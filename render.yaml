@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: house-price-prediction-platform
+    env: node
+    region: singapore # or oregon, frankfurt, etc.
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20.10.0
+      - key: FIREBASE_PROJECT_ID
+        value: housepriceprediction-bad95
+      - key: JWT_SECRET
+        value: house-price-prediction-secret-key-2026

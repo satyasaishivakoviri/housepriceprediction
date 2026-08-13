@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HomieNest - AI-Powered House Price Prediction</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a4dc6", // Deeper, more professional blue
+                        "accent-blue": "#eff6ff",
+                        "background-light": "#f8fafc",
+                        "brand-deep": "#0f172a",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            .material-symbols-outlined {
+                font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            }
+        }
+        .auth-card-shadow {
+            box-shadow: 0 -12px 40px -10px rgba(26, 77, 198, 0.12);
+        }.input-glow:focus {
+            box-shadow: 0 0 0 4px rgba(26, 77, 198, 0.15);
+        }.cool-blue-grading {
+            background-color: rgba(26, 77, 198, 0.45);
+            mix-blend-mode: multiply;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#f0f4f8] font-display text-brand-deep transition-colors duration-300">
+<div class="relative flex h-screen w-full flex-col overflow-hidden bg-white">
+<div class="relative h-[42%] w-full overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCSWP_NSioKTmT_qmdoVs7qzIHa6JozxxCFlBO3dk-42zEMDwk8260O3Smj0z__ixTiECIQlt5kL8E1g2hG217XklnG3nkZfMUL0khF4axzsxazpnBGgPYFTXEtHjkeCuOXL_MllftWYGwSOhjS0zBGmw5AtHhZjYXpB4VvndjEqMtJ76bOpFWyZyM-lkmis-OnYdyxzjzyAltcs4cY4b_JhGw6KHedozUoTamZ4StV_taxC1E0uSW8vewG9XPm_IObMU4gmPZss-fT");'></div>
+<div class="absolute inset-0 cool-blue-grading"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-primary/30 via-transparent to-white"></div>
+<div class="absolute top-14 left-0 right-0 px-6 flex flex-col items-center">
+<div class="flex items-center gap-2 mb-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
+<span class="material-symbols-outlined text-white text-2xl">home_work</span>
+<p class="text-white text-2xl font-bold tracking-tight">HomieNest</p>
+</div>
+<p class="text-white text-sm font-medium tracking-wide drop-shadow-sm">AI-Powered House Price Prediction</p>
+</div>
+</div>
+<div class="auth-card-shadow relative -mt-12 flex flex-1 flex-col rounded-t-[40px] bg-white px-8 pt-10 pb-12 overflow-y-auto">
+<div class="flex w-full mb-8">
+<div class="flex h-14 flex-1 items-center justify-center rounded-2xl bg-slate-100 p-1.5">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-xl px-2 has-[:checked]:bg-primary has-[:checked]:text-white text-slate-500 text-sm font-bold transition-all">
+<span class="truncate">Login</span>
+<input checked="" class="invisible w-0" name="auth-toggle" type="radio" value="Login"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-xl px-2 has-[:checked]:bg-primary has-[:checked]:text-white text-slate-500 text-sm font-bold transition-all">
+<span class="truncate">Sign Up</span>
+<input class="invisible w-0" name="auth-toggle" type="radio" value="Sign Up"/>
+</label>
+</div>
+</div>
+<div class="space-y-5" id="auth-container">
+<div class="flex flex-col gap-1">
+<label class="flex flex-col w-full">
+<p class="text-slate-600 text-[13px] font-bold pb-2 ml-1 uppercase tracking-wider">Email or Mobile Number</p>
+<input class="form-input input-glow flex w-full rounded-2xl text-brand-deep border-slate-200 bg-slate-50 focus:border-primary focus:ring-0 h-14 placeholder:text-slate-400 p-4 text-base font-medium transition-all" placeholder="yourname@email.com" value=""/>
+</label>
+</div>
+<div class="flex flex-col gap-1">
+<label class="flex flex-col w-full">
+<div class="flex justify-between items-center pb-2 ml-1">
+<p class="text-slate-600 text-[13px] font-bold uppercase tracking-wider">Password</p>
+<a class="text-primary text-xs font-bold hover:underline" href="#">Forgot Password?</a>
+</div>
+<div class="relative flex w-full items-stretch rounded-2xl border border-slate-200 bg-slate-50 overflow-hidden focus-within:border-primary focus-within:ring-0 focus-within:shadow-[0_0_0_4px_rgba(26,77,198,0.15)] transition-all">
+<input class="form-input flex w-full border-none bg-transparent h-14 placeholder:text-slate-400 p-4 text-base font-medium focus:ring-0" placeholder="••••••••" type="password" value=""/>
+<div class="flex items-center px-4 text-slate-400 cursor-pointer hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</div>
+</div>
+</label>
+</div>
+<button class="w-full bg-primary hover:bg-primary/95 text-white font-bold h-15 py-4 rounded-2xl mt-4 shadow-xl shadow-primary/20 transition-all active:scale-[0.98]">
+                    Sign In
+                </button>
+<div class="relative py-4">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-slate-100"></div>
+</div>
+<div class="relative flex justify-center text-xs uppercase">
+<span class="bg-white px-4 text-slate-400 font-bold tracking-widest">Or Secure Login With</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-2 h-14 rounded-2xl border border-slate-200 hover:border-primary/30 hover:bg-slate-50 transition-all">
+<img alt="Google" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU_yLNh7SCYXSYQqJeJE6lJCDOlTRtSg6SqC8UOH_IfztMEtO-5tUFmd_TE-7uIHV_t1wXG0BjjFxsvMs-cjslkvNU7N2AhLdsU43GpSLiuu3B-LTARsNo5s1v4FFLzvBDFS8ABPsTkYwLpcMLFWthWMjD-wHrtXN_7am1ZkwRhi6aLcxX1dWL0Od3cX24PxtFM-k3Rz_UWa1Eb9ENOut-Cl6u8DoDsXVcg3aeQU0p_0MaAi0YBLWmOr0_5S-_eepAA5KsPeJFyH8w"/>
+<span class="text-sm font-bold text-slate-700">Google</span>
+</button>
+<button class="flex items-center justify-center gap-2 h-14 rounded-2xl border border-slate-200 hover:border-primary/30 hover:bg-slate-50 transition-all">
+<span class="material-symbols-outlined text-2xl text-slate-700">ios</span>
+<span class="text-sm font-bold text-slate-700">Apple ID</span>
+</button>
+</div>
+<div class="mt-8">
+<p class="text-center text-slate-500 text-[12px] leading-relaxed px-2">
+                        By signing in, you agree to HomieNest's <br/>
+<a class="text-primary font-bold decoration-primary/30 underline-offset-4" href="#">Terms of Service</a> &amp; 
+                        <a class="text-primary font-bold decoration-primary/30 underline-offset-4" href="#">Privacy Policy</a>.
+                    </p>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

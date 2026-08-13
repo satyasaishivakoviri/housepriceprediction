@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Price Forecast Dashboard | HomieNest</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Top Navigation Bar -->
+<div class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="flex items-center p-4 pb-2 justify-between">
+<div class="text-slate-900 dark:text-white flex size-12 shrink-0 items-center justify-start cursor-pointer">
+<span class="material-symbols-outlined">arrow_back_ios</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">HomieNest Forecast</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex items-center justify-center rounded-lg h-12 bg-transparent text-slate-900 dark:text-white">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Dashboard Container -->
+<div class="max-w-md mx-auto pb-24">
+<!-- Scenario Selector -->
+<div class="px-4 py-3">
+<div class="flex h-11 items-center justify-center rounded-xl bg-slate-200 dark:bg-slate-800 p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-slate-700 has-[:checked]:shadow-sm text-slate-500 dark:text-slate-400 has-[:checked]:text-primary text-sm font-semibold transition-all">
+<span class="truncate">Conservative</span>
+<input class="invisible w-0" name="scenario" type="radio" value="Conservative"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-slate-700 has-[:checked]:shadow-sm text-slate-500 dark:text-slate-400 has-[:checked]:text-primary text-sm font-semibold transition-all">
+<span class="truncate">Base</span>
+<input checked="" class="invisible w-0" name="scenario" type="radio" value="Base"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-slate-700 has-[:checked]:shadow-sm text-slate-500 dark:text-slate-400 has-[:checked]:text-primary text-sm font-semibold transition-all">
+<span class="truncate">Aggressive</span>
+<input class="invisible w-0" name="scenario" type="radio" value="Aggressive"/>
+</label>
+</div>
+</div>
+<!-- Main Chart Section -->
+<div class="px-4 py-4">
+<div class="bg-white dark:bg-slate-900 rounded-3xl p-6 shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="flex justify-between items-start mb-2">
+<div class="flex flex-col gap-1">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-semibold uppercase tracking-wider">Estimated Value 2029</p>
+<p class="text-slate-900 dark:text-white tracking-tight text-3xl font-bold leading-tight">$1,245,000</p>
+</div>
+<div class="flex items-center gap-1 bg-green-50 dark:bg-green-950/30 px-2 py-1 rounded-lg">
+<span class="material-symbols-outlined text-green-600 dark:text-green-400 text-sm">trending_up</span>
+<p class="text-green-600 dark:text-green-400 text-sm font-bold">+32.4%</p>
+</div>
+</div>
+<!-- Time Horizon Toggle -->
+<div class="flex gap-2 mb-8">
+<div class="flex h-7 shrink-0 items-center justify-center rounded-full bg-primary text-white px-4">
+<p class="text-xs font-bold">1 Year</p>
+</div>
+<div class="flex h-7 shrink-0 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-4">
+<p class="text-xs font-bold">3 Year</p>
+</div>
+<div class="flex h-7 shrink-0 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-4">
+<p class="text-xs font-bold">5 Year</p>
+</div>
+</div>
+<!-- SVG Chart Container -->
+<div class="relative h-[220px] w-full">
+<!-- Macro Indicators Pinned -->
+<div class="absolute top-[80px] left-[40%] z-20 group">
+<div class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white shadow-lg border-2 border-white dark:border-slate-900 cursor-pointer">
+<span class="material-symbols-outlined text-sm">train</span>
+</div>
+<!-- Tooltip mockup -->
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-32 bg-slate-900 text-white text-[10px] p-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                            New Metro Hub (2026)
+                        </div>
+</div>
+<div class="absolute top-[40px] left-[75%] z-20 group">
+<div class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white shadow-lg border-2 border-white dark:border-slate-900 cursor-pointer">
+<span class="material-symbols-outlined text-sm">apartment</span>
+</div>
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-32 bg-slate-900 text-white text-[10px] p-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                            IT Park Expansion
+                        </div>
+</div>
+<svg class="overflow-visible" fill="none" height="180" viewbox="0 0 400 180" width="100%" xmlns="http://www.w3.org/2000/svg">
+<!-- Uncertainty Cone -->
+<path d="M0 140 L120 120 L400 20 L400 140 L120 140 Z" fill="rgba(13, 89, 242, 0.08)"></path>
+<!-- Historical Line (Solid) -->
+<path d="M0 160 C30 155 60 165 120 120" stroke="#94a3b8" stroke-linecap="round" stroke-width="3"></path>
+<!-- Forecast Line (Primary) -->
+<path d="M120 120 C180 100 240 80 400 20" stroke="#0d59f2" stroke-dasharray="6 4" stroke-linecap="round" stroke-width="3"></path>
+<!-- Current Position Dot -->
+<circle cx="120" cy="120" fill="#0d59f2" r="6" stroke="white" stroke-width="2"></circle>
+<!-- Vertical "Today" Line -->
+<line stroke="#e2e8f0" stroke-dasharray="4" stroke-width="1" x1="120" x2="120" y1="0" y2="180"></line>
+</svg>
+<!-- X-Axis Labels -->
+<div class="flex justify-between mt-4">
+<p class="text-slate-400 text-[11px] font-bold">2023</p>
+<p class="text-primary text-[11px] font-bold">Today</p>
+<p class="text-slate-400 text-[11px] font-bold">2026</p>
+<p class="text-slate-400 text-[11px] font-bold">2028</p>
+<p class="text-slate-400 text-[11px] font-bold">2029</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Section Header -->
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-6">Market Drivers</h3>
+<!-- Macro Indicators List -->
+<div class="px-4 flex flex-col gap-3">
+<div class="flex items-center gap-4 bg-white dark:bg-slate-900 p-4 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="size-12 rounded-xl bg-blue-50 dark:bg-blue-950/30 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">train</span>
+</div>
+<div class="flex-1">
+<p class="text-slate-900 dark:text-white font-bold text-sm">Metro Line Connectivity</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Estimated completion Q3 2026</p>
+</div>
+<div class="text-right">
+<p class="text-green-600 font-bold text-sm">+8.5%</p>
+<p class="text-slate-400 text-[10px] uppercase font-bold">Impact</p>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-white dark:bg-slate-900 p-4 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="size-12 rounded-xl bg-blue-50 dark:bg-blue-950/30 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">apartment</span>
+</div>
+<div class="flex-1">
+<p class="text-slate-900 dark:text-white font-bold text-sm">IT Park Expansion</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Expected 50,000 new jobs</p>
+</div>
+<div class="text-right">
+<p class="text-green-600 font-bold text-sm">+12.2%</p>
+<p class="text-slate-400 text-[10px] uppercase font-bold">Impact</p>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-white dark:bg-slate-900 p-4 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="size-12 rounded-xl bg-slate-50 dark:bg-slate-800/50 flex items-center justify-center text-slate-500">
+<span class="material-symbols-outlined">account_balance</span>
+</div>
+<div class="flex-1">
+<p class="text-slate-900 dark:text-white font-bold text-sm">Interest Rate Trend</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Based on Central Bank guidance</p>
+</div>
+<div class="text-right">
+<p class="text-slate-600 dark:text-slate-300 font-bold text-sm">-2.1%</p>
+<p class="text-slate-400 text-[10px] uppercase font-bold">Impact</p>
+</div>
+</div>
+</div>
+<!-- Risk Assessment Footer -->
+<div class="px-4 pt-8">
+<div class="bg-primary/5 dark:bg-primary/10 rounded-2xl p-4 border border-primary/20">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-lg">verified_user</span>
+<p class="text-primary font-bold text-sm">AI Confidence Score: 88%</p>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">
+                    This forecast is generated using 142 localized variables and historical transaction data from the last 15 years.
+                </p>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation Bar (iOS Style) -->
+<div class="fixed bottom-0 left-0 right-0 bg-white/90 dark:bg-slate-950/90 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 pb-8 pt-3 px-8">
+<div class="flex justify-between items-center max-w-md mx-auto">
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold">Search</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">monitoring</span>
+<span class="text-[10px] font-bold">Forecast</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">favorite</span>
+<span class="text-[10px] font-bold">Saved</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold">Profile</span>
+</div>
+</div>
+</div>
+</body></html>

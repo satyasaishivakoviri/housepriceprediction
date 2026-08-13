@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HomieNest - AI-Powered Real Estate Intelligence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#002B7F",
+                        "deep-blue": "#001B4D",
+                        "slate-accent": "#F1F5F9",
+                        "background-light": "#FFFFFF",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        :root {
+            --nav-bg: rgba(255, 255, 255, 0.7);
+            --nav-border: rgba(0, 43, 127, 0.15);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFFFF;
+            color: #001B4D;
+        }
+        .glass-pill-nav {
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            background: var(--nav-bg);
+            border: 1px solid var(--nav-border);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .nav-scrolled {
+            margin-top: 0.5rem !important;
+            padding-top: 0.5rem !important;
+            padding-bottom: 0.5rem !important;
+            background: rgba(255, 255, 255, 0.95);
+            width: 95% !important;
+            box-shadow: 0 10px 25px -5px rgba(0, 43, 127, 0.1);
+        }
+        .nav-item {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: #002B7F;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        .nav-item:hover::after {
+            width: 80%;
+        }
+        .nav-item:hover {
+            text-shadow: 0 0 15px rgba(0, 43, 127, 0.3);
+        }
+        .pulse-btn {
+            animation: soft-pulse 2s infinite;
+        }
+        @keyframes soft-pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 43, 127, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(0, 43, 127, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 43, 127, 0); }
+        }
+        .mesh-gradient {
+            background-color: #FFFFFF;
+            background-image: 
+                radial-gradient(at 100% 0%, rgba(241, 245, 249, 1) 0, transparent 40%), 
+                radial-gradient(at 0% 100%, rgba(241, 245, 249, 1) 0, transparent 40%);
+        }
+        .ticker-scroll {
+            display: flex;
+            width: fit-content;
+            animation: marquee 25s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .fintech-shadow {
+            box-shadow: 0 10px 30px -10px rgba(0, 43, 127, 0.1);
+        }
+        .house-float {
+            animation: floating 6s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(2deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light text-deep-blue font-display overflow-x-hidden">
+<div class="fixed top-0 left-0 right-0 z-50 px-4 py-4 flex justify-center">
+<nav class="glass-pill-nav w-full max-w-[92%] rounded-full px-4 py-2 flex items-center justify-between" id="navbar">
+<div class="flex items-center gap-2">
+<div class="text-white flex size-8 items-center justify-center rounded-full bg-primary shrink-0">
+<span class="material-symbols-outlined text-[18px]">house</span>
+</div>
+<h2 class="text-deep-blue text-sm font-extrabold tracking-tight hidden @[320px]:block">HomieNest</h2>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex gap-4">
+<a class="nav-item text-deep-blue/70 text-xs font-bold uppercase tracking-wider px-2" href="#">Market</a>
+<a class="nav-item text-deep-blue/70 text-xs font-bold uppercase tracking-wider px-2" href="#">Insights</a>
+</div>
+<button class="pulse-btn bg-primary text-white text-[10px] font-black py-2.5 px-4 rounded-full shadow-lg active:scale-95 transition-transform uppercase tracking-tighter">
+                Predict Price
+            </button>
+</div>
+</nav>
+</div>
+<main class="relative pt-28 mesh-gradient">
+<div class="@container max-w-7xl mx-auto">
+<div class="@[480px]:p-4">
+<div class="flex min-h-[500px] flex-col gap-8 items-center justify-center p-6 text-center">
+<div class="relative w-full max-w-[260px] aspect-square mb-2 flex items-center justify-center house-float">
+<div class="absolute inset-0 bg-primary/5 blur-[60px] rounded-full"></div>
+<img alt="3D House Model" class="relative z-10 w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr9_PNFniaoQ2lcV9SHefEGfC5TuXo-0UBSPRlwfFb6ftK81CBp-iXeD4fbqGZcxO40RfBadONOxca5ouZ1Xa3L07rslANOx2yZcu7Gk3BolcyLCEsDWwNWGRTtIdwWMoKblkaGv0NUDEf0QE5iTKytE7jXWrShpdWqhFtOtpvLeX3z7u5xU9TB9bFgkP9z6UOTGmTVVD4w-WBq1d-n1TG6TgxjhlVtWShAzOZuk6OD7fSeGsjI176csEN1RbAjld-IVL3smRHIahk"/>
+</div>
+<div class="flex flex-col gap-4 z-10">
+<h1 class="text-deep-blue text-4xl font-black leading-tight tracking-tight @[480px]:text-6xl">
+                        AI-Powered Real Estate <span class="text-primary">Intelligence</span>
+</h1>
+<p class="text-slate-500 text-sm font-medium leading-relaxed max-w-xs mx-auto">
+                        Institutional-grade accuracy for property valuations across India's top metros.
+                    </p>
+</div>
+<div class="flex flex-col gap-3 w-full max-w-xs z-10 mt-2">
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-2xl h-14 bg-primary text-white text-base font-bold shadow-2xl shadow-primary/20 transition-all hover:bg-deep-blue active:scale-[0.98]">
+<span class="truncate">Get Instant Valuation</span>
+</button>
+<div class="flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[14px] text-primary font-bold">verified</span>
+<p class="text-slate-400 text-[10px] font-bold uppercase tracking-wider">Used by 100k+ investors</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white border-y border-slate-100 py-4 overflow-hidden">
+<div class="ticker-scroll">
+<div class="flex gap-4 px-2">
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-white px-4 border border-slate-100 fintech-shadow">
+<span class="material-symbols-outlined text-primary text-sm font-bold">trending_up</span>
+<p class="text-deep-blue text-xs font-bold">Mumbai: +2.4%</p>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-white px-4 border border-slate-100 fintech-shadow">
+<span class="material-symbols-outlined text-primary text-sm font-bold">trending_up</span>
+<p class="text-deep-blue text-xs font-bold">Bangalore: +1.8%</p>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-white px-4 border border-slate-100 fintech-shadow">
+<span class="material-symbols-outlined text-primary text-sm font-bold">trending_up</span>
+<p class="text-deep-blue text-xs font-bold">Delhi: +1.2%</p>
+</div>
+</div>
+<div class="flex gap-4 px-2">
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-white px-4 border border-slate-100 fintech-shadow">
+<span class="material-symbols-outlined text-primary text-sm font-bold">trending_up</span>
+<p class="text-deep-blue text-xs font-bold">Mumbai: +2.4%</p>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-white px-4 border border-slate-100 fintech-shadow">
+<span class="material-symbols-outlined text-primary text-sm font-bold">trending_up</span>
+<p class="text-deep-blue text-xs font-bold">Bangalore: +1.8%</p>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-white px-4 border border-slate-100 fintech-shadow">
+<span class="material-symbols-outlined text-primary text-sm font-bold">trending_up</span>
+<p class="text-deep-blue text-xs font-bold">Delhi: +1.2%</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<section class="max-w-7xl mx-auto px-4 py-16 bg-white">
+<div class="grid grid-cols-2 gap-3">
+<div class="flex flex-col gap-1 rounded-2xl p-5 bg-slate-accent/30 border border-slate-50 transition-all hover:bg-white hover:fintech-shadow">
+<p class="text-slate-400 text-[9px] font-bold uppercase tracking-[0.2em]">Data Points</p>
+<p class="text-deep-blue tracking-tight text-2xl font-black">50M+</p>
+</div>
+<div class="flex flex-col gap-1 rounded-2xl p-5 bg-slate-accent/30 border border-slate-50 transition-all hover:bg-white hover:fintech-shadow">
+<p class="text-slate-400 text-[9px] font-bold uppercase tracking-[0.2em]">Accuracy</p>
+<p class="text-deep-blue tracking-tight text-2xl font-black">98.2%</p>
+</div>
+<div class="flex flex-col gap-1 rounded-2xl p-5 bg-slate-accent/30 border border-slate-50 transition-all hover:bg-white hover:fintech-shadow col-span-2">
+<p class="text-slate-400 text-[9px] font-bold uppercase tracking-[0.2em]">Regional Coverage</p>
+<p class="text-deep-blue tracking-tight text-2xl font-black">All Indian Metros</p>
+</div>
+</div>
+</section>
+<section class="max-w-7xl mx-auto px-4 py-12 bg-white">
+<div class="flex flex-col gap-10 @container">
+<div class="flex flex-col gap-3 text-center items-center">
+<span class="text-primary font-black text-[10px] tracking-[0.3em] uppercase">Core Capability</span>
+<h2 class="text-deep-blue tracking-tight text-3xl font-black max-w-[300px]">
+                Institutional Analytics
+            </h2>
+<p class="text-slate-500 text-sm font-medium leading-relaxed">
+                Precision modeling for strategic real estate decisions.
+            </p>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex gap-4 rounded-3xl border border-slate-100 bg-white p-6 items-center fintech-shadow">
+<div class="text-white bg-primary shrink-0 w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-[24px]">monitoring</span>
+</div>
+<div class="flex flex-col">
+<h3 class="text-deep-blue text-lg font-black leading-tight">AI Valuations</h3>
+<p class="text-slate-400 text-xs font-medium mt-1">500+ variable neural processing.</p>
+</div>
+</div>
+<div class="flex gap-4 rounded-3xl border border-slate-100 bg-white p-6 items-center fintech-shadow">
+<div class="text-white bg-primary shrink-0 w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-[24px]">query_stats</span>
+</div>
+<div class="flex flex-col">
+<h3 class="text-deep-blue text-lg font-black leading-tight">Market Heatmaps</h3>
+<p class="text-slate-400 text-xs font-medium mt-1">Real-time supply &amp; demand data.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="px-4 py-12">
+<div class="bg-primary rounded-[2.5rem] p-10 flex flex-col items-center gap-6 text-center shadow-2xl shadow-primary/30">
+<h2 class="text-white text-3xl font-black leading-tight">Ready to start?</h2>
+<p class="text-blue-100/90 text-sm font-medium">India's most trusted AI property platform.</p>
+<button class="bg-white text-primary px-10 h-14 rounded-full font-black text-base hover:bg-slate-50 active:scale-95 transition-all">
+            Get Started
+        </button>
+</div>
+</section>
+<footer class="py-12 px-6 border-t border-slate-50 text-center bg-white">
+<div class="flex items-center justify-center gap-2 mb-6">
+<div class="text-white flex size-6 items-center justify-center rounded-full bg-primary">
+<span class="material-symbols-outlined text-[14px]">house</span>
+</div>
+<span class="font-black text-deep-blue tracking-tight text-sm">HomieNest</span>
+</div>
+<div class="flex justify-center gap-6 mb-6">
+<a class="text-slate-400 text-[10px] font-bold hover:text-primary transition-colors uppercase tracking-widest" href="#">Platform</a>
+<a class="text-slate-400 text-[10px] font-bold hover:text-primary transition-colors uppercase tracking-widest" href="#">Privacy</a>
+</div>
+<p class="text-slate-400 text-[9px] font-bold uppercase tracking-[0.2em]">© 2024 HomieNest. India</p>
+</footer>
+<script>
+    window.addEventListener('scroll', function() {
+        const nav = document.getElementById('navbar');
+        if (window.scrollY > 20) {
+            nav.classList.add('nav-scrolled');
+        } else {
+            nav.classList.remove('nav-scrolled');
+        }
+    });
+</script>
+
+</body></html>

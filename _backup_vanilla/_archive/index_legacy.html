@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PropTechAI - Home &amp; Prediction Form</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#1152d4",
+              "background-light": "#f6f6f8",
+              "background-dark": "#101622",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<!-- Sticky Navbar -->
+<nav class="sticky top-0 z-50 w-full bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center px-4 h-16 justify-between max-w-lg mx-auto">
+<div class="flex items-center gap-2">
+<div class="text-primary flex items-center justify-center" data-icon="House" data-size="24px">
+<span class="material-symbols-outlined text-[28px]">domain</span>
+</div>
+<h2 class="text-[#0d121b] dark:text-white text-lg font-bold leading-tight tracking-tight">PropTechAI</h2>
+</div>
+<button class="bg-primary text-white text-xs font-bold px-4 py-2 rounded-full shadow-sm active:scale-95 transition-transform">
+                Predict Price
+            </button>
+</div>
+</nav>
+<main class="max-w-lg mx-auto pb-10">
+<!-- Hero Section -->
+<div class="px-4 py-8">
+<div class="flex flex-col gap-6">
+<!-- Abstract Illustration Placeholder -->
+<div class="w-full bg-gradient-to-br from-primary/20 to-primary/5 aspect-video rounded-xl flex items-center justify-center relative overflow-hidden" data-alt="Abstract blue gradient representing real estate growth" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBA40-vOnJKvY5aUgMNNmvL_79cVOeRiysgAYk01RDCjtr_Ul6CmD7WB2UpBlVnPG8A7mnvQAMwmJeDkeHtwvaX9cVXK7U9dOB5IyFeNsucPQTkx44au02He4y0TYUVX8WV6xI78Wj8tY6Hr2DX5UyoklYDC6AmusbA6NVAXFBoU7oAlNXAq0vZSDx_Qd-MjMIPkZXhsYJ305PDRr3l2l6d4qKpg_Z0HBYAS85tOU-lu27-GmegmTWd2pz5AZJPhmeBi-LieDD3r6fc'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+</div>
+<div class="flex flex-col gap-3">
+<h1 class="text-[#0d121b] dark:text-white text-3xl font-black leading-tight tracking-tight">
+                        Predict Your Home’s Market Value Instantly
+                    </h1>
+<p class="text-slate-600 dark:text-slate-400 text-base font-normal leading-relaxed">
+                        Leverage AI-driven insights to get the most accurate property valuation in seconds based on current market trends.
+                    </p>
+</div>
+</div>
+</div>
+<!-- Section Header -->
+<div class="px-4">
+<h2 class="text-[#0d121b] dark:text-white text-xl font-bold leading-tight pb-2">Valuation Form</h2>
+<p class="text-slate-500 text-sm mb-4">Complete the details below for an instant AI estimate.</p>
+</div>
+<!-- Prediction Form Card -->
+<div class="px-4">
+<div class="bg-white dark:bg-slate-900 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none border border-slate-100 dark:border-slate-800 p-5 space-y-6">
+<!-- Location Field -->
+<div class="flex flex-col gap-2">
+<label class="text-[#0d121b] dark:text-slate-200 text-sm font-semibold">Where is the property?</label>
+<div class="flex w-full items-stretch rounded-lg group">
+<input class="form-input flex w-full min-w-0 flex-1 rounded-l-lg text-[#0d121b] dark:text-white focus:outline-0 focus:ring-1 focus:ring-primary border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 h-14 placeholder:text-slate-400 p-4 text-base font-normal transition-all" placeholder="Enter city or neighborhood" value=""/>
+<div class="text-slate-400 flex border border-l-0 border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 items-center justify-center px-4 rounded-r-lg" data-icon="MagnifyingGlass">
+<span class="material-symbols-outlined">search</span>
+</div>
+</div>
+</div>
+<!-- Sqft & Year Built Grid -->
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-2">
+<label class="text-[#0d121b] dark:text-slate-200 text-sm font-semibold">Square Footage</label>
+<input class="form-input w-full rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 h-12 p-3 text-base focus:ring-1 focus:ring-primary focus:outline-none dark:text-white" placeholder="e.g. 1500" type="number"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-[#0d121b] dark:text-slate-200 text-sm font-semibold">Year Built</label>
+<select class="form-select w-full rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 h-12 p-3 text-base focus:ring-1 focus:ring-primary focus:outline-none dark:text-white">
+<option>2020+</option>
+<option>2010-2019</option>
+<option>2000-2009</option>
+<option>Before 2000</option>
+</select>
+</div>
+</div>
+<!-- Bedrooms Segmented Control -->
+<div class="flex flex-col gap-3">
+<label class="text-[#0d121b] dark:text-slate-200 text-sm font-semibold">Bedrooms</label>
+<div class="grid grid-cols-5 gap-2">
+<button class="py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm font-medium hover:border-primary focus:bg-primary focus:text-white transition-colors">1</button>
+<button class="py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm font-medium hover:border-primary focus:bg-primary focus:text-white transition-colors">2</button>
+<button class="py-2 rounded-lg border border-primary bg-primary text-white text-sm font-medium">3</button>
+<button class="py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm font-medium hover:border-primary focus:bg-primary focus:text-white transition-colors">4</button>
+<button class="py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm font-medium hover:border-primary focus:bg-primary focus:text-white transition-colors">5+</button>
+</div>
+</div>
+<!-- Bathrooms Segmented Control -->
+<div class="flex flex-col gap-3">
+<label class="text-[#0d121b] dark:text-slate-200 text-sm font-semibold">Bathrooms</label>
+<div class="grid grid-cols-4 gap-2">
+<button class="py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm font-medium hover:border-primary focus:bg-primary focus:text-white transition-colors">1</button>
+<button class="py-2 rounded-lg border border-primary bg-primary text-white text-sm font-medium">2</button>
+<button class="py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm font-medium hover:border-primary focus:bg-primary focus:text-white transition-colors">3</button>
+<button class="py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm font-medium hover:border-primary focus:bg-primary focus:text-white transition-colors">4+</button>
+</div>
+</div>
+<!-- Submit Button -->
+<button class="w-full bg-primary text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2 mt-4">
+<span class="material-symbols-outlined text-lg">auto_awesome</span>
+                    Calculate Value
+                </button>
+<div class="flex items-center justify-center gap-2 pt-2">
+<span class="material-symbols-outlined text-primary text-sm">verified</span>
+<p class="text-[11px] uppercase tracking-widest text-slate-400 font-bold">Powered by Advanced AI</p>
+</div>
+</div>
+</div>
+<!-- Footer Info -->
+<div class="px-8 mt-10 text-center">
+<p class="text-xs text-slate-400 leading-normal">
+                Estimated values are for informational purposes only. For a precise valuation, please consult a licensed professional.
+            </p>
+</div>
+</main>
+<!-- iOS Home Indicator Overlay (Visual) -->
+<div class="fixed bottom-1 left-1/2 -translate-x-1/2 w-32 h-1 bg-slate-300 dark:bg-slate-700 rounded-full opacity-50"></div>
+</body></html>

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>HomieNest | Location-Based Price Insights Pro</title>
+    <script src="../js/firebase-config.js"></script>
+    <script src="../js/install-app.js"></script>
+    <script src="../js/mobile-menu.js"></script>
+    <script src="../js/wishlist.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                        "pro-navy": "#050a14",
+                        "pro-glow": "#3b82f6",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+    <style>
+        .pro-mode-active {
+            --primary: #1152d4;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen">
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <aside
+            class="fixed inset-y-0 right-0 w-64 bg-white border-l border-gray-100 flex flex-col z-50 transform translate-x-full md:translate-x-0 md:static transition-transform duration-300">
+            <div class="p-6">
+                <div class="flex items-center gap-3 px-2">
+                    <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-lg">home</span>
+                    </div>
+                    <a href="../index.html" class="font-bold text-xl tracking-tight text-navy">HomieNest</a>
+                </div>
+            </div>
+
+            <nav class="flex-1 px-4 space-y-1 overflow-y-auto">
+                <a href="dashboard.html"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-100 text-gray-600 font-medium transition-colors">
+                    <span class="material-symbols-outlined">dashboard</span>
+                    Dashboard
+                </a>
+                <a href="listings.html"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-100 text-gray-600 font-medium transition-colors">
+                    <span class="material-symbols-outlined">storefront</span>
+                    Marketplace
+                </a>
+                <a href="predictor.html"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-100 text-gray-600 font-medium transition-colors">
+                    <span class="material-symbols-outlined">psychology</span>
+                    Price Predictor
+                </a>
+                <a href="analytics.html"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-100 text-gray-600 font-medium transition-colors">
+                    <span class="material-symbols-outlined">query_stats</span>
+                    Analytics
+                </a>
+                <a href="location-based_price_insights.html"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary/10 text-primary font-bold shadow-sm">
+                    <span class="material-symbols-outlined fill-1">location_city</span>
+                    Location Insights
+                </a>
+
+                <div class="mt-6">
+                    <div class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2 px-2">Wishlist</div>
+                    <div id="wishlist-container" class="space-y-1">
+                        <!-- Wishlist items injected by JS -->
+                    </div>
+                </div>
+            </nav>
+
+            <div class="mt-auto pt-4 border-t border-gray-100">
+                <button onclick="window.installPWA()"
+                    class="flex items-center gap-3 px-4 py-3 mb-2 rounded-xl hover:bg-gray-100 text-gray-600 font-medium w-full transition-colors">
+                    <span class="material-symbols-outlined">install_mobile</span>
+                    Install App
+                </button>
+                <button onclick="window.firebaseHelpers?.logOut().then(()=>window.location.href='login.html')"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-red-50 text-red-500 font-medium w-full transition-colors">
+                    <span class="material-symbols-outlined">logout</span>
+                    Logout
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 overflow-y-auto">
+            <!-- Mobile Overlay -->
+            <div id="mobile-overlay" class="fixed inset-0 bg-black/50 z-40 hidden md:hidden glass-nav"></div>
+
+            <!-- Mobile Header -->
+            <header
+                class="md:hidden flex items-center justify-between p-4 bg-white border-b border-gray-100 sticky top-0 z-30">
+                <div class="flex items-center gap-2">
+                    <img src="../assets/logo.png" alt="HomieNest" class="w-8 h-8 object-contain">
+                    <h1 class="font-bold text-lg text-navy">HomieNest</h1>
+                </div>
+                <button id="mobile-menu-btn" class="p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                    <span class="material-symbols-outlined text-gray-600">menu</span>
+                </button>
+            </header>
+
+            <!-- Desktop Header -->
+            <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+                <div class="flex items-center p-4 justify-between max-w-7xl mx-auto">
+                    <div class="flex items-center gap-3">
+                        <button onclick="window.history.back()"
+                            class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors group">
+                            <span
+                                class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">arrow_back_ios_new</span>
+                        </button>
+                        <div class="flex flex-col cursor-pointer" onclick="window.location.href='../index.html'">
+                            <h1 class="text-lg font-bold leading-none tracking-tight flex items-center gap-2 text-navy">
+                                Location Insights
+                                <span
+                                    class="bg-blue-500 text-[10px] px-1.5 py-0.5 rounded text-white font-black animate-pulse">PRO</span>
+                            </h1>
+                            <span class="text-[10px] uppercase tracking-widest text-primary font-bold">AI Market
+                                Analysis • Live</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <button
+                            class="size-9 rounded bg-gray-100 border border-gray-200 flex items-center justify-center hover:bg-gray-200 transition-colors">
+                            <span class="material-symbols-outlined text-gray-600 text-lg">share</span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Top Metrics Bar -->
+            <div
+                class="bg-blue-50 border-y md:border border-blue-100 px-4 py-2 flex items-center justify-between overflow-x-auto no-scrollbar gap-6 md:rounded-lg md:mx-6 md:mt-4">
+                <div class="flex flex-col">
+                    <span class="text-[9px] text-primary font-bold uppercase">Avg Price</span>
+                    <span class="text-xs font-mono text-navy">₹12,500/sqft</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-[9px] text-primary font-bold uppercase">Yield Pred</span>
+                    <span class="text-xs font-mono text-navy">+8.4%</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-[9px] text-primary font-bold uppercase">Growth</span>
+                    <span class="text-xs font-mono text-emerald-600">+1.2% MoM</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-[9px] text-primary font-bold uppercase">Confidence</span>
+                    <span class="text-xs font-mono text-navy">94%</span>
+                </div>
+            </div>
+
+            <div class="flex-1 w-full max-w-md md:max-w-7xl mx-auto pb-32 md:pb-10 pt-4 md:px-6">
+                <!-- Dashboard Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+
+                    <!-- Left Column: Map & Controls -->
+                    <div class="md:col-span-7 space-y-6">
+                        <!-- Controls -->
+                        <div class="flex gap-3 px-4 md:px-0 overflow-x-auto no-scrollbar">
+                            <button
+                                class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded bg-primary px-4 text-white shadow-md">
+                                <span class="material-symbols-outlined text-[18px]">local_fire_department</span>
+                                <span class="text-sm font-semibold">Heatmap</span>
+                            </button>
+                            <button
+                                class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded bg-white px-4 border border-gray-200 hover:bg-gray-50 transition-colors">
+                                <span class="text-slate-600 text-sm font-medium">Commercial</span>
+                                <span class="material-symbols-outlined text-slate-400 text-[18px]">apartment</span>
+                            </button>
+                            <button
+                                class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded bg-white px-4 border border-gray-200 hover:bg-gray-50 transition-colors">
+                                <span class="text-slate-600 text-sm font-medium">Residential</span>
+                                <span class="material-symbols-outlined text-slate-400 text-[18px]">home</span>
+                            </button>
+                        </div>
+
+                        <!-- Map Card -->
+                        <div class="px-4 md:px-0">
+                            <div
+                                class="relative w-full aspect-[4/3] bg-slate-100 rounded-lg overflow-hidden border border-gray-200 shadow-lg group">
+                                <img class="w-full h-full object-cover opacity-50 brightness-50 group-hover:scale-105 transition-transform duration-700"
+                                    alt="Satellite map of Koramangala area with heat map overlay"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa8h9f7dU1TQSAAPUawDNHJjKia3fxbSYVDi1BHVgldltQmwhwFtztLNtsHmz0C5aitYLMR60j0QFZVDvG8NjwDZNL3AMo9eaNlmnanzGpgcaZmPt2fEjYogpLpB86URm14Dl4ZkEtZsFnqbCtVCJu-8IYXX3ymD20ZVorinDVVbFV7DtzlNYDLaGpGTzVmfHMgyBTSlinPKKx216DavRvnCK_aaJS8QhJ2zHwV6HYkyDuutNG_Y6CPyb7uUI8auXatXC8p1PMoJ-D" />
+                                <div
+                                    class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1)_0%,transparent_100%)]">
+                                </div>
+                                <!-- Heatmap overlay lines -->
+                                <svg class="absolute inset-0 w-full h-full opacity-60" viewBox="0 0 100 100">
+                                    <path d="M0,20 Q50,40 100,10" fill="none" stroke="#3b82f6" stroke-dasharray="2 2"
+                                        stroke-width="0.5"></path>
+                                    <path d="M10,0 Q30,50 90,100" fill="none" stroke="#3b82f6" stroke-dasharray="2 2"
+                                        stroke-width="0.5"></path>
+                                    <circle class="animate-pulse" cx="50" cy="40" fill="#3b82f6" r="1.5"></circle>
+                                    <circle cx="30" cy="50" fill="#10b981" r="1.2"></circle>
+                                    <circle cx="70" cy="35" fill="#10b981" r="1"></circle>
+                                </svg>
+
+                                <!-- Map Controls -->
+                                <div class="absolute right-3 bottom-16 flex flex-col gap-2">
+                                    <button
+                                        class="size-8 rounded bg-white/90 backdrop-blur border border-gray-200 flex items-center justify-center text-gray-700 hover:bg-blue-50 hover:border-blue-200 transition-colors">
+                                        <span class="material-symbols-outlined text-sm">add</span>
+                                    </button>
+                                    <button
+                                        class="size-8 rounded bg-white/90 backdrop-blur border border-gray-200 flex items-center justify-center text-gray-700 hover:bg-blue-50 hover:border-blue-200 transition-colors">
+                                        <span class="material-symbols-outlined text-sm">remove</span>
+                                    </button>
+                                </div>
+
+                                <!-- Map Legend Overlay -->
+                                <div
+                                    class="absolute left-3 bottom-3 right-3 bg-white/95 backdrop-blur-md p-3 rounded-lg border border-gray-200 shadow-lg">
+                                    <p class="text-[9px] font-black uppercase mb-2 text-primary tracking-tighter">
+                                        Koramangala, Bengaluru</p>
+                                    <div class="flex items-center gap-4">
+                                        <div class="flex items-center gap-1.5">
+                                            <div class="size-2 rounded-full bg-emerald-500"></div>
+                                            <span class="text-[9px] text-gray-600">High Value</span>
+                                        </div>
+                                        <div class="flex items-center gap-1.5">
+                                            <div class="size-2 rounded-full bg-blue-500"></div>
+                                            <span class="text-[9px] text-gray-600">Developing</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- KPI Cards -->
+                        <div class="grid grid-cols-2 md:grid-cols-2 gap-3 px-4 md:px-0">
+                            <div
+                                class="flex flex-col gap-1 rounded-lg p-4 bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all">
+                                <p class="text-slate-500 text-[10px] font-bold uppercase tracking-wider">Avg
+                                    Price/sq.ft</p>
+                                <div class="flex items-baseline gap-2">
+                                    <p class="text-navy text-2xl font-mono font-bold">₹12.5K</p>
+                                    <span class="text-emerald-500 text-xs font-bold">+1.2%</span>
+                                </div>
+                            </div>
+                            <div
+                                class="flex flex-col gap-1 rounded-lg p-4 bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all">
+                                <p class="text-slate-500 text-[10px] font-bold uppercase tracking-wider">Prediction
+                                    Yield</p>
+                                <div class="flex items-baseline gap-2">
+                                    <p class="text-navy text-2xl font-mono font-bold">+8.4%</p>
+                                    <span class="text-primary text-xs font-bold">High</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: AI Insights & Sales -->
+                    <div class="md:col-span-5 space-y-6 px-4 md:px-0">
+                        <!-- AI Insight Card -->
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <h2 class="text-sm font-black tracking-widest uppercase text-primary">AI Market Score
+                                </h2>
+                                <div class="flex items-center gap-2 bg-white rounded p-1 border border-gray-200">
+                                    <button
+                                        class="px-2 py-0.5 text-[9px] font-bold rounded bg-primary text-white">12M</button>
+                                    <button class="px-2 py-0.5 text-[9px] font-bold rounded text-slate-500">6M</button>
+                                </div>
+                            </div>
+                            <div class="bg-blue-50 border border-blue-100 rounded-lg p-5">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div
+                                        class="flex size-12 items-center justify-center rounded-lg bg-white shadow-sm text-primary">
+                                        <span class="material-symbols-outlined text-2xl">auto_awesome</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-navy">Market Potential</h4>
+                                        <p class="text-xs text-slate-500">AI-driven analysis</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-end justify-between">
+                                    <div class="text-4xl font-mono font-black text-navy">8.9<span
+                                            class="text-lg text-slate-400">/10</span></div>
+                                    <div class="text-right">
+                                        <p class="text-[10px] uppercase font-bold tracking-widest text-slate-500">
+                                            Confidence</p>
+                                        <p class="text-sm font-bold text-emerald-600">94% High</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recent Sales List -->
+                        <div class="space-y-4">
+                            <h2 class="text-xs font-black tracking-[0.2em] text-slate-400 uppercase">Recent Sales Nearby
+                            </h2>
+                            <div class="grid grid-cols-1 gap-3">
+                                <div
+                                    class="bg-white p-4 rounded-lg flex justify-between items-center border border-gray-200 shadow-sm hover:shadow-md transition-all cursor-pointer">
+                                    <div class="flex items-center gap-3">
+                                        <div class="size-12 rounded-lg bg-cover bg-center"
+                                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBcHqzON3vWRh3d3u-1XFmpeYOdvxcn0bZeh2jkT6bkW6PLCiPgcoH75shZse2tLkxv6mPwlUQy6d8eLUdL1Sfz7Mc_IWHPT_GCEwzq-5G-xJmm99U2AWGDMNzIHlqAoDBodgVhA4D4p8gLRl-9YASxYBvjnCrNFRe6Ga5mpqVZfHvT-AfFCegq5P8kxj0f9g9_oMYnotFwcmHQoNV5_eh9I91J-u3E50yTcsdg3yyMstItcHApqA6EDEdZF60lg1-41ZN1B-53uVgU');">
+                                        </div>
+                                        <div>
+                                            <p class="text-sm font-bold text-navy">Prestige St. Johns</p>
+                                            <p class="text-[10px] text-slate-500">3 BHK • 1,840 sq.ft</p>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <p class="text-sm font-mono font-bold text-navy">₹2.85 Cr</p>
+                                        <p class="text-[10px] text-slate-500">2 days ago</p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="bg-white p-4 rounded-lg flex justify-between items-center border border-gray-200 shadow-sm hover:shadow-md transition-all cursor-pointer">
+                                    <div class="flex items-center gap-3">
+                                        <div class="size-12 rounded-lg bg-cover bg-center"
+                                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBbjHpdwOm5NGrWFXZWzQbXkdseu54aJDi7Ze_rKXGbxapB5ZK3Y6_CHFE-A_Vln9h2_QfEkKbUHqQRXWOeMqDQ0SsR61T_cXsaCrYLj_suVAZi-y9OYyR6uOYjQXV5a9FOQsimF6UEek6m0XkA5-C-GrgXhyWnoRve8W_hQ3RlY-LRHgUYKd76JGvGRsc6tzP-iRsh4g5O8R5fI37Dq_oyKbwrQUsMxokc8TkT6T-YF5mR1tIfHO_9IjjD-Vc6UoL72_MbpA_cRHXf');">
+                                        </div>
+                                        <div>
+                                            <p class="text-sm font-bold text-navy">Mantri Classic</p>
+                                            <p class="text-[10px] text-slate-500">2 BHK • 1,250 sq.ft</p>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <p class="text-sm font-mono font-bold text-navy">₹1.42 Cr</p>
+                                        <p class="text-[10px] text-slate-500">5 days ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating Action -->
+            <div class="fixed bottom-24 md:bottom-8 inset-x-4 max-w-md md:max-w-xs md:left-auto md:right-8 z-40">
+                <div class="bg-primary/20 rounded p-[1px] shadow-lg">
+                    <div
+                        class="bg-white rounded py-3 px-5 flex items-center justify-between gap-4 border border-blue-100">
+                        <div class="flex flex-col">
+                            <span class="text-[9px] font-black text-primary uppercase tracking-widest">Location
+                                Report</span>
+                            <span class="text-xs text-navy font-mono">Koramangala</span>
+                        </div>
+                        <button
+                            class="bg-primary text-white font-black text-[10px] tracking-widest px-4 py-2 rounded uppercase flex items-center gap-2 hover:bg-blue-600 transition-colors">
+                            <span class="material-symbols-outlined text-sm">description</span>
+                            Generate
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <nav
+                class="fixed bottom-0 inset-x-0 bg-white/90 backdrop-blur-lg border-t border-gray-200 pb-5 pt-2 z-50 lg:hidden">
+                <div class="flex justify-around items-center max-w-md mx-auto">
+                    <button onclick="window.location.href='dashboard.html'"
+                        class="flex flex-col items-center gap-1 text-slate-500 hover:text-primary">
+                        <span class="material-symbols-outlined">home</span>
+                        <span class="text-[10px] font-medium">Home</span>
+                    </button>
+                    <button onclick="window.location.href='analytics.html'"
+                        class="flex flex-col items-center gap-1 text-slate-500 hover:text-primary">
+                        <span class="material-symbols-outlined">insights</span>
+                        <span class="text-[10px] font-medium">Analytics</span>
+                    </button>
+                    <button onclick="window.location.href='predictor.html'"
+                        class="flex flex-col items-center gap-1 text-slate-500 hover:text-primary">
+                        <span class="material-symbols-outlined">search</span>
+                        <span class="text-[10px] font-medium">Search</span>
+                    </button>
+                    <button onclick="window.location.href='listings.html'"
+                        class="flex flex-col items-center gap-1 text-slate-500 hover:text-primary">
+                        <span class="material-symbols-outlined">favorite</span>
+                        <span class="text-[10px] font-medium">Saved</span>
+                    </button>
+                    <button
+                        onclick="if(confirm('Logout?')) window.firebaseHelpers.logOut().then(()=>window.location.href='login.html')"
+                        class="flex flex-col items-center gap-1 text-slate-500 hover:text-primary">
+                        <span class="material-symbols-outlined">person</span>
+                        <span class="text-[10px] font-medium">Profile</span>
+                    </button>
+                </div>
+            </nav>
+    </div><!-- End main content area -->
+    </div><!-- End flex container -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Auth Guard
+            if (window.firebaseHelpers) {
+                window.firebaseHelpers.onAuthChange((user) => {
+                    if (!user) {
+                        window.location.href = 'login.html';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

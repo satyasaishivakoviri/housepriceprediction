@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HomieNest | Mobile Analytics View</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#0d59f2",
+                "background-light": "#f5f6f8",
+                "background-dark": "#0B1120",
+                "card-dark": "rgba(30, 41, 59, 0.7)", // Translucent dark slate
+              },
+              fontFamily: {
+                "display": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style type="text/tailwindcss">
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+        .chart-glow {
+            filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.5));
+        }
+        .btn-glow {
+            box-shadow: 0 0 15px rgba(13, 89, 242, 0.3);
+        }
+        .dark-glass {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            border-top: 1px solid rgba(51, 65, 85, 0.5);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen transition-colors duration-300">
+<div class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/50">
+<div class="flex items-center p-4 justify-between max-w-md mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary cursor-pointer">arrow_back_ios</span>
+<div class="flex flex-col">
+<h2 class="text-sm font-bold leading-none dark:text-white">Market Analytics</h2>
+<p class="text-[10px] text-slate-500 dark:text-blue-400 font-medium">Whitefield, Bengaluru</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-yellow-400 transition-all border border-slate-200 dark:border-slate-700" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-symbols-outlined text-xl dark:hidden">dark_mode</span>
+<span class="material-symbols-outlined text-xl hidden dark:block">light_mode</span>
+</button>
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-xl dark:text-slate-300">share</span>
+</button>
+</div>
+</div>
+</div>
+<main class="max-w-md mx-auto pb-24">
+<div class="px-4 py-4">
+<div class="flex h-11 items-center justify-center rounded-xl bg-slate-200 dark:bg-slate-800/50 p-1 shadow-inner border border-transparent dark:border-slate-700/50">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-primary has-[:checked]:text-white has-[:checked]:btn-glow text-slate-500 dark:text-slate-400 text-sm font-semibold transition-all">
+<span class="truncate">6 Months</span>
+<input checked="" class="hidden" name="timeframe" type="radio" value="6m"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-primary has-[:checked]:text-white has-[:checked]:btn-glow text-slate-500 dark:text-slate-400 text-sm font-semibold transition-all">
+<span class="truncate">5 Years</span>
+<input class="hidden" name="timeframe" type="radio" value="5y"/>
+</label>
+</div>
+</div>
+<div class="px-4 py-2">
+<div class="bg-white dark:bg-card-dark backdrop-blur-sm rounded-xl p-5 shadow-sm border border-slate-200 dark:border-blue-500/20">
+<div class="flex justify-between items-start mb-6">
+<div>
+<p class="text-slate-500 dark:text-blue-300/70 text-xs font-medium uppercase tracking-wider mb-1">Avg. Market Price</p>
+<h3 class="text-3xl font-bold tracking-tight dark:text-white">₹8,450<span class="text-lg font-normal text-slate-400 dark:text-slate-500 ml-1">/sq.ft</span></h3>
+</div>
+<div class="flex items-center bg-green-100 dark:bg-green-500/20 text-green-700 dark:text-green-400 px-2 py-1 rounded-lg text-sm font-bold">
+<span class="material-symbols-outlined text-sm mr-1">trending_up</span>
+                    +24.5%
+                </div>
+</div>
+<div class="relative h-[220px] w-full mt-4">
+<svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 400 200">
+<line class="text-slate-100 dark:text-slate-800" stroke="currentColor" stroke-dasharray="4" stroke-width="1" x1="0" x2="400" y1="40" y2="40"></line>
+<line class="text-slate-100 dark:text-slate-800" stroke="currentColor" stroke-dasharray="4" stroke-width="1" x1="0" x2="400" y1="90" y2="90"></line>
+<line class="text-slate-100 dark:text-slate-800" stroke="currentColor" stroke-dasharray="4" stroke-width="1" x1="0" x2="400" y1="140" y2="140"></line>
+<path d="M0 160 Q 50 140, 100 130 T 200 80 T 300 100 T 400 40 V 200 H 0 Z" fill="url(#chartGradient)"></path>
+<path class="text-primary dark:text-cyan-400" d="M0 160 Q 50 140, 100 130 T 200 80 T 300 100 T 400 40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3"></path>
+<circle class="fill-primary dark:fill-cyan-400" cx="400" cy="40" r="5"></circle>
+<circle class="stroke-primary dark:stroke-cyan-400" cx="400" cy="40" fill="none" r="10" stroke-opacity="0.3" stroke-width="4"></circle>
+<defs>
+<linearGradient id="chartGradient" x1="0" x2="0" y1="0" y2="1">
+<stop class="text-primary dark:text-cyan-500" offset="0%" stop-color="currentColor" stop-opacity="0.2"></stop>
+<stop class="text-primary dark:text-cyan-500" offset="100%" stop-color="currentColor" stop-opacity="0"></stop>
+</linearGradient>
+</defs>
+</svg>
+<div class="flex justify-between mt-4">
+<span class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase">Jan</span>
+<span class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase">Mar</span>
+<span class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase">May</span>
+<span class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase">Jul</span>
+<span class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase">Sep</span>
+<span class="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase">Nov</span>
+</div>
+</div>
+</div>
+</div>
+<div class="px-4 pt-6 pb-2">
+<h3 class="text-lg font-bold flex items-center gap-2 dark:text-white">
+<span class="material-symbols-outlined text-primary dark:text-blue-400">insights</span>
+            Market Health Indicators
+        </h3>
+</div>
+<div class="flex flex-wrap gap-4 px-4 pb-4">
+<div class="flex-1 min-w-[160px] bg-white dark:bg-card-dark backdrop-blur-sm border border-slate-200 dark:border-blue-500/20 p-5 rounded-xl shadow-sm">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary dark:text-blue-400 text-xl">show_chart</span>
+<p class="text-slate-500 dark:text-blue-300/70 text-[11px] font-bold uppercase tracking-wide">Historical Growth</p>
+</div>
+<div class="flex flex-col">
+<p class="text-2xl font-bold leading-tight dark:text-white">24.5%</p>
+<div class="flex items-center mt-1">
+<span class="text-green-600 dark:text-green-400 text-xs font-bold">+5.2%</span>
+<span class="text-slate-400 dark:text-slate-500 text-[10px] ml-1">vs last yr</span>
+</div>
+</div>
+</div>
+<div class="flex-1 min-w-[160px] bg-white dark:bg-card-dark backdrop-blur-sm border border-slate-200 dark:border-blue-500/20 p-5 rounded-xl shadow-sm">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary dark:text-blue-400 text-xl">payments</span>
+<p class="text-slate-500 dark:text-blue-300/70 text-[11px] font-bold uppercase tracking-wide">Rental Yield</p>
+</div>
+<div class="flex flex-col">
+<p class="text-2xl font-bold leading-tight dark:text-white">3.8% <span class="text-sm font-normal text-slate-400 dark:text-slate-500">p.a.</span></p>
+<div class="flex items-center mt-1">
+<span class="text-green-600 dark:text-green-400 text-xs font-bold">+0.4%</span>
+<span class="text-slate-400 dark:text-slate-500 text-[10px] ml-1">avg. demand</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mx-4 mb-6">
+<div class="bg-primary/10 dark:bg-blue-500/10 border border-primary/20 dark:border-blue-400/20 rounded-lg p-4 flex items-start gap-3">
+<div class="bg-primary text-white p-1.5 rounded-lg btn-glow">
+<span class="material-symbols-outlined text-lg">auto_awesome</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-primary dark:text-blue-400">AI-Powered Prediction</h4>
+<p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mt-0.5">
+                    HomieNest AI predicts a <span class="font-bold text-slate-900 dark:text-white">6.2% additional growth</span> in this sector by Q4 2024 due to upcoming metro expansion.
+                </p>
+</div>
+</div>
+</div>
+<div class="px-4 space-y-3">
+<div class="flex items-center justify-between p-4 bg-white dark:bg-card-dark backdrop-blur-sm rounded-xl border border-slate-200 dark:border-blue-500/20">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800/50 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-600 dark:text-blue-300">domain</span>
+</div>
+<div>
+<p class="text-sm font-bold dark:text-white">Market Liquidity</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">High (Avg. 45 days to sell)</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500">chevron_right</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-white dark:bg-card-dark backdrop-blur-sm rounded-xl border border-slate-200 dark:border-blue-500/20">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800/50 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-600 dark:text-blue-300">map</span>
+</div>
+<div>
+<p class="text-sm font-bold dark:text-white">Development Map</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">3 Major infrastructure projects</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500">chevron_right</span>
+</div>
+</div>
+</main>
+<div class="fixed bottom-0 left-0 right-0 z-50 bg-white/95 dark:dark-glass border-t border-slate-200 dark:border-slate-800/50 pb-6 pt-2">
+<div class="max-w-md mx-auto flex justify-around items-center">
+<div class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined">search</span>
+<span class="text-[10px] font-medium">Search</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-primary dark:text-blue-400">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="text-[10px] font-bold">Analytics</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined">favorite</span>
+<span class="text-[10px] font-medium">Saved</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</div>
+</div>
+</div>
+
+</body></html>

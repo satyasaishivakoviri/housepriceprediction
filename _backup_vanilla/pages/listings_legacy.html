@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Real Estate Listings Feed</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#0d121b] dark:text-white font-display">
+<!-- Sticky Top Navigation -->
+<nav class="sticky top-0 z-50 bg-background-light dark:bg-background-dark border-b border-gray-200 dark:border-gray-800">
+<!-- TopAppBar -->
+<div class="flex items-center p-4 pb-2 justify-between">
+<div class="flex items-center gap-2">
+<div class="text-primary material-symbols-outlined" style="font-size: 32px;">apartment</div>
+<h2 class="text-[#0d121b] dark:text-white text-xl font-bold leading-tight tracking-tight">PropView AI</h2>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex size-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="size-10 rounded-full bg-cover bg-center" data-alt="User profile avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCi1D9TZEZP0ObYmCLS3oH-sqAJz4gfJbiRbTic0VwdjKLwTEIA4BohD6ScdNLHa_F3J9wZT7Dex59t11IowJTUYbo9aVjbcDcJU25voHkUmtKkvr1Tne5jh_j3BpoxCN8WmU3RIgDH-UngX2wUu0A90ILK0OxG9K3WVlbcIcfuLVHEdyQRbWgU2T2NXXEzT-MNuRozwlgReMi6ZgI1FHfLaZvAjAUYOABCD_NHjVKcbUAo6Dw8yTOkTJqjqigEJ_qplZGeJlA9AxDM')"></div>
+</div>
+</div>
+<!-- SearchBar -->
+<div class="px-4 py-2">
+<div class="flex gap-2">
+<label class="flex flex-col flex-1 h-12">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full shadow-sm bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
+<div class="text-[#4c669a] flex items-center justify-center pl-4 rounded-l-xl">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent focus:outline-0 focus:ring-0 text-[#0d121b] dark:text-white h-full placeholder:text-[#4c669a] px-4 rounded-l-none pl-2 text-base font-normal leading-normal" placeholder="Search city, budget, or area" value=""/>
+</div>
+</label>
+<button class="flex items-center justify-center w-12 h-12 rounded-xl bg-primary text-white shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">tune</span>
+</button>
+</div>
+</div>
+<!-- Chips -->
+<div class="flex gap-3 px-4 py-3 overflow-x-auto hide-scrollbar">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary text-white px-4">
+<span class="text-sm font-semibold leading-normal">For Sale</span>
+<span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 px-4">
+<span class="text-[#0d121b] dark:text-white text-sm font-medium leading-normal">Apartment</span>
+<span class="material-symbols-outlined text-[#4c669a] text-sm">keyboard_arrow_down</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 px-4">
+<span class="text-[#0d121b] dark:text-white text-sm font-medium leading-normal">Price Range</span>
+<span class="material-symbols-outlined text-[#4c669a] text-sm">keyboard_arrow_down</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 px-4">
+<span class="text-[#0d121b] dark:text-white text-sm font-medium leading-normal">More</span>
+<span class="material-symbols-outlined text-[#4c669a] text-sm">filter_list</span>
+</button>
+</div>
+<!-- Tabs -->
+<div class="px-4">
+<div class="flex border-b border-gray-200 dark:border-gray-800 gap-8">
+<a class="flex items-center gap-2 border-b-[3px] border-b-primary text-primary pb-3 pt-2" href="#">
+<span class="material-symbols-outlined text-lg">format_list_bulleted</span>
+<p class="text-sm font-bold tracking-tight">List View</p>
+</a>
+<a class="flex items-center gap-2 border-b-[3px] border-b-transparent text-[#4c669a] pb-3 pt-2" href="#">
+<span class="material-symbols-outlined text-lg">map</span>
+<p class="text-sm font-bold tracking-tight">Map View</p>
+</a>
+</div>
+</div>
+</nav>
+<!-- Content Area -->
+<main class="p-4 flex flex-col gap-6 pb-24">
+<!-- Section Title -->
+<div class="flex items-center justify-between">
+<h3 class="text-[#0d121b] dark:text-white font-bold text-lg">124 properties found</h3>
+<div class="flex items-center text-primary text-sm font-semibold">
+<span>Sorted by Newest</span>
+<span class="material-symbols-outlined text-lg">expand_more</span>
+</div>
+</div>
+<!-- Property Card 1 (List Style) -->
+<div class="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-800">
+<div class="relative w-full aspect-[16/9] bg-center bg-no-repeat bg-cover" data-alt="Modern penthouse with floor to ceiling windows" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDhwXs2Cnb-hDKitDXIEnVq0ubd6bld0x8m9TPecvjBS6-BPkv5pB37C-JPkBIa2bjgN5R6A1O93szkdFKQCfw_UzRg3EzrUbw3gzlHEH7Ewx04s2KswS20N-hNLPHGYuT2JYkDg5cvWZjCpRQ7FRR39yse1OngbN6fpJ2jBmX_EZRXsb_4y4hopFQHCWszGTfS4GELaJNDEJMgOlMMXyx4rAyG72ZD7frY5cRQDPF4MfKKBhQS_YS5FM0HdQrteUfM5sUbHK1D3VzD");'>
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="bg-primary text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Featured</span>
+<span class="bg-emerald-500 text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">auto_awesome</span>
+                        AI Verified Value
+                    </span>
+</div>
+<button class="absolute top-3 right-3 size-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-start mb-1">
+<h4 class="text-2xl font-extrabold text-[#0d121b] dark:text-white">$1,250,000</h4>
+<span class="text-xs text-[#4c669a] font-medium bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">For Sale</span>
+</div>
+<p class="text-[#0d121b] dark:text-gray-200 font-semibold text-base mb-1">Skyline Penthouse • Upper East Side</p>
+<p class="text-[#4c669a] text-sm mb-4">124 E 72nd St, New York, NY</p>
+<div class="flex items-center gap-4 py-3 border-t border-gray-50 dark:border-gray-800">
+<div class="flex items-center gap-1 text-[#4c669a]">
+<span class="material-symbols-outlined text-lg">bed</span>
+<span class="text-sm font-medium">3</span>
+</div>
+<div class="flex items-center gap-1 text-[#4c669a]">
+<span class="material-symbols-outlined text-lg">bathtub</span>
+<span class="text-sm font-medium">2.5</span>
+</div>
+<div class="flex items-center gap-1 text-[#4c669a]">
+<span class="material-symbols-outlined text-lg">square_foot</span>
+<span class="text-sm font-medium">2,100 sqft</span>
+</div>
+<div class="ml-auto">
+<button class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-bold">View Listing</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Property Card 2 (List Style) -->
+<div class="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-800">
+<div class="relative w-full aspect-[16/9] bg-center bg-no-repeat bg-cover" data-alt="Luxury villa with outdoor pool" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDUINJWQib5o92URkhwGXYCqg-nww6jJ_6Ae2jEAIBVMmp7UH0q3i31eTL3PDI9LY1KnaQGfl8B94iY7xKSdqmKL3z45ztfyomSsD7e0XNCp66R1Kx5iwHyFITDPnXnKXTjV8iDPQ4WD7LH3rRYXxyciZgqhRoLLOnfoizbGGH-uaVUuMinc9dsOU_L26yBV9g5wpvw4dFun9DhKD-XtjuKsipDg-S6XX_BarNurkQI6QsEbQl-iBsTBF_CQpxhsjI79__tTYOuN2YL");'>
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="bg-amber-500 text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">trending_down</span>
+                        Price Dropped
+                    </span>
+</div>
+<button class="absolute top-3 right-3 size-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-start mb-1">
+<div class="flex flex-col">
+<h4 class="text-2xl font-extrabold text-[#0d121b] dark:text-white">$890,000</h4>
+<span class="text-xs text-amber-600 line-through">$950,000</span>
+</div>
+<span class="text-xs text-[#4c669a] font-medium bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">For Sale</span>
+</div>
+<p class="text-[#0d121b] dark:text-gray-200 font-semibold text-base mb-1">Canyon Creek Villa • Modern Oasis</p>
+<p class="text-[#4c669a] text-sm mb-4">4500 Sunset Blvd, Los Angeles, CA</p>
+<div class="flex items-center gap-4 py-3 border-t border-gray-50 dark:border-gray-800">
+<div class="flex items-center gap-1 text-[#4c669a]">
+<span class="material-symbols-outlined text-lg">bed</span>
+<span class="text-sm font-medium">4</span>
+</div>
+<div class="flex items-center gap-1 text-[#4c669a]">
+<span class="material-symbols-outlined text-lg">bathtub</span>
+<span class="text-sm font-medium">3</span>
+</div>
+<div class="flex items-center gap-1 text-[#4c669a]">
+<span class="material-symbols-outlined text-lg">square_foot</span>
+<span class="text-sm font-medium">3,450 sqft</span>
+</div>
+<div class="ml-auto">
+<button class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-bold">View Listing</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Property Card 3 (Rent Style) -->
+<div class="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-800">
+<div class="relative w-full aspect-[16/9] bg-center bg-no-repeat bg-cover" data-alt="Minimalist urban apartment interior" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDcJwK08ka7yD9ipvM3ZD7EP21V2o1yYavirHQqVzFAgQhufhsSYVWkWkjkTPVbI1ZU0dQqM5rVTcA7zjCbKZ1HhjYoEouELCpPuXvaq3U0eGqAb7dB4Saa-rdlS8iqWE4rWm9rPTnQKDyKkF-eMgkU75v1uiPNOlKTyXRSJfpQjTLt2aTLKwbtrzkdmixGe79YSlNzLgkZa0ANYDUG1Uf3tU1Z-iZoeCnSvDMZ_m2aCq-kDdbznwu8RbtB2d8is7sxqCMv8pHKrnQG");'>
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="bg-primary/90 text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">New Listing</span>
+</div>
+<button class="absolute top-3 right-3 size-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-start mb-1">
+<h4 class="text-2xl font-extrabold text-[#0d121b] dark:text-white">$4,200 <span class="text-sm font-normal text-gray-500">/mo</span></h4>
+<span class="text-xs text-primary font-medium bg-primary/10 px-2 py-1 rounded">For Rent</span>
+</div>
+<p class="text-[#0d121b] dark:text-gray-200 font-semibold text-base mb-1">Industrial Loft • Arts District</p>
+<p class="text-[#4c669a] text-sm mb-4">1200 S Figueroa St, Los Angeles, CA</p>
+<div class="flex items-center gap-4 py-3 border-t border-gray-50 dark:border-gray-800">
+<div class="flex items-center gap-1 text-[#4c669a]">
+<span class="material-symbols-outlined text-lg">bed</span>
+<span class="text-sm font-medium">1</span>
+</div>
+<div class="flex items-center gap-1 text-[#4c669a]">
+<span class="material-symbols-outlined text-lg">bathtub</span>
+<span class="text-sm font-medium">1.5</span>
+</div>
+<div class="flex items-center gap-1 text-[#4c669a]">
+<span class="material-symbols-outlined text-lg">square_foot</span>
+<span class="text-sm font-medium">1,050 sqft</span>
+</div>
+<div class="ml-auto">
+<button class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-bold">View Listing</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar (iOS Style) -->
+<div class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg border-t border-gray-200 dark:border-gray-800 px-6 py-2 flex justify-between items-center z-50">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-[10px] font-bold">Explore</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-[#4c669a] dark:text-gray-400">
+<span class="material-symbols-outlined">favorite</span>
+<span class="text-[10px] font-medium">Saved</span>
+</button>
+<button class="flex flex-col items-center gap-1 -mt-8">
+<div class="size-14 rounded-full bg-primary flex items-center justify-center text-white shadow-lg shadow-primary/30 border-4 border-white dark:border-gray-900">
+<span class="material-symbols-outlined" style="font-size: 32px;">psychology</span>
+</div>
+<span class="text-[10px] font-bold text-primary mt-1">AI Valuator</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-[#4c669a] dark:text-gray-400">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="text-[10px] font-medium">Inbox</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-[#4c669a] dark:text-gray-400">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</div>
+</body></html>

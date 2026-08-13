@@ -1,0 +1,17 @@
+{
+    "name": "homienest",
+    "version": "1.0.0",
+    "description": "AI-Powered Real Estate Platform",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "devDependencies": {
+        "shadcn": "^3.8.4",
+        "vite": "^5.0.0"
+    },
+    "dependencies": {
+        "three": "^0.182.0"
+    }
+}

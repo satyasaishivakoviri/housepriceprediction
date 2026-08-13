@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>HomieNest - Property Details</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0A2463",
+                        "deep-blue": "#0A2463",
+                        "slate-blue": "#4E67EB",
+                        "background-light": "#F8FAFC",
+                        "background-dark": "#0F172A",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    keyframes: {
+                        'cross-fade': {
+                            '0%, 100%': { opacity: 0 },
+                            '10%, 40%': { opacity: 1 },
+                            '50%, 90%': { opacity: 0 },
+                        },
+                        'pop-in': {
+                            '0%': { transform: 'scale(0.8)', opacity: 0 },
+                            '70%': { transform: 'scale(1.1)', opacity: 1 },
+                            '100%': { transform: 'scale(1)', opacity: 1 },
+                        },
+                        'glow-pulse': {
+                            '0%, 100%': { boxShadow: '0 0 0px rgba(10, 36, 99, 0)', borderColor: 'rgba(10, 36, 99, 0.1)' },
+                            '50%': { boxShadow: '0 0 20px rgba(78, 103, 235, 0.3)', borderColor: 'rgba(78, 103, 235, 0.5)' },
+                        },
+                        'map-zoom': {
+                            '0%': { transform: 'scale(1.4)', opacity: 0 },
+                            '100%': { transform: 'scale(1)', opacity: 1 },
+                        }
+                    },
+                    animation: {
+                        'cross-fade-1': 'cross-fade 12s infinite 0s',
+                        'cross-fade-2': 'cross-fade 12s infinite 6s',
+                        'pop': 'pop-in 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards',
+                        'glow': 'glow-pulse 3s ease-in-out infinite',
+                        'zoom': 'map-zoom 2s cubic-bezier(0.23, 1, 0.32, 1) forwards'
+                    }
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        :root {
+            --primary-color: #0A2463;
+            --slate-blue: #4E67EB;
+        }
+        body { font-family: 'Inter', sans-serif; min-height: 100dvh; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .stagger-1 { animation-delay: 0.1s; opacity: 0; }
+        .stagger-2 { animation-delay: 0.2s; opacity: 0; }
+        .stagger-3 { animation-delay: 0.3s; opacity: 0; }
+        .stagger-4 { animation-delay: 0.4s; opacity: 0; }
+        .ripple-btn {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+        .ripple-btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 5px;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.4);
+            opacity: 0;
+            border-radius: 100%;
+            transform: scale(1, 1) translate(-50%);
+            transform-origin: 50% 50%;
+        }
+        .ripple-btn:active::after {
+            animation: ripple 0.6s ease-out;
+        }
+        @keyframes ripple {
+            0% { transform: scale(0, 0); opacity: 0.5; }
+            100% { transform: scale(40, 40); opacity: 0; }
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+  <script type="module" crossorigin src="/assets/firebase-config-CDF_MG8Y.js"></script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+    <header
+        class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+        <div class="flex items-center p-4 justify-between max-w-md mx-auto">
+            <button onclick="window.history.back()"
+                class="flex items-center justify-center p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                <span class="material-symbols-outlined text-slate-900 dark:text-white">arrow_back_ios_new</span>
+            </button>
+            <h2 class="text-slate-900 dark:text-white text-lg font-bold tracking-tight">HomieNest</h2>
+            <div class="flex gap-1">
+                <button
+                    class="flex items-center justify-center p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                    <span class="material-symbols-outlined text-slate-900 dark:text-white">share</span>
+                </button>
+                <button
+                    class="flex items-center justify-center p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                    <span class="material-symbols-outlined text-slate-900 dark:text-white">favorite</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="max-w-md mx-auto pb-40">
+        <div class="relative h-80 overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center animate-cross-fade-1"
+                style='background-image: linear-gradient(0deg, rgba(10, 36, 99, 0.3) 0%, rgba(0, 0, 0, 0) 50%), url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDwe7vBMJAIMdl6mEIx4le4Bkfa98WGvDhlyZNv4lfs_GZUZqHGFW4pfBR3lm-MLzlDgJfWYD9wbOi15BRmqmx7RjQ4TGVmbjKzzpxIBbzq2LdeeN9Dj5ALZQWoXkfWt6KkTbefG_Bq7GQ3k6DZSCl3o-9Xv6tb-dN4igs24hs3XwUjUftT_smuZ1l10sFCYXeY-yJLqhdKScHcR9pxYBzjuuI3hTSpz9wy7abQeJ1Cj4jHZ2YxNW0kHwnpvw0_7phjUao4pcm-MBya&quot;);'>
+            </div>
+            <div class="absolute inset-0 bg-cover bg-center animate-cross-fade-2 opacity-0"
+                style='background-image: linear-gradient(0deg, rgba(10, 36, 99, 0.3) 0%, rgba(0, 0, 0, 0) 50%), url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBfIZqotEC5gaTEaSdd2JDoZk4xQKM1J-3jxlPCdsoa_8WA8Zn5de7g_6He2eS-tO8JoDUQMADygIuCf6ZAmNSzcdzfBdJowEcDb0Woi8klgfMt0aFkZjld6sbo8rhTgVDtbLjCMnyQOAXcrWGJHLkYgwymTpucTXZHcw9NIr0onOY77L22h31ti_o6B7yJNBJgJoZQIj65RqdoesVbZmg1Ea0OfKO3LOeF-cSQuYUJWHjuoFJPZTvH8TyEfQhyW2Aq6RTyc9zuxIZ1&quot;);'>
+            </div>
+            <div class="absolute bottom-6 left-0 right-0 flex justify-center gap-2 z-10">
+                <div class="w-6 h-1 rounded-full bg-white transition-all duration-300"></div>
+                <div class="w-1.5 h-1 rounded-full bg-white/40"></div>
+                <div class="w-1.5 h-1 rounded-full bg-white/40"></div>
+                <div class="w-1.5 h-1 rounded-full bg-white/40"></div>
+            </div>
+            <div
+                class="absolute top-4 right-4 bg-deep-blue/60 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full backdrop-blur-md z-10 border border-white/10">
+                Premium Listing
+            </div>
+        </div>
+        <div class="px-5 py-6 space-y-6">
+            <div class="flex flex-col gap-1">
+                <div class="flex items-center gap-2 mb-1">
+                    <span
+                        class="px-2 py-0.5 bg-deep-blue text-white text-[10px] font-bold rounded uppercase tracking-wider">For
+                        Sale</span>
+                    <span
+                        class="px-2 py-0.5 bg-slate-blue/10 text-slate-blue text-[10px] font-bold rounded uppercase tracking-wider">Sea-Facing</span>
+                </div>
+                <h1 class="text-slate-900 dark:text-white text-[32px] font-bold leading-tight">₹8.5 Cr</h1>
+                <p class="text-slate-500 dark:text-slate-400 text-sm font-medium flex items-center gap-1">
+                    <span class="material-symbols-outlined text-base">location_on</span> Bandra West, Mumbai, MH
+                </p>
+            </div>
+            <div
+                class="flex flex-col gap-4 rounded-2xl p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 animate-glow">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <div class="p-1.5 bg-deep-blue rounded-lg">
+                            <span class="material-symbols-outlined text-white text-lg">auto_awesome</span>
+                        </div>
+                        <p class="text-deep-blue dark:text-slate-blue text-xs font-bold uppercase tracking-widest">AI
+                            Market Intelligence</p>
+                    </div>
+                    <span class="material-symbols-outlined text-slate-400 text-base">help_outline</span>
+                </div>
+                <div class="flex items-baseline justify-between">
+                    <div>
+                        <p
+                            class="text-slate-500 dark:text-slate-400 text-[10px] font-bold uppercase tracking-tighter mb-0.5">
+                            Estimated Value</p>
+                        <p class="text-slate-900 dark:text-white text-2xl font-bold">₹8.42 Cr</p>
+                    </div>
+                    <div class="bg-slate-blue/10 px-3 py-1 rounded-full">
+                        <p class="text-slate-blue text-xs font-bold flex items-center gap-1">
+                            <span class="material-symbols-outlined text-sm font-bold">query_stats</span> Market Fair
+                        </p>
+                    </div>
+                </div>
+                <div class="pt-3 border-t border-slate-100 dark:border-slate-800">
+                    <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">
+                        Listed <span class="text-deep-blue font-bold">0.9%</span> above our AI prediction for luxury
+                        penthouses in this micro-market.
+                    </p>
+                </div>
+            </div>
+            <div class="grid grid-cols-3 gap-3 py-4 border-y border-slate-100 dark:border-slate-800">
+                <div class="flex flex-col items-center gap-1.5">
+                    <div class="p-2.5 bg-slate-50 dark:bg-slate-800/50 rounded-xl">
+                        <span class="material-symbols-outlined text-slate-blue">bed</span>
+                    </div>
+                    <span class="text-slate-900 dark:text-white font-bold text-xs uppercase">4 BHK</span>
+                </div>
+                <div class="flex flex-col items-center gap-1.5">
+                    <div class="p-2.5 bg-slate-50 dark:bg-slate-800/50 rounded-xl">
+                        <span class="material-symbols-outlined text-slate-blue">bathtub</span>
+                    </div>
+                    <span class="text-slate-900 dark:text-white font-bold text-xs uppercase">4 Baths</span>
+                </div>
+                <div class="flex flex-col items-center gap-1.5">
+                    <div class="p-2.5 bg-slate-50 dark:bg-slate-800/50 rounded-xl">
+                        <span class="material-symbols-outlined text-slate-blue">straighten</span>
+                    </div>
+                    <span class="text-slate-900 dark:text-white font-bold text-xs uppercase">3,800 sqft</span>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-slate-900 dark:text-white text-lg font-bold mb-2">Description</h3>
+                <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed line-clamp-3">
+                    Experience unparalleled luxury in this designer penthouse featuring expansive balconies with Arabian
+                    Sea views. Fully integrated smart home systems, private elevator access, and bespoke Italian marble
+                    flooring throughout.
+                </p>
+                <button class="text-slate-blue font-bold text-xs mt-3 uppercase tracking-wider">Read more</button>
+            </div>
+            <div class="space-y-4">
+                <h3 class="text-slate-900 dark:text-white text-lg font-bold">Amenities</h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="flex items-center gap-3 animate-pop stagger-1">
+                        <div
+                            class="p-2 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700">
+                            <span class="material-symbols-outlined text-deep-blue">garage</span>
+                        </div>
+                        <span class="text-slate-700 dark:text-slate-300 text-sm font-semibold">3 Car Parking</span>
+                    </div>
+                    <div class="flex items-center gap-3 animate-pop stagger-2">
+                        <div
+                            class="p-2 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700">
+                            <span class="material-symbols-outlined text-deep-blue">pool</span>
+                        </div>
+                        <span class="text-slate-700 dark:text-slate-300 text-sm font-semibold">Rooftop Pool</span>
+                    </div>
+                    <div class="flex items-center gap-3 animate-pop stagger-3">
+                        <div
+                            class="p-2 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700">
+                            <span class="material-symbols-outlined text-deep-blue">fitness_center</span>
+                        </div>
+                        <span class="text-slate-700 dark:text-slate-300 text-sm font-semibold">Private Gym</span>
+                    </div>
+                    <div class="flex items-center gap-3 animate-pop stagger-4">
+                        <div
+                            class="p-2 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700">
+                            <span class="material-symbols-outlined text-deep-blue">concierge</span>
+                        </div>
+                        <span class="text-slate-700 dark:text-slate-300 text-sm font-semibold">24/7 Concierge</span>
+                    </div>
+                </div>
+            </div>
+            <div class="space-y-4">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-slate-900 dark:text-white text-lg font-bold">Location</h3>
+                    <button class="text-slate-blue text-xs font-bold uppercase tracking-wider">Open in Maps</button>
+                </div>
+                <div class="rounded-2xl overflow-hidden h-48 bg-slate-200 dark:bg-slate-800 relative group">
+                    <div class="w-full h-full animate-zoom origin-center">
+                        <img class="w-full h-full object-cover grayscale brightness-95 contrast-105"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfIZqotEC5gaTEaSdd2JDoZk4xQKM1J-3jxlPCdsoa_8WA8Zn5de7g_6He2eS-tO8JoDUQMADygIuCf6ZAmNSzcdzfBdJowEcDb0Woi8klgfMt0aFkZjld6sbo8rhTgVDtbLjCMnyQOAXcrWGJHLkYgwymTpucTXZHcw9NIr0onOY77L22h31ti_o6B7yJNBJgJoZQIj65RqdoesVbZmg1Ea0OfKO3LOeF-cSQuYUJWHjuoFJPZTvH8TyEfQhyW2Aq6RTyc9zuxIZ1" />
+                    </div>
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <div
+                            class="bg-deep-blue size-10 rounded-full border-4 border-white shadow-xl flex items-center justify-center">
+                            <div class="bg-white size-2 rounded-full"></div>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute bottom-3 left-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-slate-blue text-sm">navigation</span>
+                        <span class="text-slate-900 dark:text-white text-[10px] font-bold uppercase">5 mins to
+                            Promenade</span>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="p-4 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 flex items-center gap-4">
+                <div class="relative">
+                    <img class="size-14 rounded-full object-cover border-2 border-slate-100 dark:border-slate-800"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjojGt5pvCxO8noafIdwiwAiBv4I17zI95aYys9HzMsLkNOhEjiU4c7qi6cs3awtEajiSCiYiuJMSoF5GN8_PwKipMPPFDGSwQ4Kok1hxfhiHmkYo4Wt-NxtOy_74O4vPit-vll19frm93TqOzjevr20kCugHYZfkgjSF3CcNEHDM8qp8jg2vc1vmVoC9tbW8B2ChVRJ_bJOG1BEka9yaAkQV9-iwcf91E755RsDpt5jRTuHebBamsNOX3yf78eJ4EuF3hopyZsHFQ" />
+                    <div
+                        class="absolute bottom-0 right-0 size-3.5 bg-slate-blue border-2 border-white dark:border-slate-900 rounded-full">
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <h4 class="text-slate-900 dark:text-white font-bold text-base leading-none mb-1">Rahul Malhotra</h4>
+                    <p class="text-slate-500 dark:text-slate-400 text-[10px] font-bold uppercase tracking-tight">Elite
+                        Realty Advisory</p>
+                    <div class="flex items-center gap-1 mt-1">
+                        <span class="text-[10px] text-slate-blue uppercase font-black tracking-widest">Active Now</span>
+                    </div>
+                </div>
+                <button
+                    class="bg-slate-50 dark:bg-slate-800 p-2.5 rounded-full text-slate-600 dark:text-slate-300 ripple-btn">
+                    <span class="material-symbols-outlined text-base">arrow_forward_ios</span>
+                </button>
+            </div>
+            <div class="bg-slate-blue/5 dark:bg-slate-blue/10 border border-slate-blue/20 rounded-2xl p-5">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="material-symbols-outlined text-slate-blue">verified_user</span>
+                    <h4 class="text-slate-blue font-bold text-xs uppercase tracking-widest">HomieNest Verified</h4>
+                </div>
+                <ul class="space-y-3">
+                    <li class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed flex gap-3">
+                        <span class="size-1.5 rounded-full bg-slate-blue mt-1.5 shrink-0"></span>
+                        RERA documentation and title deeds have been digitally verified for this unit.
+                    </li>
+                    <li class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed flex gap-3">
+                        <span class="size-1.5 rounded-full bg-slate-blue mt-1.5 shrink-0"></span>
+                        Physical verification of site accessibility and amenities conducted on Oct 24.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <div
+        class="fixed bottom-0 left-0 right-0 z-50 bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800 pb-10 pt-5 px-5">
+        <div class="max-w-md mx-auto flex gap-4">
+            <button
+                class="ripple-btn flex-1 flex items-center justify-center gap-2 h-14 rounded-2xl border-2 border-deep-blue text-deep-blue font-bold text-sm uppercase tracking-wider hover:bg-deep-blue/5 transition-colors">
+                <span class="material-symbols-outlined text-xl">chat_bubble</span>
+                Chat
+            </button>
+            <button
+                class="ripple-btn flex-[2] flex items-center justify-center gap-2 h-14 rounded-2xl bg-deep-blue text-white font-bold text-sm uppercase tracking-wider shadow-xl shadow-deep-blue/20 hover:brightness-110 active:scale-95 transition-all">
+                <span class="material-symbols-outlined text-xl">phone_in_talk</span>
+                Contact Agent
+            </button>
+        </div>
+    </div>
+
+    <!-- Firebase Details Script -->
+    <!-- Firebase Details Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get property ID from URL or use default
+            const propertyId = new URLSearchParams(window.location.search).get('id') || 'bandra-west-penthouse';
+
+            // DOM Elements
+            const favoriteBtn = document.querySelector('button span.material-symbols-outlined:last-of-type')?.closest('button');
+            const contactBtn = document.querySelector('button:has(span:contains("Contact Agent"))') ||
+                document.querySelectorAll('.fixed.bottom-0 button')[1];
+            const chatBtn = document.querySelectorAll('.fixed.bottom-0 button')[0];
+
+            // Check if property is saved and update heart icon
+            async function updateSaveState(user) {
+                if (!user || !favoriteBtn) return;
+                const isSaved = await window.firebaseHelpers.isPropertySaved(propertyId);
+                const heartIcon = favoriteBtn.querySelector('span');
+                if (isSaved) {
+                    heartIcon.textContent = 'favorite';
+                    heartIcon.style.color = '#ef4444';
+                } else {
+                    heartIcon.textContent = 'favorite_border';
+                    heartIcon.style.color = '';
+                }
+            }
+
+            // Auth state listener
+            if (window.firebaseHelpers) {
+                window.firebaseHelpers.onAuthChange((user) => {
+                    updateSaveState(user);
+                });
+            }
+
+            // Toggle Save Property
+            favoriteBtn?.addEventListener('click', async () => {
+                const user = window.firebaseHelpers.getCurrentUser();
+                if (!user) {
+                    alert('Please login to save properties.');
+                    window.location.href = 'login.html';
+                    return;
+                }
+
+                const propertyData = {
+                    title: 'Bandra West Penthouse',
+                    price: '₹8.5 Cr',
+                    location: 'Bandra West, Mumbai',
+                    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDwe7vBMJAIMdl6mEIx4le4Bkfa98WGvDhlyZNv4lfs_GZUZqHGFW4pfBR3lm-MLzlDgJfWYD9wbOi15BRmqmx7RjQ4TGVmbjKzzpxIBbzq2LdeeN9Dj5ALZQWoXkfWt6KkTbefG_Bq7GQ3k6DZSCl3o-9Xv6tb-dN4igs24hs3XwUjUftT_smuZ1l10sFCYXeY-yJLqhdKScHcR9pxYBzjuuI3hTSpz9wy7abQeJ1Cj4jHZ2YxNW0kHwnpvw0_7phjUao4pcm-MBya'
+                };
+
+                const result = await window.firebaseHelpers.toggleSaveProperty(propertyId, propertyData);
+                if (result.success) {
+                    const heartIcon = favoriteBtn.querySelector('span');
+                    if (result.saved) {
+                        heartIcon.textContent = 'favorite';
+                        heartIcon.style.color = '#ef4444';
+                    } else {
+                        heartIcon.textContent = 'favorite_border';
+                        heartIcon.style.color = '';
+                    }
+                } else {
+                    alert('Error: ' + result.error);
+                }
+            });
+
+            // Contact Agent
+            contactBtn?.addEventListener('click', async () => {
+                const user = window.firebaseHelpers.getCurrentUser();
+                if (!user) {
+                    alert('Please login to contact the agent.');
+                    window.location.href = 'login.html';
+                    return;
+                }
+
+                const message = prompt('Enter your message for the agent:');
+                if (!message) return;
+
+                const result = await window.firebaseHelpers.submitInquiry(propertyId, message);
+                if (result.success) {
+                    alert('Your inquiry has been sent! The agent will contact you soon.');
+                } else {
+                    alert('Error sending inquiry: ' + result.error);
+                }
+            });
+
+            // Chat Button
+            chatBtn?.addEventListener('click', () => {
+                alert('Chat feature coming soon! Use Contact Agent for now.');
+            });
+        });
+    </script>
+</body>
+
+</html>

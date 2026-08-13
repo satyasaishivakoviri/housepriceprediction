@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>HomieNest AI Price Predictor</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#2563eb",
+                        "background-light": "#f8fafc",
+                        "background-dark": "#0f172a",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "12px",
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulseSlow 4s ease-in-out infinite',
+                        'drift': 'drift 10s ease-in-out infinite alternate',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        pulseSlow: {
+                            '0%, 100%': { transform: 'scale(1)', opacity: '0.3' },
+                            '50%': { transform: 'scale(1.2)', opacity: '0.6' },
+                        },
+                        drift: {
+                            '0%': { transform: 'translate(0, 0)' },
+                            '100%': { transform: 'translate(15px, -15px)' },
+                        }
+                    }
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen relative">
+    <!-- Fixed Glassmorphism Background -->
+    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+        <div
+            class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-blue-400/20 blur-[100px] animate-float">
+        </div>
+        <div
+            class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-purple-400/20 blur-[100px] animate-drift">
+        </div>
+        <div
+            class="absolute top-[20%] right-[10%] w-[30%] h-[30%] rounded-full bg-cyan-400/20 blur-[80px] animate-pulse-slow">
+        </div>
+        <div class="absolute inset-0 bg-white/40 dark:bg-navy/80 backdrop-blur-[2px]"></div>
+    </div>
+
+    <div class="flex h-screen bg-background-light dark:bg-background-dark overflow-hidden relative">
+        <!-- Mobile Overlay -->
+        <div id="mobile-overlay" class="fixed inset-0 bg-black/50 z-40 hidden md:hidden glass-nav"></div>
+
+        <!-- Sidebar -->
+        <aside
+            class="fixed inset-y-0 right-0 w-64 bg-white dark:bg-gray-800 border-l border-gray-100 dark:border-gray-700 flex flex-col z-50 transform translate-x-full md:translate-x-0 md:static transition-transform duration-300">
+            <div class="p-6">
+                <div class="flex items-center gap-3 px-2">
+                    <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-lg">home</span>
+                    </div>
+                    <a href="../index.html"
+                        class="font-bold text-xl tracking-tight text-navy dark:text-white">HomieNest</a>
+                </div>
+            </div>
+
+            <nav class="flex-1 px-4 space-y-1 overflow-y-auto">
+                <a href="dashboard.html"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-400 font-medium transition-colors">
+                    <span class="material-symbols-outlined">dashboard</span>
+                    Dashboard
+                </a>
+                <a href="listings.html"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-400 font-medium transition-colors">
+                    <span class="material-symbols-outlined">storefront</span>
+                    Marketplace
+                </a>
+                <a href="predictor.html"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary/10 text-primary font-bold">
+                    <span class="material-symbols-outlined fill-1">psychology</span>
+                    Price Predictor
+                </a>
+                <a href="analytics.html"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-400 font-medium transition-colors">
+                    <span class="material-symbols-outlined">query_stats</span>
+                    Analytics
+                </a>
+                <a href="location-based_price_insights.html"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-400 font-medium transition-colors">
+                    <span class="material-symbols-outlined">location_city</span>
+                    Location Insights
+                </a>
+
+                <div class="mt-6">
+                    <div class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2 px-2">Wishlist</div>
+                    <div id="wishlist-container" class="space-y-1">
+                        <!-- Wishlist items injected by JS -->
+                    </div>
+                </div>
+            </nav>
+
+            <div class="mt-auto pt-4 border-t border-gray-100 dark:border-gray-800">
+                <button onclick="window.installPWA()"
+                    class="flex items-center gap-3 px-4 py-3 mb-2 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-400 font-medium w-full transition-colors">
+                    <span class="material-symbols-outlined">install_mobile</span>
+                    Install App
+                </button>
+                <button onclick="window.firebaseHelpers?.logOut().then(()=>window.location.href='login.html')"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-red-50 dark:hover:bg-red-900/20 text-red-500 font-medium w-full transition-colors">
+                    <span class="material-symbols-outlined">logout</span>
+                    Logout
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 overflow-y-auto">
+            <!-- Mobile Header -->
+            <header
+                class="md:hidden flex items-center justify-between p-4 bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700 sticky top-0 z-30">
+                <div class="flex items-center gap-2">
+                    <img src="../assets/logo.png" alt="HomieNest" class="w-8 h-8 object-contain">
+                    <h1 class="font-bold text-lg text-navy dark:text-white">HomieNest</h1>
+                </div>
+                <button id="mobile-menu-btn"
+                    class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                    <span class="material-symbols-outlined text-gray-600 dark:text-gray-300">menu</span>
+                </button>
+            </header>
+
+            <!-- Desktop Header -->
+            <header
+                class="hidden md:flex bg-white/40 dark:bg-slate-900/40 backdrop-blur-xl border-b border-white/20 dark:border-white/5 px-8 py-4 mb-0 flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <button onclick="window.history.back()"
+                        class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors group">
+                        <span
+                            class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">arrow_back_ios_new</span>
+                    </button>
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">AI Price Predictor</h2>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm">Get accurate property valuations in
+                            seconds.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                </div>
+            </header>
+
+            <div class="p-4 lg:p-8 max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+                    <!-- Left Column: Form -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <!-- Progress Card -->
+                        <div
+                            class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm">
+                            <div class="flex justify-between items-center mb-4">
+                                <div>
+                                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">Property Details</h3>
+                                    <p class="text-sm text-slate-500">Step 2 of 3</p>
+                                </div>
+                                <span class="bg-blue-50 text-primary text-xs font-bold px-3 py-1 rounded-full">AI Model
+                                    v4.2</span>
+                            </div>
+                            <div class="h-2 w-full bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
+                                <div class="h-full bg-primary w-[66%] shadow-[0_0_10px_rgba(37,99,235,0.5)]"></div>
+                            </div>
+                        </div>
+
+                        <!-- Form Card -->
+                        <div
+                            class="bg-white dark:bg-slate-800 rounded-2xl p-6 md:p-8 border border-slate-200 dark:border-slate-700 shadow-sm">
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-6">Tell us about your home
+                            </h3>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <!-- City -->
+                                <div class="space-y-2">
+                                    <label
+                                        class="text-xs font-bold text-slate-500 uppercase tracking-wider">City</label>
+                                    <div class="relative">
+                                        <div class="relative">
+                                            <input list="city-list" id="input-city"
+                                                class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white font-medium focus:ring-2 focus:ring-primary focus:border-transparent outline-none placeholder:text-slate-400"
+                                                placeholder="Type any city... (e.g. Karnal, Mumbai)" />
+                                            <datalist id="city-list">
+                                                <!-- Populated dynamically -->
+                                            </datalist>
+                                            <span
+                                                class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">search</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Neighborhood -->
+                                <div class="space-y-2">
+                                    <label
+                                        class="text-xs font-bold text-slate-500 uppercase tracking-wider">Neighborhood</label>
+                                    <input id="input-location"
+                                        class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white font-medium focus:ring-2 focus:ring-primary focus:border-transparent outline-none placeholder:text-slate-400"
+                                        placeholder="e.g. Indiranagar" />
+                                </div>
+
+                                <!-- Area -->
+                                <div class="space-y-2">
+                                    <label class="text-xs font-bold text-slate-500 uppercase tracking-wider">Area
+                                        (sqft)</label>
+                                    <input id="input-area" type="number"
+                                        class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white font-medium focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
+                                        placeholder="1200" />
+                                </div>
+
+                                <!-- Age -->
+                                <div class="space-y-2">
+                                    <label class="text-xs font-bold text-slate-500 uppercase tracking-wider">Age
+                                        (Years)</label>
+                                    <input id="input-age" type="number"
+                                        class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white font-medium focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
+                                        placeholder="5" />
+                                </div>
+
+                                <!-- BHK -->
+                                <div class="md:col-span-2 space-y-2">
+                                    <label
+                                        class="text-xs font-bold text-slate-500 uppercase tracking-wider">Configuration</label>
+                                    <div class="grid grid-cols-4 gap-3">
+                                        <button type="button" data-value="1 BHK"
+                                            class="bhk-btn py-3 rounded-xl border border-slate-200 dark:border-slate-700 font-medium text-sm hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">1
+                                            BHK</button>
+                                        <button type="button" data-value="2 BHK"
+                                            class="bhk-btn py-3 rounded-xl border-2 border-primary bg-primary/10 text-primary font-bold text-sm">2
+                                            BHK</button>
+                                        <button type="button" data-value="3 BHK"
+                                            class="bhk-btn py-3 rounded-xl border border-slate-200 dark:border-slate-700 font-medium text-sm hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">3
+                                            BHK</button>
+                                        <button type="button" data-value="4 BHK"
+                                            class="bhk-btn py-3 rounded-xl border border-slate-200 dark:border-slate-700 font-medium text-sm hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">4
+                                            BHK</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button id="predict-btn"
+                                class="w-full mt-8 bg-primary hover:bg-blue-600 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-2 transition-all active:scale-[0.98]">
+                                <span>Predict Final Valuation</span>
+                                <span class="material-symbols-outlined">rocket_launch</span>
+                            </button>
+                            <p class="text-[10px] text-center text-slate-400 mt-4 italic">
+                                *AI estimation based on 50k+ market data points. Actual value may vary.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Visuals -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <!-- Map Preview -->
+                        <div
+                            class="bg-white dark:bg-slate-800 rounded-2xl p-4 border border-slate-200 dark:border-slate-700 shadow-sm h-fit">
+                            <div class="flex justify-between items-center mb-4 px-2">
+                                <h4 class="font-bold text-slate-900 dark:text-white">Location Insights</h4>
+                                <span class="text-xs text-primary font-bold cursor-pointer hover:underline">View Full
+                                    Map</span>
+                            </div>
+                            <div
+                                class="relative w-full aspect-square rounded-xl overflow-hidden border border-slate-100 dark:border-slate-700">
+                                <img alt="Map Context"
+                                    class="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0Vy_XBKsV2GW7c_EeAYarbctpDe7t4OIVyGZqUAkCOsqUbFYlS8p7gNudEofUX3gzCwcptJ1qgTcA5qtCkDfQpdKF2vA8T71wAX7rq1TNCcDMzddl_P_eaylUyuY1B2cs8GTLtD9kBimgispEl7RXmfiViGXjHtM-qJOcyM1jDhjs2q_OUFPK1CSqNM3U52TJptoQKgUkEtiVUaYN6nK-0o55xC9cg6Xy-k-7sI_ZhBpVy_LohZy_efaQXR16w17Nf79K0HBVdfEx" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+                                <div class="absolute bottom-4 left-4 text-white">
+                                    <p class="text-xs font-bold uppercase tracking-wider opacity-80">Market Trend</p>
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-2xl font-bold">+12.4%</span>
+                                        <span class="material-symbols-outlined text-green-400">trending_up</span>
+                                    </div>
+                                    <p class="text-[10px] opacity-70">Appreciation in last 12 months</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Stats or Info -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <div
+                                class="bg-blue-50 dark:bg-slate-800 p-4 rounded-2xl border border-blue-100 dark:border-slate-700">
+                                <span class="material-symbols-outlined text-primary mb-2">verified_user</span>
+                                <p class="text-slate-500 text-xs font-bold uppercase">Accuracy</p>
+                                <p class="text-slate-900 dark:text-white text-lg font-bold">98.2%</p>
+                            </div>
+                            <div
+                                class="bg-green-50 dark:bg-slate-800 p-4 rounded-2xl border border-green-100 dark:border-slate-700">
+                                <span class="material-symbols-outlined text-green-600 mb-2">update</span>
+                                <p class="text-slate-500 text-xs font-bold uppercase">Data Freshness</p>
+                                <p class="text-slate-900 dark:text-white text-lg font-bold">2h Ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Bottom Nav (Visible only on mobile) -->
+            <div
+                class="lg:hidden fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800 flex justify-around p-3 z-50">
+                <a class="flex flex-col items-center gap-1 text-slate-400" href="dashboard.html">
+                    <span class="material-symbols-outlined">grid_view</span>
+                    <span class="text-[10px]">Dashboard</span>
+                </a>
+                <a class="flex flex-col items-center gap-1 text-slate-400" href="listings.html">
+                    <span class="material-symbols-outlined">storefront</span>
+                    <span class="text-[10px]">Market</span>
+                </a>
+                <a class="flex flex-col items-center gap-1 text-primary" href="predictor.html">
+                    <span class="material-symbols-outlined">psychology</span>
+                    <span class="text-[10px]">Predict</span>
+                </a>
+                <a class="flex flex-col items-center gap-1 text-slate-400" href="analytics.html">
+                    <span class="material-symbols-outlined">monitoring</span>
+                    <span class="text-[10px]">Analytics</span>
+                </a>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Logic Script (Preserved) -->
+    <!-- Firebase already loaded via regular script -->
+
+
+    <script src="/js/firebase-config.js"></script>
+    <script src="/js/install-app.js"></script>
+    <script src="/js/mobile-menu.js"></script>
+    <script src="/js/wishlist.js"></script>
+    <script>
+        // Check auth on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            if (window.firebaseHelpers && window.firebaseHelpers.onAuthChange) {
+                window.firebaseHelpers.onAuthChange((user) => {
+                    if (!user) {
+                        window.location.href = 'login.html';
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script src="/js/real-estate-data.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const predictBtn = document.getElementById('predict-btn');
+            const bhkBtns = document.querySelectorAll('.bhk-btn');
+
+            // City Areas Data
+            const cityAreas = {
+                "Bangalore": ["Indiranagar", "Koramangala", "Whitefield", "HSR Layout", "Jayanagar", "JP Nagar", "Electronic City", "Hebbal", "Yelahanka", "Bannerghatta Road", "Marathahalli", "Sarjapur Road", "Bellandur", "Banashankari", "Malleswaram"],
+                "Mumbai": ["Bandra West", "Andheri West", "Juhu", "Powai", "Worli", "Lower Parel", "Colaba", "Malad", "Goregaon", "Borivali", "Chembur", "Ghatkopar", "Mulund", "Thane", "Navi Mumbai"],
+                "Delhi": ["Vasant Kunj", "Greater Kailash", "Hauz Khas", "Defence Colony", "Saket", "Dwarka", "Rohini", "Janakpuri", "Lajpat Nagar", "Karol Bagh", "Model Town", "Pitampura", "Mayur Vihar"],
+                "Hyderabad": ["Gachibowli", "Hitech City", "Jubilee Hills", "Banjara Hills", "Kukatpally", "Madhapur", "Kondapur", "Manikonda", "Miyapur", "Begumpet", "Secunderabad"],
+                "Chennai": ["Adyar", "Anna Nagar", "Besant Nagar", "T Nager", "Velachery", "OMR", "Porur", "Mylapore", "Nungambakkam", "Thiruvanmiyur"],
+                "Pune": ["Koregaon Park", "Kalyani Nagar", "Viman Nagar", "Baner", "Aundh", "Wakad", "Hinjewadi", "Kothrud", "Hadapsar", "Magarpatta"],
+                "Kolkata": ["Salt Lake", "New Town", "Ballygunge", "Alipore", "Park Street", "Dum Dum", "Rajarhat", "Tollygunge", "Jadavpur"],
+                "Gurgaon": ["DLF Phase 1-5", "Golf Course Road", "Sohna Road", "Sector 56", "Sector 45", "MG Road", "Cyber City", "Palam Vihar"],
+                "Noida": ["Sector 15", "Sector 18", "Sector 50", "Sector 62", "Sector 137", "Noida Extension", "Sector 75", "Sector 78"],
+                "Ahmedabad": ["Satellite", "Bodakdev", "Vastrapur", "Prahlad Nagar", "Thaltej", "Gota", "Bopal", "Mani Nagar", "Navrangpura"],
+                "Visakhapatnam": ["Madhurawada", "MVP Colony", "Seethammadhara", "Gajuwaka", "Yendada", "Rushikonda", "Siripuram", "Maddilalem"],
+                "Surat": ["Vesu", "Adajan", "Pal", "Piplod", "Varachha", "Katargam", "Rander"],
+                "Jaipur": ["Vaishali Nagar", "Malviya Nagar", "C Scheme", "Jagatpura", "Mansarovar", "Bani Park", "Tonk Road"],
+                "Lucknow": ["Gomti Nagar", "Aliganj", "Hazratganj", "Indira Nagar", "Mahanagar", "Jankipuram"],
+                "Chandigarh": ["Sector 17", "Sector 35", "Sector 43", "Sector 15", "Sector 8", "Zirakpur", "Mohali", "Panchkula"]
+            };
+
+            // 1. Populate City Datalist from Data Engine
+            const cityDataList = document.getElementById('city-list');
+            if (window.RealEstateData && cityDataList) {
+                const supportedCities = window.RealEstateData.getSupportedCities();
+                supportedCities.forEach(city => {
+                    const option = document.createElement('option');
+                    option.value = city;
+                    cityDataList.appendChild(option);
+                });
+            }
+            const cityInput = document.getElementById('input-city');
+            const locationInput = document.getElementById('input-location');
+
+            // Pre-fill from Home Page Search
+            const prefillLoc = localStorage.getItem('predict_location');
+            if (prefillLoc && locationInput) {
+                locationInput.value = prefillLoc;
+                localStorage.removeItem('predict_location');
+            }
+
+            // Dynamic Datalist Logic
+            const locationDatalist = document.createElement('datalist');
+            locationDatalist.id = 'neighborhood-list';
+            document.body.appendChild(locationDatalist);
+            if (locationInput) locationInput.setAttribute('list', 'neighborhood-list');
+
+            function updateAreas() {
+                if (!cityInput) return;
+                const city = cityInput.value;
+                if (!city) return;
+
+                // Create placeholder neighborhoods based on data engine
+                // Ideally this comes from the city data too, but for now we let users type freely
+                // The Generative Engine supports any neighborhood name anyway.
+            }
+
+            if (cityInput) {
+                /*
+                cityInput.addEventListener('change', () => {
+                    if (locationInput) locationInput.value = '';
+                    updateAreas();
+                });
+                */
+                // Removed restrictive updateAreas clearing logic to allow free typing
+            }
+
+            // State
+            let selectedBHK = '2 BHK';
+
+            // BHK Selection Logic
+            bhkBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    bhkBtns.forEach(b => {
+                        b.classList.remove('border-2', 'border-primary', 'bg-primary/10', 'text-primary', 'font-bold');
+                        b.classList.add('border', 'border-slate-200', 'dark:border-slate-700', 'font-medium'); // Updated reset classes
+
+                    });
+                    // Remove specifics first
+                    btn.classList.remove('border', 'border-slate-200', 'dark:border-slate-700', 'font-medium');
+
+                    btn.classList.add('border-2', 'border-primary', 'bg-primary/10', 'text-primary', 'font-bold');
+                    selectedBHK = btn.getAttribute('data-value');
+                });
+            });
+
+            // Mobile Menu & Modal Logic
+            window.closeResultModal = function () {
+                // Legacy: kept to prevent errors if invoked, but modal is removed
+            };
+
+            // Prediction Validation & Save Logic
+            predictBtn.addEventListener('click', async () => {
+                const cityEl = document.getElementById('input-city');
+                const locationEl = document.getElementById('input-location');
+                const areaEl = document.getElementById('input-area');
+                const ageEl = document.getElementById('input-age');
+
+                const city = cityEl ? cityEl.value : '';
+                const location = locationEl ? locationEl.value.trim() : '';
+                const area = areaEl ? areaEl.value.trim() : '';
+                const age = ageEl ? ageEl.value : '';
+
+                if (!location) {
+                    alert("Please enter a Neighborhood/Location");
+                    if (locationEl) locationEl.focus();
+                    return;
+                }
+                if (!area) {
+                    alert("Please enter the Area (sqft)");
+                    if (areaEl) areaEl.focus();
+                    return;
+                }
+
+                predictBtn.disabled = true;
+                predictBtn.innerHTML = '<span class="material-symbols-outlined animate-spin">progress_activity</span> Analyzing...';
+
+                try {
+                    // Check if RealEstateData is loaded
+                    if (!window.RealEstateData) {
+                        throw new Error('RealEstateData not loaded');
+                    }
+
+                    // USE DATA ENGINE FOR RATES
+                    const cityData = window.RealEstateData.getCityData(city);
+
+                    // Fallback to average if even generative fails (unlikely)
+                    const baseRate = cityData ? cityData.avgPricePerSqft : 4500;
+
+                    const rateJitter = baseRate * (0.9 + Math.random() * 0.2);
+                    const areaNum = parseInt(area) || 0;
+                    let estimatedVal = (rateJitter * areaNum) / 10000000;
+
+                    const ageNum = parseInt(age) || 0;
+                    if (ageNum > 5) estimatedVal *= 0.95;
+                    if (ageNum > 15) estimatedVal *= 0.85;
+
+                    const minVal = (estimatedVal * 0.92).toFixed(2);
+                    const maxVal = (estimatedVal * 1.08).toFixed(2);
+
+                    const predictionData = {
+                        city, location, area, age,
+                        bhk: selectedBHK,
+                        priceRange: `₹${minVal} Cr - ₹${maxVal} Cr`,
+                        timestamp: new Date()
+                    };
+
+                    // Try to save to Firebase (non-blocking)
+                    if (window.firebaseHelpers) {
+                        window.firebaseHelpers.savePrediction(predictionData)
+                            .then(result => {
+                                if (!result.success && result.error === "Not authenticated") {
+                                    console.warn("Guest prediction");
+                                }
+                            }).catch(console.error);
+                    }
+
+                    // Save data for results page and redirect
+                    setTimeout(() => {
+                        localStorage.setItem('last_prediction', JSON.stringify(predictionData));
+                        window.location.href = 'prediction_result.html';
+                    }, 1500);
+
+                } catch (e) {
+                    console.error('Prediction error:', e);
+                    alert("Error generating prediction: " + e.message);
+                    predictBtn.disabled = false;
+                    predictBtn.innerHTML = '<span>Predict Final Valuation</span> <span class="material-symbols-outlined">rocket_launch</span>';
+                }
+            });
+        });
+    </script>
+    <!-- Firebase already loaded above -->
+
+</body>
+
+</html>

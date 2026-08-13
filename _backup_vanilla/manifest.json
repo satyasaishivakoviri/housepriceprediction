@@ -1,0 +1,29 @@
+{
+    "name": "HomieNest",
+    "short_name": "HomieNest",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#f8f9fc",
+    "theme_color": "#0d59f2",
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "assets/icon.png",
+            "type": "image/png",
+            "sizes": "192x192 512x512",
+            "purpose": "any maskable"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Predict Price",
+            "url": "/predictor.html",
+            "description": "AI Price Predictor for your home"
+        },
+        {
+            "name": "Marketplace",
+            "url": "/listings.html",
+            "description": "Browse real estate listings"
+        }
+    ]
+}

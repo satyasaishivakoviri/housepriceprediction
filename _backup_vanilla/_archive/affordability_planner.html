@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Affordability &amp; EMI Planner - HomieNest</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0d59f2",
+              "background-light": "#f5f6f8",
+              "background-dark": "#101622",
+            },
+            fontFamily: {
+              "display": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .radial-progress {
+            background: conic-gradient(from 180deg at 50% 50%, #0d59f2 0deg, #0d59f2 280deg, #e5e7eb 280deg, #e5e7eb 360deg);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#0d121c] dark:text-gray-100 antialiased">
+<div class="max-w-md mx-auto min-h-screen flex flex-col bg-background-light dark:bg-background-dark">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 flex items-center bg-white/80 dark:bg-background-dark/80 backdrop-blur-md px-4 py-4 justify-between border-b border-gray-100 dark:border-gray-800">
+<div class="text-[#0d121c] dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</div>
+<h2 class="text-[#0d121c] dark:text-white text-lg font-bold leading-tight tracking-tight flex-1 text-center">Affordability Planner</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-transparent text-[#0d121c] dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined">info</span>
+</button>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto pb-24">
+<!-- Header Section -->
+<div class="px-4 pt-6">
+<h1 class="text-2xl font-bold text-gray-900 dark:text-white">Smart Budget Planner</h1>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">HomieNest AI analyzes your finances for the best recommendation.</p>
+</div>
+<!-- Visual Affordability Index -->
+<div class="mx-4 mt-6 bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-800 flex flex-col items-center">
+<div class="relative w-48 h-48 flex items-center justify-center">
+<!-- Semi-circle radial visualization simulation -->
+<div class="absolute inset-0 rounded-full border-[12px] border-gray-100 dark:border-gray-800"></div>
+<div class="absolute inset-0 rounded-full border-[12px] border-primary border-t-transparent border-l-transparent rotate-[45deg]"></div>
+<div class="text-center">
+<span class="text-4xl font-black text-primary">82</span>
+<p class="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest">Affordability Index</p>
+</div>
+</div>
+<div class="mt-4 text-center">
+<p class="text-sm font-medium text-gray-600 dark:text-gray-300 italic">"Excellent health. You can comfortably afford a premium 3BHK."</p>
+</div>
+</div>
+<!-- Recommendation Card -->
+<div class="mx-4 mt-6 bg-primary rounded-2xl p-6 shadow-lg shadow-primary/20 text-white relative overflow-hidden">
+<div class="relative z-10">
+<p class="text-primary-100 text-sm font-medium opacity-80">Max Recommended Property Price</p>
+<h2 class="text-4xl font-bold mt-1">₹ 1.45 Cr</h2>
+<div class="flex items-center mt-4 gap-2 text-xs bg-white/20 w-fit px-3 py-1 rounded-full backdrop-blur-sm">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+                        Based on 8.5% p.a interest rate
+                    </div>
+</div>
+<!-- Abstract Pattern background decoration -->
+<div class="absolute -right-10 -bottom-10 opacity-20 transform rotate-12">
+<span class="material-symbols-outlined text-[160px]">calculate</span>
+</div>
+</div>
+<!-- Financial Inputs Section -->
+<div class="px-4 mt-8">
+<h2 class="text-[#0d121c] dark:text-white text-xl font-bold leading-tight tracking-tight mb-4">Financial Inputs</h2>
+<div class="space-y-4">
+<!-- Monthly Income TextField -->
+<div class="flex flex-col gap-2">
+<label class="flex flex-col flex-1">
+<p class="text-sm font-semibold text-gray-700 dark:text-gray-300 pb-2">Monthly Net Income (INR)</p>
+<div class="flex w-full flex-1 items-stretch">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#0d121c] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/20 border border-[#ced7e8] dark:border-gray-700 bg-white dark:bg-gray-900 focus:border-primary h-14 p-[15px] rounded-r-none border-r-0 text-base font-normal leading-normal" placeholder="e.g. 1,50,000" type="number" value="180000"/>
+<div class="text-[#49659c] dark:text-gray-400 flex border border-[#ced7e8] dark:border-gray-700 bg-gray-50 dark:bg-gray-800 items-center justify-center px-4 rounded-r-lg border-l-0">
+<span class="material-symbols-outlined text-xl">payments</span>
+</div>
+</div>
+</label>
+</div>
+<!-- Existing Debts TextField -->
+<div class="flex flex-col gap-2">
+<label class="flex flex-col flex-1">
+<p class="text-sm font-semibold text-gray-700 dark:text-gray-300 pb-2">Existing Monthly EMIs (INR)</p>
+<div class="relative">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#0d121c] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/20 border border-[#ced7e8] dark:border-gray-700 bg-white dark:bg-gray-900 focus:border-primary h-14 p-[15px] text-base font-normal leading-normal" placeholder="Car loan, personal loan etc." type="number" value="25000"/>
+</div>
+</label>
+</div>
+<!-- Down Payment TextField -->
+<div class="flex flex-col gap-2">
+<label class="flex flex-col flex-1">
+<p class="text-sm font-semibold text-gray-700 dark:text-gray-300 pb-2">Planned Down Payment (INR)</p>
+<div class="flex w-full flex-1 items-stretch">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#0d121c] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/20 border border-[#ced7e8] dark:border-gray-700 bg-white dark:bg-gray-900 focus:border-primary h-14 p-[15px] rounded-r-none border-r-0 text-base font-normal leading-normal" placeholder="e.g. 20,00,000" type="number" value="3000000"/>
+<div class="text-[#49659c] dark:text-gray-400 flex border border-[#ced7e8] dark:border-gray-700 bg-gray-50 dark:bg-gray-800 items-center justify-center px-4 rounded-r-lg border-l-0">
+<span class="material-symbols-outlined text-xl">account_balance_wallet</span>
+</div>
+</div>
+</label>
+</div>
+</div>
+</div>
+<!-- Cost Breakdown Section -->
+<div class="px-4 mt-8">
+<h2 class="text-[#0d121c] dark:text-white text-xl font-bold leading-tight tracking-tight mb-4">Monthly Cost Breakdown</h2>
+<div class="bg-white dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800 overflow-hidden divide-y divide-gray-100 dark:divide-gray-800">
+<div class="p-4 flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="size-10 bg-blue-50 dark:bg-blue-900/30 rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-xl">home</span>
+</div>
+<div>
+<p class="text-sm font-semibold text-gray-800 dark:text-gray-200">Home Loan EMI</p>
+<p class="text-xs text-gray-500">Estimated 20 yr tenure</p>
+</div>
+</div>
+<p class="text-base font-bold text-gray-900 dark:text-white">₹ 65,420</p>
+</div>
+<div class="p-4 flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="size-10 bg-green-50 dark:bg-green-900/30 rounded-lg flex items-center justify-center text-green-600">
+<span class="material-symbols-outlined text-xl">settings_suggest</span>
+</div>
+<div>
+<p class="text-sm font-semibold text-gray-800 dark:text-gray-200">Maintenance Costs</p>
+<p class="text-xs text-gray-500">Average Society charges</p>
+</div>
+</div>
+<p class="text-base font-bold text-gray-900 dark:text-white">₹ 5,500</p>
+</div>
+<div class="p-4 flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="size-10 bg-orange-50 dark:bg-orange-900/30 rounded-lg flex items-center justify-center text-orange-600">
+<span class="material-symbols-outlined text-xl">account_balance</span>
+</div>
+<div>
+<p class="text-sm font-semibold text-gray-800 dark:text-gray-200">Property Tax</p>
+<p class="text-xs text-gray-500">Monthly provision</p>
+</div>
+</div>
+<p class="text-base font-bold text-gray-900 dark:text-white">₹ 1,200</p>
+</div>
+</div>
+<!-- Assumption Disclaimer -->
+<div class="mt-4 p-3 bg-gray-50 dark:bg-gray-800/50 rounded-lg flex items-start gap-3">
+<span class="material-symbols-outlined text-gray-400 text-sm mt-0.5">info</span>
+<p class="text-[11px] text-gray-500 leading-relaxed">
+                        Calculations assume a standard home loan rate of 8.5% with a 20-year tenure. Maintenance is estimated based on average rates for properties in Tier-1 cities in India.
+                    </p>
+</div>
+</div>
+</main>
+<!-- Bottom Action Bar (Fixed) -->
+<div class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-white/90 dark:bg-background-dark/90 backdrop-blur-xl border-t border-gray-100 dark:border-gray-800 p-4 pb-8 flex items-center gap-4 z-50">
+<button class="flex-1 bg-primary text-white h-14 rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg shadow-primary/25 active:scale-95 transition-transform">
+                Find Homes in Range
+                <span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</body></html>

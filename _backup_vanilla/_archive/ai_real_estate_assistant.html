@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>HomieNest - EstateBot AI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0047AB", // Deep Blue
+                        "deep-blue": "#003087",
+                        "soft-blue": "#E3F2FD",
+                        "accent-blue": "#0D59F2",
+                        "background-light": "#F8FAFF",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1.25rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .glass-header {
+                background: rgba(255, 255, 255, 0.85);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                border-bottom: 1px solid rgba(0, 71, 171, 0.08);
+            }
+            .chat-container {
+                height: calc(100vh - 160px);
+                overflow-y: auto;
+                scrollbar-width: none;
+            }
+            .chat-container::-webkit-scrollbar {
+                display: none;
+            }
+            .animated-mesh {
+                background-color: #f8faff;
+                background-image: 
+                    radial-gradient(at 0% 0%, rgba(0, 71, 171, 0.03) 0px, transparent 50%),
+                    radial-gradient(at 100% 0%, rgba(13, 89, 242, 0.04) 0px, transparent 50%),
+                    radial-gradient(at 50% 50%, rgba(227, 242, 253, 0.5) 0px, transparent 80%),
+                    radial-gradient(at 0% 100%, rgba(0, 71, 171, 0.03) 0px, transparent 50%);
+                background-size: 200% 200%;
+                animation: mesh-move 15s ease infinite;
+            }
+            @keyframes mesh-move {
+                0% { background-position: 0% 0%; }
+                50% { background-position: 100% 100%; }
+                100% { background-position: 0% 0%; }
+            }
+            @keyframes blue-pulse {
+                0%, 100% { transform: scale(1); opacity: 0.4; }
+                50% { transform: scale(1.2); opacity: 1; }
+            }
+            .pulse-dot {
+                animation: blue-pulse 1.4s infinite ease-in-out;
+            }
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+            min-height: 100dvh;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light font-display text-[#0d121c] overflow-hidden">
+<div class="h-12 w-full bg-white sticky top-0 z-50"></div>
+<nav class="glass-header sticky top-12 z-40 px-4 py-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-deep-blue cursor-pointer font-bold">arrow_back_ios</span>
+<div class="relative">
+<div class="w-10 h-10 rounded-full bg-soft-blue flex items-center justify-center overflow-hidden border border-primary/10">
+<img class="w-full h-full object-cover" data-alt="Modern AI assistant profile avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6JpsLEb9ts3NtFluWdzVup6M7TchmoL2IlgunvrbBrJGcRibeeJLyzim2_cncd4fXf-BV-vb0hpc6VwPyDZPb3x8OCuW_xpWIAp8FJ8agl8PEa9zIjMiaQftWFmDKEFl3uKre2pfJzM3qARrT0mKSR7pArJb7YDUSecYmgQ4I4AMWoCtefvL5Y1HM75rsaBJ7SMVtsEougWfQHNobZeBevASgBhhfxdKpn0sUULdnhYgIENfI--TjWhOX2y5EjMdva7kKlNLZk32e"/>
+</div>
+<div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full shadow-sm"></div>
+</div>
+<div>
+<h1 class="text-[15px] font-bold text-deep-blue leading-none">EstateBot AI</h1>
+<p class="text-[10px] text-primary font-semibold mt-1 uppercase tracking-wider">Expert Mode</p>
+</div>
+</div>
+<button class="flex items-center gap-1 text-deep-blue text-sm font-bold bg-soft-blue/50 px-3 py-1.5 rounded-full border border-primary/5">
+<span class="material-symbols-outlined text-lg">ios_share</span>
+            Export
+        </button>
+</nav>
+<main class="chat-container animated-mesh px-4 py-6 flex flex-col gap-6">
+<div class="flex items-start gap-3 max-w-[88%]">
+<div class="w-8 h-8 rounded-full bg-deep-blue flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-white text-lg">smart_toy</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<span class="text-[11px] font-semibold text-deep-blue/60 ml-1">EstateBot AI</span>
+<div class="bg-white p-4 rounded-2xl rounded-tl-none shadow-sm border border-primary/5">
+<p class="text-[15px] leading-relaxed text-[#1a1c1e]">
+                        Namaste! I'm your Indian real estate expert. I can help you predict property prices in Mumbai, analyze RERA filings, or compare market trends in 15+ cities.
+                    </p>
+</div>
+</div>
+</div>
+<div class="flex gap-2 overflow-x-auto pb-2 -mx-4 px-4 scrollbar-hide">
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white border border-primary/20 px-4 shadow-sm active:scale-95 transition-all">
+<span class="material-symbols-outlined text-deep-blue text-[18px]">analytics</span>
+<p class="text-deep-blue text-xs font-bold">Predict Price</p>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white border border-primary/20 px-4 shadow-sm active:scale-95 transition-all">
+<span class="material-symbols-outlined text-deep-blue text-[18px]">compare_arrows</span>
+<p class="text-deep-blue text-xs font-bold">Compare Localities</p>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white border border-primary/20 px-4 shadow-sm active:scale-95 transition-all">
+<span class="material-symbols-outlined text-deep-blue text-[18px]">verified_user</span>
+<p class="text-deep-blue text-xs font-bold">RERA Check</p>
+</div>
+</div>
+<div class="flex items-start gap-3 self-end max-w-[85%] flex-row-reverse">
+<div class="w-8 h-8 rounded-full bg-soft-blue border border-primary/10 shrink-0 overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="User profile placeholder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCh2f5mfUuoCyYSDH-zS3-QhexL35N0IIjsuXup5ArK8clX0LnRw72PQDuLtRWMI388COUvPW5iP3xY8nhw58_kM-pSzxhm4-ik2ivsEOXbsSNyHfWUrZf7Jy0i--HshEixh_zmJbVpq-FbSUim6zZulFSpmo8Oc_AyvMJ1tKzD_J4FjQLLKalklvlxF4aN8GOAvY0WKSpAFHJrg_-spxcHDdMnKril86kBQuT6CJEFnsZKUzLqtpzZCg0Wbx721U9XjMeK1g41ATuV"/>
+</div>
+<div class="flex flex-col gap-1.5 items-end">
+<span class="text-[11px] font-semibold text-deep-blue/60 mr-1">You</span>
+<div class="bg-soft-blue p-4 rounded-2xl rounded-tr-none shadow-sm border border-primary/10">
+<p class="text-[15px] text-deep-blue font-medium leading-relaxed">
+                        Compare 3BHK prices in Worli vs Bandra West.
+                    </p>
+</div>
+</div>
+</div>
+<div class="flex items-start gap-3 max-w-[92%]">
+<div class="w-8 h-8 rounded-full bg-deep-blue flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-white text-lg">smart_toy</span>
+</div>
+<div class="flex flex-col gap-3 flex-1">
+<span class="text-[11px] font-semibold text-deep-blue/60 ml-1">EstateBot AI</span>
+<div class="bg-white p-4 rounded-2xl rounded-tl-none shadow-sm border border-primary/5">
+<p class="text-[15px] leading-relaxed mb-4 text-[#1a1c1e]">
+                        Here's a comparison of premium 3BHK high-rises in Mumbai's luxury hubs:
+                    </p>
+<div class="rounded-xl border border-primary/10 overflow-hidden text-sm">
+<div class="grid grid-cols-3 bg-soft-blue/30 p-3 font-bold text-[11px] text-deep-blue uppercase tracking-tight">
+<div>Metric</div>
+<div class="text-center">Worli</div>
+<div class="text-center">Bandra W</div>
+</div>
+<div class="grid grid-cols-3 p-3 border-t border-primary/5 bg-white">
+<div class="text-gray-500 font-medium">Avg. Rate</div>
+<div class="text-center font-bold text-deep-blue">₹65k/sqft</div>
+<div class="text-center font-bold text-deep-blue">₹58k/sqft</div>
+</div>
+<div class="grid grid-cols-3 p-3 border-t border-primary/5 bg-white">
+<div class="text-gray-500 font-medium">Inventory</div>
+<div class="text-center text-red-600 font-semibold">Low</div>
+<div class="text-center text-amber-600 font-semibold">Mid</div>
+</div>
+<div class="grid grid-cols-3 p-3 border-t border-primary/10 bg-soft-blue/40">
+<div class="text-deep-blue font-bold">Trend</div>
+<div class="text-center text-deep-blue font-bold flex items-center justify-center gap-0.5">
+<span class="material-symbols-outlined text-sm">trending_up</span> +12%
+                            </div>
+<div class="text-center text-deep-blue font-bold flex items-center justify-center gap-0.5">
+<span class="material-symbols-outlined text-sm">trending_up</span> +8%
+                            </div>
+</div>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="bg-white border border-primary/20 px-4 py-2.5 rounded-xl text-xs font-bold text-deep-blue shadow-sm active:scale-95 transition-all">View on map</button>
+<button class="bg-white border border-primary/20 px-4 py-2.5 rounded-xl text-xs font-bold text-deep-blue shadow-sm active:scale-95 transition-all">Download Report</button>
+</div>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-deep-blue flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-white text-lg">smart_toy</span>
+</div>
+<div class="bg-white px-5 py-4 rounded-2xl rounded-tl-none shadow-sm flex gap-1.5 items-center border border-primary/5">
+<div class="w-1.5 h-1.5 bg-primary rounded-full pulse-dot"></div>
+<div class="w-1.5 h-1.5 bg-primary rounded-full pulse-dot" style="animation-delay: 0.2s"></div>
+<div class="w-1.5 h-1.5 bg-primary rounded-full pulse-dot" style="animation-delay: 0.4s"></div>
+</div>
+</div>
+<div class="h-24"></div>
+</main>
+<footer class="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-xl pb-8 pt-4 px-4 border-t border-primary/10 z-50">
+<div class="max-w-screen-sm mx-auto flex items-center gap-3">
+<button class="w-11 h-11 rounded-full flex items-center justify-center bg-soft-blue text-deep-blue active:scale-90 transition-transform">
+<span class="material-symbols-outlined font-bold">add</span>
+</button>
+<div class="flex-1 relative">
+<input class="w-full bg-soft-blue/50 border-none rounded-2xl py-3.5 px-5 text-[15px] focus:ring-2 focus:ring-primary/20 text-deep-blue placeholder:text-deep-blue/40" placeholder="Ask about property prices..." type="text"/>
+</div>
+<button class="w-11 h-11 rounded-full flex items-center justify-center bg-deep-blue text-white shadow-lg shadow-deep-blue/30 active:scale-90 transition-transform">
+<span class="material-symbols-outlined font-bold">send</span>
+</button>
+</div>
+<div class="h-1.5 w-32 bg-deep-blue/10 rounded-full mx-auto mt-6"></div>
+</footer>
+
+</body></html>

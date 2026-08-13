@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Sign Up - HomieNest</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script type="module" src="../js/firebase-config.js"></script>
+    <script type="module">
+        // Strict Auth Redirect: If logged in, go to index immediately
+        const initAuthCheck = () => {
+            if (window.firebaseHelpers && window.firebaseHelpers.onAuthChange) {
+                window.firebaseHelpers.onAuthChange((user) => {
+                    if (user) {
+                        window.location.replace('index.html');
+                    }
+                });
+            } else {
+                setTimeout(initAuthCheck, 50);
+            }
+        };
+        initAuthCheck();
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f8fafc",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased min-h-screen flex flex-col">
+
+    <!-- Navbar Minimal - Glaido Style -->
+    <nav class="w-full px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <button onclick="window.history.back()"
+                class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors group">
+                <span
+                    class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">arrow_back_ios_new</span>
+            </button>
+            <a href="../index.html" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                <div class="size-8 rounded-lg bg-primary text-white flex items-center justify-center">
+                    <span class="material-symbols-outlined text-xl">home_pin</span>
+                </div>
+                <span class="font-bold text-lg tracking-tight">HomieNest</span>
+            </a>
+        </div>
+        <div class="flex items-center gap-6">
+            <div class="hidden sm:flex items-center gap-6 text-sm font-medium">
+                <a href="about.html"
+                    class="text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors">About</a>
+                <a href="about.html#faq"
+                    class="text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors">FAQ</a>
+            </div>
+            <a href="login.html"
+                class="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-primary transition-colors px-3 py-2">
+                Sign in
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center justify-center p-4">
+        <div
+            class="w-full max-w-[400px] bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700 p-8">
+
+            <div class="text-center mb-6">
+                <h1 class="text-2xl font-bold mb-2">Create your HomieNest Account</h1>
+                <p class="text-slate-500 dark:text-slate-400 text-sm">Join the future of real estate price prediction.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- Name -->
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-slate-500 mb-1.5" for="fullname">Full
+                        Name</label>
+                    <div class="relative">
+                        <span
+                            class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">person</span>
+                        <input
+                            class="w-full rounded-xl border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-900/50 pl-10 pr-3 py-3 text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
+                            id="fullname" type="text" placeholder="e.g. Jane Doe" />
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-slate-500 mb-1.5" for="email">Email
+                        Address</label>
+                    <div class="relative">
+                        <span
+                            class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">mail</span>
+                        <input
+                            class="w-full rounded-xl border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-900/50 pl-10 pr-3 py-3 text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
+                            id="email" type="email" placeholder="name@email.com" />
+                    </div>
+                </div>
+
+                <!-- Password -->
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-slate-500 mb-1.5"
+                        for="password">Password</label>
+                    <div class="relative">
+                        <span
+                            class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">lock</span>
+                        <input
+                            class="w-full rounded-xl border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-900/50 pl-10 pr-10 py-3 text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
+                            id="password" type="password" placeholder="Min 8 characters" />
+                        <button id="toggle-password"
+                            class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-primary transition-colors">
+                            <span class="material-symbols-outlined text-lg">visibility</span>
+                        </button>
+                    </div>
+                    <!-- Strength Bar -->
+                    <div class="flex gap-1 h-1 w-full mt-2">
+                        <div
+                            class="h-full bg-slate-100 rounded-full flex-1 transition-colors duration-300 strength-bar">
+                        </div>
+                        <div
+                            class="h-full bg-slate-100 rounded-full flex-1 transition-colors duration-300 strength-bar">
+                        </div>
+                        <div
+                            class="h-full bg-slate-100 rounded-full flex-1 transition-colors duration-300 strength-bar">
+                        </div>
+                        <div
+                            class="h-full bg-slate-100 rounded-full flex-1 transition-colors duration-300 strength-bar">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button id="submit-btn"
+                    class="w-full bg-primary hover:bg-primary/90 text-white font-bold h-12 rounded-xl mt-4 shadow-lg shadow-primary/20 transition-all active:scale-[0.98]">
+                    Create Account
+                </button>
+
+                <!-- Error/Success Message Container -->
+                <div id="error-msg" class="hidden mt-3 p-3 rounded-xl text-sm flex items-start gap-2" role="alert">
+                    <span id="error-icon" class="material-symbols-outlined text-lg shrink-0 mt-0.5">error</span>
+                    <span id="error-text"></span>
+                </div>
+
+                <!-- Divider -->
+                <div class="relative py-4">
+                    <div class="absolute inset-0 flex items-center">
+                        <div class="w-full border-t border-slate-100 dark:border-slate-700"></div>
+                    </div>
+                    <div class="relative flex justify-center text-[10px] uppercase tracking-wider font-semibold">
+                        <span class="bg-white dark:bg-slate-800 px-2 text-slate-400">Or sign up with</span>
+                    </div>
+                </div>
+
+                <!-- Google Button -->
+                <button id="google-btn"
+                    class="w-full flex items-center justify-center gap-2 h-12 rounded-xl border border-slate-200 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors bg-white dark:bg-transparent">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU_yLNh7SCYXSYQqJeJE6lJCDOlTRtSg6SqC8UOH_IfztMEtO-5tUFmd_TE-7uIHV_t1wXG0BjjFxsvMs-cjslkvNU7N2AhLdsU43GpSLiuu3B-LTARsNo5s1v4FFLzvBDFS8ABPsTkYwLpcMLFWthWMjD-wHrtXN_7am1ZkwRhi6aLcxX1dWL0Od3cX24PxtFM-k3Rz_UWa1Eb9ENOut-Cl6u8DoDsXVcg3aeQU0p_0MaAi0YBLWmOr0_5S-_eepAA5KsPeJFyH8w"
+                        alt="Google" class="w-5 h-5" />
+                    <span class="text-sm font-semibold">Sign up with Google</span>
+                </button>
+
+                <!-- Terms -->
+                <p class="text-center text-[10px] text-slate-400 mt-4 px-4 leading-relaxed">
+                    By clicking "Create Account", you agree to our
+                    <a href="legal.html" class="text-slate-600 dark:text-slate-300 font-medium hover:underline">Terms of
+                        Service</a> and
+                    <a href="legal.html" class="text-slate-600 dark:text-slate-300 font-medium hover:underline">Privacy
+                        Policy</a>.
+                </p>
+
+            </div>
+
+            <div class="text-center mt-4">
+                <p class="text-xs text-slate-500">Already have an account? <a href="login.html"
+                        class="text-primary font-bold hover:underline">Log in</a></p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const emailInput = document.getElementById('email');
+            const passwordInput = document.getElementById('password');
+            const nameInput = document.getElementById('fullname');
+            const submitBtn = document.getElementById('submit-btn');
+            const googleBtn = document.getElementById('google-btn');
+            const togglePassword = document.getElementById('toggle-password');
+
+            // Check if user is already logged in - redirect to dashboard
+            if (window.firebaseHelpers) {
+                window.firebaseHelpers.onAuthChange((user) => {
+                    if (user) {
+                        window.location.href = 'dashboard.html';
+                    }
+                });
+            }
+
+            // Toggle Visibility
+            togglePassword.addEventListener('click', () => {
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
+                togglePassword.querySelector('span').textContent = type === 'password' ? 'visibility' : 'visibility_off';
+            });
+
+            // Password Strength
+            passwordInput.addEventListener('input', (e) => {
+                const val = e.target.value;
+                const bars = document.querySelectorAll('.strength-bar');
+                let score = 0;
+                if (val.length >= 8) score++;
+                if (/[A-Z]/.test(val)) score++;
+                if (/[a-z]/.test(val)) score++;
+                if (/[0-9]/.test(val)) score++;
+
+                bars.forEach((bar, index) => {
+                    if (index < score) {
+                        if (score <= 1) bar.classList.value = 'h-full bg-red-500 rounded-full flex-1 transition-colors duration-300 strength-bar';
+                        else if (score <= 3) bar.classList.value = 'h-full bg-yellow-400 rounded-full flex-1 transition-colors duration-300 strength-bar';
+                        else bar.classList.value = 'h-full bg-green-500 rounded-full flex-1 transition-colors duration-300 strength-bar';
+                    } else {
+                        bar.classList.value = 'h-full bg-slate-100 rounded-full flex-1 transition-colors duration-300 strength-bar';
+                    }
+                });
+            });
+
+            function showMessage(msg, type = 'error') {
+                const errorMsgContainer = document.getElementById('error-msg');
+                const errorIcon = document.getElementById('error-icon');
+                const errorText = document.getElementById('error-text');
+
+                errorMsgContainer.classList.remove('hidden', 'bg-red-50', 'text-red-700', 'bg-green-50', 'text-green-700', 'bg-amber-50', 'text-amber-700');
+
+                if (type === 'error') {
+                    errorMsgContainer.classList.add('bg-red-50', 'text-red-700');
+                    errorIcon.textContent = 'error';
+                } else if (type === 'success') {
+                    errorMsgContainer.classList.add('bg-green-50', 'text-green-700');
+                    errorIcon.textContent = 'check_circle';
+                } else if (type === 'warning') {
+                    errorMsgContainer.classList.add('bg-amber-50', 'text-amber-700');
+                    errorIcon.textContent = 'warning';
+                }
+
+                errorText.innerHTML = msg;
+            }
+
+            function hideMessage() {
+                document.getElementById('error-msg').classList.add('hidden');
+            }
+
+            function setLoading(loading) {
+                submitBtn.disabled = loading;
+                submitBtn.textContent = loading ? "Creating Account..." : "Create Account";
+                if (loading) submitBtn.innerHTML = '<span class="material-symbols-outlined animate-spin text-sm">progress_activity</span>';
+            }
+
+            submitBtn.addEventListener('click', async () => {
+                hideMessage();
+                const email = emailInput.value.trim().toLowerCase();
+                const password = passwordInput.value;
+                const name = nameInput.value.trim();
+
+                // Basic Validation
+                if (!name) { showMessage("Please enter your full name."); return; }
+                if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showMessage("Please enter a valid email address."); return; }
+                if (!password || password.length < 8) { showMessage("Password must be at least 8 characters long."); return; }
+
+                setLoading(true);
+                try {
+                    const result = await window.firebaseHelpers.signUpWithEmail(email, password, name);
+                    if (result.success) {
+                        // Email Signup: Force manual login as requested
+                        await window.firebaseHelpers.logOut();
+                        window.location.href = 'login.html?status=account_created';
+                    } else {
+                        // Parse Firebase errors into user-friendly messages
+                        const error = result.error.toLowerCase();
+                        if (error.includes('email-already-in-use')) {
+                            showMessage("This email is already registered. <a href='login.html' class='underline font-semibold hover:text-amber-900'>Log in instead</a>", 'warning');
+                        } else if (error.includes('weak-password')) {
+                            showMessage("Password is too weak. Use at least 8 characters with a mix of letters and numbers.");
+                        } else if (error.includes('invalid-email')) {
+                            showMessage("Please enter a valid email address.");
+                        } else if (error.includes('network')) {
+                            showMessage("Network error. Please check your connection and try again.");
+                        } else {
+                            showMessage("Unable to create account. Please try again later.");
+                            console.error('Signup error:', result.error);
+                        }
+                    }
+                } catch (e) {
+                    console.error(e);
+                    showMessage("Something went wrong. Please try again later.");
+                } finally {
+                    setLoading(false);
+                }
+            });
+
+            googleBtn.addEventListener('click', async () => {
+                try {
+                    const result = await window.firebaseHelpers.signInWithGoogle();
+                    if (result.success) {
+                        window.location.href = 'dashboard.html';
+                    } else {
+                        const error = result.error.toLowerCase();
+                        if (error.includes('unauthorized-domain')) {
+                            showMessage("Google Sign In is not configured for this domain. Please use email/password or contact support.", 'warning');
+                        } else if (error.includes('popup-closed') || error.includes('cancelled')) {
+                            showMessage("Sign up was cancelled. Please try again.", 'warning');
+                        } else if (error.includes('popup-blocked')) {
+                            showMessage("Pop-up was blocked. Please allow pop-ups for this site and try again.", 'warning');
+                        } else {
+                            showMessage("Google Sign Up failed. Please try again or use email/password.");
+                            console.error('Google Sign In error:', result.error);
+                        }
+                    }
+                } catch (e) {
+                    console.error(e);
+                    showMessage("Something went wrong with Google Sign Up. Please try again.");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

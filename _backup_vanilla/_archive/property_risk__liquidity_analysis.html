@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HomieNest - Property Risk Assessment</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0d121c] dark:text-white transition-colors duration-200">
+<!-- Top Navigation Bar -->
+<div class="fixed top-0 z-50 w-full max-w-[480px] mx-auto left-0 right-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+<div class="flex items-center p-4 justify-between h-16">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-[#0d121c] dark:text-white cursor-pointer">arrow_back_ios</span>
+</div>
+<div class="flex flex-col items-center flex-1 truncate px-4">
+<h2 class="text-[#0d121c] dark:text-white text-sm font-bold leading-none truncate">123 Premium Way</h2>
+<span class="text-[10px] text-gray-500 font-medium uppercase tracking-wider">San Francisco, CA</span>
+</div>
+<div class="flex w-8 items-center justify-end">
+<button class="text-primary">
+<span class="material-symbols-outlined">ios_share</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Content Container (Mobile Centered) -->
+<main class="relative flex min-h-screen w-full max-w-[480px] mx-auto flex-col pt-16 pb-24 overflow-x-hidden">
+<!-- Headline Section -->
+<div class="px-4 pt-6 pb-2 text-center">
+<h3 class="text-[#0d121c] dark:text-white tracking-tight text-2xl font-extrabold leading-tight">Composite Risk Rating</h3>
+<p class="text-gray-500 dark:text-gray-400 text-sm mt-1">AI-Powered Institutional Analysis</p>
+</div>
+<!-- Composite Risk Gauge Component -->
+<div class="p-4">
+<div class="relative flex flex-col items-center justify-center bg-white dark:bg-[#1a212e] rounded-xl p-8 border border-gray-100 dark:border-gray-800 shadow-sm overflow-hidden">
+<!-- Gauge Visual -->
+<div class="relative w-48 h-24 mb-4">
+<div class="absolute inset-0 rounded-t-full border-[12px] border-gray-100 dark:border-gray-800"></div>
+<div class="absolute inset-0 rounded-t-full border-[12px] border-primary border-l-transparent border-b-transparent rotate-45"></div>
+<!-- Needle -->
+<div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-20 bg-primary origin-bottom rounded-full rotate-[25deg]"></div>
+<div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-2 border-white dark:border-gray-900"></div>
+</div>
+<div class="text-center">
+<p class="text-[#0d121c] dark:text-white tracking-tight text-4xl font-black">82<span class="text-xl text-gray-400">/100</span></p>
+<div class="mt-1 flex items-center justify-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-sm font-bold">verified</span>
+<span class="text-base font-bold uppercase tracking-wider">Low Risk</span>
+</div>
+</div>
+<div class="w-full mt-6 pt-6 border-t border-gray-100 dark:border-gray-800 flex justify-between">
+<div class="text-center">
+<p class="text-[10px] text-gray-500 uppercase font-bold">Est. Value</p>
+<p class="text-sm font-bold dark:text-white">$1.24M</p>
+</div>
+<div class="text-center">
+<p class="text-[10px] text-gray-500 uppercase font-bold">Confidence</p>
+<p class="text-sm font-bold dark:text-white">96.4%</p>
+</div>
+<div class="text-center">
+<p class="text-[10px] text-gray-500 uppercase font-bold">Market Phase</p>
+<p class="text-sm font-bold dark:text-white">Growth</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Risk Factors Header -->
+<div class="px-4 py-2">
+<h3 class="text-[#0d121c] dark:text-white text-lg font-bold leading-tight tracking-tight">Risk Factors</h3>
+</div>
+<!-- Risk Chips / Grid -->
+<div class="grid grid-cols-2 gap-4 px-4 pb-6">
+<!-- Legal Risk Chip -->
+<div class="flex flex-col gap-3 rounded-xl p-4 bg-white dark:bg-[#1a212e] border border-gray-100 dark:border-gray-800 shadow-sm">
+<div class="flex justify-between items-start">
+<div class="bg-blue-50 dark:bg-blue-900/20 p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined text-[20px]">gavel</span>
+</div>
+<span class="material-symbols-outlined text-gray-300 text-[18px] cursor-help">info</span>
+</div>
+<div>
+<p class="text-gray-500 text-xs font-semibold uppercase tracking-tight">Legal Risk</p>
+<p class="text-[#0d121c] dark:text-white text-lg font-bold leading-tight">Low</p>
+</div>
+<div class="flex items-center gap-1 text-[10px] text-green-600 font-bold">
+<span class="material-symbols-outlined text-[12px]">check_circle</span>
+                    Title Clear
+                </div>
+</div>
+<!-- Liquidity Risk Chip -->
+<div class="flex flex-col gap-3 rounded-xl p-4 bg-white dark:bg-[#1a212e] border border-gray-100 dark:border-gray-800 shadow-sm">
+<div class="flex justify-between items-start">
+<div class="bg-blue-50 dark:bg-blue-900/20 p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+</div>
+<span class="material-symbols-outlined text-gray-300 text-[18px] cursor-help">info</span>
+</div>
+<div>
+<p class="text-gray-500 text-xs font-semibold uppercase tracking-tight">Liquidity</p>
+<p class="text-[#0d121c] dark:text-white text-lg font-bold leading-tight">Medium</p>
+</div>
+<div class="flex items-center gap-1 text-[10px] text-amber-600 font-bold">
+<span class="material-symbols-outlined text-[12px]">trending_flat</span>
+                    24d Avg.
+                </div>
+</div>
+<!-- Overpricing Risk Chip -->
+<div class="flex flex-col gap-3 rounded-xl p-4 bg-white dark:bg-[#1a212e] border border-gray-100 dark:border-gray-800 shadow-sm">
+<div class="flex justify-between items-start">
+<div class="bg-blue-50 dark:bg-blue-900/20 p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+</div>
+<span class="material-symbols-outlined text-gray-300 text-[18px] cursor-help">info</span>
+</div>
+<div>
+<p class="text-gray-500 text-xs font-semibold uppercase tracking-tight">Pricing</p>
+<p class="text-[#0d121c] dark:text-white text-lg font-bold leading-tight">Fair Value</p>
+</div>
+<div class="flex items-center gap-1 text-[10px] text-green-600 font-bold">
+<span class="material-symbols-outlined text-[12px]">arrow_downward</span>
+                    2% Under
+                </div>
+</div>
+<!-- Volatility Risk Chip -->
+<div class="flex flex-col gap-3 rounded-xl p-4 bg-white dark:bg-[#1a212e] border border-gray-100 dark:border-gray-800 shadow-sm">
+<div class="flex justify-between items-start">
+<div class="bg-blue-50 dark:bg-blue-900/20 p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined text-[20px]">analytics</span>
+</div>
+<span class="material-symbols-outlined text-gray-300 text-[18px] cursor-help">info</span>
+</div>
+<div>
+<p class="text-gray-500 text-xs font-semibold uppercase tracking-tight">Volatility</p>
+<p class="text-[#0d121c] dark:text-white text-lg font-bold leading-tight">Stable</p>
+</div>
+<div class="flex items-center gap-1 text-[10px] text-primary font-bold">
+<span class="material-symbols-outlined text-[12px]">monitoring</span>
+                    Zip: 94103
+                </div>
+</div>
+</div>
+<!-- AI Insight Card -->
+<div class="px-4">
+<div class="bg-primary/5 dark:bg-primary/10 rounded-xl p-5 border border-primary/10">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-[20px]">psychology</span>
+<h4 class="text-primary font-bold text-sm uppercase tracking-wide">HomieNest AI Insight</h4>
+</div>
+<p class="text-sm leading-relaxed text-[#0d121c] dark:text-gray-200">
+                    The asset shows exceptionally strong legal fundamentals with no encumbrances found. While liquidity is currently in a seasonal dip, the sub-market price stability index indicates high resilience against broader market corrections.
+                </p>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="fixed bottom-0 w-full max-w-[480px] mx-auto bg-white/90 dark:bg-[#101622]/90 backdrop-blur-md p-4 flex gap-3 border-t border-gray-200 dark:border-gray-800">
+<button class="flex-1 bg-primary text-white font-bold py-3.5 rounded-xl flex items-center justify-center gap-2 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[20px]">download</span>
+                Full Analysis Report
+            </button>
+<button class="w-14 h-14 bg-gray-100 dark:bg-gray-800 text-[#0d121c] dark:text-white rounded-xl flex items-center justify-center active:scale-95 transition-transform">
+<span class="material-symbols-outlined">compare_arrows</span>
+</button>
+</div>
+</main>
+<!-- Example Tooltip (Hidden state by default in design but visual representation) -->
+<div class="hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[100] w-[85%] bg-white dark:bg-[#1a212e] rounded-xl shadow-2xl p-6 border border-gray-200 dark:border-gray-800">
+<div class="flex justify-between items-start mb-4">
+<h4 class="font-bold text-lg">Liquidity Data Points</h4>
+<span class="material-symbols-outlined text-gray-400">close</span>
+</div>
+<ul class="space-y-3">
+<li class="flex justify-between text-sm">
+<span class="text-gray-500">Days on Market (Avg)</span>
+<span class="font-bold">24 Days</span>
+</li>
+<li class="flex justify-between text-sm">
+<span class="text-gray-500">Inventory Absorption</span>
+<span class="font-bold">8.4% / Mo</span>
+</li>
+<li class="flex justify-between text-sm">
+<span class="text-gray-500">Neighborhood Turn Rate</span>
+<span class="font-bold">2.1x</span>
+</li>
+</ul>
+<button class="w-full mt-6 bg-primary text-white py-2 rounded-lg font-bold">Got it</button>
+</div>
+</body></html>

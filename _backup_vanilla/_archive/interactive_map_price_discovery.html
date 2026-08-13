@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Interactive Map Price Discovery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+        .dark .glass-panel {
+            background: rgba(16, 22, 34, 0.9);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0d121b] dark:text-white antialiased">
+<div class="relative flex h-screen w-full flex-col overflow-hidden">
+<!-- Top App Bar & Search Container -->
+<div class="absolute top-0 left-0 right-0 z-20 flex flex-col gap-2 p-4 pt-6 bg-gradient-to-b from-black/20 to-transparent">
+<!-- Search Bar Component -->
+<div class="flex items-center gap-2">
+<div class="flex-1">
+<label class="flex flex-col min-w-40 h-12 w-full shadow-lg">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full overflow-hidden">
+<div class="text-primary flex border-none bg-white dark:bg-background-dark items-center justify-center pl-4">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden text-[#0d121b] dark:text-white focus:outline-0 focus:ring-0 border-none bg-white dark:bg-background-dark focus:border-none h-full placeholder:text-gray-400 px-4 pl-2 text-base font-medium leading-normal" placeholder="Search city or locality in India" value="HSR Layout, Bangalore"/>
+</div>
+</label>
+</div>
+<button class="flex size-12 shrink-0 items-center justify-center rounded-xl bg-white dark:bg-background-dark shadow-lg text-primary">
+<span class="material-symbols-outlined">tune</span>
+</button>
+</div>
+<!-- Chips Container -->
+<div class="flex gap-2 overflow-x-auto no-scrollbar pb-2">
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary text-white px-4 shadow-sm">
+<span class="text-sm font-semibold">Bangalore</span>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-background-dark text-[#0d121b] dark:text-white px-4 shadow-sm border border-gray-100 dark:border-gray-800">
+<span class="text-sm font-medium">Mumbai</span>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-background-dark text-[#0d121b] dark:text-white px-4 shadow-sm border border-gray-100 dark:border-gray-800">
+<span class="text-sm font-medium">Delhi NCR</span>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-background-dark text-[#0d121b] dark:text-white px-4 shadow-sm border border-gray-100 dark:border-gray-800">
+<span class="text-sm font-medium">Hyderabad</span>
+</div>
+</div>
+</div>
+<!-- Main Map Area -->
+<div class="relative flex-1 bg-gray-200">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Detailed street map of Bangalore showing HSR Layout area" data-location="Bangalore, India" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAa8h9f7dU1TQSAAPUawDNHJjKia3fxbSYVDi1BHVgldltQmwhwFtztLNtsHmz0C5aitYLMR60j0QFZVDvG8NjwDZNL3AMo9eaNlmnanzGpgcaZmPt2fEjYogpLpB86URm14Dl4ZkEtZsFnqbCtVCJu-8IYXX3ymD20ZVorinDVVbFV7DtzlNYDLaGpGTzVmfHMgyBTSlinPKKx216DavRvnCK_aaJS8QhJ2zHwV6HYkyDuutNG_Y6CPyb7uUI8auXatXC8p1PMoJ-D");'>
+<!-- Custom Map Markers -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group cursor-pointer">
+<div class="flex flex-col items-center">
+<div class="bg-primary text-white px-3 py-1.5 rounded-lg text-sm font-bold shadow-xl border-2 border-white mb-1">
+                            ₹12,450/sq ft
+                        </div>
+<div class="w-4 h-4 bg-primary rounded-full border-2 border-white shadow-lg animate-pulse"></div>
+</div>
+</div>
+<div class="absolute top-[40%] left-[30%] cursor-pointer">
+<div class="w-3 h-3 bg-gray-600 rounded-full border-2 border-white shadow-lg"></div>
+</div>
+<div class="absolute top-[60%] left-[70%] cursor-pointer">
+<div class="w-3 h-3 bg-gray-600 rounded-full border-2 border-white shadow-lg"></div>
+</div>
+</div>
+<!-- Map Controls (Right Side) -->
+<div class="absolute right-4 top-1/2 -translate-y-1/2 flex flex-col gap-3">
+<div class="flex flex-col rounded-xl overflow-hidden shadow-lg bg-white dark:bg-background-dark">
+<button class="flex size-12 items-center justify-center text-[#0d121b] dark:text-white border-b border-gray-100 dark:border-gray-800">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="flex size-12 items-center justify-center text-[#0d121b] dark:text-white">
+<span class="material-symbols-outlined">remove</span>
+</button>
+</div>
+<button class="flex size-12 items-center justify-center rounded-xl bg-white dark:bg-background-dark shadow-lg text-primary">
+<span class="material-symbols-outlined">my_location</span>
+</button>
+</div>
+</div>
+<!-- Sliding Bottom Panel (Live Valuation) -->
+<div class="absolute bottom-0 left-0 right-0 z-30 transition-transform duration-300 transform translate-y-0">
+<div class="glass-panel rounded-t-[2rem] shadow-2xl border-t border-gray-200 dark:border-gray-800 px-6 pb-8 pt-4">
+<!-- Pull Bar -->
+<div class="w-12 h-1.5 bg-gray-300 dark:bg-gray-700 rounded-full mx-auto mb-6"></div>
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-1">Live Market Valuation</h3>
+<p class="text-3xl font-bold text-primary">₹1.42 Cr - ₹1.55 Cr</p>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Sector 2, HSR Layout, Bangalore</p>
+</div>
+<div class="flex flex-col items-end">
+<div class="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 px-2 py-1 rounded text-xs font-bold flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-sm">trending_up</span> +12.4%
+                        </div>
+<div class="flex flex-col items-end">
+<span class="text-[10px] text-gray-400 uppercase font-bold">AI Confidence</span>
+<span class="text-lg font-bold text-[#0d121b] dark:text-white">94%</span>
+</div>
+</div>
+</div>
+<!-- Stats Grid -->
+<div class="grid grid-cols-3 gap-4 mb-6">
+<div class="bg-gray-50 dark:bg-gray-800/50 p-3 rounded-xl border border-gray-100 dark:border-gray-800">
+<p class="text-[10px] text-gray-500 uppercase font-bold mb-1">Avg Price</p>
+<p class="text-sm font-bold">₹12,450</p>
+<p class="text-[10px] text-gray-400">per sq ft</p>
+</div>
+<div class="bg-gray-50 dark:bg-gray-800/50 p-3 rounded-xl border border-gray-100 dark:border-gray-800">
+<p class="text-[10px] text-gray-500 uppercase font-bold mb-1">5Y Growth</p>
+<p class="text-sm font-bold text-green-600">+48.2%</p>
+<p class="text-[10px] text-gray-400">total ROI</p>
+</div>
+<div class="bg-gray-50 dark:bg-gray-800/50 p-3 rounded-xl border border-gray-100 dark:border-gray-800">
+<p class="text-[10px] text-gray-500 uppercase font-bold mb-1">Liquidity</p>
+<p class="text-sm font-bold text-orange-500">High</p>
+<p class="text-[10px] text-gray-400">Demand</p>
+</div>
+</div>
+<!-- Trend Visualization Placeholder -->
+<div class="mb-8">
+<div class="flex items-center justify-between mb-3">
+<h4 class="text-sm font-bold">Price History (2019-2024)</h4>
+<span class="text-xs text-primary font-medium">Details</span>
+</div>
+<div class="h-16 w-full flex items-end gap-1">
+<div class="flex-1 bg-primary/20 rounded-t-sm h-[30%]"></div>
+<div class="flex-1 bg-primary/20 rounded-t-sm h-[35%]"></div>
+<div class="flex-1 bg-primary/20 rounded-t-sm h-[45%]"></div>
+<div class="flex-1 bg-primary/20 rounded-t-sm h-[42%]"></div>
+<div class="flex-1 bg-primary/20 rounded-t-sm h-[55%]"></div>
+<div class="flex-1 bg-primary/30 rounded-t-sm h-[65%]"></div>
+<div class="flex-1 bg-primary/30 rounded-t-sm h-[60%]"></div>
+<div class="flex-1 bg-primary/40 rounded-t-sm h-[75%]"></div>
+<div class="flex-1 bg-primary/50 rounded-t-sm h-[85%]"></div>
+<div class="flex-1 bg-primary rounded-t-sm h-full"></div>
+</div>
+</div>
+<!-- CTA -->
+<button class="w-full bg-primary text-white h-14 rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined">description</span>
+                    Get Detailed Investment Report
+                </button>
+</div>
+</div>
+<!-- Platform Home Indicator (iOS style) -->
+<div class="absolute bottom-1 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-gray-800/20 dark:bg-white/20 rounded-full z-40"></div>
+</div>
+</body></html>

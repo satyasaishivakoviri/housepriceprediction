@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>XAI Price Breakdown Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                        "slate-blue": "#49659c",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .waterfall-grid {
+            background-image: linear-gradient(to right, #e2e8f0 1px, transparent 1px);
+            background-size: 25% 100%;
+        }
+        .dark .waterfall-grid {
+            background-image: linear-gradient(to right, #1e293b 1px, transparent 1px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0d121c] dark:text-white">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden max-w-[480px] mx-auto bg-white dark:bg-background-dark shadow-xl">
+<!-- TopAppBar -->
+<div class="flex items-center bg-white dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-50 border-b border-gray-100 dark:border-gray-800">
+<div class="text-[#0d121c] dark:text-white flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined">arrow_back_ios</span>
+</div>
+<h2 class="text-[#0d121c] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Price Explainability</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-transparent text-[#0d121c] dark:text-white gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+</div>
+<!-- ProfileHeader / Price Summary -->
+<div class="flex p-4 @container">
+<div class="flex w-full flex-col gap-4 @[520px]:flex-row @[520px]:justify-between">
+<div class="flex gap-4 items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-xl min-h-24 w-24 shadow-sm border border-gray-100 dark:border-gray-800" data-alt="Modern high-rise luxury apartment exterior" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAAJqwac2mTTSm2uksQhzFu1V5TOKO682qumYgsmYho9VKmQu8ojgFWBEUB-t9YxTvKuKuQsnkIUEFExhkgty4MYTXbNl6GbIOOXSt9EauCS27jQzxK4nFSKY3iJOKuTLm_wMY3lqlGJeeTtbuSW7cRsZJ8DTALP_ej7qbqh1DRxtrITbm3C24xiQROZseKaJUG6IjUumL3kDXHupWLhf2wiK5zPKv7q4_mRnb6kEJhMedeAsB3cVEPd8y-wOIZL25tv3AeZzzu1jAT");'></div>
+<div class="flex flex-col">
+<p class="text-[#0d121c] dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em]">₹1.45 Cr</p>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="text-primary font-semibold text-sm">AI-Predicted Value</span>
+<span class="material-symbols-outlined text-sm text-primary">verified</span>
+</div>
+<p class="text-slate-blue dark:text-slate-400 text-xs font-normal leading-normal mt-1">HomieNest AI V2.4 • Updated today</p>
+</div>
+</div>
+</div>
+</div>
+<!-- ActionPanel / Confidence Badge -->
+<div class="px-4 py-2 @container">
+<div class="flex flex-1 flex-col items-start justify-between gap-4 rounded-xl border border-[#ced7e8] dark:border-gray-700 bg-blue-50/30 dark:bg-primary/5 p-4 @[480px]:flex-row @[480px]:items-center">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">analytics</span>
+<p class="text-[#0d121c] dark:text-white text-sm font-bold leading-tight">Confidence Score: 94%</p>
+</div>
+<p class="text-slate-blue dark:text-slate-400 text-xs font-normal leading-normal">Based on 1,200+ recent neighborhood transactions.</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-primary text-white text-xs font-medium leading-normal shadow-sm">
+<span class="truncate">Insights</span>
+</button>
+</div>
+</div>
+<!-- SectionHeader -->
+<div class="flex items-center justify-between px-4 pt-6 pb-2">
+<h3 class="text-[#0d121c] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Price Contribution Waterfall</h3>
+<span class="material-symbols-outlined text-slate-blue cursor-pointer">info</span>
+</div>
+<!-- SegmentedButtons -->
+<div class="flex px-4 py-2">
+<div class="flex h-10 flex-1 items-center justify-center rounded-xl bg-gray-100 dark:bg-gray-800 p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-gray-700 has-[:checked]:shadow-sm has-[:checked]:text-[#0d121c] dark:has-[:checked]:text-white text-slate-blue text-xs font-semibold leading-normal transition-all">
+<span class="truncate">Monetary (₹)</span>
+<input checked="" class="invisible w-0" name="impact-toggle" type="radio" value="monetary"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-gray-700 has-[:checked]:shadow-sm has-[:checked]:text-[#0d121c] dark:has-[:checked]:text-white text-slate-blue text-xs font-semibold leading-normal transition-all">
+<span class="truncate">Impact (%)</span>
+<input class="invisible w-0" name="impact-toggle" type="radio" value="impact"/>
+</label>
+</div>
+</div>
+<!-- Waterfall Chart Visualization -->
+<div class="px-4 py-6 relative">
+<div class="absolute left-1/2 top-0 bottom-0 w-px bg-primary/30 z-0"></div>
+<div class="space-y-6 relative z-10">
+<!-- Baseline -->
+<div class="flex flex-col items-center">
+<span class="text-[10px] uppercase tracking-wider font-bold text-primary mb-1">Market Baseline (₹1.30 Cr)</span>
+</div>
+<!-- Positive: Prime Location -->
+<div class="flex items-center">
+<div class="w-1/2 text-right pr-3">
+<p class="text-xs font-semibold">Prime Location</p>
+</div>
+<div class="w-1/2 flex items-center">
+<div class="h-6 bg-primary rounded-r-md" style="width: 70%;"></div>
+<span class="ml-2 text-xs font-bold text-primary">+₹12L</span>
+</div>
+</div>
+<!-- Positive: High Floor -->
+<div class="flex items-center">
+<div class="w-1/2 text-right pr-3">
+<p class="text-xs font-semibold">High Floor (15+)</p>
+</div>
+<div class="w-1/2 flex items-center">
+<div class="h-6 bg-primary/60 rounded-r-md" style="width: 35%;"></div>
+<span class="ml-2 text-xs font-bold text-primary">+₹5L</span>
+</div>
+</div>
+<!-- Negative: Property Age -->
+<div class="flex items-center">
+<div class="w-1/2 flex items-center justify-end">
+<span class="mr-2 text-xs font-bold text-slate-blue">-₹3L</span>
+<div class="h-6 bg-slate-400/50 rounded-l-md" style="width: 25%;"></div>
+</div>
+<div class="w-1/2 text-left pl-3">
+<p class="text-xs font-semibold">Property Age (12y)</p>
+</div>
+</div>
+<!-- Positive: Modern Kitchen -->
+<div class="flex items-center">
+<div class="w-1/2 text-right pr-3">
+<p class="text-xs font-semibold">Smart Kitchen</p>
+</div>
+<div class="w-1/2 flex items-center">
+<div class="h-6 bg-primary/40 rounded-r-md" style="width: 20%;"></div>
+<span class="ml-2 text-xs font-bold text-primary">+₹3L</span>
+</div>
+</div>
+<!-- Negative: Maintenance -->
+<div class="flex items-center">
+<div class="w-1/2 flex items-center justify-end">
+<span class="mr-2 text-xs font-bold text-slate-blue">-₹2L</span>
+<div class="h-6 bg-slate-400/30 rounded-l-md" style="width: 15%;"></div>
+</div>
+<div class="w-1/2 text-left pl-3">
+<p class="text-xs font-semibold">High Maintenance</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Feature Contribution Cards -->
+<div class="px-4 py-4 space-y-3 pb-24">
+<h4 class="text-sm font-bold text-slate-blue uppercase tracking-widest mb-2">Deep Insights</h4>
+<!-- Card 1 -->
+<div class="p-4 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-xl shadow-sm">
+<div class="flex justify-between items-start mb-2">
+<div class="flex items-center gap-2">
+<div class="p-2 bg-blue-50 dark:bg-primary/10 rounded-lg">
+<span class="material-symbols-outlined text-primary">location_on</span>
+</div>
+<div>
+<p class="text-sm font-bold">Location Proximity</p>
+<p class="text-[10px] text-slate-blue">Impact: +12.4%</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-gray-300">chevron_right</span>
+</div>
+<p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed italic">
+                    "Proximity to the Metro Hub and Tech Park increases the desirability by 12% compared to the regional baseline."
+                </p>
+</div>
+<!-- Card 2 -->
+<div class="p-4 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-xl shadow-sm">
+<div class="flex justify-between items-start mb-2">
+<div class="flex items-center gap-2">
+<div class="p-2 bg-slate-100 dark:bg-gray-700 rounded-lg">
+<span class="material-symbols-outlined text-slate-blue">history</span>
+</div>
+<div>
+<p class="text-sm font-bold">Age &amp; Depreciation</p>
+<p class="text-[10px] text-slate-blue">Impact: -2.8%</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-gray-300">chevron_right</span>
+</div>
+<p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed italic">
+                    "Standard structural depreciation for buildings older than 10 years in this micro-market."
+                </p>
+</div>
+<!-- Confidence Warning Sparse Data -->
+<div class="p-4 bg-slate-100 dark:bg-gray-800/50 border border-dashed border-slate-300 dark:border-gray-600 rounded-xl">
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-slate-blue">error</span>
+<div class="flex flex-col gap-1">
+<p class="text-xs font-bold text-slate-blue">Slight Data Variance</p>
+<p class="text-[11px] text-slate-blue/80">Fewer than 10 comparable 'High Floor' units sold in this block last quarter. Estimates may vary by ±₹1.5L.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Action -->
+<div class="fixed bottom-0 left-0 right-0 max-w-[480px] mx-auto p-4 bg-white/80 dark:bg-background-dark/80 backdrop-blur-lg border-t border-gray-100 dark:border-gray-800 flex gap-3">
+<button class="flex-1 h-12 bg-white dark:bg-gray-800 border border-primary text-primary font-bold rounded-xl flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">download</span>
+                PDF Report
+            </button>
+<button class="flex-[2] h-12 bg-primary text-white font-bold rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+                Get Expert Advice
+                <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</div>
+</div>
+</body></html>

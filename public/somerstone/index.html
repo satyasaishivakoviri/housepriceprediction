@@ -1,0 +1,593 @@
+<!DOCTYPE html><!-- Last Published: Fri Feb 13 2026 03:18:27 GMT+0000 (Coordinated Universal Time) --><html data-wf-domain="www.somerstone.com.au" data-wf-page="68e4497aa274ebe44d0c4d35" data-wf-site="68e44979a274ebe44d0c4d2d"><head><meta charset="utf-8"/><title>Somerstone Property Group | Trusted Experts in Australian Property Investment</title><meta content="Your trusted voice in property. We help everyday Australians navigate the market with clear strategy and a focus on long-term growth." name="description"/><meta content="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68f9705697af29d2cc957501_SEO%20Image.jpg" property="og:image"/><meta content="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68f9705697af29d2cc957501_SEO%20Image.jpg" property="twitter:image"/><meta content="width=device-width, initial-scale=1" name="viewport"/><link href="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/css/somerstone-property-group.webflow.shared.6a7b9ba56.css" rel="stylesheet" type="text/css" integrity="sha384-anubpWsOzf13WONu8twC/0n2fpRcp9m01Z/y+wyxY4+KWc1PEMhKhTJCBCDY+nFF" crossorigin="anonymous"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/><script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script><script type="text/javascript">WebFont.load({  google: {    families: ["Inter:300,400,500,600,700","Manrope:300,400,500,600,700"]  }});</script><script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script><link href="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec894318ce11846830f983_Favicon.png" rel="shortcut icon" type="image/x-icon"/><link href="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68f96fa0a267c92bdc818444_Webclip.png" rel="apple-touch-icon"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-R3XZTWWKF1"></script><script type="text/javascript">window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('set', 'developer_id.dZGVlNj', true);gtag('js', new Date());gtag('config', 'G-R3XZTWWKF1');</script></head><body class="body"><div class="page-wrapper"><div class="w-embed w-script"><style>
+	html, body {
+  	overscroll-behavior: none;
+	}
+   /* Make per-char anims actually render */
+  .reveal-type .char { display:inline-block; }
+   /* Prevent native scrolling when menu is open (also covers non-Lenis fallbacks) */
+  html.no-scroll, body.no-scroll { overflow: hidden; height: 100vh; }
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://unpkg.com/split-type"></script>
+<script src="https://cdn.prod.website-files.com/6330c0ebacf06abbc83b6eb3/64103732523ba652052e0223_lenis-bundled.txt"></script>
+
+<!-- Nav Link Hover Effect -->
+<script>
+/* HOVER STAGGER — compatible with GSAP 3.12.2 + existing scripts */
+(function () {
+  var WF = window.Webflow;
+  var inDesigner = WF && WF.env && (WF.env('design') || WF.env('preview') || WF.env('editor'));
+  if (inDesigner) return;
+
+  function initHoverStagger() {
+    try {
+      // Split each target only once
+      document.querySelectorAll('[hoverstagger="text"]').forEach(function (el) {
+        if (el.__splitDone) return;
+        el.__splitDone = true;
+        el.__split = new SplitType(el, { types: 'words,chars', tagName: 'span' });
+      });
+
+      // Build one timeline per link (avoid double-binding)
+      document.querySelectorAll('[hoverstagger="link"]').forEach(function (link) {
+        if (link.__hoverTl) return;
+
+        var texts = link.querySelectorAll('[hoverstagger="text"]');
+        if (texts.length < 2) return; // needs two text nodes
+
+        var t1 = texts[0];
+        var t2 = texts[1];
+
+        var tl = gsap.timeline({
+          paused: true,
+          defaults: { duration: 0.5, ease: 'power2.out' }
+        });
+
+        tl.fromTo(t1.querySelectorAll('.char:nth-child(odd)'),  { yPercent: 100 },  { yPercent: 0 }, 0);
+        tl.fromTo(t2.querySelectorAll('.char:nth-child(odd)'),  { yPercent: 0 },    { yPercent: -100 }, 0);
+        tl.fromTo(t1.querySelectorAll('.char:nth-child(even)'), { yPercent: 0 },    { yPercent: 100 }, 0);
+        tl.fromTo(t2.querySelectorAll('.char:nth-child(even)'), { yPercent: -100 }, { yPercent: 0 }, 0);
+
+        link.__hoverTl = tl;
+
+        link.addEventListener('mouseenter', function () {
+          tl.restart();
+        });
+
+        // Optional: reset on mouseleave (keeps DOM tidy if you prefer)
+        link.addEventListener('mouseleave', function () {
+          tl.pause(0);
+        });
+      });
+    } catch (e) {
+      console.error('HoverStagger init error:', e);
+    }
+  }
+
+  // Run after Webflow; fallback to DOM ready
+  if (WF && typeof WF.push === 'function') {
+    WF.push(initHoverStagger);
+  } else if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initHoverStagger);
+  } else {
+    initHoverStagger();
+  }
+})();
+</script>
+
+
+<!-- Smooth Scroll -->
+<script>
+//Smooth scroll
+class Scroll extends Lenis {
+  constructor() {
+    super({
+      duration: 1.5,
+      easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)), // https://easings.net
+      direction: "vertical",
+      smooth: true,
+      smoothTouch: false,
+      touchMultiplier: 1.5
+    });
+
+    this.time = 0;
+    this.isActive = true;
+    this.init();
+  }
+
+  init() {
+    this.config();
+    this.render();
+    this.handleEditorView();
+  }
+
+  config() {
+    // allow scrolling on overflow elements
+    const overscroll = [
+      ...document.querySelectorAll('[data-scroll="overscroll"]')
+    ];
+
+    if (overscroll.length > 0) {
+      overscroll.forEach((item) =>
+        item.setAttribute("onwheel", "event.stopPropagation()")
+      );
+    }
+
+    // stop and start scroll btns
+    const stop = [...document.querySelectorAll('[data-scroll="stop"]')];
+    if (stop.length > 0) {
+      stop.forEach((item) => {
+        item.onclick = () => {
+          this.stop();
+          this.isActive = false;
+        };
+      });
+    }
+
+    const start = [...document.querySelectorAll('[data-scroll="start"]')];
+    if (start.length > 0) {
+      start.forEach((item) => {
+        item.onclick = () => {
+          this.start();
+          this.isActive = true;
+        };
+      });
+    }
+
+    // toggle page scrolling
+    const toggle = [...document.querySelectorAll('[data-scroll="toggle"]')];
+    if (toggle.length > 0) {
+      toggle.forEach((item) => {
+        item.onclick = () => {
+          if (this.isActive) {
+            this.stop();
+            this.isActive = false;
+          } else {
+            this.start();
+            this.isActive = true;
+          }
+        };
+      });
+    }
+
+    // anchor links
+    const anchor = [...document.querySelectorAll("[data-scrolllink]")];
+    if (anchor.length > 0) {
+      anchor.forEach((item) => {
+        const id = parseFloat(item.dataset.scrolllink);
+        const target = document.querySelector(`[data-scrolltarget="${id}"]`);
+        if (target) {
+          //console.log(id, target);
+          item.onclick = () => this.scrollTo(target);
+        }
+      });
+    }
+  }
+
+  render() {
+    this.raf((this.time += 10));
+    window.requestAnimationFrame(this.render.bind(this));
+  }
+
+  /* ---- */
+  handleEditorView() {
+    const html = document.documentElement;
+    const config = { attributes: true, childList: false, subtree: false };
+
+    const callback = (mutationList, observer) => {
+      for (const mutation of mutationList) {
+        if (mutation.type === "attributes") {
+          const btn = document.querySelector(".w-editor-bem-EditSiteButton");
+          const bar = document.querySelector(".w-editor-bem-EditorMainMenu");
+          const addTrig = (target) =>
+            target.addEventListener("click", () => this.destroy());
+
+          if (btn) addTrig(btn);
+          if (bar) addTrig(bar);
+        }
+      }
+    };
+
+    const observer = new MutationObserver(callback);
+    observer.observe(html, config);
+  }
+}
+
+window.SmoothScroll = new Scroll();
+</script>
+
+<!-- Text Animation -->
+<script>
+(function () {
+  var WF = window.Webflow;
+  var inDesigner = WF && WF.env && (WF.env('design') || WF.env('preview') || WF.env('editor'));
+  if (inDesigner) return;
+
+  function initRevealType() {
+    try {
+      document.querySelectorAll('.reveal-type').forEach(function (el) {
+        if (el.__splitDone) return;
+        el.__splitDone = true;
+        el.__split = new SplitType(el, { types: 'chars,words' });
+
+        gsap.from(el.__split.chars, {
+          opacity: 0.2,
+          stagger: 0.08,
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 90%',
+            end: 'top 10%',
+            scrub: true,
+            markers: false
+          }
+        });
+      });
+
+      if (window.SmoothScroll && typeof window.SmoothScroll.on === 'function') {
+        window.SmoothScroll.on('scroll', ScrollTrigger.update);
+      }
+
+      ScrollTrigger.refresh();
+
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(ScrollTrigger.refresh);
+      }
+    } catch (e) {
+      console.error('Reveal-type init error:', e);
+    }
+  }
+
+  if (WF && typeof WF.push === 'function') {
+    WF.push(initRevealType);
+  } else if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initRevealType);
+  } else {
+    initRevealType();
+  }
+})();
+</script>
+
+<!-- Menu Word Change On Click -->
+<script>
+(function () {
+  // Don’t run inside Designer/Editor/Preview
+  var WF = window.Webflow;
+  var inDesigner = WF && WF.env && (WF.env('design') || WF.env('preview') || WF.env('editor'));
+  if (inDesigner) return;
+
+	//Changes menu text from 'Menu' To 'Close' on click, and vice versa
+  function init() {
+    try {
+      const menuButton = document.getElementById('menuButton');
+      const menuText   = document.getElementById('menuText');
+      if (!menuButton || !menuText) return;
+
+      // Avoid double-binding if component renders more than once
+      if (menuButton.__menuHandlerBound) return;
+      menuButton.__menuHandlerBound = true;
+
+      const handler = function () {
+        // Let Webflow toggle states first (e.g., aria-expanded), then flip the text
+        setTimeout(function () {
+          const curr = (menuText.textContent || '').trim().toLowerCase();
+          menuText.textContent = (curr === 'menu') ? 'close' : 'menu';
+        }, 0);
+      };
+
+      menuButton.addEventListener('click', handler);
+    } catch (e) {
+      console.error('Menu label script error:', e);
+    }
+  }
+
+  // Run after Webflow’s scripts if available; otherwise fall back to DOM ready
+  if (WF && typeof WF.push === 'function') {
+    WF.push(init);
+  } else if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+
+<!-- Lock page scroll when fullscreen nav is open -->
+<!-- Input-level scroll lock for nav + loader -->
+<script>
+(function(){
+  var WF = window.Webflow;
+  var inDesigner = WF && WF.env && (WF.env('design') || WF.env('preview') || WF.env('editor'));
+  if (inDesigner) return;
+
+  function initScrollInputLock(){
+    var targets = [
+      document.querySelector('.open-nav-container'),
+      document.querySelector('.loader')
+    ].filter(Boolean); // remove nulls if one doesn’t exist
+
+    if (!targets.length) return;
+
+    var locked = false;
+    var savedY = 0;
+
+    function allowWithin(target){
+      return target.closest && target.closest('[data-allow-scroll]');
+    }
+
+    function preventWheelTouch(e){
+      if (allowWithin(e.target)) return;
+      e.preventDefault();
+    }
+
+    function preventKeys(e){
+      var code = e.keyCode;
+      if ((code === 32 || (code >= 33 && code <= 40)) && !allowWithin(e.target)){
+        e.preventDefault();
+      }
+    }
+
+    function jailScroll(){
+      if (locked) window.scrollTo(0, savedY);
+    }
+
+    function lock(){
+      if (locked) return;
+      locked = true;
+
+      if (window.SmoothScroll && typeof window.SmoothScroll.stop === 'function'){
+        window.SmoothScroll.stop();
+      }
+
+      savedY = window.scrollY || window.pageYOffset || 0;
+
+      window.addEventListener('wheel', preventWheelTouch, {passive:false, capture:true});
+      window.addEventListener('touchmove', preventWheelTouch, {passive:false, capture:true});
+      window.addEventListener('keydown', preventKeys, {capture:true});
+      window.addEventListener('scroll', jailScroll, {passive:true});
+
+      document.documentElement.style.touchAction = 'none';
+    }
+
+    function unlock(){
+      if (!locked) return;
+      locked = false;
+
+      window.removeEventListener('wheel', preventWheelTouch, {capture:true});
+      window.removeEventListener('touchmove', preventWheelTouch, {capture:true});
+      window.removeEventListener('keydown', preventKeys, {capture:true});
+      window.removeEventListener('scroll', jailScroll);
+
+      document.documentElement.style.touchAction = '';
+
+      window.scrollTo(0, savedY);
+
+      if (window.SmoothScroll){
+        if (typeof window.SmoothScroll.start === 'function') window.SmoothScroll.start();
+        if (typeof window.SmoothScroll.scrollTo === 'function'){
+          window.SmoothScroll.scrollTo(savedY, { immediate: true });
+        }
+      }
+
+      if (window.ScrollTrigger && typeof window.ScrollTrigger.refresh === 'function'){
+        window.ScrollTrigger.refresh();
+      }
+    }
+
+    function isVisible(el){
+      if (!el) return false;
+      var cs = window.getComputedStyle(el);
+      if (cs.display === 'none' || cs.visibility === 'hidden' || parseFloat(cs.opacity) === 0) return false;
+      var r = el.getBoundingClientRect();
+      return r.width > 0 && r.height > 0;
+    }
+
+    function update(){
+      var anyVisible = targets.some(isVisible);
+      if (anyVisible) lock(); else unlock();
+    }
+
+    // Watch all target elements
+    targets.forEach(function(el){
+      var obs = new MutationObserver(update);
+      obs.observe(el, { attributes: true, attributeFilter: ['class','style'] });
+    });
+
+    // Menu button fallback for instant update
+    var btn = document.getElementById('menuButton');
+    if (btn) btn.addEventListener('click', function(){ setTimeout(update, 0); });
+
+    update(); // initial state
+  }
+
+  if (WF && typeof WF.push === 'function'){
+    WF.push(initScrollInputLock);
+  } else if (document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', initScrollInputLock);
+  } else {
+    initScrollInputLock();
+  }
+})();
+</script></div><div data-w-id="184123d3-745a-9a6d-f726-ade0970f59d8" class="navbar"><div class="navbar-container"><a href="/" aria-current="page" class="nav-logo-black w-inline-block w--current"></a><link rel="prefetch" href="/"/><a href="/" aria-current="page" class="nav-logo-white w-inline-block w--current"></a><link rel="prefetch" href="/"/><div class="buttons-container"><div id="menuButton" class="button-menu"><div class="icon-container bars"><div class="top-bar"></div><div class="top-bar-open"></div><div class="middle-bar"></div><div class="bottom-bar-open"></div><div class="bottom-bar"></div></div><div id="menuText" class="button_text white">menu</div></div><div class="button-desktop"><a data-w-id="5669da83-33d4-939c-be9d-9949909493df" href="/book-a-call" class="button-primary w-inline-block"><div class="icon-container"><img src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68e466fd79b0782d2a13ff97_arrow-right-up-black.svg" loading="lazy" alt="Minimal arrow icon pointing up and to the right, commonly used to indicate an external link or upward navigation action." class="arrow-icon"/></div><div class="button_text">Book a discovery call</div></a><link rel="prefetch" href="/book-a-call"/></div></div></div><div class="open-nav-container"><div class="noise-on-black"></div><div class="nav-container"><div class="nav-links-container"><div class="open-nav-links"><div class="link-1"><a hoverstagger="link" href="/about" class="open-nav-link w-inline-block"><div hoverstagger="text" class="menu-link-text">About</div><div hoverstagger="text" class="menu-link-text is-2">About</div></a></div><div class="divider"></div><div class="link-2"><a hoverstagger="link" href="/services" class="open-nav-link w-inline-block"><div hoverstagger="text" class="menu-link-text">Services</div><div hoverstagger="text" class="menu-link-text is-2">Services</div></a></div><div class="divider"></div><div class="link-3"><a hoverstagger="link" href="/insights" class="open-nav-link w-inline-block"><div hoverstagger="text" class="menu-link-text">Insights</div><div hoverstagger="text" class="menu-link-text is-2">Insights</div></a></div><div class="divider"></div><div class="link-4"><a hoverstagger="link" href="/contact" class="open-nav-link w-inline-block"><div hoverstagger="text" class="menu-link-text">Contact</div><div hoverstagger="text" class="menu-link-text is-2">Contact</div></a></div></div></div><div class="button-mobile"><a data-w-id="5669da83-33d4-939c-be9d-9949909493df" href="#" class="button-primary w-inline-block"><div class="icon-container"><img src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68e466fd79b0782d2a13ff97_arrow-right-up-black.svg" loading="lazy" alt="Minimal arrow icon pointing up and to the right, commonly used to indicate an external link or upward navigation action." class="arrow-icon"/></div><div class="button_text">Book a discovery call</div></a></div><div class="nav-image-container"><div class="nav-img-wrapper"><div class="nav-image"></div><div class="image-wipe black"><div class="noise-on-black"></div></div></div><div class="nav-social-container"><div class="socials-wrapper"><a href="https://www.facebook.com/SomerstonePropertyGroup" target="_blank" class="social-link w-inline-block"><div class="social-icon-fb"></div></a><a href="https://www.instagram.com/somerstoneproperty/" target="_blank" class="social-link w-inline-block"><div class="social-icon-insta"></div></a><a href="https://www.linkedin.com/company/somerstonepropertygroup/" target="_blank" class="social-link w-inline-block"><div class="social-icon-linkedin"></div></a></div><div class="badge-text white right">Level 4/459 Church St<br/>Cremorne VIC 3121</div></div></div></div><div class="nav-footer"><div class="nav-footer-link grey-20">© 2025 somerstone</div><a href="mailto:somerstone@somerstone.com.au" class="nav-footer-link white">somerstone@somerstone.com.au</a><a href="/privacy-policy" class="nav-footer-link grey-20">Privacy policy</a></div></div></div><div style="opacity:0" class="home_hero"><div class="home_gradient_bot"><div class="code-embed-2 w-embed"><style>
+.home_gradient_bot {
+  background: linear-gradient(
+    to top,
+
+    hsla(0, 0%, 0%, 0.75) 30%,
+    hsla(0, 0%, 0%, 0.74) 35.67%,
+    hsla(0, 0%, 0%, 0.714) 40.85%,
+    hsla(0, 0%, 0%, 0.672) 45.75%,
+    hsla(0, 0%, 0%, 0.618) 50.3%,
+    hsla(0, 0%, 0%, 0.556) 54.71%,
+    hsla(0, 0%, 0%, 0.486) 58.84%,
+    hsla(0, 0%, 0%, 0.412) 62.97%,
+    hsla(0, 0%, 0%, 0.338) 67.03%,
+    hsla(0, 0%, 0%, 0.264) 71.16%,
+    hsla(0, 0%, 0%, 0.194) 75.29%,
+    hsla(0, 0%, 0%, 0.132) 79.7%,
+    hsla(0, 0%, 0%, 0.078) 84.25%,
+    hsla(0, 0%, 0%, 0.036) 89.15%,
+    hsla(0, 0%, 0%, 0.01) 94.33%,
+    hsla(0, 0%, 0%, 0) 100%
+  );
+}
+</style></div></div><div class="home_gradient_top"><div class="desktop-gradient w-embed"><style>
+.home_gradient_top {
+  	background: linear-gradient(
+  	to bottom,
+	hsla(0, 0%, 0%, 0.55) 10%,
+  hsla(0, 0%, 0%, 0.543) 17.29%,
+  hsla(0, 0%, 0%, 0.523) 23.95%,
+  hsla(0, 0%, 0%, 0.493) 30.25%,
+  hsla(0, 0%, 0%, 0.454) 36.1%,
+  hsla(0, 0%, 0%, 0.407) 41.77%,
+  hsla(0, 0%, 0%, 0.356) 47.08%,
+  hsla(0, 0%, 0%, 0.302) 52.39%,
+  hsla(0, 0%, 0%, 0.248) 57.61%,
+  hsla(0, 0%, 0%, 0.194) 62.92%,
+  hsla(0, 0%, 0%, 0.143) 68.23%,
+  hsla(0, 0%, 0%, 0.096) 73.9%,
+  hsla(0, 0%, 0%, 0.057) 79.75%,
+  hsla(0, 0%, 0%, 0.027) 86.05%,
+  hsla(0, 0%, 0%, 0.007) 92.71%,
+  hsla(0, 0%, 0%, 0) 100%
+	);
+}
+</style></div><div class="mobile-gradient w-embed"><style>
+.home_gradient_top {
+  	background: linear-gradient(
+  	to bottom,
+  	hsla(0, 0%, 0%, 0.5) 30%,
+  	hsla(0, 0%, 0%, 0.454) 36.1%,
+  	hsla(0, 0%, 0%, 0.407) 41.77%,
+  	hsla(0, 0%, 0%, 0.356) 47.08%,
+  	hsla(0, 0%, 0%, 0.302) 52.39%,
+  	hsla(0, 0%, 0%, 0.248) 57.61%,
+  	hsla(0, 0%, 0%, 0.194) 62.92%,
+  	hsla(0, 0%, 0%, 0.143) 68.23%,
+  	hsla(0, 0%, 0%, 0.096) 73.9%,
+  	hsla(0, 0%, 0%, 0.057) 79.75%,
+  	hsla(0, 0%, 0%, 0.027) 86.05%,
+  	hsla(0, 0%, 0%, 0.007) 92.71%,
+  	hsla(0, 0%, 0%, 0) 100%
+	);
+}
+</style></div></div><div class="video_overlay_2"></div><div class="video_overlay_1"></div><div data-poster-url="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f6c26a25f9b4a434e8fd22_Somerstone%20Reel-poster-00001.jpg" data-video-urls="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f6c26a25f9b4a434e8fd22_Somerstone%20Reel-transcode.mp4,https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f6c26a25f9b4a434e8fd22_Somerstone%20Reel-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="home_video w-background-video w-background-video-atom"><video id="5b7a3571-4c37-3a38-abee-a2b746ae9e59-video" autoplay="" loop="" style="background-image:url(&quot;https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f6c26a25f9b4a434e8fd22_Somerstone%20Reel-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover"><source src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f6c26a25f9b4a434e8fd22_Somerstone%20Reel-transcode.mp4" data-wf-ignore="true"/><source src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f6c26a25f9b4a434e8fd22_Somerstone%20Reel-transcode.webm" data-wf-ignore="true"/></video></div><div class="hero_noise"></div><div style="-webkit-transform:translate3d(0, 25px, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 25px, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 25px, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25px, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="home_hero_text"><img src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68f0326b2b8cf4ca9bf309a9_Somerstone%20-Horizontal-Whiteout.svg" loading="lazy" width="Auto" height="Auto" alt="" class="logo_symbol"/><h1 class="white text-shadow">Your trusted voice in property investment.</h1><div class="hero_body_container"><div class="body-large white text-shadow">We take the stress out of investing in real estate, giving you a clear path to financial freedom.</div></div><a href="/book-a-call" class="button-link-white w-inline-block"><div class="icon-container"><img src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68e44df6ff44edb06011b83c_tdesign%3Aarrow-right-up.svg" loading="lazy" alt="" class="arrow-icon"/></div><div class="button_text_ul white">start your journey</div></a><link rel="prefetch" href="/book-a-call"/></div><div data-w-id="abb2de8a-9b9e-2950-032f-d9f114d08f31" style="-webkit-transform:translate3d(0, 25px, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 25px, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 25px, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25px, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="home_card"><div class="card_image_wrapper"><img src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68f8663c9d2225b9747115f1_a65d6c8e5f368cb1ae2939a96f8ad760_Homepage_Location-min.jpg" loading="lazy" width="313.6" height="156.8" alt="Modern rooftop workspace with people collaborating and relaxing at sunset, overlooking a city skyline with tall buildings. The scene includes outdoor tables, laptops, and red brick walls, creating a professional yet casual atmosphere." srcset="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68f8663c9d2225b9747115f1_a65d6c8e5f368cb1ae2939a96f8ad760_Homepage_Location-min-p-500.jpg 500w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68f8663c9d2225b9747115f1_a65d6c8e5f368cb1ae2939a96f8ad760_Homepage_Location-min-p-800.jpg 800w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68f8663c9d2225b9747115f1_a65d6c8e5f368cb1ae2939a96f8ad760_Homepage_Location-min.jpg 1058w" sizes="314px" class="card_image"/></div><div class="card-text-container"><div class="body-small white text-shadow">We’re property experts with decades of experience delivering smarter strategies and stronger results.</div><a href="/services" class="button-link-white w-inline-block"><div class="icon-container"><img src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68e44df6ff44edb06011b83c_tdesign%3Aarrow-right-up.svg" loading="lazy" alt="" class="arrow-icon"/></div><div class="button_text_ul white">our services</div></a></div></div><div class="scroll-indicator"><div class="scroll-dot"></div></div></div><div data-w-id="d887ce5c-3dfc-6864-26a3-d89a424b3429" class="homepage"><div class="noise-on-white"></div><div class="home-intro"><div data-w-id="1d07e9ef-7372-df4a-5df7-58b1b2f082c0" class="intro-text"><div class="badge"><div class="badge-icon"></div><div class="badge-text">ABOUT SOMERSTONE</div></div><h2 style="opacity:0" class="reveal-type">We work with Australians who want to grow their wealth but don’t have the time, expertise, or confidence to do it alone.</h2><div style="opacity:0" class="intro-body"><div class="body-large black-80">With end-to-end support, we simplify the process and keep the focus on smart property decisions. By combining practical experience with market insight, we help you cut through the noise, avoid common pitfalls, and make confident choices.</div></div></div><div class="overview-columns"><div class="intro-column"><div class="column-img-wrapper"><img src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68f02128e4e24b300183a6ae_dd423df64d2b62999050400f2235ab6c_luke-southern-ftQrm7D1Rw0-unsplash-min.jpg" loading="lazy" width="Auto" height="Auto" alt="Close-up of a person writing notes in a notebook beside a laptop and smartphone on a white desk, suggesting a focused work or planning session in a modern office setting." srcset="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68f02128e4e24b300183a6ae_dd423df64d2b62999050400f2235ab6c_luke-southern-ftQrm7D1Rw0-unsplash-min-p-500.jpg 500w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68f02128e4e24b300183a6ae_dd423df64d2b62999050400f2235ab6c_luke-southern-ftQrm7D1Rw0-unsplash-min-p-800.jpg 800w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68f02128e4e24b300183a6ae_dd423df64d2b62999050400f2235ab6c_luke-southern-ftQrm7D1Rw0-unsplash-min-p-1080.jpg 1080w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68f02128e4e24b300183a6ae_dd423df64d2b62999050400f2235ab6c_luke-southern-ftQrm7D1Rw0-unsplash-min-p-1600.jpg 1600w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68f02128e4e24b300183a6ae_dd423df64d2b62999050400f2235ab6c_luke-southern-ftQrm7D1Rw0-unsplash-min-p-2000.jpg 2000w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68f02128e4e24b300183a6ae_dd423df64d2b62999050400f2235ab6c_luke-southern-ftQrm7D1Rw0-unsplash-min-p-2600.jpg 2600w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68f02128e4e24b300183a6ae_dd423df64d2b62999050400f2235ab6c_luke-southern-ftQrm7D1Rw0-unsplash-min-p-3200.jpg 3200w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68f02128e4e24b300183a6ae_dd423df64d2b62999050400f2235ab6c_luke-southern-ftQrm7D1Rw0-unsplash-min.jpg 6720w" sizes="(max-width: 6720px) 100vw, 6720px" class="column-image"/><div class="image-wipe"><div class="noise-on-white"></div></div></div><div class="column-text"><div class="badge-text">20 YEARS OF TRUSTED GUIDANCE</div><div class="body-small black-80">Markets rise and fall. What hasn’t changed is our ability to help Australians build wealth with strategies that stand the test of time.</div></div></div><div class="intro-column"><div class="column-img-wrapper"><img src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68f9b39119d86ea99e1f8ee7_def699d86c8499181672ffe1b02e573b_Expertise-min.jpg" loading="lazy" width="Auto" height="Auto" alt="Senior strategist Matthew Hill smiling while standing on a staircase in a modern office interior." srcset="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68f9b39119d86ea99e1f8ee7_def699d86c8499181672ffe1b02e573b_Expertise-min-p-500.jpg 500w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68f9b39119d86ea99e1f8ee7_def699d86c8499181672ffe1b02e573b_Expertise-min-p-800.jpg 800w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68f9b39119d86ea99e1f8ee7_def699d86c8499181672ffe1b02e573b_Expertise-min-p-1080.jpg 1080w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68f9b39119d86ea99e1f8ee7_def699d86c8499181672ffe1b02e573b_Expertise-min.jpg 1114w" sizes="(max-width: 1114px) 100vw, 1114px" class="column-image _2"/><div class="image-wipe"><div class="noise-on-white"></div></div></div><div class="column-text"><div class="badge-text">EXPERTISE YOU CAN COUNT ON</div><div class="body-small black-80">Whether it’s finance, strategy, legal or real estate guidance, our team brings every piece together so you can invest with confidence.</div></div></div><div class="intro-column"><div class="column-img-wrapper"><img src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/691d57d722258b4939682898_Untitled%20design%20(7).png" loading="lazy" width="Auto" height="Auto" alt="" srcset="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/691d57d722258b4939682898_Untitled%20design%20(7)-p-500.png 500w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/691d57d722258b4939682898_Untitled%20design%20(7)-p-800.png 800w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/691d57d722258b4939682898_Untitled%20design%20(7)-p-1080.png 1080w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/691d57d722258b4939682898_Untitled%20design%20(7)-p-1600.png 1600w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/691d57d722258b4939682898_Untitled%20design%20(7).png 1671w" sizes="(max-width: 1671px) 100vw, 1671px" class="column-image _3"/><div class="image-wipe"><div class="noise-on-white"></div></div></div><div class="column-text"><div class="badge-text">INTEGRITY AT THE CORE</div><div class="body-small black-80">We value honesty, openness, and respect. We build trusted relationships that support you through every challenge and opportunity.</div></div></div></div></div><div data-w-id="09179186-f63b-b2b4-8a30-fd444d87f2cf" class="home-logos"><h3 data-w-id="705fd790-0714-3b63-951b-2bd8cfaa4d77" style="opacity:0">Trusted by investors across Australia.</h3><div class="logo-carousel"><div style="-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="logo-carousel-wrapper"><div class="featured-logo"><img src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec2e2932ea05a4ca6c4e18_PIPA-Logo-Hi-Res-White-Background-1024x362.png" loading="lazy" width="Auto" sizes="(max-width: 1024px) 100vw, 1024px" alt="The logo for the Property Investment Professionals Of Australia" srcset="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec2e2932ea05a4ca6c4e18_PIPA-Logo-Hi-Res-White-Background-1024x362-p-500.png 500w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec2e2932ea05a4ca6c4e18_PIPA-Logo-Hi-Res-White-Background-1024x362-p-800.png 800w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec2e2932ea05a4ca6c4e18_PIPA-Logo-Hi-Res-White-Background-1024x362.png 1024w" class="logo-pipa"/></div><div class="featured-logo"><img src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec2e96c163eab86d46f62a_realestate.com.au%20Boost%20your%20brand%20boostyourbrand.au%20image-1.png" loading="lazy" width="Auto" sizes="(max-width: 1521px) 100vw, 1521px" alt="The logo for Realestate.com.au" srcset="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec2e96c163eab86d46f62a_realestate.com.au%20Boost%20your%20brand%20boostyourbrand.au%20image-1-p-500.png 500w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec2e96c163eab86d46f62a_realestate.com.au%20Boost%20your%20brand%20boostyourbrand.au%20image-1-p-800.png 800w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec2e96c163eab86d46f62a_realestate.com.au%20Boost%20your%20brand%20boostyourbrand.au%20image-1-p-1080.png 1080w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec2e96c163eab86d46f62a_realestate.com.au%20Boost%20your%20brand%20boostyourbrand.au%20image-1.png 1521w" class="logo-realestatecom"/></div><div class="featured-logo"><img src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec2fed88373690e8768904_Domain_Logo_RGB_GREEN.webp" loading="lazy" width="Auto" alt="The logo for Domain." class="logo-domain"/></div><div class="featured-logo"><img src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec30b9af3c140067ac0a1a_homely-logo-horizontal-black.png" loading="lazy" width="Auto" sizes="(max-width: 4021px) 100vw, 4021px" alt="The logo for Homely." srcset="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec30b9af3c140067ac0a1a_homely-logo-horizontal-black-p-500.png 500w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec30b9af3c140067ac0a1a_homely-logo-horizontal-black-p-800.png 800w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec30b9af3c140067ac0a1a_homely-logo-horizontal-black-p-1080.png 1080w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec30b9af3c140067ac0a1a_homely-logo-horizontal-black-p-1600.png 1600w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec30b9af3c140067ac0a1a_homely-logo-horizontal-black-p-2000.png 2000w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec30b9af3c140067ac0a1a_homely-logo-horizontal-black-p-2600.png 2600w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec30b9af3c140067ac0a1a_homely-logo-horizontal-black-p-3200.png 3200w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec30b9af3c140067ac0a1a_homely-logo-horizontal-black.png 4021w" class="logo-homely"/></div><div class="featured-logo"><img src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec32b56f791a85d9c29913_CoreLogic_idtmZUSSJg_0.svg" loading="lazy" width="175" alt="The logo for CoreLogic." class="logo-corelogic"/></div><div class="featured-logo"><img src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec3351cbbb60c6fc613194_Cotality_idb2EzZzwe_1.svg" loading="lazy" width="175" alt="The logo for Cotality." class="logo-cotality"/></div></div><div style="-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="logo-carousel-wrapper"><div class="featured-logo"><img src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec2e2932ea05a4ca6c4e18_PIPA-Logo-Hi-Res-White-Background-1024x362.png" loading="lazy" width="Auto" sizes="(max-width: 1024px) 100vw, 1024px" alt="The logo for the Property Investment Professionals Of Australia" srcset="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec2e2932ea05a4ca6c4e18_PIPA-Logo-Hi-Res-White-Background-1024x362-p-500.png 500w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec2e2932ea05a4ca6c4e18_PIPA-Logo-Hi-Res-White-Background-1024x362-p-800.png 800w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec2e2932ea05a4ca6c4e18_PIPA-Logo-Hi-Res-White-Background-1024x362.png 1024w" class="logo-pipa"/></div><div class="featured-logo"><img src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec2e96c163eab86d46f62a_realestate.com.au%20Boost%20your%20brand%20boostyourbrand.au%20image-1.png" loading="lazy" width="Auto" sizes="(max-width: 1521px) 100vw, 1521px" alt="The logo for Realestate.com.au" srcset="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec2e96c163eab86d46f62a_realestate.com.au%20Boost%20your%20brand%20boostyourbrand.au%20image-1-p-500.png 500w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec2e96c163eab86d46f62a_realestate.com.au%20Boost%20your%20brand%20boostyourbrand.au%20image-1-p-800.png 800w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec2e96c163eab86d46f62a_realestate.com.au%20Boost%20your%20brand%20boostyourbrand.au%20image-1-p-1080.png 1080w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec2e96c163eab86d46f62a_realestate.com.au%20Boost%20your%20brand%20boostyourbrand.au%20image-1.png 1521w" class="logo-realestatecom"/></div><div class="featured-logo"><img src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec2fed88373690e8768904_Domain_Logo_RGB_GREEN.webp" loading="lazy" width="Auto" alt="The logo for Domain." class="logo-domain"/></div><div class="featured-logo"><img src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec30b9af3c140067ac0a1a_homely-logo-horizontal-black.png" loading="lazy" width="Auto" sizes="(max-width: 4021px) 100vw, 4021px" alt="The logo for Homely." srcset="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec30b9af3c140067ac0a1a_homely-logo-horizontal-black-p-500.png 500w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec30b9af3c140067ac0a1a_homely-logo-horizontal-black-p-800.png 800w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec30b9af3c140067ac0a1a_homely-logo-horizontal-black-p-1080.png 1080w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec30b9af3c140067ac0a1a_homely-logo-horizontal-black-p-1600.png 1600w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec30b9af3c140067ac0a1a_homely-logo-horizontal-black-p-2000.png 2000w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec30b9af3c140067ac0a1a_homely-logo-horizontal-black-p-2600.png 2600w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec30b9af3c140067ac0a1a_homely-logo-horizontal-black-p-3200.png 3200w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec30b9af3c140067ac0a1a_homely-logo-horizontal-black.png 4021w" class="logo-homely"/></div><div class="featured-logo"><img src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec32b56f791a85d9c29913_CoreLogic_idtmZUSSJg_0.svg" loading="lazy" width="175" alt="The logo for CoreLogic." class="logo-corelogic"/></div><div class="featured-logo"><img src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68ec3351cbbb60c6fc613194_Cotality_idb2EzZzwe_1.svg" loading="lazy" width="175" alt="The logo for Cotality." class="logo-cotality"/></div></div></div></div><div data-w-id="6f08fecb-2545-3173-44ae-6b2468486bb8" class="home-process"><div class="process-intro-text"><div class="process-intro-title"><div class="badge"><div class="badge-icon"></div><div class="badge-text">our process</div></div><h2 data-w-id="d8ad0c4d-a54b-a469-b3a6-337a8723940b" style="opacity:0">An end-to-end approach for building your wealth.</h2></div><a data-w-id="5669da83-33d4-939c-be9d-9949909493df" href="/book-a-call" class="button-primary w-inline-block"><div class="icon-container"><img src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68e466fd79b0782d2a13ff97_arrow-right-up-black.svg" loading="lazy" alt="Minimal arrow icon pointing up and to the right, commonly used to indicate an external link or upward navigation action." class="arrow-icon"/></div><div class="button_text">start your journey</div></a><link rel="prefetch" href="/book-a-call"/></div><div data-delay="4000" data-animation="cross" class="process-slider w-slider" data-autoplay="false" data-easing="ease-out-quad" style="opacity:0;-webkit-transform:translate3d(0, 25px, 0) scale3d(0.95, 0.95, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 25px, 0) scale3d(0.95, 0.95, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 25px, 0) scale3d(0.95, 0.95, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25px, 0) scale3d(0.95, 0.95, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="600" data-infinite="true"><div class="mask w-slider-mask"><div class="slide w-slide"><div style="opacity:0" class="process-slider-text"><div class="badge-text white">STEP 01</div><h3 class="white">We understand your needs.</h3><div class="body-small grey-60">Before making any recommendations, we take the time to understand where you are today and where you want to be in the future. Together, we map out your current financial position and your goals for the next 5, 10, and 15 years. This clarity forms the foundation for every decision ahead.</div></div><div style="opacity:0" class="mask-container"><div data-poster-url="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f70d591f16ace227757335_close-up-hands-of-busy-concentrated-business-man-f-1080p-2025-08-28-22-20-57-utc-poster-00001.jpg" data-video-urls="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f70d591f16ace227757335_close-up-hands-of-busy-concentrated-business-man-f-1080p-2025-08-28-22-20-57-utc-transcode.mp4,https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f70d591f16ace227757335_close-up-hands-of-busy-concentrated-business-man-f-1080p-2025-08-28-22-20-57-utc-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" style="clip-path:url(#Process-Mask)" class="mask-video w-background-video w-background-video-atom"><video id="25711ad4-7a6d-9fe6-5d0c-a31d4cf8567d-video" autoplay="" loop="" style="background-image:url(&quot;https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f70d591f16ace227757335_close-up-hands-of-busy-concentrated-business-man-f-1080p-2025-08-28-22-20-57-utc-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover"><source src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f70d591f16ace227757335_close-up-hands-of-busy-concentrated-business-man-f-1080p-2025-08-28-22-20-57-utc-transcode.mp4" data-wf-ignore="true"/><source src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f70d591f16ace227757335_close-up-hands-of-busy-concentrated-business-man-f-1080p-2025-08-28-22-20-57-utc-transcode.webm" data-wf-ignore="true"/></video></div><svg xmlns="http://www.w3.org/2000/svg" width="0px" height="0px" viewBox="0 0 523 480" fill="none" class="svg"><defs><clipPath id="Process-Mask" clipPathUnits="objectBoundingBox"><path d="M0.9988152671755726,0.27173544093178037l-0.34025496183206105,0.38780865224625627l0.3146763358778626,0.3404559068219634h-0.6698702290076336l-0.3033664122137405,-0.3285723793677205l0.5964641221374046,-0.6714276206322796h0.4025160305343512l-0.0001648854961832061,0.27173544093178037z" fill="#C8C8C8"></path></clipPath></defs></svg></div></div><div class="w-slide"><div style="opacity:0" class="process-slider-text"><div class="badge-text white">STEP 02</div><h3 class="white">We plan a strategy.</h3><div class="body-small grey-60">With your goals in mind, we design a tailored investment strategy that fits your circumstances. This isn’t guesswork or speculation — it’s a structured plan that aligns property opportunities with your long-term financial objectives, giving you a clear roadmap to follow.</div></div><div style="opacity:0" class="mask-container"><div data-poster-url="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f70b985602a1c39fffbacd_Calculatr-shortened-poster-00001.jpg" data-video-urls="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f70b985602a1c39fffbacd_Calculatr-shortened-transcode.mp4,https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f70b985602a1c39fffbacd_Calculatr-shortened-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" style="clip-path:url(#Process-Mask-2)" class="mask-video w-background-video w-background-video-atom"><video id="219e6b06-d193-9407-bf68-f0e783cb1cf5-video" autoplay="" loop="" style="background-image:url(&quot;https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f70b985602a1c39fffbacd_Calculatr-shortened-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover"><source src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f70b985602a1c39fffbacd_Calculatr-shortened-transcode.mp4" data-wf-ignore="true"/><source src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f70b985602a1c39fffbacd_Calculatr-shortened-transcode.webm" data-wf-ignore="true"/></video></div><svg xmlns="http://www.w3.org/2000/svg" width="0px" height="0px" viewBox="0 0 523 480" fill="none"><defs><clipPath id="Process-Mask-2" clipPathUnits="objectBoundingBox"><path d="M0.9988152671755726,0.27173544093178037l-0.34025496183206105,0.38780865224625627l0.3146763358778626,0.3404559068219634h-0.6698702290076336l-0.3033664122137405,-0.3285723793677205l0.5964641221374046,-0.6714276206322796h0.4025160305343512l-0.0001648854961832061,0.27173544093178037z" fill="#C8C8C8"></path></clipPath></defs></svg></div></div><div class="w-slide"><div style="opacity:0" class="process-slider-text"><div class="badge-text white">STEP 03</div><h3 class="white">We present a solution.</h3><div class="body-small grey-60">Once the strategy is set, we show you the specific property and finance options that bring it to life. Every recommendation is unique to your goals, ensuring the solution we present is practical, achievable, and built for long-term returns.</div></div><div style="opacity:0" class="mask-container"><div data-poster-url="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f712ee635fcc344f3d4b62_Source%20Properties-poster-00001.jpg" data-video-urls="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f712ee635fcc344f3d4b62_Source%20Properties-transcode.mp4,https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f712ee635fcc344f3d4b62_Source%20Properties-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" style="clip-path:url(#Process-Mask-3)" class="mask-video w-background-video w-background-video-atom"><video id="c684e073-4773-6728-736b-64717c12e460-video" autoplay="" loop="" style="background-image:url(&quot;https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f712ee635fcc344f3d4b62_Source%20Properties-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover"><source src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f712ee635fcc344f3d4b62_Source%20Properties-transcode.mp4" data-wf-ignore="true"/><source src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f712ee635fcc344f3d4b62_Source%20Properties-transcode.webm" data-wf-ignore="true"/></video></div><svg xmlns="http://www.w3.org/2000/svg" width="0px" height="0px" viewBox="0 0 523 480" fill="none"><defs><clipPath id="Process-Mask-3" clipPathUnits="objectBoundingBox"><path d="M0.9988152671755726,0.27173544093178037l-0.34025496183206105,0.38780865224625627l0.3146763358778626,0.3404559068219634h-0.6698702290076336l-0.3033664122137405,-0.3285723793677205l0.5964641221374046,-0.6714276206322796h0.4025160305343512l-0.0001648854961832061,0.27173544093178037z" fill="#C8C8C8"></path></clipPath></defs></svg></div></div><div class="w-slide"><div style="opacity:0" class="process-slider-text"><div class="badge-text white">STEP 04</div><h3 class="white">We source properties.</h3><div class="body-small grey-60">Our specialist team finds the right properties to match your strategy. We focus on quality, in-demand locations, and growth potential — making sure every investment has the strength to support your financial future.</div></div><div style="opacity:0" class="mask-container"><div data-poster-url="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f7137f727db746ff955c76_Houses-poster-00001.jpg" data-video-urls="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f7137f727db746ff955c76_Houses-transcode.mp4,https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f7137f727db746ff955c76_Houses-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" style="clip-path:url(#Process-Mask-4)" class="mask-video w-background-video w-background-video-atom"><video id="c6e3ac3a-a7f3-8507-97aa-5367ae9392df-video" autoplay="" loop="" style="background-image:url(&quot;https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f7137f727db746ff955c76_Houses-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover"><source src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f7137f727db746ff955c76_Houses-transcode.mp4" data-wf-ignore="true"/><source src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f7137f727db746ff955c76_Houses-transcode.webm" data-wf-ignore="true"/></video></div><svg xmlns="http://www.w3.org/2000/svg" width="0px" height="0px" viewBox="0 0 523 480" fill="none"><defs><clipPath id="Process-Mask-4" clipPathUnits="objectBoundingBox"><path d="M0.9988152671755726,0.27173544093178037l-0.34025496183206105,0.38780865224625627l0.3146763358778626,0.3404559068219634h-0.6698702290076336l-0.3033664122137405,-0.3285723793677205l0.5964641221374046,-0.6714276206322796h0.4025160305343512l-0.0001648854961832061,0.27173544093178037z" fill="#C8C8C8"></path></clipPath></defs></svg></div></div><div class="w-slide"><div style="opacity:0" class="process-slider-text"><div class="badge-text white">STEP 05</div><h3 class="white">We manage and review.</h3><div class="body-small grey-60">Our partnership doesn’t stop once the property is secured. We help manage the process, from tenant sourcing to ongoing reviews of your strategy every six months. This ensures your investments stay on track, adapt to change, and continue working toward your goals.</div></div><div style="opacity:0" class="mask-container"><div data-poster-url="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f7103ffb691050ca499cb5_business-woman-hands-writing-growing-on-report-clo-2025-08-28-19-54-43-utc-poster-00001.jpg" data-video-urls="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f7103ffb691050ca499cb5_business-woman-hands-writing-growing-on-report-clo-2025-08-28-19-54-43-utc-transcode.mp4,https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f7103ffb691050ca499cb5_business-woman-hands-writing-growing-on-report-clo-2025-08-28-19-54-43-utc-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" style="clip-path:url(#Process-Mask-5)" class="mask-video w-background-video w-background-video-atom"><video id="aead1314-2273-bcb0-277d-382cef9a1c66-video" autoplay="" loop="" style="background-image:url(&quot;https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f7103ffb691050ca499cb5_business-woman-hands-writing-growing-on-report-clo-2025-08-28-19-54-43-utc-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover"><source src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f7103ffb691050ca499cb5_business-woman-hands-writing-growing-on-report-clo-2025-08-28-19-54-43-utc-transcode.mp4" data-wf-ignore="true"/><source src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d%2F68f7103ffb691050ca499cb5_business-woman-hands-writing-growing-on-report-clo-2025-08-28-19-54-43-utc-transcode.webm" data-wf-ignore="true"/></video></div><svg xmlns="http://www.w3.org/2000/svg" width="0px" height="0px" viewBox="0 0 523 480" fill="none"><defs><clipPath id="Process-Mask-5" clipPathUnits="objectBoundingBox"><path d="M0.9988152671755726,0.27173544093178037l-0.34025496183206105,0.38780865224625627l0.3146763358778626,0.3404559068219634h-0.6698702290076336l-0.3033664122137405,-0.3285723793677205l0.5964641221374046,-0.6714276206322796h0.4025160305343512l-0.0001648854961832061,0.27173544093178037z" fill="#C8C8C8"></path></clipPath></defs></svg></div></div></div><div style="opacity:0" class="left-arrow w-slider-arrow-left"><img loading="lazy" height="Auto" alt="Simple right-pointing arrow icon, typically used for navigation or moving forward through content." src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68e4713830b983dc6e96f3c2_arrow-left.svg" class="arrow-left"/></div><div class="noise-on-black"></div><div style="opacity:0" class="right-arrow w-slider-arrow-right"><img loading="lazy" height="Auto" alt="Simple left-pointing arrow icon, typically used for navigation or returning to a previous page." src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68e473f3fb6580295aedd072_arrow-right.svg" class="arrow-right"/></div><div data-w-id="45b63222-9d72-d55c-3952-e964bbc42e8d" style="opacity:0" class="slide-nav w-slider-nav"></div></div></div><div data-w-id="72715829-57ff-170e-b9ad-ba8cec78586c" class="home-properties"><div class="properties-text"><div class="badge"><div class="badge-icon"></div><div class="badge-text">success stories</div></div><h3 data-w-id="bfaa6769-643d-8fa5-afe0-f1276616e23e" style="opacity:0">Our track record.</h3><div style="opacity:0" class="intro-body"><div class="body-large black-80">Here are just some of the homes and investments our clients now call part of their portfolio.</div></div></div><div class="properties-container"><div style="opacity:0;-webkit-transform:translate3d(0, 25px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 25px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 25px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="property is-1"><div class="property-image is-1"></div><div class="property-info"><h4 class="white"><strong>Narangba, QLD</strong></h4><div class="property-text"><div class="text-row"><div class="badge-text black-40">Bought  in 2020 for:</div><div class="badge-text white">$687,000</div></div><div class="text-row"><div class="badge-text black-40">Current value:</div><div class="profit-wrapper"><div class="profit">+$316,000</div><div class="badge-text white">$1,003,000</div></div></div><div class="divider"></div><div class="text-row"><div class="badge-text black-40">positive cash flow:</div><div class="monthly-container"><div class="profit-icon"></div><div class="badge-text white">$1,114/mo</div></div></div></div></div></div><div style="opacity:0;-webkit-transform:translate3d(0, 25px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 25px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 25px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="property is-2"><div class="property-image is-2"></div><div class="property-info"><h4 class="white"><strong>Tamworth, NSW</strong></h4><div class="property-text"><div class="text-row"><div class="badge-text black-40">Bought  in 2022 for:</div><div class="badge-text white">$562,000</div></div><div class="text-row"><div class="badge-text black-40">Current value:</div><div class="profit-wrapper"><div class="profit">+$199,000</div><div class="badge-text white">$761,000</div></div></div><div class="divider"></div><div class="text-row"><div class="badge-text black-40">positive cash flow:</div><div class="monthly-container"><div class="profit-icon"></div><div class="badge-text white">$1,427/mo</div></div></div></div></div></div><div style="opacity:0;-webkit-transform:translate3d(0, 25px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 25px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 25px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="property is-3"><div class="property-image is-3"></div><div class="property-info"><h4 class="white"><strong>Armstrong Creek, VIC</strong></h4><div class="property-text"><div class="text-row"><div class="badge-text black-40">Bought  in 2024 for:</div><div class="badge-text white">$768,000</div></div><div class="text-row"><div class="badge-text black-40">Current value:</div><div class="profit-wrapper"><div class="profit">+$56,000</div><div class="badge-text white">$824,000</div></div></div><div class="divider"></div><div class="text-row"><div class="badge-text black-40">positive cash flow:</div><div class="monthly-container"><div class="profit-icon"></div><div class="badge-text white">$1,061/mo</div></div></div></div></div></div><div style="-webkit-transform:translate3d(0, 25px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 25px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 25px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="property is-4"><div class="property-image is-4"></div><div class="property-info"><h4 class="white"><strong>Haynes, WA</strong></h4><div class="property-text"><div class="text-row"><div class="badge-text black-40">Bought  in 2023 for:</div><div class="badge-text white">$457,000</div></div><div class="text-row"><div class="badge-text black-40">Current value:</div><div class="profit-wrapper"><div class="profit">+$274,000</div><div class="badge-text white">$731,000</div></div></div><div class="divider"></div><div class="text-row"><div class="badge-text black-40">positive cash flow:</div><div class="monthly-container"><div class="profit-icon"></div><div class="badge-text white">$931/mo</div></div></div></div></div></div><div class="scroll-padding"></div><div class="w-embed"><style>
+	.properties-container{
+		overflow-x: scroll; /* Always show horizontal scrollbar */
+	}
+</style></div></div></div><div data-w-id="191deedf-0137-6edc-95a7-3c02dd05f342" class="home-testimonials"><div class="noise-on-black"></div><div class="intro-text centered"><h2 data-w-id="4ed7e527-509d-bb23-20eb-ad485786d920" style="opacity:0" class="white">Real people, lasting outcomes.</h2><div style="opacity:0" class="intro-body"><div class="body-large grey-60">With our support, clients have secured properties, grown portfolios, and moved closer to the financial freedom they once thought was out of reach.</div></div><a data-w-id="5669da83-33d4-939c-be9d-9949909493df" href="/book-a-call" class="button-primary w-inline-block"><div class="icon-container"><img src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68e466fd79b0782d2a13ff97_arrow-right-up-black.svg" loading="lazy" alt="Minimal arrow icon pointing up and to the right, commonly used to indicate an external link or upward navigation action." class="arrow-icon"/></div><div class="button_text">start your journey</div></a><link rel="prefetch" href="/book-a-call"/></div><div class="testimonial-grid"><div style="-webkit-transform:translate3d(0, 25px, 0) scale3d(0.95, 0.95, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 25px, 0) scale3d(0.95, 0.95, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 25px, 0) scale3d(0.95, 0.95, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25px, 0) scale3d(0.95, 0.95, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="main-testimonial"><div class="testimonial-title"><div data-w-id="ba1be9ec-7aa2-bf67-56ee-9627d16e4fe8" class="badge"><div class="badge-icon white-icon"></div><div class="badge-text white">JESS &amp; MATTHEW, SA</div></div><h3 class="white">What stood out most was how much they genuinely cared - it never felt like a transaction, more like a partnership.</h3></div><div class="testimonial-text"><div class="body-small grey-60">As a couple new to investing, we had a lot of questions and probably overthought everything, but they were patient and took the time to make sure we felt comfortable. Now that we’ve settled on our first property, we feel like we’ve finally taken that big step we’ve been putting off for years.</div></div><div class="testimonial-properties-container"><div class="testimonial-property is-1"></div><div class="testimonial-property is-2"></div><div class="testimonial-property is-3"></div></div><div class="main-quote-mark"></div></div><div class="testimonial-column"><div style="-webkit-transform:translate3d(0, 25px, 0) scale3d(0.95, 0.95, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 25px, 0) scale3d(0.95, 0.95, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 25px, 0) scale3d(0.95, 0.95, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25px, 0) scale3d(0.95, 0.95, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="secondary-testimonial is-1"><div class="secondary-quote-mark"></div><div class="noise-on-white"></div><div class="secondary-testimonial-text"><div data-w-id="ba1be9ec-7aa2-bf67-56ee-9627d16e4fe8" class="badge"><div class="badge-icon white-icon"></div><div class="badge-text white">kate &amp; ryan, WA</div></div><h4 class="white">Matt was great to work with, always professional but also down to earth.</h4><div class="body-small grey-60">He made the process simple and we’re really happy with the property we secured. We’ve recommended Matt to friends already and will continue to do so.</div></div></div><div style="-webkit-transform:translate3d(0, 25px, 0) scale3d(0.95, 0.95, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 25px, 0) scale3d(0.95, 0.95, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 25px, 0) scale3d(0.95, 0.95, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25px, 0) scale3d(0.95, 0.95, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="secondary-testimonial is-2"><div class="secondary-quote-mark"></div><div class="noise-on-white"></div><div class="secondary-testimonial-text"><div data-w-id="ba1be9ec-7aa2-bf67-56ee-9627d16e4fe8" class="badge"><div class="badge-icon white-icon"></div><div class="badge-text white">nicole &amp; tom, nsw</div></div><h4 class="white">Couldn&#x27;t be happier!</h4><div class="body-small grey-60">Georgia made the whole experience smooth from start to finish. She kept us updated and made sure we felt comfortable the whole way through.</div></div></div></div></div></div><div data-w-id="99dc8a83-7bd2-ff2e-bf86-7fcce7bf7184" class="home-team"><div class="intro-text centered"><div class="badge"><div class="badge-icon"></div><div class="badge-text">our team</div></div><h2 data-w-id="9b7a1ce1-0358-cded-edd5-66ee23295576" style="opacity:0">Meet the experts.</h2><div style="opacity:0" class="intro-body"><div class="body-large black-80">For over 20 years, Craig has guided Australians through the complexities of property investment. Now a growing collective, our team is here to provide honest advice, practical strategies, and long-term support you can trust.</div></div></div><div class="value-columns"><div class="intro-column"><div class="column-img-wrapper"><img src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68f8692989687811636c1470_Craig-min.jpg" loading="lazy" width="Auto" height="Auto" alt="Professional portrait of founder Craig Hill in a suit and tie, standing with arms crossed and smiling slightly against a plain light background." srcset="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68f8692989687811636c1470_Craig-min-p-500.jpg 500w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68f8692989687811636c1470_Craig-min-p-800.jpg 800w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68f8692989687811636c1470_Craig-min-p-1080.jpg 1080w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68f8692989687811636c1470_Craig-min.jpg 1114w" sizes="(max-width: 1114px) 100vw, 1114px" class="column-image"/><div class="image-wipe"><div class="noise-on-white"></div></div></div><div class="bio-text"><div class="team-title"><div class="badge-text">CRAIG HILL</div><div class="badge-text black-60">/ FOUNDER</div></div><div class="body-small black-80">Drawing on two decades of property and wealth creation expertise, Craig founded Somerstone Property Group on principles of unwavering integrity.</div><div class="body-xtra-small black-60"> Renowned as a strong relationship builder, he delivers end-to-end guidance and bespoke solutions for discerning clients. Craig&#x27;s strategic approach and commitment to excellence ensure exceptional results for those building lasting wealth through sophisticated real estate investment strategies.</div></div></div><div class="intro-column"><div class="column-img-wrapper"><img src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68f02e5b8a092560aec22d1f_597850e5a84f37648e54f082c8c537f6_Matt.jpg" loading="lazy" width="Auto" height="Auto" alt="Professional portrait of senior consultant Matthew Hill smiling at the camera, wearing a dark sweater over a white collared shirt, set against a plain light background." srcset="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68f02e5b8a092560aec22d1f_597850e5a84f37648e54f082c8c537f6_Matt-p-500.jpg 500w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68f02e5b8a092560aec22d1f_597850e5a84f37648e54f082c8c537f6_Matt-p-800.jpg 800w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68f02e5b8a092560aec22d1f_597850e5a84f37648e54f082c8c537f6_Matt-p-1080.jpg 1080w, https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/68f02e5b8a092560aec22d1f_597850e5a84f37648e54f082c8c537f6_Matt.jpg 1114w" sizes="(max-width: 1114px) 100vw, 1114px" class="column-image"/><div class="image-wipe"><div class="noise-on-white"></div></div></div><div class="bio-text"><div class="team-title"><div class="badge-text">matthew HILL</div><div class="badge-text black-60">/ SENIOR strategist</div></div><div class="body-small black-80">With a background in Finance and Commerce, Matt combines strong financial expertise with a deep understanding of property strategy.</div><div class="body-xtra-small black-60">He’s passionate about helping everyday Australians build wealth and achieve their property goals through tailored, data-driven, and approachable guidance. Known for his responsiveness and genuine care, Matt ensures every client feels supported and confident on their investment journey.</div></div></div></div></div><div class="footer"><div id="somerstone" class="somerstone-word"><div class="w-embed w-script"><script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+<script>
+(function () {
+  // Don't run inside Webflow Designer
+  var WF = window.Webflow;
+  if (WF && WF.env && (WF.env('design') || WF.env('preview') || WF.env('editor'))) return;
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  function init() {
+    const letters = document.querySelectorAll('#somerstone .letter');
+    if (!letters.length) return;
+
+    // Set starting state
+    gsap.set(letters, { y: 40, opacity: 0 });
+
+    // Animate when visible
+    gsap.to(letters, {
+      scrollTrigger: {
+        trigger: "#somerstone",
+        start: "bot",     // starts when 80% down viewport
+        toggleActions: "play none none reverse"
+      },
+      y: 0,
+      opacity: 1,
+      duration: 0.8,
+      ease: "power3.out",
+      stagger: 0.08           // delay between letters
+    });
+  }
+
+  // Run after DOM ready
+  if (document.readyState !== 'loading') init();
+  else document.addEventListener('DOMContentLoaded', init);
+})();
+</script></div></div><a href="/" aria-current="page" class="footer-logo w-inline-block w--current"></a><div class="footer-links"><div class="left-links"><div class="links small menu"><div class="badge-text black-40">menu</div><a data-w-id="d00f0014-e076-0b7d-eaba-08e25b3f1f85" href="/about" class="footer-link w-inline-block"><div class="footer-text-link">About</div><div class="footer-link-icon"></div></a><link rel="prefetch" href="/about"/><a data-w-id="d00f0014-e076-0b7d-eaba-08e25b3f1f85" href="/services" class="footer-link w-inline-block"><div class="footer-text-link">Services</div><div class="footer-link-icon"></div></a><link rel="prefetch" href="/services"/><a data-w-id="d00f0014-e076-0b7d-eaba-08e25b3f1f85" href="/insights" class="footer-link w-inline-block"><div class="footer-text-link">Insights</div><div class="footer-link-icon"></div></a><link rel="prefetch" href="/insights"/><a data-w-id="d00f0014-e076-0b7d-eaba-08e25b3f1f85" href="/contact" class="footer-link w-inline-block"><div class="footer-text-link">Contact</div><div class="footer-link-icon"></div></a><link rel="prefetch" href="/contact"/></div><div class="links small social"><div class="badge-text black-40">social</div><a data-w-id="d00f0014-e076-0b7d-eaba-08e25b3f1f85" href="https://www.facebook.com/SomerstonePropertyGroup" target="_blank" class="footer-link w-inline-block"><div class="footer-text-link">Facebook</div><div class="footer-link-icon"></div></a><a data-w-id="d00f0014-e076-0b7d-eaba-08e25b3f1f85" href="https://www.instagram.com/somerstoneproperty/" target="_blank" class="footer-link w-inline-block"><div class="footer-text-link">Instagram</div><div class="footer-link-icon"></div></a><a data-w-id="d00f0014-e076-0b7d-eaba-08e25b3f1f85" href="https://www.linkedin.com/company/somerstonepropertygroup/" target="_blank" class="footer-link w-inline-block"><div class="footer-text-link">LinkedIn</div><div class="footer-link-icon"></div></a></div></div><div class="right-links"><div class="links contact"><div class="badge-text black-40">contact</div><a data-w-id="d00f0014-e076-0b7d-eaba-08e25b3f1f85" href="mailto:somerstone@somerstone.com.au" class="footer-link w-inline-block"><div class="footer-text-link">somerstone@somerstone.com.au</div><div class="footer-link-icon"></div></a><a data-w-id="d00f0014-e076-0b7d-eaba-08e25b3f1f85" href="tel:+610412054507" class="footer-link w-inline-block"><div class="footer-text-link">0412 054 507</div><div class="footer-link-icon"></div></a></div><div class="links legal"><div class="badge-text black-40">legal</div><a data-w-id="d00f0014-e076-0b7d-eaba-08e25b3f1f85" href="/privacy-policy" class="footer-link w-inline-block"><div class="footer-text-link">Privacy Policy</div><div class="footer-link-icon"></div></a><a data-w-id="d00f0014-e076-0b7d-eaba-08e25b3f1f85" href="/terms" class="footer-link w-inline-block"><div class="footer-text-link">Terms &amp; Conditions</div><div class="footer-link-icon"></div></a></div></div></div></div></div><div data-w-id="e824299e-1d8c-eb0e-946a-a24d15bbedf6" class="loader"><div class="noise-on-white"></div><div class="loader-logo"><div class="logo-back w-embed"><svg width="73" height="124" viewBox="0 0 124 212" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_301_194)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M62.0107 56.3024L13.0718 107.18L61.9906 156.112L110.873 105.177L62.0121 56.301L62.0107 56.3024ZM45.3251 106.642L61.9893 89.1012L78.6749 105.772L62.0107 123.314L45.3251 106.642ZM121.185 119.699C120.682 120.407 120.117 121.078 119.488 121.7L61.9906 179.198L0.0147447 118.298L0 149.986L61.9893 211.975L112.797 161.189C120.019 153.967 124.001 144.362 124.001 134.149C124.001 129.113 123.032 124.226 121.186 119.698L121.185 119.699ZM62.0107 0.4375L11.2046 51.2235C3.9824 58.4524 0 68.0512 0 78.2639C0 83.2221 0.940978 88.0316 2.73044 92.4952L62.0107 33.2149L123.979 94.1144L124 62.4268L62.0107 0.4375Z" fill="#999"/>
+</g>
+<defs>
+<clipPath id="clip0_301_194">
+<rect width="124" height="211.539" fill="#999" transform="translate(0 0.4375)"/>
+</clipPath>
+</defs>
+</svg></div><div class="logo-front hidden w-embed"><svg width="73" height="124" viewBox="0 0 124 212" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_301_194)">
+
+ <defs>
+    <mask id="mask" mask-type="alpha">
+      <rect id="mask-rect" x="0" y="0" width="100%" height="100%" fill="#000"/>
+    </mask>
+  </defs>
+
+<path fill-rule="evenodd" clip-rule="evenodd" d="M62.0107 56.3024L13.0718 107.18L61.9906 156.112L110.873 105.177L62.0121 56.301L62.0107 56.3024ZM45.3251 106.642L61.9893 89.1012L78.6749 105.772L62.0107 123.314L45.3251 106.642ZM121.185 119.699C120.682 120.407 120.117 121.078 119.488 121.7L61.9906 179.198L0.0147447 118.298L0 149.986L61.9893 211.975L112.797 161.189C120.019 153.967 124.001 144.362 124.001 134.149C124.001 129.113 123.032 124.226 121.186 119.698L121.185 119.699ZM62.0107 0.4375L11.2046 51.2235C3.9824 58.4524 0 68.0512 0 78.2639C0 83.2221 0.940978 88.0316 2.73044 92.4952L62.0107 33.2149L123.979 94.1144L124 62.4268L62.0107 0.4375Z" fill="#000" mask="url(#mask)"/>
+</g>
+<defs>
+<clipPath id="clip0_301_194">
+<rect width="124" height="211.539" fill="#000" transform="translate(0 0.4375)"/>
+</clipPath>
+</defs>
+</svg></div></div><div class="w-embed"><style>
+/* Total = 3.2s (0.4s pre-delay + 2s move + 0.8s post-delay) */
+@keyframes slideMask {
+  /* 0–12.5%: hold off-screen (0.4s) */
+  0% { y: 100%; }
+  12.5% { y: 100%; }
+
+  /* 12.5–75%: move (2.0s) */
+  75% { y: 0%; }
+
+  /* 75–100%: hold in place (0.8s) */
+  100% { y: 0%; }
+}
+
+#mask-rect {
+  /* duration | easing | delay | name */
+  animation: 3.2s ease 0s slideMask;
+  /* keep this if you need it to stay at the end after finishing */
+  animation-fill-mode: forwards;
+}
+</style></div><div class="loader-image-wrapper"><div class="loader-image-container is-1"><div class="loader-image is-1"></div><div class="loader-image-wipe is-1"><div class="noise-on-white"></div></div></div><div class="loader-image-container is-2"><div class="loader-image is-2"></div><div class="loader-image-wipe is-2"><div class="noise-on-white"></div></div></div><div class="loader-image-container is-3"><div class="loader-image is-3"></div><div class="loader-image-wipe is-3"><div class="noise-on-white"></div></div></div><div class="loader-image-container is-4"><div class="loader-image is-4"></div><div class="loader-image-wipe is-4"><div class="noise-on-white"></div></div></div></div></div><div class="badge"><div class="badge-icon"></div><div class="badge-text">ABOUT SOMERSTONE</div></div></div><script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=68e44979a274ebe44d0c4d2d" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/js/webflow.schunk.36b8fb49256177c8.js" type="text/javascript" integrity="sha384-4abIlA5/v7XaW1HMXKBgnUuhnjBYJ/Z9C1OSg4OhmVw9O3QeHJ/qJqFBERCDPv7G" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/js/webflow.schunk.0c4ae19485ed670c.js" type="text/javascript" integrity="sha384-581dxETXWw4gL+Qdcq3R0Ku6G/0FnneOR6vL0X17MXDpG6UFzwMNqDmJjjdvVLEg" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/js/webflow.schunk.61b534daaaeddbc7.js" type="text/javascript" integrity="sha384-zJCHv7ItWTNHbMmm2epSn5+4tX0nIPKUmNfcwwpQKCcPP5HC9rjwYp8giICW6yEw" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/js/webflow.schunk.9dfb96661114d3db.js" type="text/javascript" integrity="sha384-WomGmw6dEzLneGT/kPgtEBxcnZdNwGyYjo8D14umPoCXFAogmplTeXR1XciQq32y" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/68e44979a274ebe44d0c4d2d/js/webflow.7d6239e9.7c7ced4670dfd05f.js" type="text/javascript" integrity="sha384-nGGtjqGge0luT5BjqEjr5eJd6iI3OH+ljaGh8xfE48xMGKiu5ac9ZZBzmelM+pOe" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/gsap/3.14.2/gsap.min.js" type="text/javascript"></script><script src="https://cdn.prod.website-files.com/gsap/3.14.2/SplitText.min.js" type="text/javascript"></script><script src="https://cdn.prod.website-files.com/gsap/3.14.2/ScrollTrigger.min.js" type="text/javascript"></script><script src="https://cdn.prod.website-files.com/gsap/3.14.2/Flip.min.js" type="text/javascript"></script><script type="text/javascript">gsap.registerPlugin(SplitText,ScrollTrigger,Flip);</script><script>
+  // Function to check if the preloader has been shown
+  function hasPreloaderBeenShown() {
+    return sessionStorage.getItem('preloaderShown') === 'true';
+  }
+
+  // Function to set the flag indicating that the preloader has been shown
+  function setPreloaderShown() {
+    sessionStorage.setItem('preloaderShown', 'true');
+  }
+
+  // Function to show or hide the preloader based on the session storage (replace '.page-load-wrapper' with your class name)
+  function handlePreloader() {
+    var preloaderWrapper = document.querySelector('.loader');
+
+    if (!hasPreloaderBeenShown()) {
+      // Set the preloader to block
+      preloaderWrapper.style.display = 'block';
+
+      // Set the flag to indicate that the preloader has been shown
+      setPreloaderShown();
+    } else {
+      // Preloader has been shown, so hide it
+      preloaderWrapper.style.display = 'none';
+    }
+  }
+
+  // Call the function to handle the preloader on page load
+  document.addEventListener('DOMContentLoaded', function () {
+    handlePreloader();
+  });
+</script></body></html>

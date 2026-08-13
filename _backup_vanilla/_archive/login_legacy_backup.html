@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>HomieNest Auth Experience</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .dark .glass-card {
+            background: rgba(16, 22, 34, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .shimmer {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .shimmer::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(to bottom right,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 0) 40%,
+                    rgba(255, 255, 255, 0.3) 50%,
+                    rgba(255, 255, 255, 0) 60%,
+                    rgba(255, 255, 255, 0) 100%);
+            transform: rotate(45deg);
+            pointer-events: none;
+        }
+
+        .floating-label-input:focus-within label,
+        .floating-label-input input:not(:placeholder-shown)+label {
+            transform: translateY(-1.5rem) scale(0.85);
+            color: #0d59f2;
+        }
+
+        .floating-label-input label {
+            transition: all 0.2s ease-out;
+            pointer-events: none;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display antialiased">
+    <div class="relative flex h-screen w-full flex-col overflow-hidden">
+        <!-- Cinematic Background (Video Placeholder via Styled Div) -->
+        <div class="absolute inset-0 z-0">
+            <div class="h-full w-full bg-cover bg-center" data-alt="Cinematic modern Indian villa interior at sunset"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC0qEW3oDmFg__MT7Jj3Mn6ns8gQbkco9ToKpwp0rxRIa9SRQ3XyV9nDaPQSyEi5_25QT7puAxGlDxTor3m2bBL8IgLUYxibZ5RA32itYPuf2rc3mC1rTQSTFdIomvNfugrxzs7CKof52dbZShr6TLV5CLml7tkal-GosdJaqiZ_O-sqpNFQJuwRZLBU1xHBD_nEAXobROU_E9kLGiH1-cHrbFSz4AQoH3rr6souWA_oz0fzHQ1Gzo-yrQFoNdaYW6Mb-lOJmFn3u8x');">
+                <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
+            </div>
+        </div>
+        <!-- Top App Bar (Logo Area) -->
+        <div class="relative z-10 flex items-center justify-between p-6">
+            <div class="flex items-center gap-2">
+                <div
+                    class="size-10 rounded-xl bg-primary flex items-center justify-center text-white shadow-lg shadow-primary/40">
+                    <span class="material-symbols-outlined text-3xl">home_pin</span>
+                </div>
+                <h1 class="text-white text-2xl font-bold tracking-tight">HomieNest</h1>
+            </div>
+            <button
+                class="text-white bg-white/20 backdrop-blur-md size-10 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                <span class="material-symbols-outlined">help</span>
+            </button>
+        </div>
+        <!-- Spacer -->
+        <div class="flex-grow"></div>
+        <!-- Auth Experience Card -->
+        <div class="relative z-10 px-4 pb-10">
+            <div class="glass-card rounded-3xl p-6 shadow-2xl">
+                <!-- Toggle Segmented Buttons -->
+                <div class="flex mb-8">
+                    <div
+                        class="flex h-12 flex-1 items-center justify-center rounded-xl bg-gray-200/50 dark:bg-gray-800/50 p-1">
+                        <label
+                            class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white has-[:checked]:dark:bg-gray-700 has-[:checked]:shadow-sm text-[#49659c] dark:text-gray-400 has-[:checked]:text-primary text-sm font-semibold transition-all">
+                            <span class="truncate">Login</span>
+                            <input class="invisible w-0" name="auth-toggle" type="radio" value="login" />
+                        </label>
+                        <label
+                            class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white has-[:checked]:dark:bg-gray-700 has-[:checked]:shadow-sm text-[#49659c] dark:text-gray-400 has-[:checked]:text-primary text-sm font-semibold transition-all">
+                            <span class="truncate">Sign Up</span>
+                            <input checked="" class="invisible w-0" name="auth-toggle" type="radio" value="signup" />
+                        </label>
+                    </div>
+                </div>
+                <!-- Headline -->
+                <div class="mb-6">
+                    <h2 class="text-[#0d121c] dark:text-white text-2xl font-bold leading-tight">Create Account</h2>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">AI-powered house price prediction at your
+                        fingertips.</p>
+                </div>
+                <!-- Form Fields -->
+                <div class="space-y-5">
+                    <!-- Full Name -->
+                    <div class="relative floating-label-input">
+                        <input
+                            class="block w-full px-4 py-4 text-gray-900 dark:text-white bg-white/50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-primary/40 focus:border-primary outline-none transition-all peer"
+                            id="fullname" placeholder=" " type="text" />
+                        <label class="absolute left-4 top-4 text-gray-500 transition-all origin-left"
+                            for="fullname">Full Name</label>
+                    </div>
+                    <!-- Email -->
+                    <div class="relative floating-label-input">
+                        <input
+                            class="block w-full px-4 py-4 text-gray-900 dark:text-white bg-white/50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-primary/40 focus:border-primary outline-none transition-all peer"
+                            id="email" placeholder=" " type="email" />
+                        <label class="absolute left-4 top-4 text-gray-500 transition-all origin-left" for="email">Email
+                            Address</label>
+                    </div>
+                    <!-- Password -->
+                    <div class="relative floating-label-input">
+                        <input
+                            class="block w-full px-4 py-4 text-gray-900 dark:text-white bg-white/50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-primary/40 focus:border-primary outline-none transition-all peer"
+                            id="password" placeholder=" " type="password" />
+                        <label class="absolute left-4 top-4 text-gray-500 transition-all origin-left"
+                            for="password">Password</label>
+                        <button class="absolute right-4 top-4 text-gray-400 hover:text-primary transition-colors">
+                            <span class="material-symbols-outlined">visibility</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Primary Action Button -->
+                <button
+                    class="shimmer w-full mt-8 bg-primary text-white py-4 rounded-xl font-bold text-lg shadow-xl shadow-primary/30 hover:shadow-primary/40 active:scale-[0.98] transition-all">
+                    Create Account
+                </button>
+                <!-- Divider -->
+                <div class="relative my-8 flex items-center">
+                    <div class="flex-grow border-t border-gray-200 dark:border-gray-700"></div>
+                    <span class="mx-4 text-xs font-medium text-gray-400 uppercase tracking-widest">Or continue
+                        with</span>
+                    <div class="flex-grow border-t border-gray-200 dark:border-gray-700"></div>
+                </div>
+                <!-- Social Auth Buttons -->
+                <div class="flex gap-4">
+                    <button
+                        class="flex-1 flex items-center justify-center gap-2 py-3 border border-gray-200 dark:border-gray-700 rounded-xl bg-white dark:bg-gray-800 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-sm">
+                        <svg class="w-5 h-5" viewbox="0 0 24 24">
+                            <path
+                                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                                fill="#4285F4"></path>
+                            <path
+                                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                                fill="#34A853"></path>
+                            <path
+                                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                                fill="#FBBC05"></path>
+                            <path
+                                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                                fill="#EA4335"></path>
+                        </svg>
+                        <span class="text-sm font-semibold dark:text-white">Google</span>
+                    </button>
+                    <button
+                        class="flex-1 flex items-center justify-center gap-2 py-3 border border-gray-200 dark:border-gray-700 rounded-xl bg-white dark:bg-gray-800 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-sm">
+                        <svg class="w-5 h-5 dark:fill-white" fill="currentColor" viewbox="0 0 24 24">
+                            <path
+                                d="M17.05 20.28c-.96.95-2.18 1.78-3.41 1.78-1.2 0-1.74-.75-3.12-.75-1.4 0-2.05.74-3.12.74-1.27 0-2.45-.85-3.41-1.77-2.01-1.93-3.1-4.88-3.1-7.18 0-3.32 2.1-5.07 4.14-5.07 1.07 0 1.9.68 2.58.68.64 0 1.63-.78 2.82-.78 1.12 0 3.23.41 4.47 2.22-3.07 1.48-2.58 5.7.53 7.13-.53 1.34-1.33 2.76-2.3 3.74zm-2.55-15.54c.91-1.07.61-2.43.61-2.43s-1.28.1-2.22 1.2c-.85.99-.58 2.37-.58 2.37s1.3.1 2.19-1.14z">
+                            </path>
+                        </svg>
+                        <span class="text-sm font-semibold dark:text-white">Apple</span>
+                    </button>
+                </div>
+                <!-- Footer Text -->
+                <p class="text-center mt-8 text-xs text-gray-500 dark:text-gray-400">
+                    By continuing, you agree to HomieNest's <br />
+                    <a class="text-primary font-medium underline" href="#">Terms of Service</a> &amp; <a
+                        class="text-primary font-medium underline" href="#">Privacy Policy</a>
+                </p>
+            </div>
+        </div>
+        <!-- Indicator Bar (iOS style) -->
+        <div class="relative z-10 w-full flex justify-center pb-2">
+            <div class="w-32 h-1 bg-white/40 rounded-full"></div>
+        </div>
+    </div>
+
+    <!-- Firebase Auth Script -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import {
+            getAuth,
+            createUserWithEmailAndPassword,
+            signInWithEmailAndPassword,
+            signInWithPopup,
+            GoogleAuthProvider,
+            updateProfile
+        } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+        import {
+            getFirestore,
+            doc,
+            setDoc,
+            getDoc,
+            serverTimestamp
+        } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+        // Firebase Config
+        const firebaseConfig = {
+            apiKey: "AIzaSyDOf8g0gVzyaTUxwVJIrSumVGw06MoQw1g",
+            authDomain: "house-price-prediction-72b16.firebaseapp.com",
+            projectId: "house-price-prediction-72b16",
+            storageBucket: "house-price-prediction-72b16.firebasestorage.app",
+            messagingSenderId: "931456015691",
+            appId: "1:931456015691:web:779084698ee1ffabc89cce"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+        const googleProvider = new GoogleAuthProvider();
+
+        // DOM Elements
+        const authToggle = document.querySelectorAll('input[name="auth-toggle"]');
+        const fullnameField = document.getElementById('fullname');
+        const emailField = document.getElementById('email');
+        const passwordField = document.getElementById('password');
+        const submitBtn = document.querySelector('.shimmer');
+        const headline = document.querySelector('.glass-card h2');
+        const fullnameContainer = fullnameField?.closest('.floating-label-input');
+        const googleBtn = document.querySelectorAll('.glass-card button')[3]; // Google button
+
+        let isSignUp = true; // Default to Sign Up
+
+        // Toggle between Login and Sign Up
+        authToggle.forEach(radio => {
+            radio.addEventListener('change', (e) => {
+                isSignUp = e.target.value === 'signup';
+                if (fullnameContainer) {
+                    fullnameContainer.style.display = isSignUp ? 'block' : 'none';
+                }
+                if (headline) {
+                    headline.textContent = isSignUp ? 'Create Account' : 'Welcome Back';
+                }
+                if (submitBtn) {
+                    submitBtn.textContent = isSignUp ? 'Create Account' : 'Login';
+                }
+            });
+        });
+
+        // Submit Handler
+        submitBtn?.addEventListener('click', async (e) => {
+            e.preventDefault();
+            const email = emailField?.value?.trim();
+            const password = passwordField?.value;
+            const fullname = fullnameField?.value?.trim();
+
+            if (!email || !password) {
+                alert('Please enter email and password.');
+                return;
+            }
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Please wait...';
+
+            try {
+                if (isSignUp) {
+                    if (!fullname) {
+                        alert('Please enter your full name.');
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Create Account';
+                        return;
+                    }
+                    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+                    await updateProfile(userCredential.user, { displayName: fullname });
+                    await setDoc(doc(db, "users", userCredential.user.uid), {
+                        name: fullname,
+                        email: email,
+                        createdAt: serverTimestamp()
+                    });
+                    alert('Account created successfully!');
+                    window.location.href = '/dashboard';
+                } else {
+                    await signInWithEmailAndPassword(auth, email, password);
+                    window.location.href = '/dashboard';
+                }
+            } catch (error) {
+                alert('Error: ' + error.message);
+                submitBtn.disabled = false;
+                submitBtn.textContent = isSignUp ? 'Create Account' : 'Login';
+            }
+        });
+
+        // Google Sign-In
+        googleBtn?.addEventListener('click', async (e) => {
+            e.preventDefault();
+            try {
+                const result = await signInWithPopup(auth, googleProvider);
+                const userDoc = await getDoc(doc(db, "users", result.user.uid));
+                if (!userDoc.exists()) {
+                    await setDoc(doc(db, "users", result.user.uid), {
+                        name: result.user.displayName,
+                        email: result.user.email,
+                        createdAt: serverTimestamp()
+                    });
+                }
+                window.location.href = '/dashboard';
+            } catch (error) {
+                alert('Google Sign-In Error: ' + error.message);
+            }
+        });
+    </script>
+</body>
+
+</html>

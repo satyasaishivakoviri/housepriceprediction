@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HomieNest - Neighborhood Explorer Guide</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1E3A8A", // Deep Blue
+                        "accent-blue": "#3B82F6",
+                        "soft-blue": "#EFF6FF",
+                        "slate-blue": "#64748B",
+                        "background-clean": "#FFFFFF",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    boxShadow: {
+                        'slate': '0 10px 25px -5px rgba(30, 58, 138, 0.08), 0 8px 10px -6px rgba(30, 58, 138, 0.05)',
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        body { font-family: 'Inter', sans-serif; background-color: #FFFFFF; }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-clean font-display text-slate-900">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden max-w-md mx-auto bg-background-clean">
+<header class="sticky top-4 z-50 mx-4 flex items-center glass-nav px-4 py-3 justify-between rounded-2xl shadow-slate border border-slate-100/50">
+<div class="flex size-9 shrink-0 items-center justify-center rounded-full bg-soft-blue text-primary">
+<span class="material-symbols-outlined text-[20px] font-bold">arrow_back_ios_new</span>
+</div>
+<div class="flex-1 text-center">
+<h1 class="text-primary text-base font-extrabold leading-tight">Neighborhood Guide</h1>
+<p class="text-accent-blue text-[9px] font-bold uppercase tracking-widest">HomieNest AI Intelligence</p>
+</div>
+<div class="flex w-9 items-center justify-end">
+<div class="flex size-9 items-center justify-center rounded-full bg-soft-blue text-primary">
+<span class="material-symbols-outlined text-[22px]">map</span>
+</div>
+</div>
+</header>
+<div class="px-4 pt-8 pb-4">
+<div class="flex flex-col w-full">
+<div class="flex w-full items-stretch rounded-2xl h-14 shadow-slate border border-slate-50 overflow-hidden bg-white">
+<div class="text-primary flex items-center justify-center pl-4 bg-white">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full border-none bg-white focus:ring-0 text-slate-900 placeholder:text-slate-400 px-4 pl-2 text-base font-medium" placeholder="Search locality (e.g. Powai, Mumbai)" value="Koramangala, Bangalore"/>
+</div>
+</div>
+</div>
+<div class="flex gap-3 px-4 pb-6 overflow-x-auto no-scrollbar">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-primary text-white px-5 shadow-lg shadow-primary/20">
+<span class="text-xs font-bold uppercase tracking-tight">Top Rated</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-soft-blue border border-blue-100 text-primary px-5">
+<span class="text-xs font-bold uppercase tracking-tight">Safety</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-soft-blue border border-blue-100 text-primary px-5">
+<span class="text-xs font-bold uppercase tracking-tight">Metro</span>
+</button>
+</div>
+<div class="mx-4 mb-8 p-5 bg-white rounded-3xl shadow-slate border border-slate-50">
+<div class="flex items-center justify-between mb-6">
+<div>
+<h3 class="font-extrabold text-primary text-lg">Market Dynamics</h3>
+<p class="text-[10px] text-slate-blue font-semibold uppercase tracking-wider">Historical Price Trends</p>
+</div>
+<div class="flex bg-soft-blue p-1 rounded-xl">
+<button class="px-4 py-1.5 text-[10px] font-black rounded-lg bg-primary shadow-md text-white">BUY</button>
+<button class="px-4 py-1.5 text-[10px] font-black rounded-lg text-primary/60">RENT</button>
+</div>
+</div>
+<div class="h-32 w-full flex items-end justify-between gap-2 mb-3 px-1">
+<div class="w-full bg-blue-100 rounded-t-lg h-[35%]"></div>
+<div class="w-full bg-blue-200 rounded-t-lg h-[50%]"></div>
+<div class="w-full bg-blue-300 rounded-t-lg h-[45%]"></div>
+<div class="w-full bg-blue-400 rounded-t-lg h-[65%]"></div>
+<div class="w-full bg-blue-500 rounded-t-lg h-[85%]"></div>
+<div class="w-full bg-primary rounded-t-lg h-[100%] shadow-lg shadow-primary/10"></div>
+</div>
+<div class="flex justify-between text-[9px] text-slate-blue font-bold tracking-tighter px-1">
+<span>2019</span><span>2020</span><span>2021</span><span>2022</span><span>2023</span><span>2024 PROJ</span>
+</div>
+<div class="mt-5 pt-4 border-t border-slate-100 flex justify-between items-center">
+<div class="flex flex-col">
+<span class="text-[10px] text-slate-blue font-bold uppercase">5Y Appreciation</span>
+<span class="text-sm font-black text-primary">+12.4% <span class="text-blue-500 text-[10px]">YoY</span></span>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-[10px] text-slate-blue font-bold uppercase">Market Status</span>
+<span class="text-[10px] font-black px-2 py-0.5 rounded-full bg-blue-50 text-primary border border-blue-100 uppercase">High Demand</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between px-4 pb-4">
+<h2 class="text-primary text-xl font-black tracking-tight">Prime Localities</h2>
+<button class="text-accent-blue text-xs font-bold uppercase tracking-widest">Browse All</button>
+</div>
+<div class="px-4 pb-6">
+<div class="flex flex-col items-stretch rounded-3xl overflow-hidden shadow-slate border border-slate-50 bg-white">
+<div class="relative w-full h-52 bg-center bg-no-repeat bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCb3-6PbeaKgD2DfxhE7EChH5_--nezNBd8xE78bdlRwLWxeJw9bgc77NAaHthi7mO2zy-wvmlViLF01fUbTPbkL_3IJHrRTd72YLM6V3pFk6ESusFkYyqdXZg0FH4nuqSgOubmDqzSoA3KIwre-ILEJ4ljDVFNS-IbBDg4lhvKbO0eix6MuVjlvaTxT45APAkSzuAMLYXBcSWSLJJ55yp0W7T92SgqFbjtqRbwsyL3rwwraARJK9O4X1PEEi5X-l2qhgS2xAE-VsmX");'>
+<div class="absolute top-4 left-4">
+<div class="bg-primary/90 backdrop-blur-md text-white text-[10px] font-black px-3 py-1.5 rounded-xl flex items-center gap-1.5 shadow-lg border border-white/20">
+<span class="material-symbols-outlined text-[14px] text-blue-300 fill-1">shield</span> 4.8 SAFETY RATING
+                        </div>
+</div>
+<div class="absolute bottom-4 right-4 bg-white/95 backdrop-blur-md p-3 rounded-2xl text-center min-w-[70px] shadow-2xl border border-white">
+<p class="text-primary text-[9px] font-black leading-none mb-1 uppercase tracking-tighter">LIVABILITY</p>
+<p class="text-primary text-xl font-black leading-none">8.5</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 p-5">
+<div>
+<p class="text-accent-blue text-[9px] font-black tracking-[0.15em] uppercase mb-1">AI INSIGHT: HIGH APPRECIATION</p>
+<p class="text-primary text-xl font-bold leading-tight">Koramangala, Bangalore</p>
+</div>
+<div class="flex gap-2 py-1 overflow-x-auto no-scrollbar">
+<div class="flex items-center gap-1.5 bg-soft-blue px-3 py-1.5 rounded-xl text-[10px] font-bold text-primary border border-blue-50 shrink-0">
+<span class="material-symbols-outlined text-[16px]">directions_subway</span> Metro (0.5km)
+                        </div>
+<div class="flex items-center gap-1.5 bg-soft-blue px-3 py-1.5 rounded-xl text-[10px] font-bold text-primary border border-blue-50 shrink-0">
+<span class="material-symbols-outlined text-[16px]">medical_services</span> Hospitals
+                        </div>
+</div>
+<div class="flex items-center justify-between mt-2 pt-4 border-t border-slate-50">
+<div class="flex flex-col">
+<p class="text-slate-blue text-[9px] uppercase font-black tracking-widest">Market Price</p>
+<p class="text-primary font-black text-lg">₹12,500 <span class="text-[10px] font-bold text-slate-blue">/sq.ft</span></p>
+</div>
+<button class="h-11 px-6 bg-primary text-white text-xs font-black uppercase tracking-widest rounded-xl shadow-lg shadow-primary/20 active:scale-95 transition-transform">
+                            Details
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<div class="px-4 pb-6">
+<div class="flex flex-col items-stretch rounded-3xl overflow-hidden shadow-slate border border-slate-50 bg-white">
+<div class="relative w-full h-52 bg-center bg-no-repeat bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCVScBo45RVkyhpnLM6KjUowgJ87nAMAJfA6XxKKUQ9l9rU3GhxTACCAbRoQQMBdJRH_78sKsSvjCnQjMdG_jFKCPHLpE1_BYh50mMWuQ6Ttt1OB6_MD6O5io4zg8fUNZjAIg943GeQbws0bFH9JEp3pmq76vTr4uzZXrAT-pqUe8bzQSghPS7mWp9EFdq3k5hrBI7tip14cvoK2rCrOwj7pCpyLJVVShWA-VFWTAETqzXnd7Jcv7Wuc1I-LeYyhrvXId_zwopY78ul");'>
+<div class="absolute top-4 left-4">
+<div class="bg-primary/90 backdrop-blur-md text-white text-[10px] font-black px-3 py-1.5 rounded-xl flex items-center gap-1.5 shadow-lg border border-white/20">
+<span class="material-symbols-outlined text-[14px] text-blue-300 fill-1">shield</span> 4.9 SAFETY RATING
+                        </div>
+</div>
+<div class="absolute bottom-4 right-4 bg-white/95 backdrop-blur-md p-3 rounded-2xl text-center min-w-[70px] shadow-2xl border border-white">
+<p class="text-primary text-[9px] font-black leading-none mb-1 uppercase tracking-tighter">LIVABILITY</p>
+<p class="text-primary text-xl font-black leading-none">9.2</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 p-5">
+<div>
+<p class="text-accent-blue text-[9px] font-black tracking-[0.15em] uppercase mb-1">AI INSIGHT: STABLE LUXURY</p>
+<p class="text-primary text-xl font-bold leading-tight">Powai, Mumbai</p>
+</div>
+<div class="flex gap-2 py-1 overflow-x-auto no-scrollbar">
+<div class="flex items-center gap-1.5 bg-soft-blue px-3 py-1.5 rounded-xl text-[10px] font-bold text-primary border border-blue-50 shrink-0">
+<span class="material-symbols-outlined text-[16px]">park</span> Lake View
+                        </div>
+<div class="flex items-center gap-1.5 bg-soft-blue px-3 py-1.5 rounded-xl text-[10px] font-bold text-primary border border-blue-50 shrink-0">
+<span class="material-symbols-outlined text-[16px]">business_center</span> IT Hub
+                        </div>
+</div>
+<div class="flex items-center justify-between mt-2 pt-4 border-t border-slate-50">
+<div class="flex flex-col">
+<p class="text-slate-blue text-[9px] uppercase font-black tracking-widest">Market Price</p>
+<p class="text-primary font-black text-lg">₹28,200 <span class="text-[10px] font-bold text-slate-blue">/sq.ft</span></p>
+</div>
+<button class="h-11 px-6 bg-primary text-white text-xs font-black uppercase tracking-widest rounded-xl shadow-lg shadow-primary/20 active:scale-95 transition-transform">
+                            Details
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 w-full max-w-[280px] px-4">
+<button class="flex items-center justify-center gap-3 w-full bg-primary text-white py-4 rounded-2xl shadow-2xl border border-white/10 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-[20px]">explore</span>
+<span class="font-extrabold text-xs uppercase tracking-widest">Safety Heatmap</span>
+</button>
+</div>
+<div class="h-32"></div>
+</div>
+
+</body></html>

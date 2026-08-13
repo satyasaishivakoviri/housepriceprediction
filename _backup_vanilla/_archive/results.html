@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Price Prediction Results</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "success": "#10b981",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen text-[#0d121b] dark:text-white">
+<!-- Top Navigation Bar -->
+<nav class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+<div class="flex items-center justify-between p-4 h-16 max-w-md mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary cursor-pointer">arrow_back_ios</span>
+<div class="flex flex-col">
+<h2 class="text-sm font-bold leading-none">Price Prediction</h2>
+<span class="text-[10px] text-[#4c669a] dark:text-gray-400">241 Central Park West, NY</span>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer">share</span>
+<span class="material-symbols-outlined text-primary cursor-pointer">bookmark</span>
+</div>
+</div>
+</nav>
+<main class="max-w-md mx-auto pb-24">
+<!-- Hero Section: Prediction -->
+<section class="flex flex-col items-center py-8 px-4 bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800">
+<p class="text-[#4c669a] dark:text-gray-400 text-sm font-medium mb-1">Estimated Market Value</p>
+<h1 class="text-[#0d121b] dark:text-white text-5xl font-bold tracking-tight mb-4">$845,000</h1>
+<div class="flex gap-2">
+<!-- Chips Component -->
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-success/10 border border-success/20 px-4">
+<span class="material-symbols-outlined text-success text-[18px]">check_circle</span>
+<p class="text-success text-xs font-bold uppercase tracking-wider">Accurate</p>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/10 border border-primary/20 px-4">
+<span class="material-symbols-outlined text-primary text-[18px]">bolt</span>
+<p class="text-primary text-xs font-bold uppercase tracking-wider">AI Verified</p>
+</div>
+</div>
+</section>
+<!-- Confidence Section -->
+<section class="p-4 mt-2">
+<div class="bg-white dark:bg-gray-900 rounded-xl p-5 shadow-sm border border-gray-100 dark:border-gray-800">
+<div class="flex flex-col gap-3">
+<div class="flex gap-6 justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">insights</span>
+<p class="text-[#0d121b] dark:text-white text-base font-semibold">Model Confidence</p>
+</div>
+<p class="text-primary text-base font-bold">96.4%</p>
+</div>
+<!-- ProgressBar Component -->
+<div class="rounded-full bg-gray-100 dark:bg-gray-800 h-2 overflow-hidden">
+<div class="h-full rounded-full bg-primary" style="width: 96.4%;"></div>
+</div>
+<p class="text-[#4c669a] dark:text-gray-400 text-xs">Based on 1.2k similar properties sold in the last 90 days.</p>
+</div>
+</div>
+</section>
+<!-- Market Comparison Grid -->
+<section class="grid grid-cols-2 gap-4 px-4 mt-2">
+<div class="bg-white dark:bg-gray-900 p-4 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm">
+<p class="text-[#4c669a] dark:text-gray-400 text-xs mb-1">Vs. Area Avg</p>
+<div class="flex items-center gap-1">
+<span class="text-xl font-bold text-success">+12.4%</span>
+<span class="material-symbols-outlined text-success text-sm">trending_up</span>
+</div>
+<p class="text-[10px] text-gray-500 mt-2">Above neighborhood mean</p>
+</div>
+<div class="bg-white dark:bg-gray-900 p-4 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm">
+<p class="text-[#4c669a] dark:text-gray-400 text-xs mb-1">Forecast</p>
+<div class="flex items-center gap-1 text-primary">
+<span class="text-xl font-bold">+$42k</span>
+<span class="material-symbols-outlined text-sm">rocket_launch</span>
+</div>
+<p class="text-[10px] text-gray-500 mt-2">Projected growth (12mo)</p>
+</div>
+</section>
+<!-- Trend Chart Section -->
+<section class="p-4 mt-4">
+<div class="bg-white dark:bg-gray-900 rounded-xl p-5 shadow-sm border border-gray-100 dark:border-gray-800">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-bold text-lg">Price Trend</h3>
+<select class="text-xs bg-gray-50 dark:bg-gray-800 border-none rounded-lg p-1 px-2 focus:ring-0">
+<option>Last 6 Months</option>
+<option>Last Year</option>
+</select>
+</div>
+<!-- Sparkline Placeholder with CSS Gradients -->
+<div class="relative h-32 w-full mt-4 flex items-end gap-1">
+<div class="bg-primary/20 w-full h-[40%] rounded-t-sm"></div>
+<div class="bg-primary/30 w-full h-[55%] rounded-t-sm"></div>
+<div class="bg-primary/40 w-full h-[50%] rounded-t-sm"></div>
+<div class="bg-primary/50 w-full h-[65%] rounded-t-sm"></div>
+<div class="bg-primary/70 w-full h-[80%] rounded-t-sm"></div>
+<div class="bg-primary w-full h-[95%] rounded-t-sm shadow-[0_-4px_10px_rgba(17,82,212,0.3)]"></div>
+<div class="absolute bottom-0 left-0 w-full h-[1px] bg-gray-200 dark:bg-gray-700"></div>
+</div>
+<div class="flex justify-between mt-2 text-[10px] text-gray-400 font-medium">
+<span>JAN</span>
+<span>FEB</span>
+<span>MAR</span>
+<span>APR</span>
+<span>MAY</span>
+<span>JUN</span>
+</div>
+</div>
+</section>
+<!-- Heatmap Section -->
+<section class="p-4 mt-2">
+<div class="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-800">
+<div class="p-4 flex justify-between items-center">
+<div>
+<h3 class="font-bold">Location Heatmap</h3>
+<p class="text-xs text-gray-500">Price density in Manhattan</p>
+</div>
+<span class="material-symbols-outlined text-primary">map</span>
+</div>
+<div class="relative aspect-video w-full bg-gray-200">
+<img alt="City Map Heatmap" class="w-full h-full object-cover opacity-60" data-alt="Modern aerial city map with colored pricing heat overlays" data-location="New York" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKLLdOoHIitxrDZFBhmTjnes-fTiUL0aD3gUUy_xxbLwd1Ft8z2gkkqaCX6sn53UTLrdOlpOQ7AI1wrSyD652nSV3sIx6zDEGPHresch0ljMv55ZYsMwK_QdxXHDC1e21U7Kpp1WJqBcnSmkk8NsVc0EBzCeLTKgCSOJYLI1pm_NoMQ7UBYKtEFzLg_yx6igKvUmZlrr9tMCtCneKCcs2QJvKHuIml6XPzveixWz5rJmYf2GLctmlrvYhMgHE-Y-8jaVoo3CrJgekl"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent pointer-events-none"></div>
+<!-- Simulated Heat Zones -->
+<div class="absolute top-1/4 left-1/3 w-16 h-16 bg-red-500/40 rounded-full blur-xl"></div>
+<div class="absolute bottom-1/3 right-1/4 w-24 h-24 bg-primary/40 rounded-full blur-2xl"></div>
+</div>
+<div class="p-4 flex gap-4 text-[10px] items-center">
+<span class="text-gray-500">Price Intensity:</span>
+<div class="flex-1 h-1.5 rounded-full bg-gradient-to-r from-blue-200 via-primary to-red-500"></div>
+</div>
+</div>
+</section>
+<!-- Insights List -->
+<section class="p-4">
+<h3 class="font-bold mb-3 px-1">Expert Insights</h3>
+<div class="space-y-3">
+<div class="flex gap-4 p-4 bg-white dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800">
+<div class="size-10 rounded-lg bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-orange-600">trending_up</span>
+</div>
+<div>
+<p class="text-sm font-bold">Strong Liquidity</p>
+<p class="text-xs text-gray-500">Homes in this tier sell 15% faster than city average.</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 bg-white dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800">
+<div class="size-10 rounded-lg bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-purple-600">school</span>
+</div>
+<div>
+<p class="text-sm font-bold">School District Premium</p>
+<p class="text-xs text-gray-500">Proximity to PS 199 adds roughly $45k to the valuation.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Sticky Bottom CTA -->
+<div class="fixed bottom-0 left-0 right-0 p-4 bg-white/80 dark:bg-gray-950/80 backdrop-blur-lg border-t border-gray-200 dark:border-gray-800 max-w-md mx-auto z-50">
+<button class="w-full bg-primary text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-primary/20 active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined">picture_as_pdf</span>
+            Download Full Report
+        </button>
+</div>
+</body></html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HomieNest AI Prediction</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#11d452",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102216",
+                        "slate-custom": "#64748b",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .ios-blur { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 ios-blur border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center p-4 justify-between max-w-xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined cursor-pointer text-slate-700 dark:text-slate-300">arrow_back_ios</span>
+<h2 class="text-lg font-bold leading-tight tracking-tight">AI Valuation</h2>
+</div>
+<div class="flex gap-4 items-center">
+<span class="material-symbols-outlined cursor-pointer text-slate-700 dark:text-slate-300">ios_share</span>
+<span class="material-symbols-outlined cursor-pointer text-slate-700 dark:text-slate-300">bookmark</span>
+</div>
+</div>
+</header>
+<main class="max-w-xl mx-auto">
+<!-- HeadlineText -->
+<div class="px-4 py-6">
+<p class="text-primary font-semibold text-sm uppercase tracking-widest mb-1">Prediction Ready</p>
+<h1 class="text-3xl font-extrabold tracking-tight leading-tight">HomieNest Smart Predictor</h1>
+</div>
+<!-- Hero Prediction Card -->
+<div class="px-4 mb-6">
+<div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-xl border border-slate-100 dark:border-slate-800">
+<div class="bg-cover bg-center h-48 relative" data-alt="Modern luxury apartment exterior with green landscape" style='background-image: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.8) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCdGSr0Adm1kIzsHESNaSByDS5dSjq7q2dTfpcZwmXNpjoYgwF0n9SvyWO06HfLm4zjVeaaEdusNloUDPbkvbg_FftM-gVmxdCxxCdEs8wVNUtSiSo54KJuU985Z6p3ugN_Pn1NuubXY2WzEuPAseDnm9q56y58aCYMqHW-chpdu3wSVuqoBazbYHPmSAsAo9sKTFltDY8Ep3XZVeAx2P5tmc1D507p8EeO6OXFXHNVRIR98FMyfLKfmOOSJ4V_Ho7XLt_wezUuQPW_");'>
+<div class="absolute bottom-4 left-4">
+<span class="bg-primary text-black text-[10px] font-extrabold px-2 py-1 rounded-full uppercase tracking-tighter">AI Certified</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex flex-col gap-1 mb-4">
+<p class="text-slate-custom dark:text-slate-400 text-sm font-medium">AI Estimated Value</p>
+<div class="flex items-baseline gap-2">
+<h2 class="text-4xl font-extrabold text-slate-900 dark:text-white">₹2.45 Cr</h2>
+<span class="text-primary text-sm font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-sm">trending_up</span> 4.2%
+                            </span>
+</div>
+</div>
+<!-- ProgressBar (Confidence Meter) -->
+<div class="flex flex-col gap-3 p-4 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-100 dark:border-slate-800">
+<div class="flex gap-6 justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">verified</span>
+<p class="text-slate-800 dark:text-slate-200 text-sm font-semibold">AI Confidence Score</p>
+</div>
+<p class="text-primary text-sm font-bold">95%</p>
+</div>
+<div class="rounded-full bg-slate-200 dark:bg-slate-700 h-2.5 overflow-hidden">
+<div class="h-full rounded-full bg-primary" style="width: 95%;"></div>
+</div>
+<p class="text-slate-custom dark:text-slate-400 text-xs leading-relaxed">Based on 5,000+ local transactions in Mumbai South.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- SectionHeader: Input Summary -->
+<div class="px-4 flex justify-between items-center">
+<h3 class="text-lg font-bold tracking-tight">Property Details</h3>
+<button class="text-primary text-sm font-bold">Edit Details</button>
+</div>
+<!-- Input Summary Grid -->
+<div class="grid grid-cols-2 gap-3 px-4 py-4">
+<div class="bg-white dark:bg-slate-900 p-3 rounded-xl border border-slate-100 dark:border-slate-800 flex items-center gap-3">
+<div class="bg-primary/10 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary">square_foot</span>
+</div>
+<div>
+<p class="text-[10px] text-slate-custom uppercase font-bold tracking-tighter">Area</p>
+<p class="text-sm font-bold">1,850 sqft</p>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-3 rounded-xl border border-slate-100 dark:border-slate-800 flex items-center gap-3">
+<div class="bg-primary/10 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary">bed</span>
+</div>
+<div>
+<p class="text-[10px] text-slate-custom uppercase font-bold tracking-tighter">Beds</p>
+<p class="text-sm font-bold">3 BHK</p>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-3 rounded-xl border border-slate-100 dark:border-slate-800 flex items-center gap-3">
+<div class="bg-primary/10 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary">apartment</span>
+</div>
+<div>
+<p class="text-[10px] text-slate-custom uppercase font-bold tracking-tighter">Floor</p>
+<p class="text-sm font-bold">12th Floor</p>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-3 rounded-xl border border-slate-100 dark:border-slate-800 flex items-center gap-3">
+<div class="bg-primary/10 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary">history</span>
+</div>
+<div>
+<p class="text-[10px] text-slate-custom uppercase font-bold tracking-tighter">Age</p>
+<p class="text-sm font-bold">5 Years</p>
+</div>
+</div>
+</div>
+<!-- Market Insights Section -->
+<div class="px-4 mt-4">
+<div class="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-100 dark:border-slate-800">
+<h3 class="text-lg font-bold mb-6">Market Insights</h3>
+<!-- Investment Potential -->
+<div class="flex items-center justify-between mb-8 p-4 bg-primary/5 rounded-xl border border-primary/20">
+<div>
+<p class="text-xs text-slate-custom dark:text-slate-400 font-bold uppercase tracking-wider mb-1">Investment Potential</p>
+<p class="text-primary font-bold text-lg">High Growth Zone</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="text-3xl font-black text-primary">8.5<span class="text-sm text-slate-400">/10</span></div>
+</div>
+</div>
+<!-- Comparison Chart (Custom implementation) -->
+<div class="space-y-6">
+<p class="text-sm font-semibold text-slate-700 dark:text-slate-300">Price Comparison (per sqft)</p>
+<div class="space-y-4">
+<div class="space-y-1">
+<div class="flex justify-between text-xs font-bold uppercase text-slate-custom">
+<span>Subject Property</span>
+<span>₹13,243</span>
+</div>
+<div class="h-4 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 85%;"></div>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between text-xs font-bold uppercase text-slate-custom">
+<span>Locality Average</span>
+<span>₹11,800</span>
+</div>
+<div class="h-4 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-slate-400" style="width: 70%;"></div>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between text-xs font-bold uppercase text-slate-custom">
+<span>City Average</span>
+<span>₹9,500</span>
+</div>
+<div class="h-4 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-slate-300" style="width: 55%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer tip -->
+<div class="mt-8 flex items-start gap-3 bg-slate-50 dark:bg-slate-800/50 p-3 rounded-lg">
+<span class="material-symbols-outlined text-slate-400 text-lg">lightbulb</span>
+<p class="text-xs text-slate-custom dark:text-slate-400 leading-normal">This property is valued 12% higher than locality average due to premium floor and modern amenities.</p>
+</div>
+</div>
+</div>
+<!-- Location Map Card -->
+<div class="px-4 mt-6">
+<div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800">
+<div class="h-32 bg-slate-200 flex items-center justify-center relative" data-location="Mumbai, India" style="">
+<img class="w-full h-full object-cover opacity-60" data-alt="Stylized map showing neighborhood location pointers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByJCPknDQOL4oHKWsNZHeLmS74HHJut1INJ1Obr7sPWXxwE42EPiUJEEwRMXMMkxBhKsPDt-uy6_G02UORcizGaOsCuusFgZQExW-Ge5zp2BQEywM9nyglPy8ZHbg6VbgIOOe_7FT7VHXPhQ0YXq9VArJSzujw5IRJSrNmobhHo1q4lRNsAx2qjGGdNFnTfUhWgsyRZym8xF-YuVXoPNpc8BUaAbIVU7so2lYkGKb5R3wOBi6IeoKn7OkV-9BGsnExN28cwoiu1rwj"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-primary p-2 rounded-full shadow-lg border-4 border-white">
+<span class="material-symbols-outlined text-black text-xl">location_on</span>
+</div>
+</div>
+</div>
+<div class="p-4 flex justify-between items-center">
+<div>
+<p class="text-sm font-bold">Worli, South Mumbai</p>
+<p class="text-xs text-slate-custom">Premium Neighborhood</p>
+</div>
+<button class="text-primary font-bold text-sm">Open Maps</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Sticky Bottom CTA -->
+<div class="fixed bottom-0 left-0 right-0 bg-white/90 dark:bg-slate-900/90 ios-blur border-t border-slate-200 dark:border-slate-800 p-4 z-50">
+<div class="max-w-xl mx-auto flex gap-3">
+<button class="flex-1 bg-primary text-black font-extrabold py-4 rounded-xl shadow-lg shadow-primary/20 hover:opacity-90 transition-opacity">
+                Book Consultation
+            </button>
+<button class="w-14 h-14 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center border border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined text-slate-700 dark:text-slate-200">file_download</span>
+</button>
+</div>
+</div>
+</body></html>

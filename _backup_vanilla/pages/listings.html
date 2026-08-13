@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>HomieNest | Property Marketplace</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <script src="../js/firebase-config.js"></script>
+    <script src="../js/install-app.js"></script>
+    <script src="../js/mobile-menu.js"></script>
+    <script src="../js/wishlist.js"></script>
+    <script>
+        // Check auth status
+        document.addEventListener('DOMContentLoaded', function () {
+            if (window.firebaseHelpers && window.firebaseHelpers.onAuthChange) {
+                window.firebaseHelpers.onAuthChange((user) => {
+                    if (!user) {
+                        window.location.href = 'login.html';
+                    }
+                });
+            }
+        });
+    </script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#2563eb",
+                        "background-light": "#f8fafc",
+                        "background-dark": "#0f172a",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "12px",
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulseSlow 4s ease-in-out infinite',
+                        'drift': 'drift 10s ease-in-out infinite alternate',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        pulseSlow: {
+                            '0%, 100%': { transform: 'scale(1)', opacity: '0.3' },
+                            '50%': { transform: 'scale(1.2)', opacity: '0.6' },
+                        },
+                        drift: {
+                            '0%': { transform: 'translate(0, 0)' },
+                            '100%': { transform: 'translate(15px, -15px)' },
+                        }
+                    }
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen relative">
+    <!-- Fixed Glassmorphism Background -->
+    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+        <div
+            class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-blue-400/20 blur-[100px] animate-float">
+        </div>
+        <div
+            class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-purple-400/20 blur-[100px] animate-drift">
+        </div>
+        <div class="absolute top-[20%] right-[10%] w-[30%] h-[30%] rounded-full bg-cyan-400/20 blur-[80px]">
+        </div>
+        <div class="absolute inset-0 bg-white/40 dark:bg-navy/80 backdrop-blur-[2px]"></div>
+    </div>
+
+    <div class="flex h-screen bg-white dark:bg-black overflow-hidden relative"> <!-- Added relative -->
+
+        <!-- Mobile Overlay -->
+        <div id="mobile-overlay" class="fixed inset-0 bg-black/50 z-40 hidden md:hidden glass-nav"></div>
+
+        <!-- Sidebar -->
+        <aside
+            class="fixed inset-y-0 right-0 w-72 bg-white dark:bg-black border-l border-gray-100 dark:border-gray-800 flex flex-col z-50 transform translate-x-full md:translate-x-0 md:static transition-transform duration-300">
+            <div class="p-8">
+                <div class="flex items-center gap-3">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center shadow-lg shadow-primary/20">
+                        <span class="material-symbols-outlined text-white text-xl">home</span>
+                    </div>
+                    <div>
+                        <h1 class="font-black text-xl tracking-tight text-navy dark:text-white leading-none">HomieNest
+                        </h1>
+                        <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1">Real Estate AI</p>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="flex-1 px-6 space-y-2 overflow-y-auto no-scrollbar">
+                <div class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4 px-2">Menu</div>
+                <a href="dashboard.html"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-400 font-medium transition-colors">
+                    <span class="material-symbols-outlined">dashboard</span>
+                    Dashboard
+                </a>
+                <a href="listings.html"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary/10 text-primary font-bold shadow-sm">
+                    <span class="material-symbols-outlined fill-1">storefront</span>
+                    Marketplace
+                </a>
+                <a href="predictor.html"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-400 font-medium transition-colors">
+                    <span class="material-symbols-outlined">psychology</span>
+                    Price Predictor
+                </a>
+                <a href="analytics.html"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-400 font-medium transition-colors">
+                    <span class="material-symbols-outlined">query_stats</span>
+                    Analytics
+                </a>
+                <a href="location-based_price_insights.html"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-400 font-medium transition-colors">
+                    <span class="material-symbols-outlined">location_city</span>
+                    Location Insights
+                </a>
+
+                <div class="mt-6">
+                    <div class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2 px-2">Wishlist</div>
+                    <div id="wishlist-container" class="space-y-1">
+                        <!-- Wishlist items injected by JS -->
+                    </div>
+                </div>
+            </nav>
+
+            <div class="mt-auto pt-4 border-t border-gray-100 dark:border-gray-800">
+                <button onclick="window.installPWA()"
+                    class="flex items-center gap-3 px-4 py-3 mb-2 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-400 font-medium w-full transition-colors">
+                    <span class="material-symbols-outlined">install_mobile</span>
+                    Install App
+                </button>
+                <button onclick="window.firebaseHelpers?.logOut().then(()=>window.location.href='login.html')"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-red-50 dark:hover:bg-red-900/20 text-red-500 font-medium w-full transition-colors">
+                    <span class="material-symbols-outlined">logout</span>
+                    Logout
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col min-w-0 bg-white dark:bg-gray-900">
+            <!-- Mobile Header -->
+            <header
+                class="md:hidden flex items-center justify-between p-4 border-b border-gray-100 dark:border-gray-800 bg-white/80 dark:bg-black/80 backdrop-blur-md sticky top-0 z-30">
+                <div class="flex items-center gap-2">
+                    <img src="../assets/logo.png" alt="Logo" class="w-8 h-8 rounded-lg bg-primary/10 p-1">
+                    <h1 class="font-bold text-lg text-navy dark:text-white">HomieNest</h1>
+                </div>
+                <!-- Hamburger Menu -->
+                <button id="mobile-menu-btn"
+                    class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                    <span class="material-symbols-outlined text-gray-600 dark:text-gray-300">menu</span>
+                </button>
+            </header>
+
+            <!-- Desktop Header and Content... -->
+            <header id="top-navbar"
+                class="sticky top-0 z-40 -mx-4 lg:-mx-8 px-4 lg:px-8 py-4 mb-8 transition-all duration-300">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div class="flex items-center gap-4">
+                        <button onclick="window.history.back()"
+                            class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors group">
+                            <span
+                                class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">arrow_back_ios_new</span>
+                        </button>
+                        <div>
+                            <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Property Marketplace</h2>
+                            <p class="text-slate-500 dark:text-slate-400">Discover verified properties with AI-driven
+                                price
+                                estimations.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+
+                        <button
+                            class="bg-primary text-white px-5 py-2.5 rounded-xl font-medium shadow-sm hover:opacity-90 transition-opacity flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">add</span> List Property
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="mt-8 bg-white/40 dark:bg-slate-900/40 backdrop-blur-md p-4 rounded-2xl border border-white/20 dark:border-white/5 shadow-sm grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div class="relative">
+                        <span
+                            class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-slate-400">location_on</span>
+                        <select
+                            class="w-full pl-10 pr-4 py-2 bg-slate-50 dark:bg-slate-800 border-none rounded-xl focus:ring-2 focus:ring-primary text-sm font-medium">
+                            <option>All Cities</option>
+                            <option>Mumbai</option>
+                            <option>Bangalore</option>
+                            <option>Delhi NCR</option>
+                            <option>Hyderabad</option>
+                            <option>Pune</option>
+                        </select>
+                    </div>
+                    <div class="relative">
+                        <span
+                            class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-slate-400">home</span>
+                        <select
+                            class="w-full pl-10 pr-4 py-2 bg-slate-50 dark:bg-slate-800 border-none rounded-xl focus:ring-2 focus:ring-primary text-sm font-medium">
+                            <option>Property Type</option>
+                            <option>Apartment</option>
+                            <option>Villa</option>
+                            <option>Plot</option>
+                        </select>
+                    </div>
+                    <div class="relative">
+                        <span
+                            class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-slate-400">payments</span>
+                        <select
+                            class="w-full pl-10 pr-4 py-2 bg-slate-50 dark:bg-slate-800 border-none rounded-xl focus:ring-2 focus:ring-primary text-sm font-medium">
+                            <option>Price Range</option>
+                            <option>₹50L - ₹1Cr</option>
+                            <option>₹1Cr - ₹2.5Cr</option>
+                            <option>₹2.5Cr+</option>
+                        </select>
+                    </div>
+                    <div class="relative">
+                        <span
+                            class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-slate-400">search</span>
+                        <input
+                            class="w-full pl-10 pr-4 py-2 bg-slate-50 dark:bg-slate-800 border-none rounded-xl focus:ring-2 focus:ring-primary text-sm font-medium"
+                            placeholder="Search locality..." type="text" />
+                    </div>
+                </div>
+            </header>
+            <!-- Dynamic Property Grid -->
+            <div id="listing-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                <!-- Properties will be injected here by JS -->
+            </div>
+
+            <!-- Import Data Engine -->
+            <script src="../js/real-estate-data.js"></script>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const grid = document.getElementById('listing-grid');
+                    const properties = window.RealEstateData.sampleProperties;
+
+                    grid.innerHTML = properties.map(property => `
+                        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+                            <div class="relative aspect-video overflow-hidden">
+                                <img alt="${property.name}"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    src="${property.image}" 
+                                    onerror="this.src='https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=1000'"/>
+                                <div class="absolute top-3 left-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-primary flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-sm">verified</span> Verified
+                                </div>
+                                <button onclick="window.wishlistManager.toggleWishlist(${property.id}, event)" 
+                                    class="wishlist-btn absolute top-3 right-3 bg-black/20 hover:bg-black/40 backdrop-blur-sm p-2 rounded-full transition-all group-hover:scale-110"
+                                    data-id="${property.id}">
+                                    <span class="material-symbols-outlined text-white text-lg">favorite</span>
+                                </button>
+                            </div>
+                            <div class="p-5">
+                                <div class="flex justify-between items-start mb-2">
+                                    <div>
+                                        <h3 class="text-lg font-bold text-slate-900 dark:text-white">${property.name}</h3>
+                                        <p class="text-slate-500 dark:text-slate-400 text-sm flex items-center gap-1">
+                                            <span class="material-symbols-outlined text-xs">location_on</span> ${property.location}, ${property.city}
+                                        </p>
+                                    </div>
+                                    <span class="bg-blue-50 dark:bg-blue-900/30 text-primary text-xs px-2 py-1 rounded font-bold uppercase">${property.type}</span>
+                                </div>
+                                <div class="flex items-center gap-4 my-4 py-3 border-y border-slate-100 dark:border-slate-800">
+                                    <div class="text-center">
+                                        <p class="text-xs text-slate-400 uppercase font-medium">BHK</p>
+                                        <p class="font-bold">${property.bhk} BHK</p>
+                                    </div>
+                                    <div class="h-8 w-[1px] bg-slate-100 dark:bg-slate-800"></div>
+                                    <div class="text-center">
+                                        <p class="text-xs text-slate-400 uppercase font-medium">Area</p>
+                                        <p class="font-bold">${property.area.toLocaleString()} sqft</p>
+                                    </div>
+                                    <div class="h-8 w-[1px] bg-slate-100 dark:bg-slate-800"></div>
+                                    <div class="text-center">
+                                        <p class="text-xs text-slate-400 uppercase font-medium">Facing</p>
+                                        <p class="font-bold">East</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between mt-4">
+                                    <div>
+                                        <p class="text-[10px] text-slate-400 uppercase tracking-wider font-bold">Price</p>
+                                        <p class="text-2xl font-bold text-primary">${window.RealEstateData.formatCurrency(property.price)}</p>
+                                    </div>
+                                    <button class="bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity">
+                                        View Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    `).join('');
+                });
+            </script>
+            <div class="mt-12 flex items-center justify-center gap-2">
+                <button
+                    class="p-2 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 disabled:opacity-50"
+                    disabled="">
+                    <span class="material-symbols-outlined">chevron_left</span>
+                </button>
+                <button class="w-10 h-10 rounded-lg bg-primary text-white font-bold">1</button>
+                <button
+                    class="w-10 h-10 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 font-medium">2</button>
+                <button
+                    class="w-10 h-10 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 font-medium">3</button>
+                <span class="px-2">...</span>
+                <button
+                    class="w-10 h-10 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 font-medium">12</button>
+                <button
+                    class="p-2 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800">
+                    <span class="material-symbols-outlined">chevron_right</span>
+                </button>
+            </div>
+            </main>
+        </div>
+        <div id="bottom-navbar"
+            class="lg:hidden fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800 flex justify-around p-3 z-50 transition-transform duration-300">
+            <a class="flex flex-col items-center gap-1 text-slate-400" href="dashboard.html">
+                <span class="material-symbols-outlined">grid_view</span>
+                <span class="text-[10px]">Dashboard</span>
+            </a>
+            <a class="flex flex-col items-center gap-1 text-primary" href="listings.html">
+                <span class="material-symbols-outlined">storefront</span>
+                <span class="text-[10px]">Market</span>
+            </a>
+            <a class="flex flex-col items-center gap-1 text-slate-400" href="predictor.html">
+                <span class="material-symbols-outlined">psychology</span>
+                <span class="text-[10px]">Predict</span>
+            </a>
+            <a class="flex flex-col items-center gap-1 text-slate-400" href="analytics.html">
+                <span class="material-symbols-outlined">monitoring</span>
+                <span class="text-[10px]">Analytics</span>
+            </a>
+        </div>
+
+        <script>
+            const mainContainer = document.querySelector('main');
+            const topNavbar = document.getElementById('top-navbar');
+            const bottomNavbar = document.getElementById('bottom-navbar');
+            let lastScrollY = mainContainer.scrollTop;
+
+            mainContainer.addEventListener('scroll', () => {
+                const currentScrollY = mainContainer.scrollTop;
+
+                // Top Navbar Glass Effect
+                if (currentScrollY > 10) {
+                    topNavbar.classList.add('bg-white/80', 'dark:bg-slate-900/80', 'backdrop-blur-md', 'shadow-sm', 'border-b', 'border-slate-200', 'dark:border-slate-800');
+                } else {
+                    topNavbar.classList.remove('bg-white/80', 'dark:bg-slate-900/80', 'backdrop-blur-md', 'shadow-sm', 'border-b', 'border-slate-200', 'dark:border-slate-800');
+                }
+
+                // Bottom Navbar Hide/Show
+                if (currentScrollY > lastScrollY && currentScrollY > 50) {
+                    // Scrolling Down -> Hide
+                    bottomNavbar.classList.add('translate-y-full');
+                } else {
+                    // Scrolling Up -> Show
+                    bottomNavbar.classList.remove('translate-y-full');
+                }
+
+                lastScrollY = currentScrollY;
+            });
+        </script>
+</body>
+
+</html>

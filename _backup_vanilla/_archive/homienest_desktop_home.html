@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HomieNest - AI-Powered Real Estate</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "navy": "#0d1b3e",
+                        "slate-blue": "#4c669a",
+                        "background-light": "#f6f8ff",
+                        "background-dark": "#0a0f1a",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulseSlow 4s ease-in-out infinite',
+                        'drift': 'drift 10s ease-in-out infinite alternate',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        pulseSlow: {
+                            '0%, 100%': { transform: 'scale(1)', opacity: '0.3' },
+                            '50%': { transform: 'scale(1.2)', opacity: '0.6' },
+                        },
+                        drift: {
+                            '0%': { transform: 'translate(0, 0)' },
+                            '100%': { transform: 'translate(15px, -15px)' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .glass-nav {
+                @apply bg-white/70 backdrop-blur-md transition-all duration-300;
+            }
+            .dark .glass-nav {
+                @apply bg-background-dark/70 backdrop-blur-md;
+            }
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .no-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .nav-scrolled {
+                @apply bg-white/95 shadow-md py-2;
+            }
+            .dark .nav-scrolled {
+                @apply bg-background-dark/95;
+            }
+            .micro-scale {
+                @apply transition-transform duration-200 hover:scale-110 active:scale-95;
+            }
+            .blue-gradient-bg {
+                background: linear-gradient(135deg, #f6f8ff 0%, #e9efff 100%);
+            }
+            .dark .blue-gradient-bg {
+                background: linear-gradient(135deg, #0a0f1a 0%, #0d1b3e 100%);
+            }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-navy dark:text-white transition-colors duration-300">
+<nav class="sticky top-0 z-50 glass-nav border-b border-blue-100 dark:border-gray-800 py-4" id="navbar">
+<div class="flex items-center justify-between px-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-2 micro-scale cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl font-bold">home_pin</span>
+<h2 class="text-navy dark:text-white text-xl font-black leading-tight tracking-tight">HomieNest</h2>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:flex text-sm font-semibold hover:text-primary transition-colors micro-scale">Marketplace</button>
+<button class="hidden md:flex text-sm font-semibold hover:text-primary transition-colors micro-scale">AI Predictor</button>
+<button class="bg-primary text-white px-5 py-2 rounded-lg text-sm font-bold shadow-lg shadow-primary/20 hover:bg-navy transition-all">
+                Login
+            </button>
+<button class="md:hidden flex items-center justify-center micro-scale">
+<span class="material-symbols-outlined text-navy dark:text-white">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto">
+<section class="px-4 py-8 md:py-16 @container">
+<div class="flex flex-col gap-8 md:flex-row md:items-center">
+<div class="flex flex-col gap-6 md:w-1/2 animate-fade-in-up">
+<div class="flex flex-col gap-4">
+<span class="inline-flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest bg-primary/10 w-fit px-3 py-1 rounded-full micro-scale cursor-default border border-primary/20">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                        PropTech Excellence
+                    </span>
+<h1 class="text-navy dark:text-white text-4xl md:text-6xl font-black leading-[1.1] tracking-[-0.03em]">
+                        Predict Your <br/><span class="text-primary">Home’s Future</span> with AI
+                    </h1>
+<p class="text-slate-blue dark:text-gray-400 text-base md:text-lg font-normal leading-relaxed max-w-[500px]">
+                        India's most accurate platform for real-time house price forecasting, neighborhood analytics, and premium blue-chip property investment insights.
+                    </p>
+</div>
+<div class="flex flex-col sm:flex-row gap-3">
+<button class="bg-primary text-white h-14 px-8 rounded-xl text-base font-bold flex items-center justify-center gap-2 shadow-xl shadow-primary/30 hover:bg-navy hover:translate-y-[-2px] transition-all active:scale-95">
+                        Start Predicting <span class="material-symbols-outlined text-xl">trending_up</span>
+</button>
+<button class="border-2 border-blue-200 dark:border-gray-700 bg-white dark:bg-background-dark h-14 px-8 rounded-xl text-base font-bold text-navy dark:text-white flex items-center justify-center gap-2 hover:bg-blue-50 dark:hover:bg-gray-800 transition-all active:scale-95">
+                        Browse Listings
+                    </button>
+</div>
+</div>
+<div class="md:w-1/2 relative animate-float">
+<div class="w-full aspect-square md:aspect-video rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-primary/10 to-blue-300/20 border border-white/20 relative group">
+<div class="absolute inset-0 bg-center bg-no-repeat bg-cover transition-transform duration-700 group-hover:scale-110" data-alt="Modern 3D render of a futuristic glass house at sunset" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD2SjNlNIrG913M5ImN2IQS5-rkc5ZsHsZyaH8ufHeVNZjM1Esvrv8x11W0sH9GH0P5-_P2_ccsZpNJ6iyXnFjMagKygQAnwI6FMns2xCaPMUE4eYnS9GxiorUxIkIjn3lDfm2YsIiiPAHsmwXIdu9Meh8QVTQs37lnraSuXHmcn6SPQjNGGAGGR-Ylp_kyEdkejKgZ2CLmquVprdqaj39GsvYeOLxq-SfOfXFPubq_c4mQLXaN8AphTAlPqiZl80-p6o1yJvXMOVi7");'>
+</div>
+<div class="absolute bottom-6 left-6 right-6 p-4 bg-white/90 dark:bg-navy/90 backdrop-blur-md rounded-2xl border border-white/40 dark:border-white/10 shadow-xl transition-all group-hover:translate-y-[-5px]">
+<div class="flex items-center justify-between">
+<div>
+<p class="text-[10px] uppercase font-bold text-slate-blue dark:text-blue-300 tracking-wider">AI Confidence Score</p>
+<p class="text-xl font-black text-primary">98.4% Accuracy</p>
+</div>
+<div class="flex -space-x-3">
+<div class="w-8 h-8 rounded-full border-2 border-white bg-blue-100 text-primary flex items-center justify-center text-[10px] font-bold micro-scale">JD</div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-blue-500 text-white flex items-center justify-center text-[10px] font-bold micro-scale">AS</div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-navy text-white flex items-center justify-center text-[10px] font-bold micro-scale">+1k</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-8 border-t border-b border-blue-100 dark:border-gray-800 blue-gradient-bg relative overflow-hidden">
+<div class="absolute top-4 left-10 w-4 h-4 rounded-full bg-primary/20 animate-pulse-slow"></div>
+<div class="absolute bottom-4 right-1/4 w-3 h-3 rounded-full bg-primary/30 animate-drift"></div>
+<div class="absolute top-1/2 right-10 w-6 h-6 rounded-full bg-primary/10 animate-pulse-slow"></div>
+<div class="flex items-center justify-between px-4 mb-6 relative z-10">
+<div class="flex items-center gap-2 micro-scale cursor-default">
+<span class="material-symbols-outlined text-primary font-bold">query_stats</span>
+<h3 class="text-navy dark:text-white text-lg font-bold leading-tight">Trending Localities</h3>
+</div>
+<button class="text-primary text-sm font-bold flex items-center gap-1 micro-scale">View All <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+</div>
+<div class="flex overflow-x-auto no-scrollbar gap-4 px-4 pb-2 relative z-10">
+<div class="flex-shrink-0 w-64 bg-white dark:bg-navy p-4 rounded-2xl border border-blue-100 dark:border-white/10 shadow-sm hover:shadow-xl hover:translate-y-[-4px] transition-all cursor-pointer group">
+<div class="flex justify-between items-start mb-3">
+<div class="w-12 h-12 rounded-xl bg-center bg-cover transition-transform group-hover:scale-105" data-alt="Bandra West Mumbai skyline view" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDWSqzOUF8rU51LideOMYMMJs637NtVpW2ELk4QMfnz-jctF4dbEshFHxae-bni4_rnNzWDWiz-C3C8EnO6qMApOoBadedORa3kNYMXdLYxZL8-9nxFkLtY1wBUcjdEGh99IYkgxHlgRSV35Icp4l_nODRzOzeGDzJWEnujiHaN8o8bJR7GHHx4qZKEPxpvP_3oePQ0zhAvL0Lz6chy11t1iTymGX3lWritFaZN5QKuCtaR0k5d7zFHdrPQJ66P77hXUmPLNpzwdBJK");'></div>
+<span class="text-primary bg-blue-50 dark:bg-primary/20 px-2 py-1 rounded text-[10px] font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] animate-bounce">trending_up</span> 2.4%
+                    </span>
+</div>
+<p class="text-sm font-bold text-navy dark:text-white">Bandra West, Mumbai</p>
+<p class="text-lg font-black text-primary">₹45,200 <span class="text-[10px] text-slate-blue dark:text-blue-300 font-normal">/sqft</span></p>
+</div>
+<div class="flex-shrink-0 w-64 bg-white dark:bg-navy p-4 rounded-2xl border border-blue-100 dark:border-white/10 shadow-sm hover:shadow-xl hover:translate-y-[-4px] transition-all cursor-pointer group">
+<div class="flex justify-between items-start mb-3">
+<div class="w-12 h-12 rounded-xl bg-center bg-cover transition-transform group-hover:scale-105" data-alt="Indiranagar Bangalore leafy street" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAUree9VfYUJP--SxnT1mrqEbv2c1BIA-yzFdv4YF4rSVU9r19E-hmCuRA3u1kZyIt0bTONPmtotyhSUQE07Oc09WegwiJ-aZFXddOwgs0zR_JL-aaZEiRI7yxYsqiybCKPy7XNQknJW3oFcQsBr6RtY7HbnqwhJkRt7rv4qAUqER8lgWv0-Tug42K11rGAZOj18RxBCNbCNwJgFrKClcoUrmsCdG-AgrrhVkmtAj3P1VRvKt9lLBQLqC9d3k0FONEsvn9rYr04c1uV");'></div>
+<span class="text-primary bg-blue-50 dark:bg-primary/20 px-2 py-1 rounded text-[10px] font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] animate-bounce">trending_up</span> 1.8%
+                    </span>
+</div>
+<p class="text-sm font-bold text-navy dark:text-white">Indiranagar, Bengaluru</p>
+<p class="text-lg font-black text-primary">₹12,800 <span class="text-[10px] text-slate-blue dark:text-blue-300 font-normal">/sqft</span></p>
+</div>
+<div class="flex-shrink-0 w-64 bg-white dark:bg-navy p-4 rounded-2xl border border-blue-100 dark:border-white/10 shadow-sm hover:shadow-xl hover:translate-y-[-4px] transition-all cursor-pointer group">
+<div class="flex justify-between items-start mb-3">
+<div class="w-12 h-12 rounded-xl bg-center bg-cover transition-transform group-hover:scale-105" data-alt="DLF Phase 5 Gurgaon modern buildings" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDRaoZMZb-KM2vHwCFHwef_nWVsWPPqTYfgrqSelq4R1r2yba4XHhq7LjykDL1E2VSCTpY5e9mDKax932WMD5Lxdp3901C3YZYukSo3HhU7f8Gl90hXZe0ixQuJ8QNBgNcVjnLoECu3cOMo6fdGQKjZjkv0TQ42O64xZHctgjX6xFdmfD47I-I1c9FS3NFat3FPHAZx2S0pKOK6a1nlCs54seDCGDenmz_YFi9OidtOtFaxEVQkRbgW_wuR8XyY5im_UoUW9bADThHJ");'></div>
+<span class="text-primary bg-blue-50 dark:bg-primary/20 px-2 py-1 rounded text-[10px] font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] animate-bounce">trending_up</span> 3.2%
+                    </span>
+</div>
+<p class="text-sm font-bold text-navy dark:text-white">Sector 54, Gurgaon</p>
+<p class="text-lg font-black text-primary">₹18,400 <span class="text-[10px] text-slate-blue dark:text-blue-300 font-normal">/sqft</span></p>
+</div>
+</div>
+</section>
+<section class="px-4 py-16 @container">
+<div class="flex flex-col gap-12">
+<div class="flex flex-col gap-4 text-center items-center">
+<h2 class="text-navy dark:text-white text-3xl md:text-4xl font-black leading-tight max-w-[600px]">
+                    The Smartest Way to Navigate the <span class="text-primary">Indian Market</span>
+</h2>
+<p class="text-slate-blue dark:text-gray-400 text-base max-w-[600px]">
+                    We combine deep learning with localized real estate data to give you the upper hand in every transaction.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-white dark:bg-navy p-8 rounded-3xl border border-blue-100 dark:border-white/10 shadow-xl hover:-translate-y-2 transition-transform group">
+<div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 micro-scale">
+<span class="material-symbols-outlined text-primary text-3xl group-hover:rotate-12 transition-transform">psychology</span>
+</div>
+<h3 class="text-navy dark:text-white text-xl font-bold mb-3">AI Price Estimator</h3>
+<p class="text-slate-blue dark:text-gray-400 text-sm leading-relaxed">
+                        Upload photos or enter an address to get an instant, AI-calculated fair market value with 98% accuracy.
+                    </p>
+</div>
+<div class="bg-white dark:bg-navy p-8 rounded-3xl border border-blue-100 dark:border-white/10 shadow-xl hover:-translate-y-2 transition-transform group">
+<div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 micro-scale">
+<span class="material-symbols-outlined text-primary text-3xl group-hover:rotate-12 transition-transform">insights</span>
+</div>
+<h3 class="text-navy dark:text-white text-xl font-bold mb-3">Investment Heatmaps</h3>
+<p class="text-slate-blue dark:text-gray-400 text-sm leading-relaxed">
+                        Visualize future growth corridors in major Indian cities before they become mainstream hubs.
+                    </p>
+</div>
+<div class="bg-white dark:bg-navy p-8 rounded-3xl border border-blue-100 dark:border-white/10 shadow-xl hover:-translate-y-2 transition-transform group">
+<div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 micro-scale">
+<span class="material-symbols-outlined text-primary text-3xl group-hover:rotate-12 transition-transform">verified_user</span>
+</div>
+<h3 class="text-navy dark:text-white text-xl font-bold mb-3">Legal Verification</h3>
+<p class="text-slate-blue dark:text-gray-400 text-sm leading-relaxed">
+                        Every property listed on HomieNest is cross-referenced with RERA and municipal records automatically.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<div class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] md:w-full max-w-lg z-40">
+<div class="bg-navy text-white p-2 pl-6 rounded-2xl flex items-center gap-4 shadow-2xl border border-white/20 group focus-within:ring-2 focus-within:ring-primary transition-all">
+<span class="material-symbols-outlined text-blue-300 micro-scale group-focus-within:text-primary transition-colors">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm flex-1 placeholder:text-slate-blue/60" placeholder="Enter locality or property..." type="text"/>
+<button class="bg-primary px-6 py-3 rounded-xl font-bold text-sm hover:bg-white hover:text-navy active:scale-95 transition-all">Predict</button>
+</div>
+</div>
+</main>
+<footer class="bg-white dark:bg-black py-16 px-4 border-t border-blue-100 dark:border-gray-800 mb-20">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12">
+<div class="flex flex-col gap-6 max-w-sm">
+<div class="flex items-center gap-2 micro-scale cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl font-bold">home_pin</span>
+<h2 class="text-navy dark:text-white text-xl font-black">HomieNest</h2>
+</div>
+<p class="text-slate-blue dark:text-gray-400 text-sm leading-relaxed">
+                The next generation of real estate investment tools. Helping Indians make data-backed property decisions with premium AI analytics.
+            </p>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full border border-blue-100 dark:border-gray-800 flex items-center justify-center text-primary micro-scale cursor-pointer hover:bg-blue-50">
+<span class="material-symbols-outlined text-xl">language</span>
+</div>
+<div class="w-10 h-10 rounded-full border border-blue-100 dark:border-gray-800 flex items-center justify-center text-primary micro-scale cursor-pointer hover:bg-blue-50">
+<span class="material-symbols-outlined text-xl">alternate_email</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-navy dark:text-white">Platform</h4>
+<a class="text-sm text-slate-blue hover:text-primary micro-scale w-fit" href="#">Marketplace</a>
+<a class="text-sm text-slate-blue hover:text-primary micro-scale w-fit" href="#">AI Predictor</a>
+<a class="text-sm text-slate-blue hover:text-primary micro-scale w-fit" href="#">Analytics</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-navy dark:text-white">Company</h4>
+<a class="text-sm text-slate-blue hover:text-primary micro-scale w-fit" href="#">About Us</a>
+<a class="text-sm text-slate-blue hover:text-primary micro-scale w-fit" href="#">Contact</a>
+<a class="text-sm text-slate-blue hover:text-primary micro-scale w-fit" href="#">Careers</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-navy dark:text-white">Legal</h4>
+<a class="text-sm text-slate-blue hover:text-primary micro-scale w-fit" href="#">Privacy</a>
+<a class="text-sm text-slate-blue hover:text-primary micro-scale w-fit" href="#">Terms</a>
+<a class="text-sm text-slate-blue hover:text-primary micro-scale w-fit" href="#">RERA Compliance</a>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-blue-50 dark:border-gray-900 flex justify-between items-center">
+<p class="text-[10px] text-slate-blue font-medium">© 2024 HomieNest Technologies Pvt Ltd. All rights reserved.</p>
+<div class="flex gap-2 items-center micro-scale cursor-default">
+<span class="material-symbols-outlined text-primary text-lg">verified</span>
+<span class="text-[10px] text-primary font-bold">SECURED PLATFORM</span>
+</div>
+</div>
+</footer>
+<script>
+    window.addEventListener('scroll', function() {
+        const nav = document.getElementById('navbar');
+        if (window.scrollY > 20) {
+            nav.classList.add('nav-scrolled');
+            nav.style.opacity = "0.98";
+        } else {
+            nav.classList.remove('nav-scrolled');
+            nav.style.opacity = "1";
+        }
+    });
+</script>
+
+</body></html>

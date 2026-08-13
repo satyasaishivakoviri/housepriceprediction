@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result | HomieNest</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet">
+
+    <script src="../js/firebase-config.js"></script>
+    <script src="../js/install-app.js"></script>
+    <script src="../js/mobile-menu.js"></script>
+    <script src="../js/wishlist.js"></script>
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0d59f2",
+                        "background-light": "#f8fafc",
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light text-slate-900 min-h-screen">
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <aside
+            class="fixed inset-y-0 right-0 md:left-0 md:right-auto w-64 bg-white border-l md:border-l-0 md:border-r border-slate-200 flex flex-col z-50 transform translate-x-full md:translate-x-0 transition-transform duration-300 shadow-xl md:shadow-none">
+            <div class="p-6">
+                <div class="flex items-center gap-3 px-2">
+                    <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-lg">home</span>
+                    </div>
+                    <a href="../index.html" class="font-bold text-xl tracking-tight text-slate-900">HomieNest</a>
+                </div>
+            </div>
+
+            <nav class="flex-1 px-4 space-y-1 overflow-y-auto">
+                <a href="dashboard.html"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-50 text-slate-600 font-medium transition-colors">
+                    <span class="material-symbols-outlined">dashboard</span>
+                    Dashboard
+                </a>
+                <a href="listings.html"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-50 text-slate-600 font-medium transition-colors">
+                    <span class="material-symbols-outlined">storefront</span>
+                    Marketplace
+                </a>
+                <a href="predictor.html"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary/10 text-primary font-bold shadow-sm">
+                    <span class="material-symbols-outlined fill-1">psychology</span>
+                    Price Predictor
+                </a>
+                <a href="analytics.html"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-50 text-slate-600 font-medium transition-colors">
+                    <span class="material-symbols-outlined">query_stats</span>
+                    Analytics
+                </a>
+                <a href="location-based_price_insights.html"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-50 text-slate-600 font-medium transition-colors">
+                    <span class="material-symbols-outlined">location_city</span>
+                    Location Insights
+                </a>
+
+                <div class="mt-6">
+                    <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 px-2">Wishlist</div>
+                    <div id="wishlist-container" class="space-y-1">
+                        <!-- Wishlist items injected by JS -->
+                    </div>
+                </div>
+            </nav>
+
+            <div class="mt-auto pt-4 border-t border-slate-100 p-4">
+                <button onclick="window.installPWA()"
+                    class="flex items-center gap-3 px-4 py-3 mb-2 rounded-xl hover:bg-gray-100 text-gray-600 font-medium w-full transition-colors">
+                    <span class="material-symbols-outlined">install_mobile</span>
+                    Install App
+                </button>
+                <button onclick="window.firebaseHelpers?.logOut().then(()=>window.location.href='login.html')"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-red-50 text-red-500 font-medium w-full transition-colors">
+                    <span class="material-symbols-outlined">logout</span>
+                    Logout
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 md:ml-64 flex flex-col min-h-screen">
+
+            <!-- Mobile Header / Overlay -->
+            <div id="mobile-overlay" class="fixed inset-0 bg-black/50 z-40 hidden md:hidden"></div>
+            <header
+                class="md:hidden flex items-center justify-between p-4 bg-white border-b border-slate-200 sticky top-0 z-30">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-sm">home</span>
+                    </div>
+                    <h1 class="font-bold text-lg text-slate-900">Result</h1>
+                </div>
+                <button id="mobile-menu-btn" class="p-2 rounded-lg hover:bg-slate-100 transition-colors">
+                    <span class="material-symbols-outlined text-slate-600">menu</span>
+                </button>
+            </header>
+
+            <!-- Desktop Header -->
+            <header class="hidden md:flex sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-slate-200">
+                <div class="flex items-center justify-between px-8 py-4 w-full">
+                    <div>
+                        <h1 class="text-2xl font-bold text-slate-900">Valuation Report</h1>
+                        <p class="text-sm text-slate-500">AI-generated property estimate</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <button onclick="window.print()" class="p-2 text-slate-500 hover:text-primary transition-colors"
+                            title="Print Report">
+                            <span class="material-symbols-outlined">print</span>
+                        </button>
+                        <button onclick="window.location.href='predictor.html'"
+                            class="flex items-center gap-2 px-4 py-2 bg-slate-900 text-white rounded-lg hover:opacity-90 transition-opacity">
+                            <span class="material-symbols-outlined text-sm">add</span>
+                            New Prediction
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <div class="p-4 md:p-8 max-w-7xl mx-auto w-full">
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                    <!-- Left Column: Main Valuation -->
+                    <div class="lg:col-span-2 space-y-6">
+
+                        <!-- Hero Card -->
+                        <div
+                            class="bg-gradient-to-br from-primary to-blue-700 rounded-3xl p-8 text-white shadow-xl shadow-primary/20 relative overflow-hidden">
+                            <div
+                                class="absolute top-0 right-0 p-32 bg-white/10 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none">
+                            </div>
+
+                            <div class="relative z-10">
+                                <span
+                                    class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider mb-4 inline-block border border-white/20">
+                                    AI High Confidence
+                                </span>
+                                <h2 class="text-blue-100 font-medium mb-2">Estimated Market Range</h2>
+                                <h1 class="text-4xl md:text-5xl font-black tracking-tight mb-8" id="price-range">--</h1>
+
+                                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-6 border-t border-white/10">
+                                    <div>
+                                        <p class="text-blue-200 text-xs uppercase font-bold tracking-wider mb-1">Price /
+                                            Sqft</p>
+                                        <p class="text-xl font-bold" id="price-per-sqft">--</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-blue-200 text-xs uppercase font-bold tracking-wider mb-1">Growth
+                                            (1Y)</p>
+                                        <p class="text-xl font-bold flex items-center gap-1">
+                                            <span class="material-symbols-outlined text-sm">trending_up</span> +8.4%
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="text-blue-200 text-xs uppercase font-bold tracking-wider mb-1">Demand
+                                        </p>
+                                        <p class="text-xl font-bold">High</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-blue-200 text-xs uppercase font-bold tracking-wider mb-1">Rental
+                                            Yield</p>
+                                        <p class="text-xl font-bold">3.2%</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Property Summary -->
+                        <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+                            <h3 class="font-bold text-slate-800 mb-4 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">analytics</span>
+                                Valuation Breakdown
+                            </h3>
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-4 p-3 hover:bg-slate-50 rounded-xl transition-colors">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
+                                        <span class="material-symbols-outlined">landscape</span>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="font-bold text-slate-700">Land Value</span>
+                                            <span class="font-bold text-slate-900">65%</span>
+                                        </div>
+                                        <div class="w-full bg-slate-100 rounded-full h-2">
+                                            <div class="bg-emerald-500 h-2 rounded-full" style="width: 65%"></div>
+                                        </div>
+                                        <p class="text-xs text-slate-500 mt-1">Based on location: <span
+                                                class="font-medium" id="detail-location-sm">--</span></p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-4 p-3 hover:bg-slate-50 rounded-xl transition-colors">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-orange-600">
+                                        <span class="material-symbols-outlined">foundation</span>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="font-bold text-slate-700">Structure Cost</span>
+                                            <span class="font-bold text-slate-900">25%</span>
+                                        </div>
+                                        <div class="w-full bg-slate-100 rounded-full h-2">
+                                            <div class="bg-orange-500 h-2 rounded-full" style="width: 25%"></div>
+                                        </div>
+                                        <p class="text-xs text-slate-500 mt-1">Depreciated value for <span
+                                                class="font-medium" id="detail-age-sm">--</span> old building</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-4 p-3 hover:bg-slate-50 rounded-xl transition-colors">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600">
+                                        <span class="material-symbols-outlined">star</span>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="font-bold text-slate-700">Premium Factors</span>
+                                            <span class="font-bold text-slate-900">10%</span>
+                                        </div>
+                                        <div class="w-full bg-slate-100 rounded-full h-2">
+                                            <div class="bg-purple-500 h-2 rounded-full" style="width: 10%"></div>
+                                        </div>
+                                        <p class="text-xs text-slate-500 mt-1">Adjusted for floor rise, amenities &
+                                            facing</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Price History Graph -->
+                        <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+                            <div class="flex justify-between items-center mb-6">
+                                <h3 class="font-bold text-slate-800 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary">ssid_chart</span>
+                                    Price Trends (5 Years)
+                                </h3>
+                                <select class="text-xs bg-slate-50 border-none rounded-lg font-bold text-slate-500">
+                                    <option>5 Years</option>
+                                    <option>1 Year</option>
+                                </select>
+                            </div>
+
+                            <!-- Simple SVG Line Chart -->
+                            <div class="relative h-48 w-full">
+                                <svg class="w-full h-full overflow-visible" viewBox="0 0 100 50"
+                                    preserveAspectRatio="none">
+                                    <!-- Grid Lines -->
+                                    <line x1="0" y1="0" x2="100" y2="0" stroke="#f1f5f9" stroke-width="0.5" />
+                                    <line x1="0" y1="12.5" x2="100" y2="12.5" stroke="#f1f5f9" stroke-width="0.5" />
+                                    <line x1="0" y1="25" x2="100" y2="25" stroke="#f1f5f9" stroke-width="0.5" />
+                                    <line x1="0" y1="37.5" x2="100" y2="37.5" stroke="#f1f5f9" stroke-width="0.5" />
+                                    <line x1="0" y1="50" x2="100" y2="50" stroke="#f1f5f9" stroke-width="0.5" />
+
+                                    <!-- Chart Line (Animated) -->
+                                    <path d="M0,45 C10,42 20,40 30,35 C40,30 50,32 60,25 C70,18 80,15 90,10 L100,5"
+                                        fill="none" stroke="#0d59f2" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" class="chart-line" />
+
+                                    <!-- Area under curve -->
+                                    <path
+                                        d="M0,45 C10,42 20,40 30,35 C40,30 50,32 60,25 C70,18 80,15 90,10 L100,5 V50 H0 Z"
+                                        fill="url(#gradient)" opacity="0.2" />
+
+                                    <defs>
+                                        <linearGradient id="gradient" x1="0" y1="0" x2="0" y2="1">
+                                            <stop offset="0%" stop-color="#0d59f2" />
+                                            <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+
+                                <!-- Points -->
+                                <div
+                                    class="absolute top-[10%] right-0 w-3 h-3 bg-primary rounded-full border-2 border-white shadow-md">
+                                </div>
+                                <div
+                                    class="absolute top-[10%] right-[-10px] bg-slate-900 text-white text-[10px] px-2 py-1 rounded-md shadow-lg transform -translate-x-1/2 -translate-y-full">
+                                    ₹4,833/sqft
+                                </div>
+                            </div>
+                            <div class="flex justify-between text-xs text-slate-400 mt-2 font-medium">
+                                <span>2021</span>
+                                <span>2022</span>
+                                <span>2023</span>
+                                <span>2024</span>
+                                <span>2025</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Right Column: Details & Actions -->
+                    <div class="space-y-6">
+
+                        <!-- Property Details Card -->
+                        <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+                            <h3 class="font-bold text-slate-800 mb-4 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">assignment</span>
+                                Input Details
+                            </h3>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="p-3 bg-slate-50 rounded-lg">
+                                    <p class="text-xs text-slate-500 uppercase font-bold tracking-wider mb-1">Location
+                                    </p>
+                                    <p class="font-bold text-slate-900 break-words" id="detail-location">--</p>
+                                    <p class="text-xs text-slate-400" id="detail-city">--</p>
+                                </div>
+                                <div class="p-3 bg-slate-50 rounded-lg">
+                                    <p class="text-xs text-slate-500 uppercase font-bold tracking-wider mb-1">Size</p>
+                                    <p class="font-bold text-slate-900" id="detail-area">--</p>
+                                </div>
+                                <div class="p-3 bg-slate-50 rounded-lg">
+                                    <p class="text-xs text-slate-500 uppercase font-bold tracking-wider mb-1">Config</p>
+                                    <p class="font-bold text-slate-900" id="detail-bhk">--</p>
+                                </div>
+                                <div class="p-3 bg-slate-50 rounded-lg">
+                                    <p class="text-xs text-slate-500 uppercase font-bold tracking-wider mb-1">Age</p>
+                                    <p class="font-bold text-slate-900" id="detail-age">--</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CTA Card -->
+                        <div class="bg-slate-900 rounded-2xl p-6 text-white shadow-lg relative overflow-hidden">
+                            <div class="relative z-10">
+                                <h3 class="font-bold text-xl mb-2">Want a precise valuation?</h3>
+                                <p class="text-slate-300 text-sm mb-6">Connect with a certified agent to get an official
+                                    on-site valuation report.</p>
+                                <button onclick="window.location.href='contact_agent.html'"
+                                    class="w-full py-3 bg-white text-slate-900 font-bold rounded-xl hover:bg-gray-100 transition-colors">
+                                    Contact Expert Agent
+                                </button>
+                            </div>
+                            <div class="absolute -bottom-10 -right-10 w-32 h-32 bg-white/10 rounded-full blur-2xl">
+                            </div>
+                        </div>
+
+                        <!-- Nearby Amenities -->
+                        <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+                            <h3 class="font-bold text-slate-800 mb-4 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">near_me</span>
+                                Nearby Amenities
+                            </h3>
+                            <div class="space-y-3">
+                                <div
+                                    class="flex items-center justify-between p-2 rounded-lg hover:bg-slate-50 transition-colors">
+                                    <div class="flex items-center gap-3">
+                                        <span class="material-symbols-outlined text-slate-400">train</span>
+                                        <div>
+                                            <p class="text-sm font-bold text-slate-700">Metro Station</p>
+                                            <p class="text-xs text-slate-400">Rapid Transit</p>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-1 rounded-md">0.5
+                                        km</span>
+                                </div>
+                                <div
+                                    class="flex items-center justify-between p-2 rounded-lg hover:bg-slate-50 transition-colors">
+                                    <div class="flex items-center gap-3">
+                                        <span class="material-symbols-outlined text-slate-400">school</span>
+                                        <div>
+                                            <p class="text-sm font-bold text-slate-700">Global School</p>
+                                            <p class="text-xs text-slate-400">International</p>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-1 rounded-md">1.2
+                                        km</span>
+                                </div>
+                                <div
+                                    class="flex items-center justify-between p-2 rounded-lg hover:bg-slate-50 transition-colors">
+                                    <div class="flex items-center gap-3">
+                                        <span class="material-symbols-outlined text-slate-400">local_hospital</span>
+                                        <div>
+                                            <p class="text-sm font-bold text-slate-700">City Hospital</p>
+                                            <p class="text-xs text-slate-400">Multi-specialty</p>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-1 rounded-md">2.0
+                                        km</span>
+                                </div>
+                                <div
+                                    class="flex items-center justify-between p-2 rounded-lg hover:bg-slate-50 transition-colors">
+                                    <div class="flex items-center gap-3">
+                                        <span class="material-symbols-outlined text-slate-400">shopping_bag</span>
+                                        <div>
+                                            <p class="text-sm font-bold text-slate-700">City Center Mall</p>
+                                            <p class="text-xs text-slate-400">Shopping</p>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-1 rounded-md">3.5
+                                        km</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Similar Properties Section -->
+                <div class="mt-12">
+                    <h3 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary">view_agenda</span>
+                        Similar Properties in Market
+                    </h3>
+
+                    <div id="similar-properties-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Dynamic Content Loaded via JS -->
+                        <div class="col-span-full text-center py-10 opacity-50">
+                            <span class="material-symbols-outlined animate-spin">progress_activity</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Floating Buttons Container -->
+    <div class="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
+        <!-- Floating Map Button -> Redirects to Insights -->
+        <a href="location-based_price_insights.html" title="View Map"
+            class="w-14 h-14 bg-white text-slate-900 rounded-full shadow-xl flex items-center justify-center hover:scale-110 transition-transform border border-slate-200 cursor-pointer">
+            <span class="material-symbols-outlined">map</span>
+        </a>
+
+        <!-- Floating Chat Button -> Toggles Widget -->
+        <button id="chat-toggle-btn"
+            class="w-14 h-14 bg-primary text-white rounded-full shadow-xl shadow-primary/30 flex items-center justify-center hover:scale-110 transition-transform">
+            <span class="material-symbols-outlined">chat</span>
+        </button>
+    </div>
+
+    <!-- AI Chatbot Widget -->
+    <div id="chat-widget"
+        class="fixed bottom-24 right-6 w-80 md:w-96 bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 z-50 hidden flex-col overflow-hidden transition-all duration-300 origin-bottom-right transform scale-95 opacity-0">
+        <!-- Chat Header -->
+        <div class="bg-primary p-4 flex items-center justify-between text-white">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-sm">smart_toy</span>
+                </div>
+                <div>
+                    <h3 class="font-bold text-sm">Homie AI</h3>
+                    <p class="text-xs text-blue-100 flex items-center gap-1"><span
+                            class="w-1.5 h-1.5 bg-green-400 rounded-full"></span> Online</p>
+                </div>
+            </div>
+            <button id="close-chat-btn" class="text-white/80 hover:text-white">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+
+        <!-- Chat Body -->
+        <div id="chat-messages" class="h-80 overflow-y-auto p-4 space-y-3 bg-slate-50 dark:bg-slate-900">
+            <!-- Bot Welcome Message -->
+            <div class="flex items-start gap-2">
+                <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <span class="material-symbols-outlined text-xs text-primary">smart_toy</span>
+                </div>
+                <div
+                    class="bg-white dark:bg-slate-800 p-3 rounded-2xl rounded-tl-none shadow-sm text-sm text-slate-700 dark:text-slate-200 border border-slate-100 dark:border-slate-700">
+                    Hi! I'm your AI assistant. How can I help you with this property valuation?
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Input -->
+        <div class="p-3 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
+            <form id="chat-form" class="flex items-center gap-2">
+                <input type="text" id="chat-input"
+                    class="flex-1 bg-slate-50 dark:bg-slate-800 border-0 rounded-xl px-4 py-2.5 text-sm focus:ring-2 focus:ring-primary dark:text-white"
+                    placeholder="Ask about price, trends..." autocomplete="off">
+                <button type="submit"
+                    class="p-2.5 bg-primary text-white rounded-xl hover:bg-blue-600 transition-colors flex items-center justify-center">
+                    <span class="material-symbols-outlined text-sm">send</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const dataStr = localStorage.getItem('last_prediction');
+
+            if (!dataStr) {
+                // For dev/test purposes if accessed directly, preserve layout
+                // In production, uncomment redirect:
+                // alert("No prediction data found. Redirecting to predictor.");
+                // window.location.href = 'predictor.html';
+                // return;
+
+                // Mock data for display when testing direct access
+                const mockData = {
+                    priceRange: "₹1.45 Cr - ₹1.65 Cr",
+                    location: "Indiranagar",
+                    city: "Bangalore",
+                    area: "1500",
+                    age: "5",
+                    bhk: "3 BHK"
+                };
+                populateData(mockData);
+                return;
+            }
+
+            const data = JSON.parse(dataStr);
+            populateData(data);
+
+            function populateData(data) {
+                // Main Price
+                document.getElementById('price-range').textContent = data.priceRange;
+
+                // Details
+                document.getElementById('detail-location').textContent = data.location;
+                document.getElementById('detail-location-sm').textContent = data.location;
+                document.getElementById('detail-city').textContent = data.city;
+                document.getElementById('detail-bhk').textContent = data.bhk;
+                document.getElementById('detail-area').textContent = `${data.area} sqft`;
+                document.getElementById('detail-age').textContent = `${data.age} years`;
+                document.getElementById('detail-age-sm').textContent = `${data.age} year`;
+
+                // Calculate Per Sqft (Helper)
+                let estimatedPriceVal = 0;
+                try {
+                    const priceParts = data.priceRange.match(/[\d\.]+/g);
+                    if (priceParts && priceParts.length > 0) {
+                        const avgPriceCr = (parseFloat(priceParts[0]) + parseFloat(priceParts[1])) / 2;
+                        const avgPrice = avgPriceCr * 10000000;
+                        estimatedPriceVal = avgPrice;
+                        const area = parseInt(data.area);
+                        const perSqft = Math.round(avgPrice / area);
+                        document.getElementById('price-per-sqft').textContent = `₹${perSqft.toLocaleString()}`;
+                    }
+                } catch (e) {
+                    console.warn("Could not calculate per sqft", e);
+                    document.getElementById('price-per-sqft').textContent = "N/A";
+                }
+
+                // Generate Similar Properties (Dynamic Comps)
+                generateComps(data, estimatedPriceVal);
+            }
+
+            async function generateComps(data, basePrice) {
+                const container = document.getElementById('similar-properties-grid');
+                if (!container) return;
+
+                // Create 3 simulated comps
+                const comps = [];
+                for (let i = 1; i <= 3; i++) {
+                    // Random variations
+                    const priceVar = 0.9 + (Math.random() * 0.2); // 0.9 to 1.10
+                    const price = basePrice * priceVar;
+                    const areaVar = 0.9 + (Math.random() * 0.2);
+                    const area = Math.round(parseInt(data.area) * areaVar);
+
+                    // Determine Type for Image
+                    const type = parseInt(data.bhk) > 3 ? 'villa' : 'apartment';
+
+                    // Try Mapillary (Street View) or Fallback to Unsplash
+                    let imageUrl = null;
+                    if (window.RealEstateData && window.RealEstateData.MAPILLARY_ACCESS_TOKEN) {
+                        try {
+                            // Pass city from data
+                            const mapillaryUrl = await window.RealEstateData.getMapillaryImage(data.location || "Bangalore");
+                            imageUrl = mapillaryUrl;
+                        } catch (e) { console.log("Mapillary error", e); }
+                    }
+
+                    // Fallback
+                    if (!imageUrl) {
+                        imageUrl = window.RealEstateData ? window.RealEstateData.getImageFromPool(data.location + i, type) : 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=80';
+                    }
+
+                    comps.push({
+                        id: i,
+                        price: `₹${(price / 10000000).toFixed(2)} Cr`,
+                        location: data.location,
+                        title: `${data.bhk} ${type.charAt(0).toUpperCase() + type.slice(1)}`,
+                        bhk: data.bhk,
+                        baths: Math.max(1, parseInt(data.bhk) - (Math.random() > 0.5 ? 0 : 1)),
+                        area: area,
+                        image: imageUrl
+                    });
+                }
+
+                // Render
+                let html = '';
+                comps.forEach(comp => {
+                    html += `
+                    <div class="group bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer" onclick="window.location.href='listings.html'">
+                        <div class="relative h-48 bg-gray-200 overflow-hidden">
+                            <img src="${comp.image}" 
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="House">
+                            <div class="absolute top-3 left-3 bg-white/90 backdrop-blur px-2 py-1 rounded-lg text-xs font-bold text-slate-900">
+                                ${comp.price}
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-bold text-slate-900 mb-1 truncate">${comp.title}</h4>
+                            <p class="text-sm text-slate-500 mb-3 flex items-center gap-1">
+                                <span class="material-symbols-outlined text-[16px]">location_on</span>
+                                Near ${comp.location}
+                            </p>
+                            <div class="flex items-center gap-4 text-xs font-medium text-slate-600 border-t border-slate-100 pt-3">
+                                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">bed</span> ${comp.bhk}</span>
+                                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">shower</span> ${comp.baths} Baths</span>
+                                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">square_foot</span> ${comp.area} sqft</span>
+                            </div>
+                        </div>
+                    </div>`;
+                });
+
+                container.innerHTML = html;
+            }
+            // Chatbot Logic
+            const chatWidget = document.getElementById('chat-widget');
+            const chatToggle = document.getElementById('chat-toggle-btn');
+            const closeChat = document.getElementById('close-chat-btn');
+            const chatForm = document.getElementById('chat-form');
+            const chatInput = document.getElementById('chat-input');
+            const chatMessages = document.getElementById('chat-messages');
+
+            function toggleChat() {
+                if (chatWidget.classList.contains('hidden')) {
+                    chatWidget.classList.remove('hidden');
+                    // Small delay to allow display block to apply before transition
+                    setTimeout(() => {
+                        chatWidget.classList.remove('opacity-0', 'scale-95');
+                    }, 10);
+                } else {
+                    chatWidget.classList.add('opacity-0', 'scale-95');
+                    setTimeout(() => {
+                        chatWidget.classList.add('hidden');
+                    }, 300);
+                }
+            }
+
+            chatToggle.addEventListener('click', toggleChat);
+            closeChat.addEventListener('click', toggleChat);
+
+            function addMessage(text, isUser = false) {
+                const msgDiv = document.createElement('div');
+                msgDiv.className = `flex items-start gap-2 ${isUser ? 'flex-row-reverse' : ''}`;
+
+                const avatar = isUser ?
+                    `<div class="w-6 h-6 rounded-full bg-slate-200 flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-xs text-slate-500">person</span></div>` :
+                    `<div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-xs text-primary">smart_toy</span></div>`;
+
+                const bubble = document.createElement('div');
+                bubble.className = isUser ?
+                    'bg-primary text-white p-3 rounded-2xl rounded-tr-none shadow-sm text-sm' :
+                    'bg-white dark:bg-slate-800 p-3 rounded-2xl rounded-tl-none shadow-sm text-sm text-slate-700 dark:text-slate-200 border border-slate-100 dark:border-slate-700';
+                bubble.textContent = text;
+
+                msgDiv.innerHTML = avatar;
+                msgDiv.appendChild(bubble);
+                chatMessages.appendChild(msgDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+
+            chatForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const text = chatInput.value.trim();
+                if (!text) return;
+
+                addMessage(text, true);
+                chatInput.value = '';
+
+                // Simulated AI Response
+                setTimeout(() => {
+                    let response = "I can help you connect with an agent for more details.";
+                    const lowerText = text.toLowerCase();
+
+                    if (lowerText.includes('price') || lowerText.includes('cost') || lowerText.includes('val')) {
+                        response = "The estimated range is based on current market trends in this location. We analyze recent transaction data to generate this figure.";
+                    } else if (lowerText.includes('location') || lowerText.includes('area')) {
+                        response = "This location has a high demand score. It's close to key amenities like the Metro and Global School.";
+                    } else if (lowerText.includes('hello') || lowerText.includes('hi')) {
+                        response = "Hello! Do you have any questions about this property valuation?";
+                    }
+
+                    addMessage(response, false);
+                }, 1000);
+            });
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Budget Planner - HomieNest</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#1E40AF", // Deep Blue
+              "brand-blue": "#3B82F6",
+              "brand-light": "#EFF6FF",
+              "background-light": "#F8FAFC",
+            },
+            fontFamily: {
+              "display": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .custom-slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 6px;
+            background: #DBEAFE;
+            border-radius: 5px;
+            outline: none;
+        }
+        .custom-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #1E40AF;
+            cursor: pointer;
+            border-radius: 50%;
+            border: 3px solid #FFFFFF;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .radial-chart-container {
+            position: relative;
+            width: 180px;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .conic-gradient-bg {
+            background: conic-gradient(#1E40AF 0% 82%, #DBEAFE 82% 100%);
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            mask: radial-gradient(farthest-side, transparent 82%, black 83%);
+            -webkit-mask: radial-gradient(farthest-side, transparent 82%, black 83%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light text-[#1E293B] antialiased">
+<div class="max-w-md mx-auto min-h-screen flex flex-col relative">
+<div class="fixed top-4 inset-x-4 max-w-md mx-auto z-[60] px-4">
+<nav class="bg-white/90 backdrop-blur-xl border border-blue-100 shadow-lg rounded-full px-4 py-2 flex items-center justify-between">
+<button class="size-10 flex items-center justify-center rounded-full hover:bg-blue-50 text-primary transition-colors">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<span class="font-bold text-primary tracking-tight">Affordability &amp; EMI</span>
+<button class="size-10 flex items-center justify-center rounded-full hover:bg-blue-50 text-primary transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</nav>
+</div>
+<main class="flex-1 overflow-y-auto pt-24 pb-32">
+<div class="px-6 mb-6">
+<h1 class="text-2xl font-bold text-slate-900">Budget Planner</h1>
+<p class="text-sm text-slate-500 mt-1">AI-powered affordability analysis by HomieNest.</p>
+</div>
+<div class="mx-6 bg-white rounded-3xl p-8 shadow-sm border border-blue-50 flex flex-col items-center">
+<div class="radial-chart-container">
+<div class="conic-gradient-bg absolute inset-0"></div>
+<div class="text-center z-10">
+<span class="text-5xl font-black text-primary">82</span>
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Health Score</p>
+</div>
+</div>
+<div class="mt-6 text-center">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-semibold mb-2">
+<span class="material-symbols-outlined text-sm">verified</span> High Affordability
+                    </div>
+<p class="text-sm font-medium text-slate-600">Based on your current profile, you can comfortably manage a premium property purchase.</p>
+</div>
+</div>
+<div class="mx-6 mt-6 bg-primary rounded-3xl p-6 shadow-xl shadow-blue-900/10 text-white relative overflow-hidden">
+<div class="relative z-10">
+<p class="text-blue-200 text-xs font-medium uppercase tracking-wider mb-1">Max Recommended Property</p>
+<h2 class="text-4xl font-bold italic tracking-tight">₹ 1.45 Cr</h2>
+<div class="flex items-center mt-6 gap-2 text-[10px] bg-white/10 w-fit px-3 py-1.5 rounded-full border border-white/20">
+<span class="material-symbols-outlined text-sm">info</span>
+                        Calculated at 8.5% p.a interest
+                    </div>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10">
+<span class="material-symbols-outlined text-[120px]">apartment</span>
+</div>
+</div>
+<div class="px-6 mt-10 space-y-8">
+<h2 class="text-lg font-bold text-slate-900">Financial Inputs</h2>
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<label class="text-sm font-semibold text-slate-700">Monthly Net Income</label>
+<span class="text-lg font-bold text-primary">₹ 1,80,000</span>
+</div>
+<input class="custom-slider" max="1000000" min="50000" step="5000" type="range" value="180000"/>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<label class="text-sm font-semibold text-slate-700">Existing Monthly EMIs</label>
+<span class="text-lg font-bold text-primary">₹ 25,000</span>
+</div>
+<input class="custom-slider" max="200000" min="0" step="1000" type="range" value="25000"/>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<label class="text-sm font-semibold text-slate-700">Down Payment</label>
+<span class="text-lg font-bold text-primary">₹ 30,00,000</span>
+</div>
+<input class="custom-slider" max="10000000" min="500000" step="50000" type="range" value="3000000"/>
+</div>
+</div>
+<div class="px-6 mt-12 pb-10">
+<h2 class="text-lg font-bold text-slate-900 mb-4">Monthly Cost Breakdown</h2>
+<div class="bg-white rounded-3xl border border-blue-50 overflow-hidden">
+<div class="p-5 flex justify-between items-center border-b border-blue-50">
+<div class="flex items-center gap-3">
+<div class="size-10 bg-blue-50 rounded-xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">home_max</span>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-800">Home Loan EMI</p>
+<p class="text-[10px] text-slate-500 uppercase">20 Years Tenure</p>
+</div>
+</div>
+<p class="text-base font-bold text-primary">₹ 65,420</p>
+</div>
+<div class="p-5 flex justify-between items-center border-b border-blue-50">
+<div class="flex items-center gap-3">
+<div class="size-10 bg-blue-50 rounded-xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">construction</span>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-800">Maintenance</p>
+<p class="text-[10px] text-slate-500 uppercase">Society Avg</p>
+</div>
+</div>
+<p class="text-base font-bold text-primary">₹ 5,500</p>
+</div>
+<div class="p-5 flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="size-10 bg-blue-50 rounded-xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">account_balance</span>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-800">Property Tax</p>
+<p class="text-[10px] text-slate-500 uppercase">Monthly Provision</p>
+</div>
+</div>
+<p class="text-base font-bold text-primary">₹ 1,200</p>
+</div>
+</div>
+</div>
+</main>
+<div class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-white/80 backdrop-blur-2xl border-t border-blue-50 p-5 pb-8 flex items-center gap-3 z-50">
+<button class="flex-1 bg-primary text-white h-14 rounded-2xl font-bold flex items-center justify-center gap-2 shadow-xl shadow-blue-900/20 active:scale-[0.98] transition-all">
+                Get Detailed Report
+                <span class="material-symbols-outlined text-sm">download</span>
+</button>
+<button class="size-14 bg-brand-light text-primary rounded-2xl flex items-center justify-center active:scale-95 transition-all">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+</div>
+
+</body></html>

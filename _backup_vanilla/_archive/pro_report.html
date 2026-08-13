@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pro Investment Comparison Report</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased">
+<!-- Top Navigation Bar -->
+<div class="sticky top-0 z-50 flex items-center bg-white/80 dark:bg-background-dark/80 backdrop-blur-md p-4 pb-2 justify-between border-b border-slate-200 dark:border-slate-800">
+<div class="text-slate-900 dark:text-white flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined cursor-pointer">arrow_back_ios</span>
+</div>
+<div class="flex flex-col items-center">
+<h2 class="text-slate-900 dark:text-white text-base font-bold leading-tight tracking-tight">Pro Investment Report</h2>
+<p class="text-[10px] text-primary font-semibold uppercase tracking-widest">HomieNest AI Analysis</p>
+</div>
+<div class="flex w-12 items-center justify-end">
+<button class="flex cursor-pointer items-center justify-center rounded-lg h-12 bg-transparent text-slate-900 dark:text-white p-0">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+</div>
+<!-- Portfolio Selection Tabs -->
+<div class="bg-white dark:bg-background-dark border-b border-slate-200 dark:border-slate-800 sticky top-[68px] z-40">
+<div class="flex overflow-x-auto hide-scrollbar px-4 gap-6">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-primary text-primary pb-[10px] pt-4 whitespace-nowrap" href="#">
+<p class="text-sm font-bold">Portfolio A</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-500 dark:text-slate-400 pb-[10px] pt-4 whitespace-nowrap" href="#">
+<p class="text-sm font-bold">Portfolio B</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-500 dark:text-slate-400 pb-[10px] pt-4 whitespace-nowrap" href="#">
+<p class="text-sm font-bold">Portfolio C</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-500 dark:text-slate-400 pb-[10px] pt-4 whitespace-nowrap" href="#">
+<p class="text-sm font-bold">Portfolio D</p>
+</a>
+</div>
+</div>
+<main class="pb-32">
+<!-- Visualization Section -->
+<section class="mt-4">
+<div class="flex items-center justify-between px-4 pb-2">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight">Risk vs. Reward</h3>
+<span class="material-symbols-outlined text-slate-400 text-sm">info</span>
+</div>
+<div class="px-4">
+<div class="bg-slate-50 dark:bg-slate-900/50 rounded-xl p-4 border border-slate-200 dark:border-slate-800">
+<div class="flex flex-col gap-2 mb-4">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-wider">Overall Risk Profile</p>
+<div class="flex items-baseline gap-2">
+<p class="text-slate-900 dark:text-white text-2xl font-bold leading-tight">Medium Risk</p>
+<p class="text-emerald-500 text-sm font-bold">+12.5% Forecast</p>
+</div>
+</div>
+<div class="relative h-48 w-full mt-2">
+<!-- Simulated Scatter Plot / Line Chart -->
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 400 150">
+<defs>
+<lineargradient id="chartGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#0d59f2" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#0d59f2" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<path d="M0 120 Q 50 110, 100 80 T 200 60 T 300 30 T 400 10 L 400 150 L 0 150 Z" fill="url(#chartGradient)"></path>
+<path d="M0 120 Q 50 110, 100 80 T 200 60 T 300 30 T 400 10" fill="none" stroke="#0d59f2" stroke-linecap="round" stroke-width="3"></path>
+<!-- Data Points -->
+<circle class="animate-pulse" cx="100" cy="80" fill="#0d59f2" r="4"></circle>
+<circle cx="200" cy="60" fill="#0d59f2" r="4"></circle>
+<circle cx="300" cy="30" fill="#0d59f2" r="4"></circle>
+<circle cx="380" cy="15" fill="#0d59f2" r="5" stroke="white" stroke-width="2"></circle>
+</svg>
+<div class="flex justify-between mt-4">
+<span class="text-slate-500 dark:text-slate-400 text-[10px] font-bold uppercase">Conservative</span>
+<span class="text-slate-500 dark:text-slate-400 text-[10px] font-bold uppercase">Moderate</span>
+<span class="text-slate-500 dark:text-slate-400 text-[10px] font-bold uppercase">Aggressive</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Financial Metrics Section -->
+<section class="mt-8">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight px-4 pb-4">Key Financial Metrics</h3>
+<div class="grid grid-cols-2 gap-3 px-4">
+<!-- IRR -->
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 rounded-xl shadow-sm">
+<p class="text-slate-500 dark:text-slate-400 text-[10px] font-bold uppercase tracking-widest mb-1">IRR</p>
+<p class="text-slate-900 dark:text-white text-xl font-bold">14.2%</p>
+<div class="flex items-center gap-1 mt-2">
+<span class="material-symbols-outlined text-emerald-500 text-xs font-bold">trending_up</span>
+<span class="text-emerald-500 text-[10px] font-bold">+2.1% YoY</span>
+</div>
+</div>
+<!-- NPV -->
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 rounded-xl shadow-sm">
+<p class="text-slate-500 dark:text-slate-400 text-[10px] font-bold uppercase tracking-widest mb-1">NPV</p>
+<p class="text-slate-900 dark:text-white text-xl font-bold">$1.84M</p>
+<div class="flex items-center gap-1 mt-2">
+<span class="material-symbols-outlined text-primary text-xs font-bold">analytics</span>
+<span class="text-primary text-[10px] font-bold">Target Met</span>
+</div>
+</div>
+<!-- Yield -->
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 rounded-xl shadow-sm">
+<p class="text-slate-500 dark:text-slate-400 text-[10px] font-bold uppercase tracking-widest mb-1">Gross Yield</p>
+<p class="text-slate-900 dark:text-white text-xl font-bold">6.8%</p>
+<div class="w-full bg-slate-200 dark:bg-slate-800 h-1 rounded-full mt-3 overflow-hidden">
+<div class="bg-primary h-full w-[68%]"></div>
+</div>
+</div>
+<!-- AI Predicted Appreciation -->
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 rounded-xl shadow-sm">
+<p class="text-slate-500 dark:text-slate-400 text-[10px] font-bold uppercase tracking-widest mb-1">AI 5Y APPR.</p>
+<p class="text-slate-900 dark:text-white text-xl font-bold">+31.4%</p>
+<div class="flex items-center gap-1 mt-2">
+<span class="material-symbols-outlined text-amber-500 text-[14px]">auto_awesome</span>
+<span class="text-slate-400 text-[10px] font-bold">High Confidence</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Sensitivity Analysis Table -->
+<section class="mt-8">
+<div class="flex items-center justify-between px-4 pb-4">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight">Sensitivity Analysis</h3>
+<span class="text-primary text-xs font-bold">Portfolio A</span>
+</div>
+<div class="px-4">
+<div class="overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-slate-50 dark:bg-slate-800/50">
+<th class="p-3 text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Price Change</th>
+<th class="p-3 text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider text-right">IRR Impact</th>
+<th class="p-3 text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider text-right">New NPV</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+<tr>
+<td class="p-3 text-sm font-semibold text-emerald-500">+10% Market</td>
+<td class="p-3 text-sm text-right font-medium text-slate-900 dark:text-white">+3.2%</td>
+<td class="p-3 text-sm text-right font-medium text-slate-900 dark:text-white">$2.05M</td>
+</tr>
+<tr>
+<td class="p-3 text-sm font-semibold text-emerald-400">+5% Market</td>
+<td class="p-3 text-sm text-right font-medium text-slate-900 dark:text-white">+1.4%</td>
+<td class="p-3 text-sm text-right font-medium text-slate-900 dark:text-white">$1.92M</td>
+</tr>
+<tr class="bg-primary/5">
+<td class="p-3 text-sm font-bold text-primary">Base Case</td>
+<td class="p-3 text-sm text-right font-bold text-primary">0.0%</td>
+<td class="p-3 text-sm text-right font-bold text-primary">$1.84M</td>
+</tr>
+<tr>
+<td class="p-3 text-sm font-semibold text-rose-400">-5% Market</td>
+<td class="p-3 text-sm text-right font-medium text-slate-900 dark:text-white">-1.8%</td>
+<td class="p-3 text-sm text-right font-medium text-slate-900 dark:text-white">$1.71M</td>
+</tr>
+<tr>
+<td class="p-3 text-sm font-semibold text-rose-500">-10% Market</td>
+<td class="p-3 text-sm text-right font-medium text-slate-900 dark:text-white">-4.1%</td>
+<td class="p-3 text-sm text-right font-medium text-slate-900 dark:text-white">$1.58M</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Portfolio Highlights Section -->
+<section class="mt-8 px-4">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight pb-4">Property Distribution</h3>
+<div class="flex gap-4 overflow-x-auto hide-scrollbar pb-4">
+<div class="flex-shrink-0 w-64 bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="h-32 bg-slate-200 dark:bg-slate-800 relative">
+<img alt="Modern luxury villa with pool" class="w-full h-full object-cover opacity-80" data-alt="Modern luxury villa architectural exterior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0A1FwXvQ-FBTRcb5AmgQHvODH5t7cOJIVhTxtlyUHfhQ6SaMFZBciNUYnRVbOQETZzA3NfSBAMsI9u6dIP8DOcOVzR9TyD80ezZxjFExeaRvZ6MXTm7VJoUwLYcEma2Zt31gOo9Ma1BlmLmWSkzXuRjIrfhGsQ9D4ZkQOoPfIgIB2BznApY99FUMoMGUgNbo_gYQSn5y3DmPJ_QGW4M2EsVm5AdnFh6BAlWryYmw4GJhMt_FWDfFGI3rYUXbYj67N8wzyNIlvnzDi"/>
+<div class="absolute bottom-2 left-2 bg-primary px-2 py-1 rounded text-[10px] font-bold text-white">TOP ASSET</div>
+</div>
+<div class="p-3">
+<p class="font-bold text-sm">Oak Ridge Estates</p>
+<p class="text-xs text-slate-500">Predicted Yield: 7.2%</p>
+</div>
+</div>
+<div class="flex-shrink-0 w-64 bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="h-32 bg-slate-200 dark:bg-slate-800 relative">
+<img alt="Cottage style home with garden" class="w-full h-full object-cover opacity-80" data-alt="Suburban cottage home architectural exterior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5Zdh8RH9I_dke8eDD4E3ni47Tr8qDBLk_3r0kVhwRy5TWa_neuXKSwkozyXanpkSPLa7g9C_AtszR-KgGkGInsxzkUiND7m8vKBdHdzvvTYgZ0GPiSn77aGXzl02xsovwkHVrZwPDAcK4g6-JMGRit3Qu_9B2PTDJPH9npXipYIvP6FoeCiOJhD4lupPkhuwUG_wvvHXSQk-UajQioqUJWModVbuinPgaojN-Qi_edR7adhrewKVBjLUyVhMBoCxKx5L2zTvr-fGo"/>
+<div class="absolute bottom-2 left-2 bg-slate-800/80 px-2 py-1 rounded text-[10px] font-bold text-white">STABLE RENTAL</div>
+</div>
+<div class="p-3">
+<p class="font-bold text-sm">Maple Grove Villas</p>
+<p class="text-xs text-slate-500">Predicted Yield: 6.4%</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Action Bar -->
+<div class="fixed bottom-0 left-0 right-0 bg-white/90 dark:bg-background-dark/90 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 p-4 pb-8 z-50">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-primary/20 transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined">picture_as_pdf</span>
+            Generate PDF Report
+        </button>
+</div>
+</body></html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>HomieNest AI Map Dashboard</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script type="module" src="firebase-config.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        :root {
+            --deep-blue: #003366;
+            --primary-blue: #0d59f2;
+            --light-blue: #e0f2fe;
+            --indigo-accent: #4338ca;
+            --ios-bg: #ffffff;
+            --header-blue: #001f3f;
+            --nav-glass: rgba(255, 255, 255, 0.75);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "deep-blue": "#003366",
+                        "background-light": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["-apple-system", "BlinkMacSystemFont", "Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "2xl": "1.5rem", "3xl": "2rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            transition: font-variation-settings 0.3s ease, transform 0.3s ease;
+        }
+
+        .active .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            color: var(--primary-blue);
+        }
+
+        .heatmap-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(13, 89, 242, 0.1) 0%, rgba(0, 31, 63, 0.05) 100%);
+        }
+
+        .glass-nav {
+            background: var(--nav-glass);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .glowing-dot {
+            box-shadow: 0 0 8px 2px rgba(13, 89, 242, 0.5);
+        }
+
+        body {
+            min-height: 100dvh;
+            background-color: #f8fafc;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light font-display text-slate-900 antialiased overflow-hidden">
+    <div class="relative flex h-screen w-full flex-col">
+        <header
+            class="absolute top-4 left-4 right-4 z-50 flex items-center glass-nav p-3 rounded-2xl justify-between shadow-lg">
+            <div class="flex items-center gap-3">
+                <div onclick="window.location.href='index.html'"
+                    class="text-deep-blue cursor-pointer bg-white/50 p-1.5 rounded-lg">
+                    <span class="material-symbols-outlined font-bold text-sm">arrow_back_ios_new</span>
+                </div>
+                <div>
+                    <h2 id="header-title" class="text-sm font-bold leading-tight tracking-tight text-deep-blue">
+                        HomieNest AI</h2>
+                    <p id="header-subtitle" class="text-[10px] text-slate-500 font-medium">Map Intelligence</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-2">
+                <button class="flex size-9 items-center justify-center rounded-xl bg-white/80 text-deep-blue shadow-sm">
+                    <span class="material-symbols-outlined text-xl">notifications</span>
+                </button>
+            </div>
+        </header>
+        <main class="relative flex-1 overflow-hidden">
+            <div class="absolute inset-0 z-0 bg-cover bg-center"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDUzidynQZ2D7kGnAFiATNzzYBjGU2KbcYTEjfbzzy4l3ZDqXVDoKQ7gMIhjhZiEJLPRWMrmqFF5AnFVcD1XQgDJOBAzV0xK2FBiMWsF8wV4j34U8KrnJ_lgLTHyhzp8mYpeDMUv16YC8YBh2wp3nmxkyBIqE2MWIeupyDFclqvPxAM6YJwCWbfRTk6cnnyqb3D31XnXHL8Kst2WasRX4HxZ2etrhZr5AexAlGveL3erF2YMUlyEjq8zapgljIatmgVQN85WDdrhyoC");'>
+                <div class="absolute inset-0 heatmap-gradient"></div>
+                <div class="absolute top-1/3 left-1/4">
+                    <div class="flex flex-col items-center group cursor-pointer">
+                        <div
+                            class="bg-deep-blue text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-xl border-2 border-white/80 transition-transform active:scale-95">
+                            ₹4.2 Cr</div>
+                        <div class="w-0.5 h-3 bg-deep-blue shadow-sm"></div>
+                    </div>
+                </div>
+                <div class="absolute top-[52%] left-2/3">
+                    <div class="flex flex-col items-center group cursor-pointer">
+                        <div
+                            class="bg-primary text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-xl border-2 border-white/80 transition-transform active:scale-95">
+                            ₹2.8 Cr</div>
+                        <div class="w-0.5 h-3 bg-primary shadow-sm"></div>
+                    </div>
+                </div>
+                <div class="absolute bottom-1/2 left-1/3">
+                    <div class="flex flex-col items-center group cursor-pointer">
+                        <div
+                            class="bg-indigo-700 text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-xl border-2 border-white/80 transition-transform active:scale-95">
+                            ₹5.1 Cr</div>
+                        <div class="w-0.5 h-3 bg-indigo-700 shadow-sm"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute top-24 left-4 right-4 z-10 transition-all">
+                <label class="flex items-center glass-nav shadow-xl rounded-2xl h-12 px-4 border border-white/40">
+                    <span class="material-symbols-outlined text-primary mr-2">search</span>
+                    <input
+                        class="flex-1 bg-transparent border-none focus:ring-0 text-sm placeholder:text-slate-500 font-medium text-deep-blue"
+                        placeholder="Search locality..." value="Bandra West, Mumbai" />
+                    <div class="w-px h-6 bg-slate-300 mx-2"></div>
+                    <span class="material-symbols-outlined text-deep-blue cursor-pointer text-xl">tune</span>
+                </label>
+            </div>
+            <div class="absolute right-4 top-40 z-10 flex flex-col gap-3">
+                <div class="flex flex-col rounded-2xl overflow-hidden shadow-xl glass-nav border border-white/40">
+                    <button class="p-3 text-deep-blue active:bg-white/40">
+                        <span class="material-symbols-outlined">add</span>
+                    </button>
+                    <div class="h-px bg-slate-200/50 mx-2"></div>
+                    <button class="p-3 text-deep-blue active:bg-white/40">
+                        <span class="material-symbols-outlined">remove</span>
+                    </button>
+                </div>
+                <button
+                    class="size-12 flex items-center justify-center rounded-2xl shadow-xl glass-nav border border-white/40 text-primary active:scale-90 transition-transform">
+                    <span class="material-symbols-outlined">near_me</span>
+                </button>
+            </div>
+            <div
+                class="absolute inset-x-0 bottom-[92px] z-30 flex flex-col bg-white rounded-t-[2.5rem] shadow-[0_-20px_50px_rgba(0,51,102,0.15)] max-h-[60vh]">
+                <button class="flex h-6 w-full items-center justify-center py-2">
+                    <div class="h-1.5 w-12 rounded-full bg-slate-200"></div>
+                </button>
+                <div class="overflow-y-auto no-scrollbar px-6 pb-6 pt-1">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h2 class="text-xl font-black tracking-tight text-deep-blue">Bandra West</h2>
+                            <p class="text-xs text-slate-500 font-semibold flex items-center gap-1 mt-0.5">
+                                <span class="material-symbols-outlined text-sm">location_on</span>
+                                Mumbai • Premium Residential
+                            </p>
+                        </div>
+                        <div
+                            class="bg-blue-50 text-deep-blue px-2 py-1 rounded-md text-[9px] font-black uppercase tracking-wider border border-blue-100">
+                            AI Verified
+                        </div>
+                    </div>
+                    <div class="bg-blue-50/50 rounded-2xl p-4 border border-blue-100 mb-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-[9px] font-black uppercase tracking-widest text-deep-blue/60">Market
+                                Forecast</span>
+                            <span class="text-[10px] font-bold text-primary flex items-center gap-0.5">
+                                <span class="material-symbols-outlined text-sm">trending_up</span>
+                                +5.4% YoY
+                            </span>
+                        </div>
+                        <div class="flex items-baseline gap-2 mb-4">
+                            <h3 class="text-3xl font-black text-deep-blue">₹4.2 Cr</h3>
+                            <span class="text-[10px] font-semibold text-slate-400">Avg. 3BHK</span>
+                        </div>
+                        <div class="flex items-center gap-3 pt-3 border-t border-blue-100/50">
+                            <div class="relative size-10 flex items-center justify-center">
+                                <svg class="size-10 -rotate-90">
+                                    <circle class="text-slate-200" cx="20" cy="20" fill="transparent" r="17"
+                                        stroke="currentColor" stroke-width="4"></circle>
+                                    <circle class="text-deep-blue" cx="20" cy="20" fill="transparent" r="17"
+                                        stroke="currentColor" stroke-dasharray="106" stroke-dashoffset="10"
+                                        stroke-linecap="round" stroke-width="4"></circle>
+                                </svg>
+                                <span class="absolute text-[9px] font-black text-deep-blue">92%</span>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-bold text-deep-blue uppercase">Reliability</p>
+                                <p class="text-[9px] text-slate-500 font-medium">5.2k transactions analyzed</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h4 class="text-[10px] font-black text-deep-blue uppercase tracking-wider">5-Year Trend</h4>
+                            <span
+                                class="text-[9px] font-bold text-primary bg-primary/10 px-2 py-0.5 rounded">FORECAST</span>
+                        </div>
+                        <div class="relative h-24 w-full flex items-end justify-between gap-2 px-1">
+                            <div class="flex-1 h-[40%] bg-blue-100 rounded-t-md"></div>
+                            <div class="flex-1 h-[55%] bg-blue-200 rounded-t-md"></div>
+                            <div class="flex-1 h-[70%] bg-blue-300 rounded-t-md"></div>
+                            <div class="flex-1 h-[90%] bg-deep-blue rounded-t-md shadow-lg shadow-deep-blue/20"></div>
+                            <div
+                                class="flex-1 h-[80%] bg-primary/10 rounded-t-md border-t-2 border-dashed border-primary">
+                            </div>
+                            <div
+                                class="absolute -bottom-5 w-full flex justify-between text-[9px] font-bold text-slate-400 uppercase tracking-tighter">
+                                <span>2022</span>
+                                <span>2023</span>
+                                <span class="text-deep-blue">Now</span>
+                                <span>2025*</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="window.location.href='neighborhood.html?loc=bandra'"
+                        class="w-full bg-deep-blue text-white font-black py-3.5 rounded-xl shadow-lg shadow-deep-blue/30 flex items-center justify-center gap-2 active:scale-[0.97] transition-all">
+                        <span class="material-symbols-outlined text-lg">analytics</span>
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </main>
+        <div class="absolute bottom-6 left-6 right-6 z-50 pointer-events-none">
+            <nav
+                class="glass-nav h-16 px-6 flex items-center justify-between shadow-2xl rounded-3xl pointer-events-auto">
+                <div class="active flex flex-col items-center justify-center relative group cursor-pointer h-full">
+                    <span class="material-symbols-outlined text-2xl">explore</span>
+                    <div class="absolute -bottom-1 w-1.5 h-1.5 bg-primary rounded-full glowing-dot"></div>
+                </div>
+                <div onclick="window.location.href='listings.html'"
+                    class="flex flex-col items-center justify-center relative group cursor-pointer h-full opacity-40 hover:opacity-100 transition-opacity">
+                    <span class="material-symbols-outlined text-2xl">favorite</span>
+                </div>
+                <div class="flex flex-col items-center justify-center h-full">
+                    <div onclick="window.location.href='predictor.html'"
+                        class="size-11 bg-deep-blue rounded-2xl flex items-center justify-center shadow-lg shadow-deep-blue/40 transform -translate-y-2 active:scale-90 transition-transform cursor-pointer">
+                        <span class="material-symbols-outlined text-white font-bold">add</span>
+                    </div>
+                </div>
+                <div onclick="window.location.href='analytics.html'"
+                    class="flex flex-col items-center justify-center relative group cursor-pointer h-full opacity-40 hover:opacity-100 transition-opacity">
+                    <span class="material-symbols-outlined text-2xl">query_stats</span>
+                </div>
+                <div id="account-btn"
+                    class="flex flex-col items-center justify-center relative group cursor-pointer h-full opacity-40 hover:opacity-100 transition-opacity">
+                    <span class="material-symbols-outlined text-2xl">account_circle</span>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Auth Guard
+        window.firebaseHelpers.onAuthChange((user) => {
+            if (!user) {
+                // Redirect to login if not authenticated
+                // console.log("No user, redirecting...");
+                // window.location.href = 'login.html';
+                // For development/demo, we might want to allow viewing, but better to protect it.
+                window.location.href = 'login.html';
+            } else {
+                // Update Header
+                const title = document.getElementById('header-title');
+                const subtitle = document.getElementById('header-subtitle');
+                if (title) title.textContent = `Hello, ${user.displayName ? user.displayName.split(' ')[0] : 'User'}`;
+                if (subtitle) subtitle.textContent = "Premium Member";
+            }
+        });
+
+        // Logout Handler
+        const accountBtn = document.getElementById('account-btn');
+        if (accountBtn) {
+            accountBtn.addEventListener('click', async () => {
+                if (confirm('Do you want to sign out?')) {
+                    await window.firebaseHelpers.logOut();
+                    window.location.href = 'login.html';
+                }
+            });
+        }
+    });
+</script>
+
+</html>

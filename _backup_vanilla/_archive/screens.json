@@ -1,0 +1,1111 @@
+{
+  "id": 1,
+  "jsonrpc": "2.0",
+  "result": {
+    "content": [
+      {
+        "text": "{\"screens\":[{\"name\":\"projects/11060188023459959450/screens/b2eccfe544a843d09241b12f9386eddd\",\"title\":\"Desktop Marketplace Feed\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/0b92bfc1663344c5bb3d7a4337f51a37\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidXr4xWwzrDB1-GniIJ2dcGS19ROwO1ByDFTq0Jtl83ptvHkSoWeNiimx-UDr7VGaGZoD_kLT47N79eos0APX2Z1_DOlZGcGkM3xuLaTbI4Ko8BvLMeFvim623gPt1fMXIuetTgGu0jPtJ19KY9QmoiTm1sMv5cSMX_TVycGSlVufF20Z0YpeKYIdUlLVXpz4VRLxAQRb8osmoS8_1KXkmHAaXpjp1HOQUv1w5r6NRmkBYwBwcvMwJQJtR3b\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/0105aacfd753410f8d5f11720dbb2ad9\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzc3NzM4MmE0ODMzOTRkMjliZWZmZWVkYjI2ODA2YWEwEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"2948\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/89da438c22c94bf984b993869618dc52\",\"title\":\"Advanced Market Analytics\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/6d9bba261f37463b9f67332e04e72ad2\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidW88LWNtPH_wHwu5UEAlu8eDLeCrx5Hq3g2qR3gvQh_Qb15TW23wHXKXVSicuOh7GLWV3Pm_obd6vAshBJKoUM9oxEjfhY82aboCYaeqj5p8V9qpGgVdRM76IprJs2HLbASa_97PHFINZ-ZJKL2WF89njB53iNVfrubCxF0OOAJZEWGA9GdsOXrlWf6erhuQSGRVPSitXI4jrFTJ86zegKh3pR0147X4IeTV4-5CyVP8UPDxfz1Q8mGqDEo\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/bb41b165c6aa488a8fdf46c13c800845\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzA4Y2U2OWZiODk2MjQ4ZTViYzQxNmRhMmVkMWZjMjYzEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"2806\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/4de8ceccd386462d9079be2152ca4080\",\"title\":\"Property Details & Contact\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/fea432840f1a46879ea021c608f1293c\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidU27TXvdrgmkZtAzN6se6fFPdOjk49nta92Ox-TaUz25uMm1VPWJC3qs0Bw4_T8nBDY7YNclGbzyzfMq6eWMHh7UtJkAxb4G-JpZU7YVagY4iaoDBxhM58jYmVoaWopsb3JEH9DqZwOivWKHE50MZJD_-Z3rqVM7O9UUL5N9uQ0FS792cAeoWvozVt55iLw2xL_pR1JYtgZtMCbErafoF5kVPNyb9qYhuaejZwzYj2ymbdqjSVY83IN2Vnk\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/2036909b02c34e15bc683eb361f51ce9\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzEzNzM5ZWZiNTU4NzQ5NTNhOGFhN2QxYmNlM2QxYzBlEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"3942\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/7cc18c2bf47345a4bd345ed339188a50\",\"title\":\"XAI Price Breakdown Dashboard\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/ebfb2d73c6fd4866a768349b75968a75\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidWinme9pi2aCge5wpZTpvaDyLjsL724tZAtFF8EEPhrDyYLss_jW-He3jJYdbLMdS9t7nAAxbDeqh3L79yDAG46EsocVxE4AFgJhLyhXPXDrGtqvK8Q8PcPRg59fcF3Llf1ryx0GCcEzAXSYgvDT9CfqHkAgXtGuN3pYudq_TywH62DKPbxkRiDtvscEt9YnKSSxXTRde36gz7KEgaoAdUY02BZK4k7dkQ7bOozPdq8nzrLI-0glb42ogw\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/ef1f7f5c7cce4abcbf6c69c35f1074de\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2I0YjY2MjFiZjc1NDRhNDE4Y2IyYWQyMmQ5MjM0MTc1EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"2554\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/28b08b574e2148c6bb9b35a90c93b7f5\",\"title\":\"Interactive Map Dashboard\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/95846878706242af940f37213af97e4c\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidVDNoxsPnUHpEp6Ps99aqvcztetDwXRMuoFgVXmqhNP4-Gw7E2uqx9LTIwz9q_XzyKcZ7xXgxcP5acDyOePpKCIVGGs1rYhGygjw1AGyxY__YmB1q7I6Cb_eJTIPTseeYvGB2VizoYTW8KYvhHw4pBsfaKpIUZ2l_m1L9IL_ruoNSo0kMyVBFRUxgf-iDo0Sv54g14AeTwEMdZk58ZJVLloTs4cC5eXA_Tfau7f2xIgfkc14oXjV-Ctx5Y\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/e33c5cbf8bcb455291bb46b4b147de51\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzJjYjA4MDhhMzhlODQ4ZDU4MjdmYTdlOTk3NzY2OTZlEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"2364\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/6de80ee81dec414eb09ac9d0e35a6b85\",\"title\":\"Location-Based Price Insights\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/dbb51511a3de40e48427d8653269a4df\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidUFPe9b8UZ__Y1HF0DrsKU2s6uiEmLZLhCqKRWb-r-iuWrWtsiACRbsvmS6jFtruumX2qY91dB0wtsHnVnRbijqXcDvGczIyf603eaaGLtFaY4LKmWwzJWk3JivD5Sv3y0yUwL514srhIsN4Cj6CLVot_PDmXQT2OED-BAmrL5WGVxgs57N4qG1HyxP5ne6duyaZNzn8CMeK0tma_bvW7fjxo80mfZSt2SJDirwm4eEcmZmUL3yjCkXHyA\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/cb6a52684eef4871aef78a6510903ee6\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzA0OTZiY2Q0NzY1NzQ2Zjg4YzRkN2M5ZGU0ZWRjMThhEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"1768\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/399fee7ece904d7eb81cbb2234eefaaa\",\"title\":\"Mobile Analytics View\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/ce118c57de25425cb2ea9602cd6af31c\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidXhnxTtBb3Zw0Nx3n-A5nI6k7H2Bs2HMqejMNUZ5tlQEreFEM2gmEZIFlRWJVzCbDveBMp8W8t9cYHcQ3QqIgMPRcqDWx9An9yucs_gclEpSpdh9fogUT67TLIB3iOJzQlV2JBZktUm5W_-mmouHIbbAUROy2riZzAqnBDxMydqMhPc-h7hsSFyBlDDsi_zwdBcpdkA9QosXUTZvrGpDZfM4xyareZXmJA4ecafB30-v16xUABznbdN9EjV\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/aab80e46fe084aecaf6237e7a77f980e\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzgwMzU1YmIzZjcyMzQ3YTZhMjRkOWFmYTZhY2ZhODBkEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"2236\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/f49b51a5d2f541a0ac25a0ac07e39c3f\",\"title\":\"HomieNest Desktop Home\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/e01725d5fbe94dfeacb14461fbb37d23\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidWSORhmQg-ZgxpEwyvQTe1IX0yesDH7YgBUGxcaSP5GJjFwoG25AGJlrcyfP6_XN1qYS5IWKl0xqQ3uEbHHzqYopx3xM8SY_WbI9k6D4ynaGDI8wHHgiTJNY6DLMyVoiQQakZ_LvSGTR7YeKfuwj8AU373IJsUoDANV0IhHSOt-a4LMyit3oFWHPfPiGPxPjqijiRDu3JEa35JBDsojuKAOcVq3LI3Lf10ASBrl5KDSMYUTQbibM-R0F8Q\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/b9d6cfe627764c4fbd1323fd6e20d6ed\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2NjZjllMmU1ODhmMDRmMDdiNWE2ZDU5NmMxNTgzOWFhEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"882\",\"height\":\"6550\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/0361d043a86a4d529826ad5fd95be624\",\"title\":\"Animated HomieNest Auth Experience\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/66b0020580f14f10ad2050d1672bd7f4\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidW8jYyur6JathTDPUXSkPbCFCexYtHelKimLgV7oWXl_tfOKfcAiPA0MLz9gyIGo0Mvc5sKzD7TEMQ14Ea1ajnzDSCQSaqXwV_VsWmf7Aa1fYspegxjmvdA3-_msZzWWXS8GhuiaDjDeHheMvBkFugvzBlB4URHO_dEPbmXiwPTOHR1MN5o0x4xaahVphMb9Bbw8kxCgnlfpR6-VIwzNQwV58REGIYa7ezoSypi_KEkXj_neMXKQyC4BnK-\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/16730bf0ce3249078c3603956ea3c63a\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2Y4NGVjZTkyY2JhZDQ2ZGQ5ZWRhZjQ5OWMxNmI2MWQ3EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"1768\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/dfaae36255024ff7850defd85319ae81\",\"title\":\"Property Details & Contact\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/1ff0b740a0144700bc6020523715ee60\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidUcnaCxKOuThgtavjSVK80xyM_VJpX1IVntdJGFOnSN0N_Rs4qm4APTbYvLv4egw9JXhKtE-_06Y1uoQ85MyoZDieo2vSgjFb7GKXteQWTI0VAjag9LAKeJo7Ua9Vsun6fHJvMr08MozmgG0pYwXZ-qDpGX4MUs50H7gLUw4UAWAFTEUmUadn30JYCCkhgIaawKFuqkYZP9vZncmUMj9UgFDYJo8R-mzrQwO6-JTHKxY0mnLilWs-qE0Pku\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/afe4f7a9df3a46a28cfe72924c3c66b5\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2QwZGE3OGE3ZDdlYTQ3NGRhNzhhYzEzYzQxYjRiNzQwEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"3960\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/6bced70f04a4421585d56c5400e33f5f\",\"title\":\"Desktop AI Prediction Result\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/260453c3a27d4446b5d6f86e71822253\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidVv2TXJZhcrChBOyD_IprmGoq1NxHpA2VvzMidwQ6MfPuTL6ypx27VAuVd2xEowKfNzv5ZbL3j21J6nG289DK0JhrTSG_Ex9VCOyo90jLJv2nZ3LqQeUokkugymx2fPsfoMcRboZvkEip65V8NmJC8JXFjLkD8ft5110x6bykqMcymLadi8qLowct1eXdiGpW4hsLnMrFExqmfjRng7VcglmVQqv3h-Q0j7dCa-yXmU7qF5EVoUth9zigHy\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/6e499744731c426782e9440f32893834\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2MzYjA5ZmIxMjE4ZDQzODc5ODMxNGYwOWJlODE4NDM2EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"3490\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/be75aa6b047647a4bf4f5b77ef9d2b89\",\"title\":\"Desktop AI Prediction Result\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/5ad9e58b07c046b995e5477f8ff9e4f9\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidXQm90rrGFTj7jIm1OdtLH3eJa6W0b9qePqrBWBEWHHD-gYI31jDutB4pl8I4kHMpskEYl8Tboaumjn-ftEXbJl7zadzSODCgsqKckVn0kANn_a-RRPSDgeMlfRM9lklUag73xBBnkOwjuKvPp6NY9LaRiDYB85gRdCkh9_O-Sdo_j_TjY4ecySODEeXtUpVa5YbF0tXwwHhacu33rFrJn4xDAQ1bRIm9m5Jhyp5go2pHDrr92Pw63BP7wb\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/4ad4b4ff99744137acc5b37e025d5261\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzU5MTU1ZTIzM2Y5YTQ5ZjBiM2YzYjA3OWM0MjlkZmUwEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"3490\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/7eb0e90959d94741a737258eeee1eb7e\",\"title\":\"AI Assistant Widget View\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/0fc23ec856984adda80a88f3a8410d3f\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidUJ_9s4532C8B7yWII1W6QN_HvfwdWGO0weGXdGAOfm_oJryLfCdFj7tl0FDoMzjHNDZJRBr16m0Njsfhr9306WEFNOwp_H2IaYKfMV2bQFbc26FfwIz-mAo_yDtItcp8-WwFHMAJ8hP8y9J_7V4UkmKdB1JU4LygnzWSxQurJwTtKLlIfgNwXq057nrRhEgQ01vXP4eTuGkRrYSAufG11ZIUeLRQdQRfBRdNDqWrxUIHLHig9aAw8RCQo-\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/959a5a4ef94641678b0f1ff41db78eb5\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzM3OGFjZTA5MDE0YzRlZDk4NGUwZWUyZmViNmNmNDExEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"1864\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/9a3c345547504601ab73f331e8ffede7\",\"title\":\"AI Real Estate Assistant\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/5a30f94c0e0248d182eb1aa3912776ec\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidXwDyfKfxzzIZJ4_momoXxIGih6zmwR5UtU1KzrfWumCfJ-juN1QgsQeFUZ1KQSowxDGJPMrToK6HAd0SMI3pDyHnFn-YVljByiawBm7nutX2ux2-cvGuWWc7FbFafJCpCeHzgQOeFUXlQBL7JvxjA6UaLFpDTOFbmP0Df7-khOIf1Fwva1kZI6eEBMUHnRPE1XVX6QoTmYoO_nssyZAEgAwiNpbasDoxW6qNyq20nr1tbugkhSMhIQdzKj\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/ebba52fb45f0440ebefdab3bcb36d39f\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzE2ZTY5OTgyMjg0YTRlYzU4YTM3YTI5YjU5ZTdmMjM4EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"1768\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/9c82a1675f41431aac3c73c007b9859b\",\"title\":\"Login & Sign Up\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/2290ddc5766c4254a633ea319604c0e0\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidWsmWkq96e-BvNdlUNjWOclGyNZjjb_WHZAtg-XIjLPuOmC8HtuNYJWtCZ95atiA8ljncAB3O7myV_x8QOmA8F_qAKycLO6qJTwZPysbGHhLAn-WGv3LeAZcjjoiEgMZIdgESgMOgWP7OsGM6W_kGyRPLFQUTr-MMbtIDZQlsjzdXPYLNiPriUo-tpaOWsrvo3V0kFnyQlIUW_6PJkF22kTDekcmWrDB9Doxgo7vgKeWsTuxl2a810-Er80\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/5ac03cc1950540be9ae0edd01f8d7fc3\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2M3MjRlNWU4M2Q0NzRkMGZiZTI4YjY0MThmYjUyYzIxEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"2192\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/fd4deef6e9ba4a18abdc2deeffb16c86\",\"title\":\"HomieNest Desktop Home\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/a508cabc54174518a210a15373baa99a\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidX1DzQOmMpgPKsGfWmMLLWRvnf1WEakRCCYkc4ykMaBk8n9qX4gL6aiYnu-bA2Ku8mReT_gPbkmsIlLhTeJIMfnu14QjRjQpLe85zAiLGziofGNGxIts7tYwCqH7CDpt-18njYRvzOZ-2kBZx-zCCcivVmWW5ENgWk7qfwcCSwHhy6SOjk4y5UnqXZYoHL1IvR54DL6bXoQDC514dIxQv5rEp4c6eqEJqPP6CPATCNqguf3cyE7X5A2q1Sl\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/5b27a005cf394dcb9d5089540d210bb9\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2FlMDVmZDkwNzI1MTRlMTc5Mjg2ZWQwOWYwNjJkYmZjEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"882\",\"height\":\"6518\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/882096f896b04f5bae81cc3b5cb0a6bb\",\"title\":\"Desktop Marketplace Feed\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/e25180ee52734b1fbcc1ca4bc42ea07a\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidWRwzXZva2icxD4fbLalq8cTzij5wLjR3qjrvacxABcXDBuMahhgRbsJjszkr3RvqK-lJaaqxXJz04Qe-QN2MP8OzZoy0FdYl9xv4I3CbsIWqUfwfI9peHfIlOPJkX7UipiRRGOnR193E1acAa6BqPNxbPPrsTS3de2jotS0-T-IgA2oDArUyQCaJDwKBeFBEWmhtwOrU5uVlCZAwO0jJ9j5UN35F-sakwsWZsZhTdVw_QM8Nqj36f63UQ8\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/083fee39827b4f6ebb79198faaf44185\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzk2MWQ2ZWJhYTYyOTRmYTRhMzM2Y2ZkNWVmNDFhYWNhEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"2726\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/79a91805efab4544b86dff9577b5f2ae\",\"title\":\"Advanced Market Analytics\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/a5fcc664c9cf4f66b405619e8a5bb002\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidU4U8Vh6T8k_H5cIm17SaGKq_FYhEBrK6y6O_o0X21lHiJrRoAGTnRgH0XnXnP4x2jOe22jM2z6T7fjUufxJ8jOZN159pZ56exSBjgzXUKq4QV-NjyCgdaqPsihsouYeZ7uvGIjNfWYVIBMWIe7bENyLjURG8mXlET52BiBdMBVGC6L88YNW9R7-NKnYqUR2MgAh01AojOpRKRi2tsGb4zEMjkPtLz2Z02kFDUVjOWAxrD8fNdDnzP87IDo\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/faf88b5bccab4545b14c234670b4d108\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwM2YyMmI3NjNlNjRlYWM4NjViYTFkYTEzMjdiNGFiEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"2808\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/412d3dd0c07343fd8bbc48a37c2be073\",\"title\":\"House Predictor Variant 3\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/b4e67ce58e604efc902c6b2c0d814225\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidW-P4CXCv7DQBvBTaBPgVuQQjw3gd9RexykvjchxXpQJhtRy-39oZb_mGz9Yd34bSR4tbgg8tSz7gNN5AQtWiIgtCx8lvB8ye1qOHQ5ysplqykPkZtQYDuSXFY8wt5OX5L0ctkYPlle_rtX3W72kSAFHZJwHhgN0IliY707WIN_5qiTla2M4oWRTh1QnPj4hQXmMxzEZHxK1isyrV6k01fbhaBa74x47Ft21X5UZg-dc8-9IxXfHhU0g07j\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/cdddbb73649540129ee0d196e8b26908\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzdiYzE5ODNlMjg2MjRkODliM2EwMTE1NTNmYWNmMmUwEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"2082\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/a1710549b14e4aa1aa9b7b94cd0105a8\",\"title\":\"HomieNest Landing Page\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/3d5ad12b76fd4931a7c29eb7e88979f9\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidXkbV8TDMCpvdIlAcDuj805qjQX-V8c8vHTFLBq14bh9fVxNzf2jLOLofMFGWZ9Gp5jL8NaD7qqRwlYPvhVpcEjS0l4GMqH_-bQg6vb9lm5sqds3-OnNDa5CHfMRXQ0cYe5_z3A_hdr4GkO-cDTeWcnOWYXHr_kbInluG6n6S2Albxtu8WeDF_Qs4ipObBrCOF5J0vB2Orvsx9zjdomH-X3Qawz7E6rhJw2oO02vAo4yPGe1BD-TYP87iAi\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/4678fdca0e6a45639047889702da15a1\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzk0YjQxZWVmZDc4ODQ2ODY5OWExZTA5NTY5YzNiZmQ2EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"5780\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/f0a4319eb8664b069860f86986aacb5e\",\"title\":\"Login & Sign Up\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/36153188043f498a8bd2368f9978f4bf\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidVWXAv9G6tQX5RAc6R6gm3teK7F8l_XonwjeL9qnuMJRxNwzf-Sn-_YyKJv-_OutCRyml_iyY45JDtBf3LwspYG-6yGi4BxsFdRqIQalNs_fGEspnGm9dL7XNa-lsNm33f2YXDCWxHMKEsPY3JICtojTeK8gMSBHMPiEzyiqxxvCOPuh360DbjS0Do6A7BeQBlcJZeL1xdwXXfgu_QqzDBa9qhzlm0htAtjWNKOVsDQdHcQGZKXzqV5OLmk\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/f97bfe553dac4be9b9b133a5278f5271\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2FiMDIwZWE5ZWUwNjQ1YWNiNzE5ZDBjZDlhZDI2NTU4EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"2320\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/ab7f5d2745b046bb89843f368c539961\",\"title\":\"Chat & Notifications\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/a668dec3cee543a0b5f303006a699fd8\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidVeI9Oos35pkTOeh7zAlNn7WNatvp0XfKbA4RJH6IacFR2ZKqdJAefgOwPWgtU8C0LwcAeeJh1HRjm9xl-uyhF3XJst8rG5oRM48x6sfYb-rXjVenIyxRD-ckBoof7SpX-QUfNh6N8m8u81yO2-MRFoY4WOiYjRbOuQiX9m9rG_rdnFcUCKcIyrFt86D-NbJwAlxRPEz-q0JZ6pSJdUj5B6sQWZAeM5idFiJbVrsWveQJZlZ9GbBDlgSYk\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/92c5918a7ece4469947c01d39886b221\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzIxNmU4OWU1NmQ2YzQwY2NiZTk2NDczMDI4NDE5YzFjEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"1768\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/4c6897dd3d0143c5a36f0cf3b240b6b9\",\"title\":\"Desktop Marketplace Feed\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/fbda2a1775594798a5e7bb1f47eaee75\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidV9BsymxMp4bQleH4KLYJSInCtDRLJkI225GfTpz1H3D_r_xnvUsRwhXDBSMf6JebrAMvU6siA_pKlsrrLpMYjl3IORLEFDA2QROqhYfllOKw5Udi7eSInVmEVKNHIBLcob84icYePpxDweID1yr7IfVLDViRG2ym7eFPxv8iqZH3I625EH8FvB2I9QZArJF_z9hQBtA-5rm--GzIeq5miwXN8vpkZ0_sEkY05DgL7b5iF6VK_5b_dOXUI\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/f0e93d5c388f453b960644e137c7d98a\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzRhMWQ3OTExYTExNTQyYTdhZDdmMzI3ZmE5N2JiNzk2EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"3232\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/8bf2e036df024a8fa055c9efa728df12\",\"title\":\"Neighborhood Explorer Guide\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/5b3379b1b9df42a99ac6d16bb3e0a87f\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidVck6ILL1X-ICH15hkDJgwmvXWAfLB4loS3cfBJAIP0CTMHxL9c7NFRbjSJB32XjcUlsCRGl-8hGAHAcmX2WsTwZ-urVfGSVEnJAQNj-oESGnlePT4nO6AWFERC1TD1_gj_wcK9Kgu0vf0E2i37wLSUeIOsJRCCYqFL6s6QeI21_0AUuQm_kj_7Z5mJmz1HQtoe_9rKvXdl8MhQ26JXatuVb_rVHD5qRtYUDOn0iqICp_a12Au6PatTui4E\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/7589938218e84d519e1dad27d9e5cfb3\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2E3MDEzMDc3Njk1YTQ5YTNiMzVhYjNmYTg4ZTk1OTkyEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"2808\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/dac35fc462534af7a3fb1a11e86a34cd\",\"title\":\"Property Details View\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/32ce07c5cf444796b434fc2b4d312ecc\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidUga-lbfwYzSgqacrj61eBoNeizFE36469AkLzUrUDvfx_qNRXE5nwkhRr1m7wFEI5WT_crDcZQBgvynRAFUzxB6l0noTl4M2vRH8vT2T4IjvtnDdkXOc09FD0NtqXUoKKz76BMVbGS4cIVPuGRlhAf_FILB4mHUn7aORV8iT87KKl8i2IschKVpUUMoQrZ9UUVYrzxXbV9m0o3QYOPTYFKQRl26e2uBDAEMBD4QzdAQbZsnjGZJNL1ZY66\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/58049f5fd55245a7ad79a98c69fbd486\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzM2MTIxNjdkZTY4ZjQxZDQ4MTVlZDczMjMzNDk3MWY5EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"3872\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/4c01d1d2f13a4bfe8264f57d2d50e1ae\",\"title\":\"Interactive Map Dashboard\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/2feb455e018c447a984f94c885a4bfde\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidWSY6_btdvydKUiRfOGW0ni2pO9g6wxBWm7HLz5OQMLRQqXS-c5_F6HgS2tRWFPcyT_SoWdZ7AeW83OhO-CT8kNZrMIkYhDWhFiovzYL_1IkGNz0VJFSmzWFn3cRHNdNy72x7HImihYd1hQ5ItLTOuP6f9o-v9w_VSVOTr2kZ6fnEzo01WEDOaA92IxeiftGQxrrGw0Sv9y_oSqANil_NxwWE9FSgcqLXUgNHJxBcptXpZ63f62BdhJzjas\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/940a30829ff9493587cddf3d6ab5e4f3\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzhlMGFjM2NjODZiNTRhYTRhMGI3ZGI1ODA4ZjRjNDliEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"1768\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/7079720416004c0faa824022a32334d1\",\"title\":\"Neighborhood Explorer Guide\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/172f2bcd7e4d48e7816918b6477c2233\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidVnNm90tbARQon6GUYlQYdd4oHkdgZ6HiAMJqPNj_bhphB5nhQia5fkmP5VPKhaOXpetemQLnKie1vhLzpGDj-YU55zbt7PhVukdAwcUhPkAlcTmuYtia9ZcHiVbqsCgRv7ESYyeh8OZuxg2OypP7l1IQ-kwBlEGa25EMRF3s_BOB3uMsKRI_dUksr2bWcvneXPyAA5bCUg1ROUOwLB-FpE36JR6SmjPlBv-Iut6wyK8cYPyVqeg0UFFYrs\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/49557074e4da465ab7fa4d3861110d27\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzQ3Mzg4ODM5MTE1ZjQwODhiZTBhOWFiYWFmY2FkMzk3EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"3330\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/75cbce1fd7394679a9e666d57ea923d5\",\"title\":\"AI Price Predictor\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/01fdfa3335014b7297e69c70250b82c4\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidW1VFgOlRC1E7xP_F3cAH419CXaBkZPjEyrTp8SpRENoooTYeb5ihx-Thq0FHGREiMntaOZ1yNzwlbX9_SU1w_-aL0yp-ydAiHpY6z89ZAjb4H4UQubq9LdEZyKeB9g7BDt6InpJ9qlEeJ7GYJ4fD4chSeS50vzFQsJ1OyC89uD5LYli0HtRlyZqMSl7tV9tq7BE-hl-XlLDiCAIVGYfEoH2z0WC_VefQR9ZaOxRkUu1CA3dw3wAQIJGmhe\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/56e1d0afefc54c4cbdb5d4751288dd34\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2M2N2EyZTlhMDM5ZDQyYzFiNmVkZmM5YThjNjIzMzQ2EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"2770\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/4b1a532f36f04e14b8f9379417ffc56a\",\"title\":\"Login & Sign Up Screen\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/f6ec9c2faa96461ba2ecd553295bbf1f\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidXbN2GHikBFXv9zCZyKpL6Mu1qSQ-pKDDnrSOLXluhVfHMndGiYj853DTy0nv8cAyrPAioi62HaLQAfz74eWudKX459j_2-jSwU5XCftyeCvb2pJ8VyX7XG6lUzNY2ebyGZJ9N3E4VJbN29V2CC6AVRuYbYIhE6ue4f1j1Itunckafpq2Vof6t1h64g8dRpTgFRWeuW0vExZ7e68dVzv-zOoisr5aO50NbTDShmdLzNvgZnvR9PmXezMc0\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/02168d2128aa4ae6847116f7a9564017\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2I5N2MyNmVmM2JmZTQ0YWJiNjM3N2NlM2ViYzcwNTlkEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"1768\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/45fefb2324cc4c63ba7f8692cd94a632\",\"title\":\"HomieNest Landing Page\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/87fdd39d6bc44c4db02e1fe74620429c\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidV9vPUmn9_74rw2xJG5mf4g5k1_kGB1ydB2yUsnQzKuETvD6FQKf4BylWVmSQAV79zsvzHBb7C4Rq5Oh-JXiVQgqUDXV5XJTXhMxytG9IeHflz0Ec4z6ydBlGg_td7ljmZcJOaVCbyvb4o8sNbsD3IPkPN6mauaXfy9yjx2WS1DK8Ocde5x8TYgNMaWxZ0rHPOQ6HlNNmT_VzGQzC8cnnrW2GmU1ACgbtJF29QgY-HZsf5uV4kL0x6rijmz\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/5dec260a3e444c3a977dc7b4f27f9bfc\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzZjNjIyZTY1YTg5ZDQyM2RiNmZiNDI2ZDE1ZmQ5N2MzEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"3628\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/f83fddbb1fc84c3b8c494c3c23e6ebb9\",\"title\":\"Affordability & EMI Planner\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/4ee88e0d3352498aa903c93c713b48e9\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidXnBdwNrOZwGIfEha2Hh5ocFMYZYN2X90K8_5Kd4r7uvZuwbzjOKHULdF5VCqOG3z2_URjBR2b0RITRD6kRhffqkhpSgZ7dB6TO_BjX0kJWgNPPeyPJcGVPv9FdWM5LQvYmyw3UZtXh8Dh4EN8_fVz4IxyW1s2AiPIsuRWGRyM0xgZFLKcF-bQzXE5H0_grVnOrCVBNLaztWvVk30smkeYim_O0mJGdEWEPvDUjRu5VU6mVkgKGQxOQaTyG\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/85de451477e342138406036bdf7440ca\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2I5YmQ0YjBkODE1YzQ2ZjFhZGU4OGJiNzFmYjBjYTA1EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"3136\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/0c347b25f7f64dd58e0b457c12a12fe3\",\"title\":\"Price Prediction Results\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/15cb6a02df1043abbf9afdd5157809ae\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidXwuKFURTDMkgUX6w6L9WRt-lceT_P5Fdxi7VlipnYdl_97dWWwTzoYriQ-zitiQxDgV66q_WpGtCkIlvZ3vof8E1rwzU4y7TPhRdVmFNuvMcveCSFIy1RyPpI8ccl33VCbCgDGJ7c105ZlL-aFBzxMGPLJ5CplKkQkMn-fbtHXK0yWx-wwLk9HI1w7bysybO-KDHjIfP1pLrHwoEBRTnAy2_Ss9ZDVWGxiAY_xeHkrOrogpNTGvd0GhEve\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/0184bd0ae0534fa19c7812c796bfb9cf\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2Q0MTYzM2YzMDVlMzQyM2NhMzNjOGQyZWFkOGE0ZjRiEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"3038\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/da9d7062240b40059f195c530d983c59\",\"title\":\"Interactive Map Price Discovery\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/e833227e41a047bc8672c1474c341740\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidXxpf2zJrq1OmQBSs7k1JYHzW6vm5CWMyI505zP3_BLstIaSorYxYL8_F-9EdAPgPzW__4LD9Z5lcmYxZofV_ie-WOESoaxGrxqm0uSykCNVtVwVStlwNt2yoemqjbsjr6J4B33Ip01ekhu-PCU35X-bpyDlijADn4RvOeDwUsr74xmBQyN0T98hN0NIyRqJUYP75Dp4s3VJpJ7eTf-txgRsKk0_d3y4f8UTybclQmIQUJ00RNO4x4l0ZcE\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/ca6a9da8941b4c1f8ca0109e048254ff\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzY1NGVlM2U1YzA0NzQwNTNhODYyMWM3ZjU5ZTYxNzc1EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"1768\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/e0838290452c4a22ab4c48d6c3e51eb9\",\"title\":\"HomieNest Desktop Home\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/6e74adcd7da4427d83a7d2622bfbc306\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidVCdq3XzRPkI-MwSeH-CPVqxPVrxWmDPhV3w8StlOqcc4Lelnxzn6n08aqRCMgY1NEUI9F8bbGMMKyrxtpP8LAy9weq4qoaMdYxym45SBlhsv-22OL4MoNoo7ZNRLfIrOwbnAlmrB7yNyvJkARkeqEbyquTyYqUb8-tGK0K54jg6EUsS9-Abb7bS9wyhfzoQh1kQAzMZPAToWD7PXpEchjof_z7XpVbDW3lS3Ak_sgMrMOoMaF3-f3secI\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/18491bf4bd644c84bff8799ccfaa66b7\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwNDAwZWMyNTRlYTQxMzhiZWJmYzEwMzRkYWJjNmI1EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"882\",\"height\":\"6522\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/0de317af606f4715b1d2ae1d6a779cf5\",\"title\":\"Pro Investment Comparison Report\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/82876257e1c241fda5b95ead28db4515\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidWh56BN5i8v1IenHR8dqb8u3W1gr1mbUVqFl6g1HDRc8kuqAL4AQdXq5BD1UN-jUdam0zwJadADnXUJIhgXmcV96_X1pXOcy3BQswtXJedDIjozAjHrP4YSbg29vdMpIY6gBVe5wY8RYWoppRKjZVdq3NCJ1Wz0KbGY7z6mo8rpM0xF6P_es4gr6WearJIEHKvDEO9ZSNXDTpxwPjEN2WMi3FSDeVtQYWemsWHz2FhTjnwLz58PjGnPbgI\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/5a75bfa0e99745bc8b55677d7a3948c1\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzFlMGFkZjAzZGMzNTQ1M2RhZTIzZmRmNWMzZmY1MzM3EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"2994\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/e893a3565cbb4ec9b73b0b18c9f0436c\",\"title\":\"Legal & Compliance Center\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/1af43583cc184406a2b5fbde11f03a60\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidXBGzAs2CbA1BB-boxJDAv3a2WYGS4f7f8ap3eNvc22c0BrgvPdO1hqlVYquKEpv_rZn5b-sTyhZuQhu3ogib3Vnb599h2o_Zl2ewJEMuCI3XAnQHlVvNj6q9gCINOU1Uph8rmNx0VXBUcE2RSecwloEGXCAxkL4OBP3k88Vp37TzWQ1sjHWeSq9yeiohzauAJihXg5gwMwClbomflA-sV69m4FS9jZKSfWS5R2MGzjSHk_wFyJr9mhrvg\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/0ec26982a17c44adb8f48589997c79c5\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2U5YWE5YzE1OTc2YTQwMzA5ZWRmZGZiZjM5MmY5OGNiEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"2844\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/a5e084f72d874a9f9a7e0c57e11ff5c8\",\"title\":\"House Predictor Variant 2\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/8e0f2b0b4fda4e53a90f20956962058e\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidX52kOqeiPbD6f7K1hTUjK4Jp0bRfWhTCudAoI5gvu5kth6LPnDzKx-KjEOIMm3DbcygAGlPwrYsv30jeEVPkNV74fKYE9aQSjjx64sn4tP2tCJqFz0nY4vPuaGjxh0hQVzgqhI83e7k5R6jTXe2rlrf1_xKXoZh_pYtQn0ng2yMUGn3V3T0RLAw6U-Eyam7KV0QmDTCq_65fnr6wY3ja2mEfPeERrK6a5e1sjgS5BP2FTObzu1m4Yi4D1l\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/7ae665674cf7487ca60bdc5cbf1766a2\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzM5ZjgyMmViMTU4YzQ3OWE4ZmI2YTE3M2NmN2QxYTYxEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"2750\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/1abcd3f700d94549aeaf3b69aa1b0649\",\"title\":\"Marketplace Listings Feed\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/689f428aff1f44099cdec5102fb298c6\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidVst5sncOWj9NWWOvYPMGVI74poa0robm1CfXdlC1MmXfa41-foX5cNRchbo6u_XosQfAx7YAEDoRkJwak2Cmce7hcTmiBxIWIL7wNfDAhzjjcB_b7KDqgmpWfND4MkuDITesOwfOplYp1NjmNtu9uXIXpBbH5jVFhwbroJ253RlCBwm7vyp3e2AfEQvwc8H86Uw0XafM6OB1w6oA5NJTHOw7AvkiggAk4WVl56VxiwBkJWqnvkfIqScIQ\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/a9e30d4137c043d5bba7fac06a428121\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzE0NzViNzkzZjU2MTRlZWNiOWEyYTI3NWFmN2NmYzJkEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"3558\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/def34d2151f744fb9914d9e49ce3536f\",\"title\":\"Animated HomieNest Auth Experience\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/881f4b2fcdbe48b79388d05fd0c373bc\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidU1GtsnetzRCAIhWQFXKi9F0Y3CIUJk8weA5pVwzFxSdmx3ff-BXGE-QJDm38H3yfNkMnoG3t5za9nUqWrTmQ4pciLzr09y1eebmM-zYmCrGce28bZ4O_4VElZ4zNrgbZRUHeVMxdNPI8igHGzmo6BgaaUPIAOD3VE7KXJLsh-sjSgj0sZOZiG6t_Hcl41gRfvsaVsEJZMSBDRw75fTRGY709XIUVp6F_WPAbq8fsrqdTI1iv4ZlOjUXZnC\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/31dafa5347434f86bd227e7e56cecb09\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2RkYzkyOGI5MDk5ZjQ3YTNiMGE5NDc5NzExNTA4YTM1EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"1768\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/157534532866425498e25e8f0f3d7f50\",\"title\":\"User Activity Dashboard\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/8d670cd830f047f59e51d4b4690bc85d\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidXSd907qwO0Ub9GDQCLD8j4Tmu8FffQk42qYUGxaeW1U7rN5TY8qSyHaFJxlJ7GgB8AibR_9-4LOxYwnJkREo5DJ37GJj7JWytz9BBueZ7zCXzoCezVRTgwnwx2GrIJfFWBXg6F7PKgYCAnHwke0l7-bNYkS4YwHLl557Jp0csDIy7VQdT2AK3A2lnnJvh-POQHKmoLgt2wVXVtrQ3kNbIc5cOnyyB0qp-cWIYIvzuDRImgVdHmmUJ0Xwg\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/546274d095644ad699b97b53f425e385\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAxZGU2ZThmOWUwMDQ1MGE4MGIxNmZlMTMxOTU2YzgyEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"1968\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/b64123fc617b45918d10a9fc53605cd1\",\"title\":\"User Activity Dashboard\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/852b88bb1b374eed8f93641676a426fe\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidWPp2TmXdsDEzuccH6uLX6E0jXjOvu-m8v_f3dvhTd8rVEYgk5lgmaCkjXhKSBIXG1vJEkmAQV4Rxjn6SUHR8yf1HVUwfXkSO-WWGr0Ihc2ijQ7UIJvEtjvHstDdSB1cVoQM8iJXl4WcV72gsiAwz_EqocA2o8Y3Sgqsju3pzAq1XkjLMnszx9JU9X-D8bC5Mpv2lMT81qqU6_9Y4hnqHpHjBfLdNbfRu343Uj27lSzNEeMlKDlBZu1c7f0\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/f0c798da3aa247fe9dae696dad7eb1bb\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzU5N2E5ZTk5NTdhYzRkZWM5NjU3M2YyMWFjZDAzMmMzEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"1768\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/5e39b457792a41168893a73320800fb6\",\"title\":\"Desktop Map Dashboard\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/d57520c2a1e94665b5894bc40acd1f1c\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidX-4elrsasb2M_DN8ix3tNHkt6o_xnkt8mFT-H5xA_d86jDlplc9Wnor8UwUxepLzpn8GTG4woHbT8XNp6nPGn7YX0OkzVXBWWMuPxqPQpCqW65X30BUQv4muo_D3Nj4vk8tHmTfLTmROj7StFTCyAKxzOCBFVaJFxTFAjEyRnvHI21pRxEBLmH3H-EdGzPmWrwCURy56W5QWC1w6oRbO7ZgiQqJRMuXHMqHQDTZo4yaaTu8JQW3pYmXri2\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/335471cda5de45c1adc0345705757db1\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzgxMzdmNDJkMDExMjQ0OWZhMjk0ZGEyYzgyNGU4ZDJjEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"1768\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/55a95236f97e4c5090f3ae07d745bb91\",\"title\":\"HomieNest Landing Page\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/8aad8beda41c419ba26df67f7871ea8d\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidXldYyiUunQm2U5RqxABMZ4qRPbzAtUqwtWQ7k78aQaP0D4ixWaqzUQYcntt0lVolbOCzTxUsTcJ3WxhVBdeIW-OMG2xb6zRnOmGW8jHkGSROv4fnafg23m7vtcSlD4lH9xzIUaNOA05AB0p50Rde14ZdZS0Pjh63c46_hgiEc45KNg6cv1jmHx_Hz8WjDMBlZnKNYRHtS4ZfTclX119Rr99UNC_BZfbXXoiVl_5fv1doMw7RX4y2VW4B0_\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/f2cdf259458a4662a8e949932a6bab2d\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzdlYmM2ZjZkMTNjYTQ4MzZiMTM2NTEzNjA3ODZkMTFmEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"6032\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/9b930fa93f6146719532f4836794fb97\",\"title\":\"HomieNest Landing Page\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/ad36d23bf5194d8591a24ab7f5110079\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidXmjJmhUFeh0nhM-lEyUjDEi3lUcPCgAOECRxfqPgJ0uZhzvYN_SRmYNzKxpEJM2WQjxqaLDuFLLaG0PujJPKphBHOQiul68f3fPYaplhNjifHGGsVA9cqRRvPmmuXSlrAm64mrg6og3FYrDuy1j2kgAONyBup7ksHJPpK2VWB4S4cLvQRahKRypOOC4gl2Pq-yeVeoBmxZmEinsP91UebUR2iSXu2sc8tGbUM-Qeux_qHl_NO_zA84VVKQ\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/1d5b1f425ff54faa98b070cda27801c1\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzc3YTRhMDc0YWEzOTRmZTY4ZDY4ZTk2ZWE0NzE0NDIwEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"4334\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/550a1699e7df479e85202b879f5a2e1a\",\"title\":\"Desktop Map Dashboard\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/c1a33fb8b9c840dfbe08201e6b871260\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidVFT4SLT9kjNS4zO4Knw7mkO8NIraqP5n14MU9q7oOU-YcZlAg-6yjWt56f2pgoLXLXqGH7luNfVzVZxo3orPB-4iikFErbg-WL8HVAVRrTG48WteXG3wFEoiRxuHdJowAwlJHORdTRCIu5WzufUCsW2sSrvl-rW27EwnrznBZsuMJAqSkLD3OqycUuWVR-wXeU5I_2Hd6W_mWfkw8bIsytND5kso6q9hwL5_wfOGESA6GHLlpnxc95hIFB\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/10c1ca2254f44981a9ed5eed5041bf50\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzQ4N2MyZTYzMDVmYzRhMDBhNTczNTM4NjhmZDlhMDVhEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"1768\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/b47845d738aa4504b5c73c7db40aefe1\",\"title\":\"New Launches & Projects\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/82fc20b95d1e4fd6bdf01d94f80b3731\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidWcRHj7lSOVWvhD61BzzIS1F3LuJ6W1sUXefymxvCzYIFZ4AsZKqUc1dxVZI7F9SruHta0G9_D-OHowTLAxXyiVTiUcUOiL1MLEIPISDVFwM-sDAEHWL5QHgEe7t9mYJKBOrWIS65H4CotQB4uqo7gAVP4M8NKB6EZrWER2-8ZCiP2yPvx1sovYgiHBPqB-T66PNhw4fXbKh8qyLSZXn5ReiZFk0BymqXH4MOYS390ozdmbZLtVCKJNSlZQ\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/7c9bd66e5f334def8b76cc7a94a73a21\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzRiNWY1NGE0NjMzMTQxYmQ5NDU5ZTRjYzg4YWE2ZmU0EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"2374\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/1cb982df12a6474fa59179eb7311f5c1\",\"title\":\"AI Price Predictor\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/94afe31039d54e82b8ff5dcbeace0161\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidW8_Zkb8LN7GxV5TqPEGfiOsyCR4Cvnl_goYm2eEQ-IsdU09FZEKREAorWrcvWRZ64bOdqvrHpKhCPd3hSDJ7RZQ3fxGUiQ4BC-OtEHf3SdqYWukksUUaE6mWlEPYY-cInhnK_RYcDDV2iq_l-gur3zYlOfebPztqfN2ksm6cLf7oLQS4XJ2gVPrSMir0-q5mWzmzUMe_AJGQgIM9WpWrLEH39Zpm2bgG3U86mW26nEHAfeBifDBVLrNmQR\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/c7bf398c997047b2b98b5390d56960c0\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2Q1Y2YyZWYxZDE3MTQ4ZjY5ZTFmM2FjZjhjMzhlZDc0EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"2438\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/fd80b6a4c60d46e3a1e57f19a3a69187\",\"title\":\"Property Details View\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/5309856acb3a424b9124cf3e1a86d0a4\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidXA0AT4BiYCs2HdoDPBmUXWoVKOfN8ItfpNTuN5eyZ0hXjjyI0dK2XkZrCPXrMgT2nSJSp2GooAA2T0qsjh-U1JGAbERKBLx-cAoyTjlt8mGxiFj4PyiFLdix5n22NSIlLP0QEthxnHw-3gd54hy7wObH-yHBjZgXRNvvfTieOotLuHBGNH1621e0eBv5EYUKtvKHl0vx5YEoFxlS_FazfYP0yAZ7mbkr7tRjaLeIP7bk4Re-SE4tyYhfdQ\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/25495624070746faab532772f40162fc\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzBkZDZhZDM5ODIyZTRhNGY4OGFkYzBlNTA2ODMxNjUwEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"4370\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/7a0aac8ea97246a68d40e8c125a117fb\",\"title\":\"New Launches & Projects\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/771977dc08d14cb383d4ca33bfc640d2\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidXQwLq6Rj3vmBCPWVgtsc_KIwQONhuEz1GubF6Oyqjz4IlwcojhM0cscMYG0WsyfTCFkzbhwxzZSnVjyETBa8_Met1kGiow4dL5piNYfIFKUNGwKIo2TSPrPi5p3Q8GP7nPCwZnaUHv9eOkWhUJORjS6EgjPFTihIsC7JVRtLNrYNZ0lUF8QG1EZcJ3-QrGy0ctpPfHpVG-JoyCOrZ94CH8V3T7Zo4PGVL_cKPcON4pkDHbRFD5oQT2QnH6\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/a8175ac73a474fd69ab059e4b0c5c6c5\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzQyOWJkNTVhODQxMzRlMDViZDNmOGJmYzA2YzVjOWJkEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"3332\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/120166a99d014aad912676fa101dc0f6\",\"title\":\"Property Details & Contact\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/ce334332b49c4ed0afd8d755a7e247ba\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidVOqqSzklXFy-DMpZ0sceRcbB4yezY_qCP4DERevWumnu4j_6OjH9sw_GL-rupVrK3URSSurBDxvDmVQdRXlRBzg1gk9tD27eFgk_c8IlY28wP52BgA8qKrr9XWWjCPTLHnw2IZVuearZzIKi55RVaoHGP-VHubkxOiXaC6fHAH5c78GOFnliShTXjGMG_bbs5ij_r2u5hvFGW1nIOE0vk-25B0AOW7JL-Vg2NGmfW_Q8eeq8evJLAOMPE\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/ffbfe6465bc64b91aab32bf54b078e9d\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzJiNjU2ZDBkMTkzZTQ3ODc5NWFjMTBkYjg5ZDg4MWRkEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"4120\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/dbbe250f00f94074a07fb235a639fdd9\",\"title\":\"AI Real Estate Assistant\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/0050beb295db401b86ab96a3703c1c62\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidVN5gDxJclNKpUSsh8EgQMD81im36dkU4ADLrGFqZgtQscbQxHJa5X6fGHnM1bvw-aSXgfBjaveqwEzSEomp0c0r-JS70O1VhVo42Zppj0_wbDTb5uoRNZLYXspD5apkhPith0R2nTahFJfhFOlm-kRlGtUkVmsuP2da60ZK8-BQ_4rLfARZJh0NiHUAxrns9fgCKca5o_oRUHAsU0TKtVul6GFUgeGjO6YPMc4OVoS_wqWAzsed8b0XxJ9\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/842633e966e149a0b979b579ba11dcdf\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2Q2YjNmMjQ1OTBkNjRhZTI5M2RjZWY0M2Y3ZDIwYmE2EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"1768\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/6bb67b37b9e34067a6b7a3a3a4ccda35\",\"title\":\"Marketplace Listings Feed\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/c7d8190aa4a6457480bf7848843988f9\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidXNp_Sx5jEy-Bv-scPphRk4MjICBumT8Hr4agjdwJYbwy4J7z1NwYoqEZzzCjycwgaGpcwqCB-5OmIKhwmUsLSVW7-HDjIIUjA8Q1BEmJjLv5UfFKYeQKdZuJfHjICGPHT27Sz3hKk6aARVMW5ib3n6HDkVQk-f7t--WZ226qPcJ5iX1awfRcsku1eLFN3X_LMhaQ7olIKoWeXEaY3NnR-OiTE12S20B8TKLINVpZFwQV0g9T3cuxAJUzzj\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/c94f7270bc92440fb79cfe0e378eae4e\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzYxODJjOTMyZmEzZTQyZjhiZTBmNjQ2ZjlhNzAyYWJhEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"3878\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/f0c1cdb8865649e49fa94de854900357\",\"title\":\"AI Real Estate Assistant\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/f859bb106f484f0bbe16595c778e994a\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidXVHDsbv3wKlhkJVETWOY5bVQagDSYqUPSMDI3lKMoFeK6D6Xvy6xFhGbzVN8OzS8ferjwGFZ7bKjANr6Csv-ehio_e1vP5UYW7s9uyTVu3SRl0qshRopHqsovcvBeduX-TE2KJRbNhKPjiHzBq5Hb1PE_9BWp2KVA_spw5J_3rQrc7YpMzST00fBst3Ja162-xbVl406XcYHG1mYCTFDFVt7-8Oy6vpxHqYJ4UZos2LNV-S7KpJhnLyjw4\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/1538338456254848b7372176c6c1e41e\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzk1YTc0ZjE5MDgxYzRmNmY5ODI5NDYwMmRkMGZkZWZmEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"1768\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/f24d2ad4ac444077bbeeae0f571184f7\",\"title\":\"AI Real Estate Assistant\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/241262961025404c80ab02c1809356c4\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidXeV6hZDBTJvRNSBUYEoKx7qfLinaYU_KQ7pqKAQarTcNg4rZzBl6umoWhaSfjA5OaEw-ixdmY05Ll9d_s5sr2NgVhJYsadPD1qE48YLRgdmvIKO6cB0FR4GgoTK8xgxQgbkIOvWKmVYMF5vWqf2MGH6Y5l0J0XfQCbMmrVZ_O_yIjBKmw-D6JEo4IRjwh8TLYcLE4h-8n9Xa6yelPnT95K_A4Iwey0F-MITI_nXdP2EwJ0J4nAcfmaixYo\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/aef23f99d6c7458e91189b71c10fa8e6\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2IzMDA4YjYzNjEyMjRkYzc4MjU2ZWU2MzM5ZDk1NDZlEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"1768\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/88ecb201f2f34622a787a375c7cc562a\",\"title\":\"Interactive Map Dashboard\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/c52178ea94dd4efeaff689a79827af55\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidV_79dq6RRHnICWwS-iI6ex6dMZUq_nWJFICLQBetlANYFkxKQ2hWBdjr2a3eMluOSAS11TWnXF_IUbRPaT4OWcVhgn6rPmVQ_hPm7KgWXvwKpwUaMvW1DfynTi6Sq1kNUTo680jPGc3KGQjohQWYSwX55itvzGgqBKl63EfmBYeADq40UQVN3bs-T7A_MUqDKLu1gSreW_ZHScVYWnooBXgbQVKlZdMkRLiOIRVhwtpjaIwVkTk-a7Qtm7\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/2df2b25dd1fe4914ae7fb1be55cd72a8\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2FjYWM1YmI5ZjM2YjQ1N2NhZWVlMTgyNTU3ZWI0YmYwEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"2746\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/0ed492f5c88c4d5492c4a9338a380581\",\"title\":\"Property Risk & Liquidity Analysis\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/b7faef767b8945148bf437b97cd2996e\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidWphZAF3KqP3fS7BUlXC5ou79gq7fsJH72ywdcugZ8VMr748mLs3pCyVN-EA9860cp_iihRNsIJnwpdhulGO0xnhiPONx5u7vQRTNRQrvwycAHQycEbOU69WYNRVcttUtUr1Rv8IYR45BixCRBzPVVFGZ2td_vG_Sge5Moi6DTW1lhkoW0phB9a3Ztt9_BaGTaHob4adYG7UbBXClRd04JqMWlm6IFrai_GCViMS6N8NkQLkhE3BT0IndzF\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/763f5aed6a3c46b49db774d598ce6a57\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzgyMGJjM2E2M2ZmZjQ5YjRiZDgyZTQwNDBiYTU4NWUwEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"2354\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/5f4b9ce6213e439e83df80b666eff34d\",\"title\":\"List Your Property\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/4c92fed4672a426991efa26ac86fcfdf\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidX5ncAryfBm6CmETPtwGVVLgOKqvgvIcGe5vnODbmOV7xEOlQMuY2du8Z5w9raUV8uTT-3NF6CWMkuoNuPFraM95Qx5DDztaxcLHIgiENQXwFpZuNgzKtX3tYkT152TiS4MFIcVoc_fIRIO4PlGa79MPLiuJnj8jmo_Tpg27j9Bc1333u_r5E12Nx5SNsMUdiLA8s5vsUMO8Tyh8lHy9DxSl_IVePcqKK3qNZyNc_I8vlwfnAf3OIf-_iQ\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/5713312ae2244de88195229c4f2259ee\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2JjYjc3NmFkOGViMjQxNmQ4ZThkY2RiN2MxY2VjODBhEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"3518\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/a2f37ce5e50d4f048ba050b83ef3ef8c\",\"title\":\"House Predictor Variant 1\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/31f3cd9970a24bd980b6633f84e1eaf7\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidXJIuUC85HEK2GFOZC9OLhfL_r-eUb8QIkHtPyiTjSRJPUWnOwc1j5BbrqwkyMJiPCh8MTruP7-MZl1VIlTznnflw1uYTLrvlUYQ_vaaSt3mDTjLYHkFPBI_pImAr6OhaSmp3d94jmlsX6TUDBXLTN_NClFgWImkTGKtgnsMeW8ToafDk3zbDdnK0q-N3b0tYbCEPgizBuMGT52iKcjq4Xff6xkNlJIAGaN88QAySaiXDWRUR7o9Z8EySTC\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/3f6f397ceed14ed0bcaa8ea92eeede70\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzc0OTgwMTA4MGRhYjQxOGY4ZTc1NmQ1YTcyMTY3NzZhEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"2288\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/199c722ba50a4199841a6da80bcbb76f\",\"title\":\"Login & Sign Up\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/bc5355fbd0854e18be58fbb69beb85db\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidUp0Plot4onLk_xz4vFk55kFh7kkVMKc1p0SpaHFDGzecOg4boatrU4sDdto-zFaH3sebcCcmHkzUnBVMkCjCrFjvRIN3HaYb4Wx2XJfTP4g5QUG4t6bNOrWt4SUl2w43KgndM3VCwfL8XVpA-kt9teoE-QXI2x_aYe1jmPRU_Ou19l8oPcAGN0OIDchNX3NqavL5CGRBYczjYXbuzuLdPmGN2dWkNL2wZTWxcGvKFj925gbsL3vBDMSyNJ\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/d0e02118ee3c49429462f9bad8c31b78\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzFjMmUyOWI2YzUyZTRkNzJhZTkxZmRjZDcyYWQwOWViEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"2284\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/650335e0ff3943d697fc4cd7e9d1c353\",\"title\":\"Advanced Market Analytics\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/5f72bec32ad347ecb52f3b2a6bb68b61\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidUvT0O2RU5E1qG4Rrvp7R113Va_d_Z-b7iN-TijjnuTxrvcgJHI-A_CnQkll9JKnVXx9Jr44apdDnG3QmB-X11KIL_mxg8K_6b8btIRkaXBdv-ewnBT7RQ1ZEEd85j2nYcffZdb3zKZR5EcffAlwsYNpkDfblSF2OC-q4G7uy-EqxIX-Z6NBPUQ1d0YJObjSAx7mN9MEjzQFbCIJ_xn-E1kY5MlaHEPz-t_g21I4wKCVD9IdAnRuKafYSo6\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/178ad88f5e8e4cb7a7feb8d51a20b89e\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzg1YjJjMzMxMThlYjQ3Zjg4ODdhMmE4ZmVmZTYwMGJhEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"2934\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/3ac600bc1c614880939538aea6ffaf57\",\"title\":\"List Your Property Flow\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/4e18abcdc70f43d38521ec72f15947ec\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidUqaAH8Sip1GwyBX15rRjTau2kJ7nYb3xJWYOMKqbZ-a74dRvYA6SESCIkmWtIyqYChTxG7QVmb2j4dKcfzmwpihC2WKgOI70GjNuXW0dxivNxnd0Ji-x7vJY5vvbLbszy0msgVBTClpWrl-BBLnD7rLJObMDMY2LKJlG2kJC-plu1SobYt3D1c4GlOdoZcOb18Hf6ubdpMeQ31cGhrWb_CgxAFHeELNTBVnkt95-xpaVG1oX7HhDo9mUw\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/f726fe7ebe894342936931692aaed1ed\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2RlNTgxOWU0ODQ4MTQwZmY5ZGJmMDg1MDliY2YyMjg3EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"2082\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/2f2d162ae7ca4980960e502140536557\",\"title\":\"Real Estate Listings Feed\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/042b06bba0fa482bad1eb4c930554042\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidVIfcsG7aegeURxT2UJF2q6S8zZR75Uja6WxYxAzYS_8kJ7x6igsD3aMhWy9Md7k-ai8HRZqo1cCFl0aSY0DhOaJ7QKydTvJSQkCtIF9r7eXnR3_BtmAFv78LXzlS0Xa7ewqLepgbegvwTxhUqOQpDk33VxACo41SNaEC-w-5vBEETfpxtjfnXe7WGC8hrIZTxugdVnpZFXNIgN_bCwoVYMkT-X1vmNCcWy4v99pxepHYAxD_BAffvwOn7e\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/d3eb3559446640fbb1504a3ca9f0ce90\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzMxMDI3M2I5NGMxODQ4Yjc5MTVmYTZlNmJiY2Q0MGYzEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"3350\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/9ab8e7bb6cc349469dea8f2fc156167c\",\"title\":\"AI Price Forecast Dashboard\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/edfe4b17b7ff48d8ad99e9dc629bae88\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidUOtyElxRyDlIWVdYpJRbWuyUF8kPkwye39l1qPYgNYDKRo_HV9rOGU8UO270-rwmO-leyTCnK3tDgrHaaENsY3ZQKTHuQk49uQnke7fYTvLCJUhIzsxGmWHLIfbnXdy6WVuVZRDkqEsR9TGsNTgUHtq0KXvf3ern5zOcqB586XRGSIbNnFXHdWHCX6kOesE9MghFYNoNB37Dj6EnloQwAX6D8N8Ljgjqe8hgasoSPItTsQgteeKDWpqHE\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/60ac7430309f4a0e8133a753dcfa0196\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzcxYmFmMWQyZDZkNTQ2ZmM5NTM1NmYwNzgyMDZlZGU2EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"2258\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/d3d7d380e2774bccaf8bef7c02bcee13\",\"title\":\"Legal & Compliance Center\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/d244e6645042452099b060dcc3993784\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidUiGjcrRTK3w-ZC4LDFis5UGqa4Eq_WfaD1V379IL6oV1lLlxLzkWvp8QRc3LcCv5KHz3Ir8iIYk2ZeoKpZf4jpriBj-F__xy10l0MDysEAWIGPjjGPc776Fno6dl147fBRQVQKmuF0vUPJNlM2Bfrh82wmjHxpv4fBqnzZUlxTnyNTsr42J_lMS06mQ1PWfSv1CMlRdr8lWYerE4OLvKwGTsehMl4rptRyjRmEc7xG37DpQaAmipCjFEwj\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/b84344d279df416e81ecf85f3b8cc092\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzMwYzA4MDgzM2QyNzRkN2I4MTM5MmZjZWUzYmY3ZTk2EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"3114\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/fa5c9bac29654669a0b2446c9a122e68\",\"title\":\"How It Works & Footer\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/c5e6129e0b034339acc49b46ce73a9d3\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidWLw4wexNsfm8YIlzfJaR2WkP2AV-CkeKxRVuEM4zKCWaoa0VpvLUpiQ9xCtebe6FiTkI1Od3rk9uE0hCR4EtPNJ75-mbXMgd8gy50uyhTbXiBYgamSail4TADXb7cMirOZZ1opZVkHGNqfb1_DTtve_vU3xfOU0r8EozxWx3DyBoiacYLASx7U85uMhUX5NtQZnKKGySeM1F0VLbLkLkO3Qh0_yY96G8368kHKavI1gj7pM6IGNaj9K-nq\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/e23476ae2c4f4fa5945f250fabd6681c\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzk4MWVkYzA5OTVlYjRhMjM5YTZhNDUwYzk2N2QxNmU4EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"3406\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/aa86f5d61c8c4bde99bbc5bf260672ba\",\"title\":\"List Your Property Flow\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/d5cd6727bb2c42ffbc6e514beb25c7c9\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidWo5xIZj8ObopCaXP2ogpLXEnI9FJv3ZdPSLitXyEre8nKUXhMJTIbr2A41jdEf3hoO5oZgdduu_uuycwK6UlKr-sX07wlu7rgJZ7VKNsCkFJ5uy69FA0wrvaXvdSH3zgeq6OADFvDnPOdzncxeYFPULlaC4DY7fbLeJwu4SZxRGX7cjWfJNRtnVvYsKm-OiRLlWp5NIpn9b6--3x46ISyg_oWIPmq1d9Fida89l7POCJBayao9nOB_n4o\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/a398c50cf36b4481b337fbe0f55df13c\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwYTdhZGMyMTYxMDQ5MjdhMzkzNWRkOTMyOGMyZjU5EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"2276\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/f939c2b1cdb845028eb065687de05822\",\"title\":\"Marketplace Listings Feed\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/9ef0924925614945ae79ec91fcd9e03d\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidUGTinN7NWi6G9Hz7iFhifGUDmA_GkAQ9paFfvcd7xz8MbmDR-KsbzR_k2WBF5GwMLzXNwTkYZ6x85KkvJfE-Omc3KWdjcF-rNIUX6tyDVXZX5Dx17CBBIgFaVLo3Nzw8fOPYnt3OfimvvEpTriUl9w6uVcJVeXYZMiOs6bN7JYblL88r-Jp5VWtdjTE2U2OiiLHVwCQjaYRkXl-vkGeqoU1ohlTtZ2A9RPMNlo1QzLrVDigXtoQOb-aLo\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/94503ade29dd410a8c81ffa54f5a3b75\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzY4MWM2MTE0Nzk5MDQyNWE4NWFhOGJhNWMxOTk5YTg4EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"3486\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/e4ee6dd1aa574cd4ad7ab86d5635279f\",\"title\":\"Home & Prediction Form\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/821e45c6e9b647cf9ab5ae1011322270\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidUDtdzT-cBHeQ0qVedCl9yUG9V9_90otbDbrPAFyC93G9BIuf95uE8FGQa5-VFSSfO6d3BN7dZNT40OHZkA0F_FhasXDRujw3LapGG2GSgi9kcbWQByepHXQ98k8wL2vp5unVNLVM6-6hH-R7D_wKFYXVnpRfNwmuGjIt-M7uMRTL5GcJWnG-A6EZzIZuNaFdcX0C9RpfWM6gmbB1kT5ObpKstVe_U8uQxw_yBWscmOhwXBgI1OQC17pOjW\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/f13fed0a4e21472499f675af5335df8b\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzU3Nzc5NmIzZDBhNzRjYTQ5Y2NkOWI1OWRiOGRmNjhmEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"2544\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/12ec6975606c4008ba0f1126549e5f6a\",\"title\":\"Desktop Map Dashboard\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/2122b1c03a6f436b956c382ddf19d918\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidWdLr4bM9HmtdEdoNCObz-4qggTXkcGvHL5ws-4Dw0b2duDFlm96tHruUTrlzjgm70_3It6zurdHrWX4EgwJh-lDAHlos-0a2qzKSy9WqKpdozbkgyiT0anpDBC-7b3xFjFs0I9530J6O-gZ5KikWT_w9KJxnpM2X3OoDOF5TFa53-rybA8L1sfdyWRh9hzfTNZjcMVLXq_feBcfmD21OeQKOTnzOMo1tyoImWxmw4pIXdEilh0u5y3Ixff\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/886fa189603a438599b136b8be018f27\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzI1ZGI2MmU2ODYwODQxZjdhMjNlNzRkZDZlZWMwZWI3EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"1768\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/9b6c27898f0641ae9cbf70ce4257ebb3\",\"title\":\"Desktop AI Prediction Result\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/43a86960cf064347b3ddfc1231ca3ecd\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidW1sMOsEIzci4Yo6BoyAXkyNkiQ2yAgOLJGEILcLPVcgFBuezWsdwS6YlepeprLiy3vGQmtayiKxnvT0rLCFFXk_c62LiPpapXd-aPo06JukKu6894kdYXlCgWuspPGsOc17V6QG6xJe7KVgmBVdyFLL-2s_0sZ62NLPqYp3Gk1AhpvxpVsDuVkCgzY9F-lfy_nESLhsN-cNQ8davm6Iq7Xmb4fpXsRgCj3eCKkwKridIRhvie1HHohox0\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/7f5263994b0c4834a3a565fe581cac5e\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzkxYWY4NWM0MjAzZDQ3YWVhYzZiNzI3ZDU3Y2EwYTg0EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"3490\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/1eb2cb5558994b6a93698f5a366170f6\",\"title\":\"Login & Sign Up Screen\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/dd1e79c186da42c1afea561ee2df7932\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidV2iQYtRPQN2NrlIJL_5PRwuOGqlKK2GW6pjysPQmpCww-cOMmlDCAu0usPCyj8i5SFC-q-fIjHei_DzaCBxP_pIhrAsC8-Bt7AFlP6Fym1mOqqMV_-aL6miUbNyVUhLVP17dQoGF_3oijHhNrAxU7OpEQOnYHzyOM_Kz2hXcw_NE3vfoSlN8N30xSQnotIGXgUcxxduxvELyqoPiuOweERrDlcrqU9eGseBde4_68gYheMOb5rtdAaM-mg\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/291dc3062bc34fec941d46005cdd1f2d\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzBiYzE4MWRhMmZmODQwNmViNmZiYjliM2JlMjliNTIzEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"1768\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/9af68065269d4785b76560e2f38db2d8\",\"title\":\"AI Real Estate Assistant\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/2d25da59f6934b2185a5473d18a46820\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidWyRjPGl0kMV-SKWfX-ahcUnSN6XsW2R_685X7vuTj766xOMd8bfxkk0ntOqhPTNwkryISkAnf0iWChx0XlcVNScWQ6b-3lDIl5pPJH8knf9ZMpwJ28sQ7ALujXJfzmjxunphHgm9v51LfiHl_TXtEwTcPX7bLZu4iTAW1HrYSKL84Ulm-iCKhmYLgzAD6WOSvgLxmJzyVQ32hCkPu8R06o-INl-0b7CQTpTXDJBXBRsmr697QWOZGmOy0T\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/a2163f290f5448408a329d327991b5a9\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzM1ODA2MGI1OGE5YjQyZmNiNThkOTE1Yzc4NTJhMjIzEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"1768\",\"deviceType\":\"MOBILE\"},{\"name\":\"projects/11060188023459959450/screens/c7fdbae5f7034ed2aa084b8d6dafcf5f\",\"title\":\"Affordability & EMI Planner\",\"screenshot\":{\"name\":\"projects/11060188023459959450/files/4baab41a6d0243d2a360a5188bd4e1a6\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AOfcidWR52wHmRZ4Sx8a4iuWVrESZ1LZv_YxJ7O_1mofZ3KG1f_c89_VbNGsqnnQQrSHHcdMEM9jveYJ5PIUD_8xQXg2KAprLFL_Ds89zhVJe1HBCNcagm27FkHDmNo11DdCYFwSBN-AOIAJ-p1UiDmkZZcl7mJOdwWSY5344tlPeRFtUmAve3fW_nmnz-F_y6O_t--uBc9FjbcNq6h4xYAWo_EWI31usAwXwIi-eqB6RNJfyy-eIHLyHDfe0M6J\"},\"htmlCode\":{\"name\":\"projects/11060188023459959450/files/d8fdbd98ed474c3baa57a71c210a23bc\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzdmNTk0M2NlYzU5ZjQ0Y2Y5YjY3ZDc0OTAzODYyN2ZiEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086\"},\"width\":\"780\",\"height\":\"3030\",\"deviceType\":\"MOBILE\"}]}",
+        "type": "text"
+      }
+    ],
+    "structuredContent": {
+      "screens": [
+        {
+          "deviceType": "MOBILE",
+          "height": "2948",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzc3NzM4MmE0ODMzOTRkMjliZWZmZWVkYjI2ODA2YWEwEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/0105aacfd753410f8d5f11720dbb2ad9"
+          },
+          "name": "projects/11060188023459959450/screens/b2eccfe544a843d09241b12f9386eddd",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidXr4xWwzrDB1-GniIJ2dcGS19ROwO1ByDFTq0Jtl83ptvHkSoWeNiimx-UDr7VGaGZoD_kLT47N79eos0APX2Z1_DOlZGcGkM3xuLaTbI4Ko8BvLMeFvim623gPt1fMXIuetTgGu0jPtJ19KY9QmoiTm1sMv5cSMX_TVycGSlVufF20Z0YpeKYIdUlLVXpz4VRLxAQRb8osmoS8_1KXkmHAaXpjp1HOQUv1w5r6NRmkBYwBwcvMwJQJtR3b",
+            "name": "projects/11060188023459959450/files/0b92bfc1663344c5bb3d7a4337f51a37"
+          },
+          "title": "Desktop Marketplace Feed",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "2806",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzA4Y2U2OWZiODk2MjQ4ZTViYzQxNmRhMmVkMWZjMjYzEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/bb41b165c6aa488a8fdf46c13c800845"
+          },
+          "name": "projects/11060188023459959450/screens/89da438c22c94bf984b993869618dc52",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidW88LWNtPH_wHwu5UEAlu8eDLeCrx5Hq3g2qR3gvQh_Qb15TW23wHXKXVSicuOh7GLWV3Pm_obd6vAshBJKoUM9oxEjfhY82aboCYaeqj5p8V9qpGgVdRM76IprJs2HLbASa_97PHFINZ-ZJKL2WF89njB53iNVfrubCxF0OOAJZEWGA9GdsOXrlWf6erhuQSGRVPSitXI4jrFTJ86zegKh3pR0147X4IeTV4-5CyVP8UPDxfz1Q8mGqDEo",
+            "name": "projects/11060188023459959450/files/6d9bba261f37463b9f67332e04e72ad2"
+          },
+          "title": "Advanced Market Analytics",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "3942",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzEzNzM5ZWZiNTU4NzQ5NTNhOGFhN2QxYmNlM2QxYzBlEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/2036909b02c34e15bc683eb361f51ce9"
+          },
+          "name": "projects/11060188023459959450/screens/4de8ceccd386462d9079be2152ca4080",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidU27TXvdrgmkZtAzN6se6fFPdOjk49nta92Ox-TaUz25uMm1VPWJC3qs0Bw4_T8nBDY7YNclGbzyzfMq6eWMHh7UtJkAxb4G-JpZU7YVagY4iaoDBxhM58jYmVoaWopsb3JEH9DqZwOivWKHE50MZJD_-Z3rqVM7O9UUL5N9uQ0FS792cAeoWvozVt55iLw2xL_pR1JYtgZtMCbErafoF5kVPNyb9qYhuaejZwzYj2ymbdqjSVY83IN2Vnk",
+            "name": "projects/11060188023459959450/files/fea432840f1a46879ea021c608f1293c"
+          },
+          "title": "Property Details & Contact",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "2554",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2I0YjY2MjFiZjc1NDRhNDE4Y2IyYWQyMmQ5MjM0MTc1EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/ef1f7f5c7cce4abcbf6c69c35f1074de"
+          },
+          "name": "projects/11060188023459959450/screens/7cc18c2bf47345a4bd345ed339188a50",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidWinme9pi2aCge5wpZTpvaDyLjsL724tZAtFF8EEPhrDyYLss_jW-He3jJYdbLMdS9t7nAAxbDeqh3L79yDAG46EsocVxE4AFgJhLyhXPXDrGtqvK8Q8PcPRg59fcF3Llf1ryx0GCcEzAXSYgvDT9CfqHkAgXtGuN3pYudq_TywH62DKPbxkRiDtvscEt9YnKSSxXTRde36gz7KEgaoAdUY02BZK4k7dkQ7bOozPdq8nzrLI-0glb42ogw",
+            "name": "projects/11060188023459959450/files/ebfb2d73c6fd4866a768349b75968a75"
+          },
+          "title": "XAI Price Breakdown Dashboard",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "2364",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzJjYjA4MDhhMzhlODQ4ZDU4MjdmYTdlOTk3NzY2OTZlEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/e33c5cbf8bcb455291bb46b4b147de51"
+          },
+          "name": "projects/11060188023459959450/screens/28b08b574e2148c6bb9b35a90c93b7f5",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidVDNoxsPnUHpEp6Ps99aqvcztetDwXRMuoFgVXmqhNP4-Gw7E2uqx9LTIwz9q_XzyKcZ7xXgxcP5acDyOePpKCIVGGs1rYhGygjw1AGyxY__YmB1q7I6Cb_eJTIPTseeYvGB2VizoYTW8KYvhHw4pBsfaKpIUZ2l_m1L9IL_ruoNSo0kMyVBFRUxgf-iDo0Sv54g14AeTwEMdZk58ZJVLloTs4cC5eXA_Tfau7f2xIgfkc14oXjV-Ctx5Y",
+            "name": "projects/11060188023459959450/files/95846878706242af940f37213af97e4c"
+          },
+          "title": "Interactive Map Dashboard",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "1768",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzA0OTZiY2Q0NzY1NzQ2Zjg4YzRkN2M5ZGU0ZWRjMThhEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/cb6a52684eef4871aef78a6510903ee6"
+          },
+          "name": "projects/11060188023459959450/screens/6de80ee81dec414eb09ac9d0e35a6b85",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidUFPe9b8UZ__Y1HF0DrsKU2s6uiEmLZLhCqKRWb-r-iuWrWtsiACRbsvmS6jFtruumX2qY91dB0wtsHnVnRbijqXcDvGczIyf603eaaGLtFaY4LKmWwzJWk3JivD5Sv3y0yUwL514srhIsN4Cj6CLVot_PDmXQT2OED-BAmrL5WGVxgs57N4qG1HyxP5ne6duyaZNzn8CMeK0tma_bvW7fjxo80mfZSt2SJDirwm4eEcmZmUL3yjCkXHyA",
+            "name": "projects/11060188023459959450/files/dbb51511a3de40e48427d8653269a4df"
+          },
+          "title": "Location-Based Price Insights",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "2236",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzgwMzU1YmIzZjcyMzQ3YTZhMjRkOWFmYTZhY2ZhODBkEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/aab80e46fe084aecaf6237e7a77f980e"
+          },
+          "name": "projects/11060188023459959450/screens/399fee7ece904d7eb81cbb2234eefaaa",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidXhnxTtBb3Zw0Nx3n-A5nI6k7H2Bs2HMqejMNUZ5tlQEreFEM2gmEZIFlRWJVzCbDveBMp8W8t9cYHcQ3QqIgMPRcqDWx9An9yucs_gclEpSpdh9fogUT67TLIB3iOJzQlV2JBZktUm5W_-mmouHIbbAUROy2riZzAqnBDxMydqMhPc-h7hsSFyBlDDsi_zwdBcpdkA9QosXUTZvrGpDZfM4xyareZXmJA4ecafB30-v16xUABznbdN9EjV",
+            "name": "projects/11060188023459959450/files/ce118c57de25425cb2ea9602cd6af31c"
+          },
+          "title": "Mobile Analytics View",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "6550",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2NjZjllMmU1ODhmMDRmMDdiNWE2ZDU5NmMxNTgzOWFhEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/b9d6cfe627764c4fbd1323fd6e20d6ed"
+          },
+          "name": "projects/11060188023459959450/screens/f49b51a5d2f541a0ac25a0ac07e39c3f",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidWSORhmQg-ZgxpEwyvQTe1IX0yesDH7YgBUGxcaSP5GJjFwoG25AGJlrcyfP6_XN1qYS5IWKl0xqQ3uEbHHzqYopx3xM8SY_WbI9k6D4ynaGDI8wHHgiTJNY6DLMyVoiQQakZ_LvSGTR7YeKfuwj8AU373IJsUoDANV0IhHSOt-a4LMyit3oFWHPfPiGPxPjqijiRDu3JEa35JBDsojuKAOcVq3LI3Lf10ASBrl5KDSMYUTQbibM-R0F8Q",
+            "name": "projects/11060188023459959450/files/e01725d5fbe94dfeacb14461fbb37d23"
+          },
+          "title": "HomieNest Desktop Home",
+          "width": "882"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "1768",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2Y4NGVjZTkyY2JhZDQ2ZGQ5ZWRhZjQ5OWMxNmI2MWQ3EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/16730bf0ce3249078c3603956ea3c63a"
+          },
+          "name": "projects/11060188023459959450/screens/0361d043a86a4d529826ad5fd95be624",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidW8jYyur6JathTDPUXSkPbCFCexYtHelKimLgV7oWXl_tfOKfcAiPA0MLz9gyIGo0Mvc5sKzD7TEMQ14Ea1ajnzDSCQSaqXwV_VsWmf7Aa1fYspegxjmvdA3-_msZzWWXS8GhuiaDjDeHheMvBkFugvzBlB4URHO_dEPbmXiwPTOHR1MN5o0x4xaahVphMb9Bbw8kxCgnlfpR6-VIwzNQwV58REGIYa7ezoSypi_KEkXj_neMXKQyC4BnK-",
+            "name": "projects/11060188023459959450/files/66b0020580f14f10ad2050d1672bd7f4"
+          },
+          "title": "Animated HomieNest Auth Experience",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "3960",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2QwZGE3OGE3ZDdlYTQ3NGRhNzhhYzEzYzQxYjRiNzQwEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/afe4f7a9df3a46a28cfe72924c3c66b5"
+          },
+          "name": "projects/11060188023459959450/screens/dfaae36255024ff7850defd85319ae81",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidUcnaCxKOuThgtavjSVK80xyM_VJpX1IVntdJGFOnSN0N_Rs4qm4APTbYvLv4egw9JXhKtE-_06Y1uoQ85MyoZDieo2vSgjFb7GKXteQWTI0VAjag9LAKeJo7Ua9Vsun6fHJvMr08MozmgG0pYwXZ-qDpGX4MUs50H7gLUw4UAWAFTEUmUadn30JYCCkhgIaawKFuqkYZP9vZncmUMj9UgFDYJo8R-mzrQwO6-JTHKxY0mnLilWs-qE0Pku",
+            "name": "projects/11060188023459959450/files/1ff0b740a0144700bc6020523715ee60"
+          },
+          "title": "Property Details & Contact",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "3490",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2MzYjA5ZmIxMjE4ZDQzODc5ODMxNGYwOWJlODE4NDM2EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/6e499744731c426782e9440f32893834"
+          },
+          "name": "projects/11060188023459959450/screens/6bced70f04a4421585d56c5400e33f5f",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidVv2TXJZhcrChBOyD_IprmGoq1NxHpA2VvzMidwQ6MfPuTL6ypx27VAuVd2xEowKfNzv5ZbL3j21J6nG289DK0JhrTSG_Ex9VCOyo90jLJv2nZ3LqQeUokkugymx2fPsfoMcRboZvkEip65V8NmJC8JXFjLkD8ft5110x6bykqMcymLadi8qLowct1eXdiGpW4hsLnMrFExqmfjRng7VcglmVQqv3h-Q0j7dCa-yXmU7qF5EVoUth9zigHy",
+            "name": "projects/11060188023459959450/files/260453c3a27d4446b5d6f86e71822253"
+          },
+          "title": "Desktop AI Prediction Result",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "3490",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzU5MTU1ZTIzM2Y5YTQ5ZjBiM2YzYjA3OWM0MjlkZmUwEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/4ad4b4ff99744137acc5b37e025d5261"
+          },
+          "name": "projects/11060188023459959450/screens/be75aa6b047647a4bf4f5b77ef9d2b89",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidXQm90rrGFTj7jIm1OdtLH3eJa6W0b9qePqrBWBEWHHD-gYI31jDutB4pl8I4kHMpskEYl8Tboaumjn-ftEXbJl7zadzSODCgsqKckVn0kANn_a-RRPSDgeMlfRM9lklUag73xBBnkOwjuKvPp6NY9LaRiDYB85gRdCkh9_O-Sdo_j_TjY4ecySODEeXtUpVa5YbF0tXwwHhacu33rFrJn4xDAQ1bRIm9m5Jhyp5go2pHDrr92Pw63BP7wb",
+            "name": "projects/11060188023459959450/files/5ad9e58b07c046b995e5477f8ff9e4f9"
+          },
+          "title": "Desktop AI Prediction Result",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "1864",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzM3OGFjZTA5MDE0YzRlZDk4NGUwZWUyZmViNmNmNDExEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/959a5a4ef94641678b0f1ff41db78eb5"
+          },
+          "name": "projects/11060188023459959450/screens/7eb0e90959d94741a737258eeee1eb7e",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidUJ_9s4532C8B7yWII1W6QN_HvfwdWGO0weGXdGAOfm_oJryLfCdFj7tl0FDoMzjHNDZJRBr16m0Njsfhr9306WEFNOwp_H2IaYKfMV2bQFbc26FfwIz-mAo_yDtItcp8-WwFHMAJ8hP8y9J_7V4UkmKdB1JU4LygnzWSxQurJwTtKLlIfgNwXq057nrRhEgQ01vXP4eTuGkRrYSAufG11ZIUeLRQdQRfBRdNDqWrxUIHLHig9aAw8RCQo-",
+            "name": "projects/11060188023459959450/files/0fc23ec856984adda80a88f3a8410d3f"
+          },
+          "title": "AI Assistant Widget View",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "1768",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzE2ZTY5OTgyMjg0YTRlYzU4YTM3YTI5YjU5ZTdmMjM4EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/ebba52fb45f0440ebefdab3bcb36d39f"
+          },
+          "name": "projects/11060188023459959450/screens/9a3c345547504601ab73f331e8ffede7",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidXwDyfKfxzzIZJ4_momoXxIGih6zmwR5UtU1KzrfWumCfJ-juN1QgsQeFUZ1KQSowxDGJPMrToK6HAd0SMI3pDyHnFn-YVljByiawBm7nutX2ux2-cvGuWWc7FbFafJCpCeHzgQOeFUXlQBL7JvxjA6UaLFpDTOFbmP0Df7-khOIf1Fwva1kZI6eEBMUHnRPE1XVX6QoTmYoO_nssyZAEgAwiNpbasDoxW6qNyq20nr1tbugkhSMhIQdzKj",
+            "name": "projects/11060188023459959450/files/5a30f94c0e0248d182eb1aa3912776ec"
+          },
+          "title": "AI Real Estate Assistant",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "2192",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2M3MjRlNWU4M2Q0NzRkMGZiZTI4YjY0MThmYjUyYzIxEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/5ac03cc1950540be9ae0edd01f8d7fc3"
+          },
+          "name": "projects/11060188023459959450/screens/9c82a1675f41431aac3c73c007b9859b",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidWsmWkq96e-BvNdlUNjWOclGyNZjjb_WHZAtg-XIjLPuOmC8HtuNYJWtCZ95atiA8ljncAB3O7myV_x8QOmA8F_qAKycLO6qJTwZPysbGHhLAn-WGv3LeAZcjjoiEgMZIdgESgMOgWP7OsGM6W_kGyRPLFQUTr-MMbtIDZQlsjzdXPYLNiPriUo-tpaOWsrvo3V0kFnyQlIUW_6PJkF22kTDekcmWrDB9Doxgo7vgKeWsTuxl2a810-Er80",
+            "name": "projects/11060188023459959450/files/2290ddc5766c4254a633ea319604c0e0"
+          },
+          "title": "Login & Sign Up",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "6518",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2FlMDVmZDkwNzI1MTRlMTc5Mjg2ZWQwOWYwNjJkYmZjEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/5b27a005cf394dcb9d5089540d210bb9"
+          },
+          "name": "projects/11060188023459959450/screens/fd4deef6e9ba4a18abdc2deeffb16c86",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidX1DzQOmMpgPKsGfWmMLLWRvnf1WEakRCCYkc4ykMaBk8n9qX4gL6aiYnu-bA2Ku8mReT_gPbkmsIlLhTeJIMfnu14QjRjQpLe85zAiLGziofGNGxIts7tYwCqH7CDpt-18njYRvzOZ-2kBZx-zCCcivVmWW5ENgWk7qfwcCSwHhy6SOjk4y5UnqXZYoHL1IvR54DL6bXoQDC514dIxQv5rEp4c6eqEJqPP6CPATCNqguf3cyE7X5A2q1Sl",
+            "name": "projects/11060188023459959450/files/a508cabc54174518a210a15373baa99a"
+          },
+          "title": "HomieNest Desktop Home",
+          "width": "882"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "2726",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzk2MWQ2ZWJhYTYyOTRmYTRhMzM2Y2ZkNWVmNDFhYWNhEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/083fee39827b4f6ebb79198faaf44185"
+          },
+          "name": "projects/11060188023459959450/screens/882096f896b04f5bae81cc3b5cb0a6bb",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidWRwzXZva2icxD4fbLalq8cTzij5wLjR3qjrvacxABcXDBuMahhgRbsJjszkr3RvqK-lJaaqxXJz04Qe-QN2MP8OzZoy0FdYl9xv4I3CbsIWqUfwfI9peHfIlOPJkX7UipiRRGOnR193E1acAa6BqPNxbPPrsTS3de2jotS0-T-IgA2oDArUyQCaJDwKBeFBEWmhtwOrU5uVlCZAwO0jJ9j5UN35F-sakwsWZsZhTdVw_QM8Nqj36f63UQ8",
+            "name": "projects/11060188023459959450/files/e25180ee52734b1fbcc1ca4bc42ea07a"
+          },
+          "title": "Desktop Marketplace Feed",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "2808",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwM2YyMmI3NjNlNjRlYWM4NjViYTFkYTEzMjdiNGFiEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/faf88b5bccab4545b14c234670b4d108"
+          },
+          "name": "projects/11060188023459959450/screens/79a91805efab4544b86dff9577b5f2ae",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidU4U8Vh6T8k_H5cIm17SaGKq_FYhEBrK6y6O_o0X21lHiJrRoAGTnRgH0XnXnP4x2jOe22jM2z6T7fjUufxJ8jOZN159pZ56exSBjgzXUKq4QV-NjyCgdaqPsihsouYeZ7uvGIjNfWYVIBMWIe7bENyLjURG8mXlET52BiBdMBVGC6L88YNW9R7-NKnYqUR2MgAh01AojOpRKRi2tsGb4zEMjkPtLz2Z02kFDUVjOWAxrD8fNdDnzP87IDo",
+            "name": "projects/11060188023459959450/files/a5fcc664c9cf4f66b405619e8a5bb002"
+          },
+          "title": "Advanced Market Analytics",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "2082",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzdiYzE5ODNlMjg2MjRkODliM2EwMTE1NTNmYWNmMmUwEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/cdddbb73649540129ee0d196e8b26908"
+          },
+          "name": "projects/11060188023459959450/screens/412d3dd0c07343fd8bbc48a37c2be073",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidW-P4CXCv7DQBvBTaBPgVuQQjw3gd9RexykvjchxXpQJhtRy-39oZb_mGz9Yd34bSR4tbgg8tSz7gNN5AQtWiIgtCx8lvB8ye1qOHQ5ysplqykPkZtQYDuSXFY8wt5OX5L0ctkYPlle_rtX3W72kSAFHZJwHhgN0IliY707WIN_5qiTla2M4oWRTh1QnPj4hQXmMxzEZHxK1isyrV6k01fbhaBa74x47Ft21X5UZg-dc8-9IxXfHhU0g07j",
+            "name": "projects/11060188023459959450/files/b4e67ce58e604efc902c6b2c0d814225"
+          },
+          "title": "House Predictor Variant 3",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "5780",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzk0YjQxZWVmZDc4ODQ2ODY5OWExZTA5NTY5YzNiZmQ2EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/4678fdca0e6a45639047889702da15a1"
+          },
+          "name": "projects/11060188023459959450/screens/a1710549b14e4aa1aa9b7b94cd0105a8",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidXkbV8TDMCpvdIlAcDuj805qjQX-V8c8vHTFLBq14bh9fVxNzf2jLOLofMFGWZ9Gp5jL8NaD7qqRwlYPvhVpcEjS0l4GMqH_-bQg6vb9lm5sqds3-OnNDa5CHfMRXQ0cYe5_z3A_hdr4GkO-cDTeWcnOWYXHr_kbInluG6n6S2Albxtu8WeDF_Qs4ipObBrCOF5J0vB2Orvsx9zjdomH-X3Qawz7E6rhJw2oO02vAo4yPGe1BD-TYP87iAi",
+            "name": "projects/11060188023459959450/files/3d5ad12b76fd4931a7c29eb7e88979f9"
+          },
+          "title": "HomieNest Landing Page",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "2320",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2FiMDIwZWE5ZWUwNjQ1YWNiNzE5ZDBjZDlhZDI2NTU4EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/f97bfe553dac4be9b9b133a5278f5271"
+          },
+          "name": "projects/11060188023459959450/screens/f0a4319eb8664b069860f86986aacb5e",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidVWXAv9G6tQX5RAc6R6gm3teK7F8l_XonwjeL9qnuMJRxNwzf-Sn-_YyKJv-_OutCRyml_iyY45JDtBf3LwspYG-6yGi4BxsFdRqIQalNs_fGEspnGm9dL7XNa-lsNm33f2YXDCWxHMKEsPY3JICtojTeK8gMSBHMPiEzyiqxxvCOPuh360DbjS0Do6A7BeQBlcJZeL1xdwXXfgu_QqzDBa9qhzlm0htAtjWNKOVsDQdHcQGZKXzqV5OLmk",
+            "name": "projects/11060188023459959450/files/36153188043f498a8bd2368f9978f4bf"
+          },
+          "title": "Login & Sign Up",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "1768",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzIxNmU4OWU1NmQ2YzQwY2NiZTk2NDczMDI4NDE5YzFjEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/92c5918a7ece4469947c01d39886b221"
+          },
+          "name": "projects/11060188023459959450/screens/ab7f5d2745b046bb89843f368c539961",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidVeI9Oos35pkTOeh7zAlNn7WNatvp0XfKbA4RJH6IacFR2ZKqdJAefgOwPWgtU8C0LwcAeeJh1HRjm9xl-uyhF3XJst8rG5oRM48x6sfYb-rXjVenIyxRD-ckBoof7SpX-QUfNh6N8m8u81yO2-MRFoY4WOiYjRbOuQiX9m9rG_rdnFcUCKcIyrFt86D-NbJwAlxRPEz-q0JZ6pSJdUj5B6sQWZAeM5idFiJbVrsWveQJZlZ9GbBDlgSYk",
+            "name": "projects/11060188023459959450/files/a668dec3cee543a0b5f303006a699fd8"
+          },
+          "title": "Chat & Notifications",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "3232",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzRhMWQ3OTExYTExNTQyYTdhZDdmMzI3ZmE5N2JiNzk2EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/f0e93d5c388f453b960644e137c7d98a"
+          },
+          "name": "projects/11060188023459959450/screens/4c6897dd3d0143c5a36f0cf3b240b6b9",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidV9BsymxMp4bQleH4KLYJSInCtDRLJkI225GfTpz1H3D_r_xnvUsRwhXDBSMf6JebrAMvU6siA_pKlsrrLpMYjl3IORLEFDA2QROqhYfllOKw5Udi7eSInVmEVKNHIBLcob84icYePpxDweID1yr7IfVLDViRG2ym7eFPxv8iqZH3I625EH8FvB2I9QZArJF_z9hQBtA-5rm--GzIeq5miwXN8vpkZ0_sEkY05DgL7b5iF6VK_5b_dOXUI",
+            "name": "projects/11060188023459959450/files/fbda2a1775594798a5e7bb1f47eaee75"
+          },
+          "title": "Desktop Marketplace Feed",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "2808",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2E3MDEzMDc3Njk1YTQ5YTNiMzVhYjNmYTg4ZTk1OTkyEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/7589938218e84d519e1dad27d9e5cfb3"
+          },
+          "name": "projects/11060188023459959450/screens/8bf2e036df024a8fa055c9efa728df12",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidVck6ILL1X-ICH15hkDJgwmvXWAfLB4loS3cfBJAIP0CTMHxL9c7NFRbjSJB32XjcUlsCRGl-8hGAHAcmX2WsTwZ-urVfGSVEnJAQNj-oESGnlePT4nO6AWFERC1TD1_gj_wcK9Kgu0vf0E2i37wLSUeIOsJRCCYqFL6s6QeI21_0AUuQm_kj_7Z5mJmz1HQtoe_9rKvXdl8MhQ26JXatuVb_rVHD5qRtYUDOn0iqICp_a12Au6PatTui4E",
+            "name": "projects/11060188023459959450/files/5b3379b1b9df42a99ac6d16bb3e0a87f"
+          },
+          "title": "Neighborhood Explorer Guide",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "3872",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzM2MTIxNjdkZTY4ZjQxZDQ4MTVlZDczMjMzNDk3MWY5EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/58049f5fd55245a7ad79a98c69fbd486"
+          },
+          "name": "projects/11060188023459959450/screens/dac35fc462534af7a3fb1a11e86a34cd",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidUga-lbfwYzSgqacrj61eBoNeizFE36469AkLzUrUDvfx_qNRXE5nwkhRr1m7wFEI5WT_crDcZQBgvynRAFUzxB6l0noTl4M2vRH8vT2T4IjvtnDdkXOc09FD0NtqXUoKKz76BMVbGS4cIVPuGRlhAf_FILB4mHUn7aORV8iT87KKl8i2IschKVpUUMoQrZ9UUVYrzxXbV9m0o3QYOPTYFKQRl26e2uBDAEMBD4QzdAQbZsnjGZJNL1ZY66",
+            "name": "projects/11060188023459959450/files/32ce07c5cf444796b434fc2b4d312ecc"
+          },
+          "title": "Property Details View",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "1768",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzhlMGFjM2NjODZiNTRhYTRhMGI3ZGI1ODA4ZjRjNDliEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/940a30829ff9493587cddf3d6ab5e4f3"
+          },
+          "name": "projects/11060188023459959450/screens/4c01d1d2f13a4bfe8264f57d2d50e1ae",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidWSY6_btdvydKUiRfOGW0ni2pO9g6wxBWm7HLz5OQMLRQqXS-c5_F6HgS2tRWFPcyT_SoWdZ7AeW83OhO-CT8kNZrMIkYhDWhFiovzYL_1IkGNz0VJFSmzWFn3cRHNdNy72x7HImihYd1hQ5ItLTOuP6f9o-v9w_VSVOTr2kZ6fnEzo01WEDOaA92IxeiftGQxrrGw0Sv9y_oSqANil_NxwWE9FSgcqLXUgNHJxBcptXpZ63f62BdhJzjas",
+            "name": "projects/11060188023459959450/files/2feb455e018c447a984f94c885a4bfde"
+          },
+          "title": "Interactive Map Dashboard",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "3330",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzQ3Mzg4ODM5MTE1ZjQwODhiZTBhOWFiYWFmY2FkMzk3EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/49557074e4da465ab7fa4d3861110d27"
+          },
+          "name": "projects/11060188023459959450/screens/7079720416004c0faa824022a32334d1",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidVnNm90tbARQon6GUYlQYdd4oHkdgZ6HiAMJqPNj_bhphB5nhQia5fkmP5VPKhaOXpetemQLnKie1vhLzpGDj-YU55zbt7PhVukdAwcUhPkAlcTmuYtia9ZcHiVbqsCgRv7ESYyeh8OZuxg2OypP7l1IQ-kwBlEGa25EMRF3s_BOB3uMsKRI_dUksr2bWcvneXPyAA5bCUg1ROUOwLB-FpE36JR6SmjPlBv-Iut6wyK8cYPyVqeg0UFFYrs",
+            "name": "projects/11060188023459959450/files/172f2bcd7e4d48e7816918b6477c2233"
+          },
+          "title": "Neighborhood Explorer Guide",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "2770",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2M2N2EyZTlhMDM5ZDQyYzFiNmVkZmM5YThjNjIzMzQ2EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/56e1d0afefc54c4cbdb5d4751288dd34"
+          },
+          "name": "projects/11060188023459959450/screens/75cbce1fd7394679a9e666d57ea923d5",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidW1VFgOlRC1E7xP_F3cAH419CXaBkZPjEyrTp8SpRENoooTYeb5ihx-Thq0FHGREiMntaOZ1yNzwlbX9_SU1w_-aL0yp-ydAiHpY6z89ZAjb4H4UQubq9LdEZyKeB9g7BDt6InpJ9qlEeJ7GYJ4fD4chSeS50vzFQsJ1OyC89uD5LYli0HtRlyZqMSl7tV9tq7BE-hl-XlLDiCAIVGYfEoH2z0WC_VefQR9ZaOxRkUu1CA3dw3wAQIJGmhe",
+            "name": "projects/11060188023459959450/files/01fdfa3335014b7297e69c70250b82c4"
+          },
+          "title": "AI Price Predictor",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "1768",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2I5N2MyNmVmM2JmZTQ0YWJiNjM3N2NlM2ViYzcwNTlkEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/02168d2128aa4ae6847116f7a9564017"
+          },
+          "name": "projects/11060188023459959450/screens/4b1a532f36f04e14b8f9379417ffc56a",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidXbN2GHikBFXv9zCZyKpL6Mu1qSQ-pKDDnrSOLXluhVfHMndGiYj853DTy0nv8cAyrPAioi62HaLQAfz74eWudKX459j_2-jSwU5XCftyeCvb2pJ8VyX7XG6lUzNY2ebyGZJ9N3E4VJbN29V2CC6AVRuYbYIhE6ue4f1j1Itunckafpq2Vof6t1h64g8dRpTgFRWeuW0vExZ7e68dVzv-zOoisr5aO50NbTDShmdLzNvgZnvR9PmXezMc0",
+            "name": "projects/11060188023459959450/files/f6ec9c2faa96461ba2ecd553295bbf1f"
+          },
+          "title": "Login & Sign Up Screen",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "3628",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzZjNjIyZTY1YTg5ZDQyM2RiNmZiNDI2ZDE1ZmQ5N2MzEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/5dec260a3e444c3a977dc7b4f27f9bfc"
+          },
+          "name": "projects/11060188023459959450/screens/45fefb2324cc4c63ba7f8692cd94a632",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidV9vPUmn9_74rw2xJG5mf4g5k1_kGB1ydB2yUsnQzKuETvD6FQKf4BylWVmSQAV79zsvzHBb7C4Rq5Oh-JXiVQgqUDXV5XJTXhMxytG9IeHflz0Ec4z6ydBlGg_td7ljmZcJOaVCbyvb4o8sNbsD3IPkPN6mauaXfy9yjx2WS1DK8Ocde5x8TYgNMaWxZ0rHPOQ6HlNNmT_VzGQzC8cnnrW2GmU1ACgbtJF29QgY-HZsf5uV4kL0x6rijmz",
+            "name": "projects/11060188023459959450/files/87fdd39d6bc44c4db02e1fe74620429c"
+          },
+          "title": "HomieNest Landing Page",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "3136",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2I5YmQ0YjBkODE1YzQ2ZjFhZGU4OGJiNzFmYjBjYTA1EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/85de451477e342138406036bdf7440ca"
+          },
+          "name": "projects/11060188023459959450/screens/f83fddbb1fc84c3b8c494c3c23e6ebb9",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidXnBdwNrOZwGIfEha2Hh5ocFMYZYN2X90K8_5Kd4r7uvZuwbzjOKHULdF5VCqOG3z2_URjBR2b0RITRD6kRhffqkhpSgZ7dB6TO_BjX0kJWgNPPeyPJcGVPv9FdWM5LQvYmyw3UZtXh8Dh4EN8_fVz4IxyW1s2AiPIsuRWGRyM0xgZFLKcF-bQzXE5H0_grVnOrCVBNLaztWvVk30smkeYim_O0mJGdEWEPvDUjRu5VU6mVkgKGQxOQaTyG",
+            "name": "projects/11060188023459959450/files/4ee88e0d3352498aa903c93c713b48e9"
+          },
+          "title": "Affordability & EMI Planner",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "3038",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2Q0MTYzM2YzMDVlMzQyM2NhMzNjOGQyZWFkOGE0ZjRiEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/0184bd0ae0534fa19c7812c796bfb9cf"
+          },
+          "name": "projects/11060188023459959450/screens/0c347b25f7f64dd58e0b457c12a12fe3",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidXwuKFURTDMkgUX6w6L9WRt-lceT_P5Fdxi7VlipnYdl_97dWWwTzoYriQ-zitiQxDgV66q_WpGtCkIlvZ3vof8E1rwzU4y7TPhRdVmFNuvMcveCSFIy1RyPpI8ccl33VCbCgDGJ7c105ZlL-aFBzxMGPLJ5CplKkQkMn-fbtHXK0yWx-wwLk9HI1w7bysybO-KDHjIfP1pLrHwoEBRTnAy2_Ss9ZDVWGxiAY_xeHkrOrogpNTGvd0GhEve",
+            "name": "projects/11060188023459959450/files/15cb6a02df1043abbf9afdd5157809ae"
+          },
+          "title": "Price Prediction Results",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "1768",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzY1NGVlM2U1YzA0NzQwNTNhODYyMWM3ZjU5ZTYxNzc1EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/ca6a9da8941b4c1f8ca0109e048254ff"
+          },
+          "name": "projects/11060188023459959450/screens/da9d7062240b40059f195c530d983c59",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidXxpf2zJrq1OmQBSs7k1JYHzW6vm5CWMyI505zP3_BLstIaSorYxYL8_F-9EdAPgPzW__4LD9Z5lcmYxZofV_ie-WOESoaxGrxqm0uSykCNVtVwVStlwNt2yoemqjbsjr6J4B33Ip01ekhu-PCU35X-bpyDlijADn4RvOeDwUsr74xmBQyN0T98hN0NIyRqJUYP75Dp4s3VJpJ7eTf-txgRsKk0_d3y4f8UTybclQmIQUJ00RNO4x4l0ZcE",
+            "name": "projects/11060188023459959450/files/e833227e41a047bc8672c1474c341740"
+          },
+          "title": "Interactive Map Price Discovery",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "6522",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwNDAwZWMyNTRlYTQxMzhiZWJmYzEwMzRkYWJjNmI1EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/18491bf4bd644c84bff8799ccfaa66b7"
+          },
+          "name": "projects/11060188023459959450/screens/e0838290452c4a22ab4c48d6c3e51eb9",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidVCdq3XzRPkI-MwSeH-CPVqxPVrxWmDPhV3w8StlOqcc4Lelnxzn6n08aqRCMgY1NEUI9F8bbGMMKyrxtpP8LAy9weq4qoaMdYxym45SBlhsv-22OL4MoNoo7ZNRLfIrOwbnAlmrB7yNyvJkARkeqEbyquTyYqUb8-tGK0K54jg6EUsS9-Abb7bS9wyhfzoQh1kQAzMZPAToWD7PXpEchjof_z7XpVbDW3lS3Ak_sgMrMOoMaF3-f3secI",
+            "name": "projects/11060188023459959450/files/6e74adcd7da4427d83a7d2622bfbc306"
+          },
+          "title": "HomieNest Desktop Home",
+          "width": "882"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "2994",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzFlMGFkZjAzZGMzNTQ1M2RhZTIzZmRmNWMzZmY1MzM3EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/5a75bfa0e99745bc8b55677d7a3948c1"
+          },
+          "name": "projects/11060188023459959450/screens/0de317af606f4715b1d2ae1d6a779cf5",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidWh56BN5i8v1IenHR8dqb8u3W1gr1mbUVqFl6g1HDRc8kuqAL4AQdXq5BD1UN-jUdam0zwJadADnXUJIhgXmcV96_X1pXOcy3BQswtXJedDIjozAjHrP4YSbg29vdMpIY6gBVe5wY8RYWoppRKjZVdq3NCJ1Wz0KbGY7z6mo8rpM0xF6P_es4gr6WearJIEHKvDEO9ZSNXDTpxwPjEN2WMi3FSDeVtQYWemsWHz2FhTjnwLz58PjGnPbgI",
+            "name": "projects/11060188023459959450/files/82876257e1c241fda5b95ead28db4515"
+          },
+          "title": "Pro Investment Comparison Report",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "2844",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2U5YWE5YzE1OTc2YTQwMzA5ZWRmZGZiZjM5MmY5OGNiEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/0ec26982a17c44adb8f48589997c79c5"
+          },
+          "name": "projects/11060188023459959450/screens/e893a3565cbb4ec9b73b0b18c9f0436c",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidXBGzAs2CbA1BB-boxJDAv3a2WYGS4f7f8ap3eNvc22c0BrgvPdO1hqlVYquKEpv_rZn5b-sTyhZuQhu3ogib3Vnb599h2o_Zl2ewJEMuCI3XAnQHlVvNj6q9gCINOU1Uph8rmNx0VXBUcE2RSecwloEGXCAxkL4OBP3k88Vp37TzWQ1sjHWeSq9yeiohzauAJihXg5gwMwClbomflA-sV69m4FS9jZKSfWS5R2MGzjSHk_wFyJr9mhrvg",
+            "name": "projects/11060188023459959450/files/1af43583cc184406a2b5fbde11f03a60"
+          },
+          "title": "Legal & Compliance Center",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "2750",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzM5ZjgyMmViMTU4YzQ3OWE4ZmI2YTE3M2NmN2QxYTYxEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/7ae665674cf7487ca60bdc5cbf1766a2"
+          },
+          "name": "projects/11060188023459959450/screens/a5e084f72d874a9f9a7e0c57e11ff5c8",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidX52kOqeiPbD6f7K1hTUjK4Jp0bRfWhTCudAoI5gvu5kth6LPnDzKx-KjEOIMm3DbcygAGlPwrYsv30jeEVPkNV74fKYE9aQSjjx64sn4tP2tCJqFz0nY4vPuaGjxh0hQVzgqhI83e7k5R6jTXe2rlrf1_xKXoZh_pYtQn0ng2yMUGn3V3T0RLAw6U-Eyam7KV0QmDTCq_65fnr6wY3ja2mEfPeERrK6a5e1sjgS5BP2FTObzu1m4Yi4D1l",
+            "name": "projects/11060188023459959450/files/8e0f2b0b4fda4e53a90f20956962058e"
+          },
+          "title": "House Predictor Variant 2",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "3558",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzE0NzViNzkzZjU2MTRlZWNiOWEyYTI3NWFmN2NmYzJkEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/a9e30d4137c043d5bba7fac06a428121"
+          },
+          "name": "projects/11060188023459959450/screens/1abcd3f700d94549aeaf3b69aa1b0649",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidVst5sncOWj9NWWOvYPMGVI74poa0robm1CfXdlC1MmXfa41-foX5cNRchbo6u_XosQfAx7YAEDoRkJwak2Cmce7hcTmiBxIWIL7wNfDAhzjjcB_b7KDqgmpWfND4MkuDITesOwfOplYp1NjmNtu9uXIXpBbH5jVFhwbroJ253RlCBwm7vyp3e2AfEQvwc8H86Uw0XafM6OB1w6oA5NJTHOw7AvkiggAk4WVl56VxiwBkJWqnvkfIqScIQ",
+            "name": "projects/11060188023459959450/files/689f428aff1f44099cdec5102fb298c6"
+          },
+          "title": "Marketplace Listings Feed",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "1768",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2RkYzkyOGI5MDk5ZjQ3YTNiMGE5NDc5NzExNTA4YTM1EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/31dafa5347434f86bd227e7e56cecb09"
+          },
+          "name": "projects/11060188023459959450/screens/def34d2151f744fb9914d9e49ce3536f",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidU1GtsnetzRCAIhWQFXKi9F0Y3CIUJk8weA5pVwzFxSdmx3ff-BXGE-QJDm38H3yfNkMnoG3t5za9nUqWrTmQ4pciLzr09y1eebmM-zYmCrGce28bZ4O_4VElZ4zNrgbZRUHeVMxdNPI8igHGzmo6BgaaUPIAOD3VE7KXJLsh-sjSgj0sZOZiG6t_Hcl41gRfvsaVsEJZMSBDRw75fTRGY709XIUVp6F_WPAbq8fsrqdTI1iv4ZlOjUXZnC",
+            "name": "projects/11060188023459959450/files/881f4b2fcdbe48b79388d05fd0c373bc"
+          },
+          "title": "Animated HomieNest Auth Experience",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "1968",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAxZGU2ZThmOWUwMDQ1MGE4MGIxNmZlMTMxOTU2YzgyEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/546274d095644ad699b97b53f425e385"
+          },
+          "name": "projects/11060188023459959450/screens/157534532866425498e25e8f0f3d7f50",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidXSd907qwO0Ub9GDQCLD8j4Tmu8FffQk42qYUGxaeW1U7rN5TY8qSyHaFJxlJ7GgB8AibR_9-4LOxYwnJkREo5DJ37GJj7JWytz9BBueZ7zCXzoCezVRTgwnwx2GrIJfFWBXg6F7PKgYCAnHwke0l7-bNYkS4YwHLl557Jp0csDIy7VQdT2AK3A2lnnJvh-POQHKmoLgt2wVXVtrQ3kNbIc5cOnyyB0qp-cWIYIvzuDRImgVdHmmUJ0Xwg",
+            "name": "projects/11060188023459959450/files/8d670cd830f047f59e51d4b4690bc85d"
+          },
+          "title": "User Activity Dashboard",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "1768",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzU5N2E5ZTk5NTdhYzRkZWM5NjU3M2YyMWFjZDAzMmMzEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/f0c798da3aa247fe9dae696dad7eb1bb"
+          },
+          "name": "projects/11060188023459959450/screens/b64123fc617b45918d10a9fc53605cd1",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidWPp2TmXdsDEzuccH6uLX6E0jXjOvu-m8v_f3dvhTd8rVEYgk5lgmaCkjXhKSBIXG1vJEkmAQV4Rxjn6SUHR8yf1HVUwfXkSO-WWGr0Ihc2ijQ7UIJvEtjvHstDdSB1cVoQM8iJXl4WcV72gsiAwz_EqocA2o8Y3Sgqsju3pzAq1XkjLMnszx9JU9X-D8bC5Mpv2lMT81qqU6_9Y4hnqHpHjBfLdNbfRu343Uj27lSzNEeMlKDlBZu1c7f0",
+            "name": "projects/11060188023459959450/files/852b88bb1b374eed8f93641676a426fe"
+          },
+          "title": "User Activity Dashboard",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "1768",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzgxMzdmNDJkMDExMjQ0OWZhMjk0ZGEyYzgyNGU4ZDJjEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/335471cda5de45c1adc0345705757db1"
+          },
+          "name": "projects/11060188023459959450/screens/5e39b457792a41168893a73320800fb6",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidX-4elrsasb2M_DN8ix3tNHkt6o_xnkt8mFT-H5xA_d86jDlplc9Wnor8UwUxepLzpn8GTG4woHbT8XNp6nPGn7YX0OkzVXBWWMuPxqPQpCqW65X30BUQv4muo_D3Nj4vk8tHmTfLTmROj7StFTCyAKxzOCBFVaJFxTFAjEyRnvHI21pRxEBLmH3H-EdGzPmWrwCURy56W5QWC1w6oRbO7ZgiQqJRMuXHMqHQDTZo4yaaTu8JQW3pYmXri2",
+            "name": "projects/11060188023459959450/files/d57520c2a1e94665b5894bc40acd1f1c"
+          },
+          "title": "Desktop Map Dashboard",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "6032",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzdlYmM2ZjZkMTNjYTQ4MzZiMTM2NTEzNjA3ODZkMTFmEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/f2cdf259458a4662a8e949932a6bab2d"
+          },
+          "name": "projects/11060188023459959450/screens/55a95236f97e4c5090f3ae07d745bb91",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidXldYyiUunQm2U5RqxABMZ4qRPbzAtUqwtWQ7k78aQaP0D4ixWaqzUQYcntt0lVolbOCzTxUsTcJ3WxhVBdeIW-OMG2xb6zRnOmGW8jHkGSROv4fnafg23m7vtcSlD4lH9xzIUaNOA05AB0p50Rde14ZdZS0Pjh63c46_hgiEc45KNg6cv1jmHx_Hz8WjDMBlZnKNYRHtS4ZfTclX119Rr99UNC_BZfbXXoiVl_5fv1doMw7RX4y2VW4B0_",
+            "name": "projects/11060188023459959450/files/8aad8beda41c419ba26df67f7871ea8d"
+          },
+          "title": "HomieNest Landing Page",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "4334",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzc3YTRhMDc0YWEzOTRmZTY4ZDY4ZTk2ZWE0NzE0NDIwEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/1d5b1f425ff54faa98b070cda27801c1"
+          },
+          "name": "projects/11060188023459959450/screens/9b930fa93f6146719532f4836794fb97",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidXmjJmhUFeh0nhM-lEyUjDEi3lUcPCgAOECRxfqPgJ0uZhzvYN_SRmYNzKxpEJM2WQjxqaLDuFLLaG0PujJPKphBHOQiul68f3fPYaplhNjifHGGsVA9cqRRvPmmuXSlrAm64mrg6og3FYrDuy1j2kgAONyBup7ksHJPpK2VWB4S4cLvQRahKRypOOC4gl2Pq-yeVeoBmxZmEinsP91UebUR2iSXu2sc8tGbUM-Qeux_qHl_NO_zA84VVKQ",
+            "name": "projects/11060188023459959450/files/ad36d23bf5194d8591a24ab7f5110079"
+          },
+          "title": "HomieNest Landing Page",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "1768",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzQ4N2MyZTYzMDVmYzRhMDBhNTczNTM4NjhmZDlhMDVhEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/10c1ca2254f44981a9ed5eed5041bf50"
+          },
+          "name": "projects/11060188023459959450/screens/550a1699e7df479e85202b879f5a2e1a",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidVFT4SLT9kjNS4zO4Knw7mkO8NIraqP5n14MU9q7oOU-YcZlAg-6yjWt56f2pgoLXLXqGH7luNfVzVZxo3orPB-4iikFErbg-WL8HVAVRrTG48WteXG3wFEoiRxuHdJowAwlJHORdTRCIu5WzufUCsW2sSrvl-rW27EwnrznBZsuMJAqSkLD3OqycUuWVR-wXeU5I_2Hd6W_mWfkw8bIsytND5kso6q9hwL5_wfOGESA6GHLlpnxc95hIFB",
+            "name": "projects/11060188023459959450/files/c1a33fb8b9c840dfbe08201e6b871260"
+          },
+          "title": "Desktop Map Dashboard",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "2374",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzRiNWY1NGE0NjMzMTQxYmQ5NDU5ZTRjYzg4YWE2ZmU0EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/7c9bd66e5f334def8b76cc7a94a73a21"
+          },
+          "name": "projects/11060188023459959450/screens/b47845d738aa4504b5c73c7db40aefe1",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidWcRHj7lSOVWvhD61BzzIS1F3LuJ6W1sUXefymxvCzYIFZ4AsZKqUc1dxVZI7F9SruHta0G9_D-OHowTLAxXyiVTiUcUOiL1MLEIPISDVFwM-sDAEHWL5QHgEe7t9mYJKBOrWIS65H4CotQB4uqo7gAVP4M8NKB6EZrWER2-8ZCiP2yPvx1sovYgiHBPqB-T66PNhw4fXbKh8qyLSZXn5ReiZFk0BymqXH4MOYS390ozdmbZLtVCKJNSlZQ",
+            "name": "projects/11060188023459959450/files/82fc20b95d1e4fd6bdf01d94f80b3731"
+          },
+          "title": "New Launches & Projects",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "2438",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2Q1Y2YyZWYxZDE3MTQ4ZjY5ZTFmM2FjZjhjMzhlZDc0EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/c7bf398c997047b2b98b5390d56960c0"
+          },
+          "name": "projects/11060188023459959450/screens/1cb982df12a6474fa59179eb7311f5c1",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidW8_Zkb8LN7GxV5TqPEGfiOsyCR4Cvnl_goYm2eEQ-IsdU09FZEKREAorWrcvWRZ64bOdqvrHpKhCPd3hSDJ7RZQ3fxGUiQ4BC-OtEHf3SdqYWukksUUaE6mWlEPYY-cInhnK_RYcDDV2iq_l-gur3zYlOfebPztqfN2ksm6cLf7oLQS4XJ2gVPrSMir0-q5mWzmzUMe_AJGQgIM9WpWrLEH39Zpm2bgG3U86mW26nEHAfeBifDBVLrNmQR",
+            "name": "projects/11060188023459959450/files/94afe31039d54e82b8ff5dcbeace0161"
+          },
+          "title": "AI Price Predictor",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "4370",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzBkZDZhZDM5ODIyZTRhNGY4OGFkYzBlNTA2ODMxNjUwEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/25495624070746faab532772f40162fc"
+          },
+          "name": "projects/11060188023459959450/screens/fd80b6a4c60d46e3a1e57f19a3a69187",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidXA0AT4BiYCs2HdoDPBmUXWoVKOfN8ItfpNTuN5eyZ0hXjjyI0dK2XkZrCPXrMgT2nSJSp2GooAA2T0qsjh-U1JGAbERKBLx-cAoyTjlt8mGxiFj4PyiFLdix5n22NSIlLP0QEthxnHw-3gd54hy7wObH-yHBjZgXRNvvfTieOotLuHBGNH1621e0eBv5EYUKtvKHl0vx5YEoFxlS_FazfYP0yAZ7mbkr7tRjaLeIP7bk4Re-SE4tyYhfdQ",
+            "name": "projects/11060188023459959450/files/5309856acb3a424b9124cf3e1a86d0a4"
+          },
+          "title": "Property Details View",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "3332",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzQyOWJkNTVhODQxMzRlMDViZDNmOGJmYzA2YzVjOWJkEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/a8175ac73a474fd69ab059e4b0c5c6c5"
+          },
+          "name": "projects/11060188023459959450/screens/7a0aac8ea97246a68d40e8c125a117fb",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidXQwLq6Rj3vmBCPWVgtsc_KIwQONhuEz1GubF6Oyqjz4IlwcojhM0cscMYG0WsyfTCFkzbhwxzZSnVjyETBa8_Met1kGiow4dL5piNYfIFKUNGwKIo2TSPrPi5p3Q8GP7nPCwZnaUHv9eOkWhUJORjS6EgjPFTihIsC7JVRtLNrYNZ0lUF8QG1EZcJ3-QrGy0ctpPfHpVG-JoyCOrZ94CH8V3T7Zo4PGVL_cKPcON4pkDHbRFD5oQT2QnH6",
+            "name": "projects/11060188023459959450/files/771977dc08d14cb383d4ca33bfc640d2"
+          },
+          "title": "New Launches & Projects",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "4120",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzJiNjU2ZDBkMTkzZTQ3ODc5NWFjMTBkYjg5ZDg4MWRkEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/ffbfe6465bc64b91aab32bf54b078e9d"
+          },
+          "name": "projects/11060188023459959450/screens/120166a99d014aad912676fa101dc0f6",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidVOqqSzklXFy-DMpZ0sceRcbB4yezY_qCP4DERevWumnu4j_6OjH9sw_GL-rupVrK3URSSurBDxvDmVQdRXlRBzg1gk9tD27eFgk_c8IlY28wP52BgA8qKrr9XWWjCPTLHnw2IZVuearZzIKi55RVaoHGP-VHubkxOiXaC6fHAH5c78GOFnliShTXjGMG_bbs5ij_r2u5hvFGW1nIOE0vk-25B0AOW7JL-Vg2NGmfW_Q8eeq8evJLAOMPE",
+            "name": "projects/11060188023459959450/files/ce334332b49c4ed0afd8d755a7e247ba"
+          },
+          "title": "Property Details & Contact",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "1768",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2Q2YjNmMjQ1OTBkNjRhZTI5M2RjZWY0M2Y3ZDIwYmE2EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/842633e966e149a0b979b579ba11dcdf"
+          },
+          "name": "projects/11060188023459959450/screens/dbbe250f00f94074a07fb235a639fdd9",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidVN5gDxJclNKpUSsh8EgQMD81im36dkU4ADLrGFqZgtQscbQxHJa5X6fGHnM1bvw-aSXgfBjaveqwEzSEomp0c0r-JS70O1VhVo42Zppj0_wbDTb5uoRNZLYXspD5apkhPith0R2nTahFJfhFOlm-kRlGtUkVmsuP2da60ZK8-BQ_4rLfARZJh0NiHUAxrns9fgCKca5o_oRUHAsU0TKtVul6GFUgeGjO6YPMc4OVoS_wqWAzsed8b0XxJ9",
+            "name": "projects/11060188023459959450/files/0050beb295db401b86ab96a3703c1c62"
+          },
+          "title": "AI Real Estate Assistant",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "3878",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzYxODJjOTMyZmEzZTQyZjhiZTBmNjQ2ZjlhNzAyYWJhEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/c94f7270bc92440fb79cfe0e378eae4e"
+          },
+          "name": "projects/11060188023459959450/screens/6bb67b37b9e34067a6b7a3a3a4ccda35",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidXNp_Sx5jEy-Bv-scPphRk4MjICBumT8Hr4agjdwJYbwy4J7z1NwYoqEZzzCjycwgaGpcwqCB-5OmIKhwmUsLSVW7-HDjIIUjA8Q1BEmJjLv5UfFKYeQKdZuJfHjICGPHT27Sz3hKk6aARVMW5ib3n6HDkVQk-f7t--WZ226qPcJ5iX1awfRcsku1eLFN3X_LMhaQ7olIKoWeXEaY3NnR-OiTE12S20B8TKLINVpZFwQV0g9T3cuxAJUzzj",
+            "name": "projects/11060188023459959450/files/c7d8190aa4a6457480bf7848843988f9"
+          },
+          "title": "Marketplace Listings Feed",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "1768",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzk1YTc0ZjE5MDgxYzRmNmY5ODI5NDYwMmRkMGZkZWZmEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/1538338456254848b7372176c6c1e41e"
+          },
+          "name": "projects/11060188023459959450/screens/f0c1cdb8865649e49fa94de854900357",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidXVHDsbv3wKlhkJVETWOY5bVQagDSYqUPSMDI3lKMoFeK6D6Xvy6xFhGbzVN8OzS8ferjwGFZ7bKjANr6Csv-ehio_e1vP5UYW7s9uyTVu3SRl0qshRopHqsovcvBeduX-TE2KJRbNhKPjiHzBq5Hb1PE_9BWp2KVA_spw5J_3rQrc7YpMzST00fBst3Ja162-xbVl406XcYHG1mYCTFDFVt7-8Oy6vpxHqYJ4UZos2LNV-S7KpJhnLyjw4",
+            "name": "projects/11060188023459959450/files/f859bb106f484f0bbe16595c778e994a"
+          },
+          "title": "AI Real Estate Assistant",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "1768",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2IzMDA4YjYzNjEyMjRkYzc4MjU2ZWU2MzM5ZDk1NDZlEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/aef23f99d6c7458e91189b71c10fa8e6"
+          },
+          "name": "projects/11060188023459959450/screens/f24d2ad4ac444077bbeeae0f571184f7",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidXeV6hZDBTJvRNSBUYEoKx7qfLinaYU_KQ7pqKAQarTcNg4rZzBl6umoWhaSfjA5OaEw-ixdmY05Ll9d_s5sr2NgVhJYsadPD1qE48YLRgdmvIKO6cB0FR4GgoTK8xgxQgbkIOvWKmVYMF5vWqf2MGH6Y5l0J0XfQCbMmrVZ_O_yIjBKmw-D6JEo4IRjwh8TLYcLE4h-8n9Xa6yelPnT95K_A4Iwey0F-MITI_nXdP2EwJ0J4nAcfmaixYo",
+            "name": "projects/11060188023459959450/files/241262961025404c80ab02c1809356c4"
+          },
+          "title": "AI Real Estate Assistant",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "2746",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2FjYWM1YmI5ZjM2YjQ1N2NhZWVlMTgyNTU3ZWI0YmYwEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/2df2b25dd1fe4914ae7fb1be55cd72a8"
+          },
+          "name": "projects/11060188023459959450/screens/88ecb201f2f34622a787a375c7cc562a",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidV_79dq6RRHnICWwS-iI6ex6dMZUq_nWJFICLQBetlANYFkxKQ2hWBdjr2a3eMluOSAS11TWnXF_IUbRPaT4OWcVhgn6rPmVQ_hPm7KgWXvwKpwUaMvW1DfynTi6Sq1kNUTo680jPGc3KGQjohQWYSwX55itvzGgqBKl63EfmBYeADq40UQVN3bs-T7A_MUqDKLu1gSreW_ZHScVYWnooBXgbQVKlZdMkRLiOIRVhwtpjaIwVkTk-a7Qtm7",
+            "name": "projects/11060188023459959450/files/c52178ea94dd4efeaff689a79827af55"
+          },
+          "title": "Interactive Map Dashboard",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "2354",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzgyMGJjM2E2M2ZmZjQ5YjRiZDgyZTQwNDBiYTU4NWUwEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/763f5aed6a3c46b49db774d598ce6a57"
+          },
+          "name": "projects/11060188023459959450/screens/0ed492f5c88c4d5492c4a9338a380581",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidWphZAF3KqP3fS7BUlXC5ou79gq7fsJH72ywdcugZ8VMr748mLs3pCyVN-EA9860cp_iihRNsIJnwpdhulGO0xnhiPONx5u7vQRTNRQrvwycAHQycEbOU69WYNRVcttUtUr1Rv8IYR45BixCRBzPVVFGZ2td_vG_Sge5Moi6DTW1lhkoW0phB9a3Ztt9_BaGTaHob4adYG7UbBXClRd04JqMWlm6IFrai_GCViMS6N8NkQLkhE3BT0IndzF",
+            "name": "projects/11060188023459959450/files/b7faef767b8945148bf437b97cd2996e"
+          },
+          "title": "Property Risk & Liquidity Analysis",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "3518",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2JjYjc3NmFkOGViMjQxNmQ4ZThkY2RiN2MxY2VjODBhEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/5713312ae2244de88195229c4f2259ee"
+          },
+          "name": "projects/11060188023459959450/screens/5f4b9ce6213e439e83df80b666eff34d",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidX5ncAryfBm6CmETPtwGVVLgOKqvgvIcGe5vnODbmOV7xEOlQMuY2du8Z5w9raUV8uTT-3NF6CWMkuoNuPFraM95Qx5DDztaxcLHIgiENQXwFpZuNgzKtX3tYkT152TiS4MFIcVoc_fIRIO4PlGa79MPLiuJnj8jmo_Tpg27j9Bc1333u_r5E12Nx5SNsMUdiLA8s5vsUMO8Tyh8lHy9DxSl_IVePcqKK3qNZyNc_I8vlwfnAf3OIf-_iQ",
+            "name": "projects/11060188023459959450/files/4c92fed4672a426991efa26ac86fcfdf"
+          },
+          "title": "List Your Property",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "2288",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzc0OTgwMTA4MGRhYjQxOGY4ZTc1NmQ1YTcyMTY3NzZhEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/3f6f397ceed14ed0bcaa8ea92eeede70"
+          },
+          "name": "projects/11060188023459959450/screens/a2f37ce5e50d4f048ba050b83ef3ef8c",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidXJIuUC85HEK2GFOZC9OLhfL_r-eUb8QIkHtPyiTjSRJPUWnOwc1j5BbrqwkyMJiPCh8MTruP7-MZl1VIlTznnflw1uYTLrvlUYQ_vaaSt3mDTjLYHkFPBI_pImAr6OhaSmp3d94jmlsX6TUDBXLTN_NClFgWImkTGKtgnsMeW8ToafDk3zbDdnK0q-N3b0tYbCEPgizBuMGT52iKcjq4Xff6xkNlJIAGaN88QAySaiXDWRUR7o9Z8EySTC",
+            "name": "projects/11060188023459959450/files/31f3cd9970a24bd980b6633f84e1eaf7"
+          },
+          "title": "House Predictor Variant 1",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "2284",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzFjMmUyOWI2YzUyZTRkNzJhZTkxZmRjZDcyYWQwOWViEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/d0e02118ee3c49429462f9bad8c31b78"
+          },
+          "name": "projects/11060188023459959450/screens/199c722ba50a4199841a6da80bcbb76f",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidUp0Plot4onLk_xz4vFk55kFh7kkVMKc1p0SpaHFDGzecOg4boatrU4sDdto-zFaH3sebcCcmHkzUnBVMkCjCrFjvRIN3HaYb4Wx2XJfTP4g5QUG4t6bNOrWt4SUl2w43KgndM3VCwfL8XVpA-kt9teoE-QXI2x_aYe1jmPRU_Ou19l8oPcAGN0OIDchNX3NqavL5CGRBYczjYXbuzuLdPmGN2dWkNL2wZTWxcGvKFj925gbsL3vBDMSyNJ",
+            "name": "projects/11060188023459959450/files/bc5355fbd0854e18be58fbb69beb85db"
+          },
+          "title": "Login & Sign Up",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "2934",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzg1YjJjMzMxMThlYjQ3Zjg4ODdhMmE4ZmVmZTYwMGJhEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/178ad88f5e8e4cb7a7feb8d51a20b89e"
+          },
+          "name": "projects/11060188023459959450/screens/650335e0ff3943d697fc4cd7e9d1c353",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidUvT0O2RU5E1qG4Rrvp7R113Va_d_Z-b7iN-TijjnuTxrvcgJHI-A_CnQkll9JKnVXx9Jr44apdDnG3QmB-X11KIL_mxg8K_6b8btIRkaXBdv-ewnBT7RQ1ZEEd85j2nYcffZdb3zKZR5EcffAlwsYNpkDfblSF2OC-q4G7uy-EqxIX-Z6NBPUQ1d0YJObjSAx7mN9MEjzQFbCIJ_xn-E1kY5MlaHEPz-t_g21I4wKCVD9IdAnRuKafYSo6",
+            "name": "projects/11060188023459959450/files/5f72bec32ad347ecb52f3b2a6bb68b61"
+          },
+          "title": "Advanced Market Analytics",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "2082",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2RlNTgxOWU0ODQ4MTQwZmY5ZGJmMDg1MDliY2YyMjg3EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/f726fe7ebe894342936931692aaed1ed"
+          },
+          "name": "projects/11060188023459959450/screens/3ac600bc1c614880939538aea6ffaf57",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidUqaAH8Sip1GwyBX15rRjTau2kJ7nYb3xJWYOMKqbZ-a74dRvYA6SESCIkmWtIyqYChTxG7QVmb2j4dKcfzmwpihC2WKgOI70GjNuXW0dxivNxnd0Ji-x7vJY5vvbLbszy0msgVBTClpWrl-BBLnD7rLJObMDMY2LKJlG2kJC-plu1SobYt3D1c4GlOdoZcOb18Hf6ubdpMeQ31cGhrWb_CgxAFHeELNTBVnkt95-xpaVG1oX7HhDo9mUw",
+            "name": "projects/11060188023459959450/files/4e18abcdc70f43d38521ec72f15947ec"
+          },
+          "title": "List Your Property Flow",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "3350",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzMxMDI3M2I5NGMxODQ4Yjc5MTVmYTZlNmJiY2Q0MGYzEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/d3eb3559446640fbb1504a3ca9f0ce90"
+          },
+          "name": "projects/11060188023459959450/screens/2f2d162ae7ca4980960e502140536557",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidVIfcsG7aegeURxT2UJF2q6S8zZR75Uja6WxYxAzYS_8kJ7x6igsD3aMhWy9Md7k-ai8HRZqo1cCFl0aSY0DhOaJ7QKydTvJSQkCtIF9r7eXnR3_BtmAFv78LXzlS0Xa7ewqLepgbegvwTxhUqOQpDk33VxACo41SNaEC-w-5vBEETfpxtjfnXe7WGC8hrIZTxugdVnpZFXNIgN_bCwoVYMkT-X1vmNCcWy4v99pxepHYAxD_BAffvwOn7e",
+            "name": "projects/11060188023459959450/files/042b06bba0fa482bad1eb4c930554042"
+          },
+          "title": "Real Estate Listings Feed",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "2258",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzcxYmFmMWQyZDZkNTQ2ZmM5NTM1NmYwNzgyMDZlZGU2EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/60ac7430309f4a0e8133a753dcfa0196"
+          },
+          "name": "projects/11060188023459959450/screens/9ab8e7bb6cc349469dea8f2fc156167c",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidUOtyElxRyDlIWVdYpJRbWuyUF8kPkwye39l1qPYgNYDKRo_HV9rOGU8UO270-rwmO-leyTCnK3tDgrHaaENsY3ZQKTHuQk49uQnke7fYTvLCJUhIzsxGmWHLIfbnXdy6WVuVZRDkqEsR9TGsNTgUHtq0KXvf3ern5zOcqB586XRGSIbNnFXHdWHCX6kOesE9MghFYNoNB37Dj6EnloQwAX6D8N8Ljgjqe8hgasoSPItTsQgteeKDWpqHE",
+            "name": "projects/11060188023459959450/files/edfe4b17b7ff48d8ad99e9dc629bae88"
+          },
+          "title": "AI Price Forecast Dashboard",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "3114",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzMwYzA4MDgzM2QyNzRkN2I4MTM5MmZjZWUzYmY3ZTk2EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/b84344d279df416e81ecf85f3b8cc092"
+          },
+          "name": "projects/11060188023459959450/screens/d3d7d380e2774bccaf8bef7c02bcee13",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidUiGjcrRTK3w-ZC4LDFis5UGqa4Eq_WfaD1V379IL6oV1lLlxLzkWvp8QRc3LcCv5KHz3Ir8iIYk2ZeoKpZf4jpriBj-F__xy10l0MDysEAWIGPjjGPc776Fno6dl147fBRQVQKmuF0vUPJNlM2Bfrh82wmjHxpv4fBqnzZUlxTnyNTsr42J_lMS06mQ1PWfSv1CMlRdr8lWYerE4OLvKwGTsehMl4rptRyjRmEc7xG37DpQaAmipCjFEwj",
+            "name": "projects/11060188023459959450/files/d244e6645042452099b060dcc3993784"
+          },
+          "title": "Legal & Compliance Center",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "3406",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzk4MWVkYzA5OTVlYjRhMjM5YTZhNDUwYzk2N2QxNmU4EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/e23476ae2c4f4fa5945f250fabd6681c"
+          },
+          "name": "projects/11060188023459959450/screens/fa5c9bac29654669a0b2446c9a122e68",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidWLw4wexNsfm8YIlzfJaR2WkP2AV-CkeKxRVuEM4zKCWaoa0VpvLUpiQ9xCtebe6FiTkI1Od3rk9uE0hCR4EtPNJ75-mbXMgd8gy50uyhTbXiBYgamSail4TADXb7cMirOZZ1opZVkHGNqfb1_DTtve_vU3xfOU0r8EozxWx3DyBoiacYLASx7U85uMhUX5NtQZnKKGySeM1F0VLbLkLkO3Qh0_yY96G8368kHKavI1gj7pM6IGNaj9K-nq",
+            "name": "projects/11060188023459959450/files/c5e6129e0b034339acc49b46ce73a9d3"
+          },
+          "title": "How It Works & Footer",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "2276",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwYTdhZGMyMTYxMDQ5MjdhMzkzNWRkOTMyOGMyZjU5EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/a398c50cf36b4481b337fbe0f55df13c"
+          },
+          "name": "projects/11060188023459959450/screens/aa86f5d61c8c4bde99bbc5bf260672ba",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidWo5xIZj8ObopCaXP2ogpLXEnI9FJv3ZdPSLitXyEre8nKUXhMJTIbr2A41jdEf3hoO5oZgdduu_uuycwK6UlKr-sX07wlu7rgJZ7VKNsCkFJ5uy69FA0wrvaXvdSH3zgeq6OADFvDnPOdzncxeYFPULlaC4DY7fbLeJwu4SZxRGX7cjWfJNRtnVvYsKm-OiRLlWp5NIpn9b6--3x46ISyg_oWIPmq1d9Fida89l7POCJBayao9nOB_n4o",
+            "name": "projects/11060188023459959450/files/d5cd6727bb2c42ffbc6e514beb25c7c9"
+          },
+          "title": "List Your Property Flow",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "3486",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzY4MWM2MTE0Nzk5MDQyNWE4NWFhOGJhNWMxOTk5YTg4EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/94503ade29dd410a8c81ffa54f5a3b75"
+          },
+          "name": "projects/11060188023459959450/screens/f939c2b1cdb845028eb065687de05822",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidUGTinN7NWi6G9Hz7iFhifGUDmA_GkAQ9paFfvcd7xz8MbmDR-KsbzR_k2WBF5GwMLzXNwTkYZ6x85KkvJfE-Omc3KWdjcF-rNIUX6tyDVXZX5Dx17CBBIgFaVLo3Nzw8fOPYnt3OfimvvEpTriUl9w6uVcJVeXYZMiOs6bN7JYblL88r-Jp5VWtdjTE2U2OiiLHVwCQjaYRkXl-vkGeqoU1ohlTtZ2A9RPMNlo1QzLrVDigXtoQOb-aLo",
+            "name": "projects/11060188023459959450/files/9ef0924925614945ae79ec91fcd9e03d"
+          },
+          "title": "Marketplace Listings Feed",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "2544",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzU3Nzc5NmIzZDBhNzRjYTQ5Y2NkOWI1OWRiOGRmNjhmEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/f13fed0a4e21472499f675af5335df8b"
+          },
+          "name": "projects/11060188023459959450/screens/e4ee6dd1aa574cd4ad7ab86d5635279f",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidUDtdzT-cBHeQ0qVedCl9yUG9V9_90otbDbrPAFyC93G9BIuf95uE8FGQa5-VFSSfO6d3BN7dZNT40OHZkA0F_FhasXDRujw3LapGG2GSgi9kcbWQByepHXQ98k8wL2vp5unVNLVM6-6hH-R7D_wKFYXVnpRfNwmuGjIt-M7uMRTL5GcJWnG-A6EZzIZuNaFdcX0C9RpfWM6gmbB1kT5ObpKstVe_U8uQxw_yBWscmOhwXBgI1OQC17pOjW",
+            "name": "projects/11060188023459959450/files/821e45c6e9b647cf9ab5ae1011322270"
+          },
+          "title": "Home & Prediction Form",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "1768",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzI1ZGI2MmU2ODYwODQxZjdhMjNlNzRkZDZlZWMwZWI3EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/886fa189603a438599b136b8be018f27"
+          },
+          "name": "projects/11060188023459959450/screens/12ec6975606c4008ba0f1126549e5f6a",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidWdLr4bM9HmtdEdoNCObz-4qggTXkcGvHL5ws-4Dw0b2duDFlm96tHruUTrlzjgm70_3It6zurdHrWX4EgwJh-lDAHlos-0a2qzKSy9WqKpdozbkgyiT0anpDBC-7b3xFjFs0I9530J6O-gZ5KikWT_w9KJxnpM2X3OoDOF5TFa53-rybA8L1sfdyWRh9hzfTNZjcMVLXq_feBcfmD21OeQKOTnzOMo1tyoImWxmw4pIXdEilh0u5y3Ixff",
+            "name": "projects/11060188023459959450/files/2122b1c03a6f436b956c382ddf19d918"
+          },
+          "title": "Desktop Map Dashboard",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "3490",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzkxYWY4NWM0MjAzZDQ3YWVhYzZiNzI3ZDU3Y2EwYTg0EgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/7f5263994b0c4834a3a565fe581cac5e"
+          },
+          "name": "projects/11060188023459959450/screens/9b6c27898f0641ae9cbf70ce4257ebb3",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidW1sMOsEIzci4Yo6BoyAXkyNkiQ2yAgOLJGEILcLPVcgFBuezWsdwS6YlepeprLiy3vGQmtayiKxnvT0rLCFFXk_c62LiPpapXd-aPo06JukKu6894kdYXlCgWuspPGsOc17V6QG6xJe7KVgmBVdyFLL-2s_0sZ62NLPqYp3Gk1AhpvxpVsDuVkCgzY9F-lfy_nESLhsN-cNQ8davm6Iq7Xmb4fpXsRgCj3eCKkwKridIRhvie1HHohox0",
+            "name": "projects/11060188023459959450/files/43a86960cf064347b3ddfc1231ca3ecd"
+          },
+          "title": "Desktop AI Prediction Result",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "1768",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzBiYzE4MWRhMmZmODQwNmViNmZiYjliM2JlMjliNTIzEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/291dc3062bc34fec941d46005cdd1f2d"
+          },
+          "name": "projects/11060188023459959450/screens/1eb2cb5558994b6a93698f5a366170f6",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidV2iQYtRPQN2NrlIJL_5PRwuOGqlKK2GW6pjysPQmpCww-cOMmlDCAu0usPCyj8i5SFC-q-fIjHei_DzaCBxP_pIhrAsC8-Bt7AFlP6Fym1mOqqMV_-aL6miUbNyVUhLVP17dQoGF_3oijHhNrAxU7OpEQOnYHzyOM_Kz2hXcw_NE3vfoSlN8N30xSQnotIGXgUcxxduxvELyqoPiuOweERrDlcrqU9eGseBde4_68gYheMOb5rtdAaM-mg",
+            "name": "projects/11060188023459959450/files/dd1e79c186da42c1afea561ee2df7932"
+          },
+          "title": "Login & Sign Up Screen",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "1768",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzM1ODA2MGI1OGE5YjQyZmNiNThkOTE1Yzc4NTJhMjIzEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/a2163f290f5448408a329d327991b5a9"
+          },
+          "name": "projects/11060188023459959450/screens/9af68065269d4785b76560e2f38db2d8",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidWyRjPGl0kMV-SKWfX-ahcUnSN6XsW2R_685X7vuTj766xOMd8bfxkk0ntOqhPTNwkryISkAnf0iWChx0XlcVNScWQ6b-3lDIl5pPJH8knf9ZMpwJ28sQ7ALujXJfzmjxunphHgm9v51LfiHl_TXtEwTcPX7bLZu4iTAW1HrYSKL84Ulm-iCKhmYLgzAD6WOSvgLxmJzyVQ32hCkPu8R06o-INl-0b7CQTpTXDJBXBRsmr697QWOZGmOy0T",
+            "name": "projects/11060188023459959450/files/2d25da59f6934b2185a5473d18a46820"
+          },
+          "title": "AI Real Estate Assistant",
+          "width": "780"
+        },
+        {
+          "deviceType": "MOBILE",
+          "height": "3030",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzdmNTk0M2NlYzU5ZjQ0Y2Y5YjY3ZDc0OTAzODYyN2ZiEgsSBxCIwfzDpBQYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTA2MDE4ODAyMzQ1OTk1OTQ1MA&filename=&opi=89354086",
+            "name": "projects/11060188023459959450/files/d8fdbd98ed474c3baa57a71c210a23bc"
+          },
+          "name": "projects/11060188023459959450/screens/c7fdbae5f7034ed2aa084b8d6dafcf5f",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidWR52wHmRZ4Sx8a4iuWVrESZ1LZv_YxJ7O_1mofZ3KG1f_c89_VbNGsqnnQQrSHHcdMEM9jveYJ5PIUD_8xQXg2KAprLFL_Ds89zhVJe1HBCNcagm27FkHDmNo11DdCYFwSBN-AOIAJ-p1UiDmkZZcl7mJOdwWSY5344tlPeRFtUmAve3fW_nmnz-F_y6O_t--uBc9FjbcNq6h4xYAWo_EWI31usAwXwIi-eqB6RNJfyy-eIHLyHDfe0M6J",
+            "name": "projects/11060188023459959450/files/4baab41a6d0243d2a360a5188bd4e1a6"
+          },
+          "title": "Affordability & EMI Planner",
+          "width": "780"
+        }
+      ]
+    }
+  }
+}
